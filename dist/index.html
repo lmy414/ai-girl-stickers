@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#ffffff" />
+    <meta name="description" content="收集和下载 AI 娘二创表情包的开放图鉴：按角色归档、Tag 检索、原图下载与作品评论。" />
+    <title>AI 娘图鉴 · 表情包开放档案</title>
+    <link rel="icon" href="favicon.ico" sizes="any" />
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <!-- 主题在样式加载前落地，避免浅色主题闪一下深色（键名与 app.js 的 CONFIG.theme.storageKey 保持一致） -->
+    <script>
+      (function () {
+        try {
+          var saved = localStorage.getItem("aigirl-theme-2");
+          if (saved === "light" || saved === "dark") document.documentElement.dataset.theme = saved;
+        } catch (error) {}
+      })();
+    </script>
+    <link rel="preconnect" href="https://giscus.app" crossorigin />
+    <link rel="stylesheet" href="tokens.css?v=11" />
+    <link rel="stylesheet" href="styles.css?v=12" />
+  </head>
+  <body>
+    <a class="skip-link" href="#app">跳到主要内容</a>
+
+    <div class="site-shell">
+      <header class="topbar">
+        <a class="brand" href="#/" aria-label="AI 娘图鉴首页">
+          <span class="brand-mark" aria-hidden="true"><img src="favicon.png" alt="" /></span>
+          <span class="brand-text">
+            <strong>AI 娘图鉴</strong>
+            <small>表情包开放档案</small>
+          </span>
+        </a>
+
+        <nav class="topnav" aria-label="主导航">
+          <a class="nav-link is-active" href="#/" data-route-link="home">作品列表</a>
+          <a class="nav-link" href="#/about" data-route-link="about">关于本站</a>
+        </nav>
+
+        <div class="topbar-actions">
+          <button type="button" class="icon-button" data-action="toggle-theme" aria-label="切换主题" title="切换主题"></button>
+          <button type="button" class="button small" data-action="submit">
+            <svg class="icon" viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true">
+              <path d="M12 .7a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2.2c-3.4.7-4.1-1.6-4.1-1.6-.5-1.4-1.3-1.7-1.3-1.7-1.1-.8.1-.8.1-.8 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.7-.3-5.5-1.4-5.5-6a4.7 4.7 0 0 1 1.2-3.3c-.1-.3-.5-1.6.1-3.2 0 0 1-.3 3.3 1.2a11.4 11.4 0 0 1 6 0C16.3 5.8 17.3 6 17.3 6c.6 1.6.2 2.9.1 3.2a4.7 4.7 0 0 1 1.2 3.3c0 4.6-2.8 5.7-5.5 6 .4.3.7 1 .7 2v3c0 .3.2.7.8.6A12 12 0 0 0 12 .7Z" />
+            </svg>
+            <span>提交作品</span>
+          </button>
+        </div>
+      </header>
+
+      <main id="app" tabindex="-1"></main>
+
+      <footer class="site-footer">
+        <div class="footer-inner">
+          <p class="footer-brand">
+            <span class="brand-mark" aria-hidden="true"><img src="favicon.png" alt="" /></span>
+            AI 娘图鉴 · 表情包开放档案
+          </p>
+          <nav class="footer-links" aria-label="页脚导航">
+            <a href="#/">作品列表</a>
+            <a href="#/about">关于本站</a>
+            <button type="button" class="button quiet small" data-action="submit">提交作品</button>
+          </nav>
+          <p class="footer-note">
+            非官方同人整理项目，与各 AI 产品官方无关；图片版权归原作者所有。本站为纯静态站点，不统计浏览量、点赞、收藏与下载热度。
+          </p>
+        </div>
+      </footer>
+    </div>
+
+    <div class="toast-region" aria-live="polite" aria-atomic="true"></div>
+    <script src="app.js?v=11"></script>
+  </body>
+</html>

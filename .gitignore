@@ -1,0 +1,15 @@
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+
+# Dependencies and local runtime output
+node_modules/
+__pycache__/
+.sites-runtime/
+
+# Local configuration and secrets
+.env
+.env.*
+!.env.example
+*.log
