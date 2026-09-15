@@ -1,5 +1,5 @@
 /* ==========================================================================
-   AI 娘图鉴 · 前端
+   蓝色大肥鱼 · 前端
    --------------------------------------------------------------------------
    单文件、无构建、无依赖。模块顺序：
      1 配置 → 2 数据 → 3 工具 → 4 图标 → 5 视图 → 6 评论区 → 7 交互 → 8 启动
@@ -16,7 +16,7 @@
    1 · 配置
    ========================================================================== */
 const CONFIG = {
-  siteName: "AI 娘图鉴",
+  siteName: "蓝色大肥鱼",
   /* 投稿按钮直接打开公开仓库的 GitHub Issue 新建页。 */
   repositoryUrl: "https://github.com/lmy414/ai-girl-stickers",
   comments: {
@@ -517,7 +517,7 @@ function galleryIntro() {
   const roleTotal = characters.filter((character) => character.id !== "all").length;
   return `
     <header class="page-head">
-      <h1>AI 娘图鉴</h1>
+      <h1>蓝色大肥鱼</h1>
       <p class="page-desc">收集不同 AI 角色的二创表情包，按角色归档、按 Tag 检索。</p>
       <p class="meta-line">${published().length} 张作品<span class="sep">·</span>${roleTotal} 个角色<span class="sep">·</span>${formats.size} 种格式</p>
     </header>`;
@@ -969,7 +969,7 @@ function aboutMarkup(slug) {
       <article class="doc-body">
         <header class="doc-head">
           <h1>关于本站</h1>
-          <p>AI 娘图鉴是一个开放的二创表情包档案：作品按角色归档，支持模糊搜索、原图下载与作品评论，内容全部通过 GitHub 投稿和维护。</p>
+          <p>蓝色大肥鱼是一个开放的 AI 娘二创表情包档案：作品按角色归档，支持模糊搜索、原图下载与作品评论，内容全部通过 GitHub 投稿和维护。</p>
           <p class="meta-line">${published().length} 张作品<span class="sep">·</span>${characters.length - 1} 个角色<span class="sep">·</span>${formats.size} 种格式<span class="sep">·</span>0 后端依赖</p>
         </header>
 
