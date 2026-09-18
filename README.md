@@ -11,6 +11,8 @@
 
 本站是非官方同人整理项目，跟任何 AI 产品的官方都没关系。图片著作权归原作者，程序代码是 MIT——这两件事分开算。
 
+打算改这个仓库的话，先看 [AGENTS.md](AGENTS.md)（约定和坑都在里面）；**大型更新先在 [CHANGELOG.md](CHANGELOG.md) 补一条，再动代码。**
+
 ---
 
 ## 跑起来看看
@@ -118,7 +120,9 @@ dist/
 assets/         favicon 原图与透明底版本
 tools/          favicon 处理脚本
 数据契约.md      字段定义、投稿校验、来源与授权类型
-.github/        Issue 模板
+CHANGELOG.md     更新日志（大型更新先写这里）
+AGENTS.md        给代理的约定：改之前先看
+.github/         Issue 模板
 ```
 
 ---
