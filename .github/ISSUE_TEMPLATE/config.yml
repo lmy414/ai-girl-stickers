@@ -1,4 +1,5 @@
-blank_issues_enabled: false
+# 保留空白 Issue：报 bug、提版式建议这类没有对应模板，别让它们无处可提。
+blank_issues_enabled: true
 contact_links:
   - name: 站点「来源与授权」说明
     url: https://xn--pssy23gqgbz2d718b.com/#/about/license
