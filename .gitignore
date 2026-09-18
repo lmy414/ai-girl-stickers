@@ -13,3 +13,10 @@ __pycache__/
 .env.*
 !.env.example
 *.log
+
+# 本地首批预览导入：图片与 staging 数据先不进入公开主干
+/dist/data/
+
+# 本机运维：发布脚本与服务器侧产物不进公开仓库
+/tools/deploy.mjs
+/staging/

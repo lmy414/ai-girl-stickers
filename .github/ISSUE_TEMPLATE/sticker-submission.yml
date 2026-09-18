@@ -1,0 +1,132 @@
+name: 表情包投稿
+description: 提交一张 AI 角色二创表情包，维护者审核后收录
+title: "[投稿] "
+labels: ["sticker-submission"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        本站收集 **AI 角色的拟人化二创表情包**，是非官方同人档案。填写前请先看 [来源与授权说明](https://xn--pssy23gqgbz2d718b.com/#/about/license)。
+
+        - 支持格式：PNG、JPG、GIF、WebP、APNG、SVG；单张建议不超过 10 MB。
+        - 图片请**直接拖进下面的「图片文件」框上传**，不要贴网盘或外链代替。
+        - 与 AI 角色无关的通用表情包、真人肖像、未授权商业素材不收录。
+        - 来源链接不是必填：自己生成或没有公开出处也可以投，但请如实填写来源与授权。
+  - type: textarea
+    id: name
+    attributes:
+      label: 图片名称
+      description: 展示在卡片和详情页上的名字，会进入搜索。
+      placeholder: 例如：不是……而是……大学习
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: 一句话说明（可选）
+      description: 这张图表达的情绪或场景，会用于搜索。
+      placeholder: 例如：用于表达质疑或无语
+    validations:
+      required: false
+  - type: dropdown
+    id: character
+    attributes:
+      label: 角色
+      description: 括号里是 `characterId`，收录时直接按它归档。不属于任何已收录角色的选「其他角色」。
+      options:
+        - "DeepSeek娘（deepseek · 别名 蓝色大肥鱼 / 鲸鱼娘）"
+        - "豆包娘（doubao · 别名 豆包）"
+        - "Kimi娘（kimi · 别名 Kimi）"
+        - "通义千问娘（qwen · 别名 千问娘 / Qwen）"
+        - "Claude娘（claude · 别名 Claude）"
+        - "Gemini娘（gemini · 别名 Gemini）"
+        - "Grok娘（grok · 别名 Grok）"
+        - "其他角色（other）"
+    validations:
+      required: true
+  - type: textarea
+    id: character-extra
+    attributes:
+      label: 角色补充（只在上一题选了「其他角色」时填写）
+      description: 这个角色叫什么、有哪些常见别名、出自哪个产品。
+      placeholder: 例如：元宝娘，别名 腾讯元宝 / Yuanbao
+    validations:
+      required: false
+  - type: textarea
+    id: tags
+    attributes:
+      label: Tag
+      description: 用空格或逗号分隔，至少 1 个。没有 Tag 的条目不会进入展示。
+      placeholder: 例如：学习 划重点
+    validations:
+      required: true
+  - type: textarea
+    id: files
+    attributes:
+      label: 图片文件
+      description: 把图片拖进这个框上传（上传后框里会自动出现图片引用，这就是必填内容）。
+      placeholder: 拖入图片即可
+    validations:
+      required: true
+  - type: dropdown
+    id: origin-type
+    attributes:
+      label: 内容来源
+      description: 括号里是 `origin.type` 的取值。
+      options:
+        - "自己创作或生成（self-created）"
+        - "原作者本人投稿（author-submitted）"
+        - "网络整理（internet-found）"
+        - "社区成员创作（community-created）"
+        - "来源不明（unknown）"
+    validations:
+      required: true
+  - type: textarea
+    id: origin-author
+    attributes:
+      label: 来源作者
+      description: 谁做的这张图。填「佚名」会让这张图在站上一直显示「未标注」，能填就请填。
+      placeholder: 例如：@soeur，或 本人（@你的用户名）
+    validations:
+      required: false
+  - type: textarea
+    id: origin-url
+    attributes:
+      label: 来源链接（可选）
+      description: 首次发布的帖子、作品页或作者主页。没有公开出处就留空。
+      placeholder: https://
+    validations:
+      required: false
+  - type: dropdown
+    id: license-type
+    attributes:
+      label: 授权状态
+      description: 括号里是 `license.type` 的取值。本站会原样展示在作品详情页。
+      options:
+        - "投稿者确认授权收录与下载（submitter-permission）"
+        - "原作者明确授权（author-permission）"
+        - "CC0 公共领域（cc0）"
+        - "CC BY 署名（cc-by）"
+        - "CC BY-NC 署名·非商用（cc-by-nc）"
+        - "授权状态不明（unknown）"
+    validations:
+      required: true
+  - type: textarea
+    id: license-note
+    attributes:
+      label: 授权说明
+      description: 用一句话说明授权依据，会显示在详情页的来源与授权栏。
+      placeholder: 例如：本人使用 AI 生成，允许本站收录与下载
+    validations:
+      required: false
+  - type: checkboxes
+    id: confirm
+    attributes:
+      label: 确认
+      options:
+        - label: 我确认自己有权提交这张图片，或已获得原作者允许。
+          required: true
+        - label: 我同意维护者核实后收录到蓝色大肥鱼，并在收到版权要求时修改信息或删除。
+          required: true
+        - label: 我知道本站是非官方同人整理项目，图片著作权始终归原作者。
+          required: true

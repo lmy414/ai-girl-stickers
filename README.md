@@ -10,11 +10,14 @@
 
 ```
 dist/
-  index.html    壳层：顶栏、页脚、主题引导脚本
+  index.html    壳层：顶栏、页脚、主题引导脚本、分享用 og
   tokens.css    设计 Token（原始值 + 语义层，深浅两套主题）
   styles.css    组件与页面样式（只消费 Token，不写死色值）
   app.js        数据、路由、视图、评论区适配
+  robots.txt    爬虫规则（/data/ 不放行，避免爬虫吃走图片）
+  data/         首批图片与清单（.gitignore 排除，只在本地和服务器上）
 数据契约.md      字段定义、投稿校验、授权类型
+tools/           favicon 处理脚本（发布脚本按本机运维处理，不进仓库）
 ```
 
 ## 本地预览
@@ -28,16 +31,22 @@ python -m http.server 5173 -d dist
 
 ## 投稿
 
-首页右上角的「提交作品」按钮会打开本仓库的 GitHub Issue 新建页。在 Issue 中选择「表情包投稿」模板，填写信息并直接拖入图片即可。
+投稿和版权请求都走 GitHub Issue，用 **Issue Forms（YAML 模板）**收集，字段与 `数据契约.md` 一一对应：角色、内容来源、授权状态都是下拉单选，取值就是契约里的 `characterId` / `origin.type` / `license.type`，审核时不需要再猜。
 
-建议填写：
+模板在 `.github/ISSUE_TEMPLATE/` 下，共两份，`config.yml` 里关掉了空白 Issue：
 
-- 图片名称、角色和自由 Tag；
-- 提交者与来源类型；
-- 来源作者、来源链接（可选）；
-- 授权说明，并确认自己有权投稿。
+| 模板 | 用途 | 打的标签 |
+|---|---|---|
+| `sticker-submission.yml` | 表情包投稿（13 项，图片直接拖进「图片文件」框） | `sticker-submission` |
+| `takedown-request.yml` | 原作者申请署名、更正来源或下架 | `takedown` |
+
+两个标签需要在仓库里存在，否则模板里的 `labels` 会被 GitHub 静默忽略（已建好）。
+
+站内入口：首页与页脚的「提交作品」按钮直接打开投稿表单（`app.js` 的 `goSubmit()` → `issueUrl("sticker-submission.yml", "[投稿] ")`）；作品详情页的授权栏和「关于本站 → 版权与删除」链到删除申请模板，并把作品名带进标题。
 
 来源链接不是必填项，自己生成或没有公开出处的作品也可以投稿，但仍需要如实填写来源和授权状态。维护者审核后才会进入公开数据。
+
+图片一律放 GitHub 仓库，不自建对象存储：首批原图仍指向上游 `EDMOK/blue-fish-archive`（`CONFIG.upstreamRepo`），后续投稿的图片进本仓库，所以 `rawGithubPath(repo, path)` 的仓库参数是按记录传的，不要写死。等仓库大到装不下再考虑自托管。
 
 ## 路由
 
@@ -91,11 +100,13 @@ python -m http.server 5173 -d dist
    深色是中性灰黑（不带蓝调），默认亮色；主题偏好存在 `localStorage` 的 `aigirl-theme-2`，
    想强制所有人回到默认主题时换这个键名即可（`index.html` 的引导脚本与 `CONFIG.theme.storageKey` 要同步改）。
 
-作品占位图的配色（`--art-*`）也定义在 Token 里；导出示例图时会从 CSS 变量读色值，避免在 JS 里重复一份色板。
+作品图容器的底色（`--art-*`）也定义在 Token 里，由 `.sticker-art` 的渐变消费；图片加载失败时的回退块沿用同一容器，JS 里不重复色板。
 
 ## 评论接入
 
 **结论：用 Giscus。** 它把评论存在 GitHub Discussions 里，静态站点无需任何服务器、数据库或运维，与本站已有的 GitHub 投稿流程同源。
+
+**当前状态：已开启**，复用博客评论区仓库 [`lmy414/lmy414-blog-comments`](https://github.com/lmy414/lmy414-blog-comments) 的 `Announcements` 分类（`repoId=R_kgDOTUvnVw`、`categoryId=DIC_kwDOTUvnV84DF4fs`，已写进 `dist/app.js`）。派生此项目时按下面三步换成你自己的仓库。
 
 ### 三步开启
 
@@ -142,10 +153,13 @@ data-term    = `sticker-${sticker.id}`
 
 ## 数据现状
 
-- `app.js` 里的 12 条作品是**演示数据**，字段结构已与 `数据契约.md` 对齐（`submitter` / `origin` / `license` 都是对象），可直接替换成构建产物；另有 168 条生成出来的占位作品，见上面「演示数据说明」。
-- 图片资源尚未接入：列表与详情页显示的是按角色与尺寸生成的占位图。接真实图片时，把 `artMarkup()` 换成 `<img src="${sticker.thumbnailPath}" alt="…">`，并删掉数据里的 `tone` / `symbol` 两个占位字段，布局不需要改。
-- 详情页"下载原图"当前导出的是占位 SVG（颜色取自 Token）。真实图片接入后改成直接下载 `sticker.path`，并同步改掉 `downloadSticker()` 里的提示文案。
-- `CONFIG.repositoryUrl` 已指向本仓库的 Issue 新建页；如果派生此项目，请改成自己的公开仓库地址。
+站点已经接入首批真实图片，数据分两层：
+
+- `dist/data/blue-fish-classification.json` 是从上游公开清单（`EDMOK/blue-fish-archive`）导入的 205 条记录，`app.js` 的 `loadLocalDataset()` 在首屏渲染前读它并用 `mapLocalRecord()` 映射成作品记录；名称、Tag、角色三项齐全的才进入展示，当前是 146 条，其余 59 条留在清单里不展示。
+- `dist/data/blue-fish/previews/` 是本站自己托管的 205 张预览图（约 34 MB）。这个目录被 `.gitignore` 排除，不进公开仓库，只存在于本地和服务器。
+- 每条记录的 `origin.author` 为空、`license.type` 为 `unknown`，详情页会如实显示「未标注 / 授权状态不明」。**上游清单没有逐条作者与授权信息，这是当前最大的缺口**：收录新条目时要按 `数据契约.md` 补齐 `submitter` / `origin` / `license`。
+- 「下载原图」指向 `raw.githubusercontent.com/EDMOK/blue-fish-archive/...` 的上游原始文件（本站只存预览图，不存约 189 MB 的原图）。这是外部依赖，上游改动作废则该链接失效。
+- 只有清单读取失败（例如用 `file://` 直接打开）时才会回退到 `app.js` 里的 12 条手写作品与 168 条生成占位作品；这些演示作品没有图片文件，因此不会发出图片请求。
 
 ## 目录与发布
 
@@ -155,10 +169,37 @@ data-term    = `sticker-${sticker.id}`
 .
 ├─ dist/                 # 可直接发布的网站文件
 ├─ assets/               # favicon 原始图与透明处理版本
-├─ tools/                # favicon 处理脚本
+├─ tools/                # favicon 处理脚本、发布脚本
 ├─ 数据契约.md           # 作品、角色、投稿与搜索的数据约定
 └─ .github/              # GitHub Issue 投稿模板
 ```
+
+### 本站的线上发布
+
+正式站在阿里云香港（QuickSite Studio 里的 `aliyun-hk`）以 nginx 静态站点托管，域名是国际化域名
+`蓝色大肥鱼.com`（punycode `xn--pssy23gqgbz2d718b.com`），旧域名 `dafeiyu.dshregistry.xyz` 整站 301 过来。
+服务器上的布局是发布目录 + 软链：
+
+```text
+/srv/www/dafeiyu/
+├─ releases/<YYYYmmdd-HHMMSS>/   # 每次发布一个自包含目录
+└─ current -> releases/<版本>     # nginx root 指向它，切软链即切版本
+```
+
+发布脚本 `tools/deploy.mjs` 留在维护者本机（里面写着服务器路径，不进公开仓库）。它经本地 QuickSite Studio
+面板的 `qss` CLI 操作服务器，写命令都会在面板任务中心先显示计划、等人工确认，并落审计日志。等价的四步手工流程：
+
+```bash
+tar -czf site.tgz -C dist .                                 # 1. 打包 dist/
+qss fs upload site.tgz /srv/www/dafeiyu/<ts>.tgz            # 2. 上传
+qss exec "mkdir -p /srv/www/dafeiyu/releases/<ts> \
+  && tar -xzf /srv/www/dafeiyu/<ts>.tgz -C /srv/www/dafeiyu/releases/<ts> \
+  && ln -sfn /srv/www/dafeiyu/releases/<ts> /srv/www/dafeiyu/current && nginx -t"   # 3. 解包 + 切软链
+curl -sI https://xn--pssy23gqgbz2d718b.com/                 # 4. 回读验证
+```
+
+新 release 的目录设成 755、文件设成 644；图片目录用 `cp -al` 从上一版硬链接过来，避免每次重传 34 MB。
+回滚只要把 `current` 指回上一个 `releases/<ts>`，不删任何文件。
 
 ## 开源与版权边界
 

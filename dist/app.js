@@ -17,20 +17,25 @@
    ========================================================================== */
 const CONFIG = {
   siteName: "蓝色大肥鱼",
-  /* 投稿按钮直接打开公开仓库的 GitHub Issue 新建页。 */
+  /* 投稿与版权请求都走公开仓库的 Issue；模板在仓库 .github/ISSUE_TEMPLATE/ 下。 */
   repositoryUrl: "https://github.com/lmy414/ai-girl-stickers",
+  /* 首批图片的原图放在上游仓库；后续投稿的图片直接进本仓库，
+     所以取原图地址时要按记录区分仓库，不能写死一个。 */
+  upstreamRepo: "EDMOK/blue-fish-archive",
   comments: {
     /* provider: "giscus" | "none" —— 见 README.md「评论接入」 */
     provider: "giscus",
     giscus: {
-      repo: "",        /* "owner/repo"，必须是公开仓库且已开启 Discussions */
-      repoId: "",      /* 在 giscus.app 生成 */
+      repo: "lmy414/lmy414-blog-comments",   /* 与博客评论区共用的仓库，已开启 Discussions */
+      repoId: "R_kgDOTUvnVw",
       category: "Announcements",
-      categoryId: "",
+      categoryId: "DIC_kwDOTUvnV84DF4fs",
       reactionsEnabled: true,
       inputPosition: "bottom"
     }
   },
+  /* 本地首批预览导入：仅在本地存在时启用，未导入时仍回退到演示数据。 */
+  localDataUrl: "data/blue-fish-classification.json",
   /* 键名带版本：改版后换键可以让旧的深色偏好失效，默认回到亮色 */
   theme: { storageKey: "aigirl-theme-2", default: "light" }
 };
@@ -267,14 +272,101 @@ function generatePlaceholderWorks(total) {
 
 stickers.push(...generatePlaceholderWorks(PLACEHOLDER_TOTAL));
 
-/* 补全由流水线生成的字段（真实仓库路径、MIME、状态）。 */
+/* 补全由流水线生成的字段（MIME、状态）。演示作品没有图片文件，因此不写
+   path / thumbnailPath，让 artMarkup 直接走无图版式；否则会请求一批
+   生产环境不存在的 /previews/*，每张卡片都产生一条 404。 */
 stickers.forEach((sticker) => {
   sticker.mimeType = MIME_BY_FORMAT[sticker.format] || "application/octet-stream";
-  sticker.path = `assets/${sticker.characterId}/${sticker.id}.${sticker.format}`;
-  sticker.thumbnailPath = `previews/${sticker.characterId}/${sticker.id}.${sticker.format}`;
   sticker.status = "published";
   sticker.updatedAt = sticker.createdAt;
 });
+
+/* ===========================================================================
+   2.1 · 本地首批数据导入
+   ---------------------------------------------------------------------------
+   staging 里的结果先经过最小收录门槛：必须同时有名称、至少一个 Tag 和角色。
+   因此名称或 Tag 不确定的条目仍保留在 staging JSON，但不会出现在本地
+   主展示中。预览图只读本地资源，下载原图仍回到上游原始地址。
+   =========================================================================== */
+let dataMode = "demo";
+let localImportSkipped = 0;
+
+function sourceFileName(value) {
+  return String(value || "").split("/").pop();
+}
+
+function localPreviewPath(record) {
+  const filename = sourceFileName(record.previewPath || record.sourcePath);
+  return `data/blue-fish/previews/${encodeURIComponent(filename)}`;
+}
+
+function rawGithubPath(repo, value) {
+  return `https://raw.githubusercontent.com/${repo}/main/${String(value || "").replace(/^\/+/, "")}`;
+}
+
+function mapLocalRecord(record, index) {
+  const name = String(record.name || "").trim();
+  const tags = Array.isArray(record.tags)
+    ? record.tags.map((tag) => String(tag || "").trim()).filter(Boolean)
+    : [];
+  const characterId = String(record.characterId || "").trim();
+
+  /* 不确定名称、Tag 或角色的条目只留在 staging，不进入本地展示主干。 */
+  if (!name || !tags.length || !characterId) return null;
+
+  const format = String(record.format || "").toLowerCase();
+  const originalPath = String(record.sourcePath || "");
+  const sourceUrl = record.sourceUrl || null;
+  const id = `sticker_bf_${String(index + 1).padStart(3, "0")}`;
+  return {
+    id,
+    name,
+    description: "首批收录自蓝色大肥鱼档案馆的公开清单；单条原作者与授权信息待补充，可在详情页申请署名或删除。",
+    characterId,
+    tags,
+    format,
+    isAnimated: format === "gif" || format === "apng",
+    width: Number(record.width) || 1,
+    height: Number(record.height) || 1,
+    fileSize: Number(record.fileSize) || 0,
+    submitter: { name: "上游清单导入", github: "" },
+    origin: {
+      type: "internet-found",
+      author: "",
+      sourceUrl,
+      note: "从公开上游清单导入；单条原作者信息待补充"
+    },
+    license: { type: "unknown" },
+    createdAt: "2026-09-15T00:00:00+08:00",
+    tone: characterId,
+    symbol: "",
+    mimeType: MIME_BY_FORMAT[format] || "application/octet-stream",
+    path: rawGithubPath(CONFIG.upstreamRepo, originalPath),
+    thumbnailPath: localPreviewPath(record),
+    /* 详情预览也保持本地，原图下载按钮再访问上游原始文件。 */
+    fullPath: localPreviewPath(record),
+    status: "published",
+    updatedAt: "2026-09-15T00:00:00+08:00"
+  };
+}
+
+async function loadLocalDataset() {
+  try {
+    const response = await fetch(CONFIG.localDataUrl, { cache: "no-store" });
+    if (!response.ok) return;
+    const records = await response.json();
+    if (!Array.isArray(records) || !records.length) return;
+
+    const imported = records.map(mapLocalRecord).filter(Boolean);
+    if (!imported.length) return;
+
+    stickers.splice(0, stickers.length, ...imported);
+    dataMode = "local";
+    localImportSkipped = records.length - imported.length;
+  } catch (error) {
+    /* 直接打开 dist/index.html 时 fetch 可能被浏览器拦截，保留演示回退。 */
+  }
+}
 
 /* ==========================================================================
    3 · 工具
@@ -364,13 +456,19 @@ const ICONS = {
    5 · 视图
    ========================================================================== */
 
-/* --- 作品占位图 ---
-   真实图片接入后：把 artMarkup 换成
-   `<img src="${sticker.thumbnailPath}" width=… height=… alt=…>`，
-   并删掉数据里的 tone / symbol 两个占位字段即可，其余布局不用动。 */
-function artMarkup(sticker, className = "") {
+/* --- 作品图 ---
+   列表优先使用本地缩略图；详情页使用上游大图地址，避免首批原图进入仓库。 */
+function artMarkup(sticker, className = "", mode = "thumb") {
   const character = characterFor(sticker.characterId);
-  return `<div class="sticker-art art-${sticker.tone} ${className}" role="img" aria-label="${escapeHtml(sticker.name)}，${escapeHtml(character.name)}作品占位图"><div class="art-copy"><span class="art-symbol">${escapeHtml(sticker.symbol)}</span><strong>${escapeHtml(character.name)}</strong><small>${escapeHtml(sticker.name)}</small></div></div>`;
+  const imagePath = mode === "full" ? (sticker.fullPath || sticker.thumbnailPath) : sticker.thumbnailPath;
+  const alt = `${sticker.name}，${character.name}作品`;
+  if (imagePath) {
+    return `<div class="sticker-art art-${sticker.tone} ${className}" style="${ratioStyle(sticker)}" role="img" aria-label="${escapeHtml(alt)}">
+      <img class="sticker-image" src="${escapeHtml(imagePath)}" width="${sticker.width}" height="${sticker.height}" alt="${escapeHtml(alt)}" loading="${mode === "full" ? "eager" : "lazy"}" referrerpolicy="no-referrer" onerror="this.hidden=true;this.nextElementSibling.hidden=false" />
+      <div class="art-copy image-fallback" hidden><span class="art-symbol">${escapeHtml(sticker.symbol || "?")}</span><strong>${escapeHtml(character.name)}</strong><small>${escapeHtml(sticker.name)}</small></div>
+    </div>`;
+  }
+  return `<div class="sticker-art art-${sticker.tone} ${className}" style="${ratioStyle(sticker)}" role="img" aria-label="${escapeHtml(alt)}"><div class="art-copy"><span class="art-symbol">${escapeHtml(sticker.symbol || "?")}</span><strong>${escapeHtml(character.name)}</strong><small>${escapeHtml(sticker.name)}</small></div></div>`;
 }
 
 function roleCounts() {
@@ -515,11 +613,15 @@ function cardMarkup(sticker) {
 function galleryIntro() {
   const formats = new Set(published().map((sticker) => sticker.format));
   const roleTotal = characters.filter((character) => character.id !== "all").length;
+  const localNote = dataMode === "local"
+    ? `<p class="meta-line">首批收录 · 另有 ${localImportSkipped} 条名称或 Tag 待确认，暂不展示</p>`
+    : "";
   return `
     <header class="page-head">
       <h1>蓝色大肥鱼</h1>
       <p class="page-desc">收集不同 AI 角色的二创表情包，按角色归档、按 Tag 检索。</p>
       <p class="meta-line">${published().length} 张作品<span class="sep">·</span>${roleTotal} 个角色<span class="sep">·</span>${formats.size} 种格式</p>
+      ${localNote}
     </header>`;
 }
 
@@ -806,7 +908,7 @@ function workMarkup(id) {
             <span class="stage-hint">方向键 ← → 可翻页</span>
           </div>
           <div class="stage-canvas">
-            <div class="stage-art" style="${ratioStyle(sticker)}">${artMarkup(sticker)}</div>
+            <div class="stage-art" style="${ratioStyle(sticker)}">${artMarkup(sticker, "", "full")}</div>
           </div>
           <div class="stage-foot">
             <button type="button" class="button small" data-action="download" data-sticker-id="${escapeHtml(sticker.id)}">${icon("download", 15)}下载原图</button>
@@ -863,19 +965,20 @@ function workMarkup(id) {
 
           <p class="license-note">
             <strong>图片来源与授权：</strong>${escapeHtml(originLabel)}${sticker.origin.note ? `（${escapeHtml(sticker.origin.note)}）` : ""}。
-            版权归原作者所有。作者可联系维护者申请署名、修改信息或删除内容。
+            版权归原作者所有。作者可
+            <a href="${issueUrl("takedown-request.yml", `[署名/删除] ${sticker.name}`)}" target="_blank" rel="noopener noreferrer nofollow">提交 Issue 申请署名、修改信息或删除</a>。
           </p>
         </aside>
-      </div>
 
-      ${related.items.length ? `
-      <section class="related" aria-labelledby="relatedTitle">
-        <div class="section-head">
-          <h2 id="relatedTitle">${relatedTitle}</h2>
-          <a href="#/character/${encodeURIComponent(character.id)}">查看 ${escapeHtml(character.name)} 的全部作品</a>
-        </div>
-        <div class="related-grid">${related.items.map(cardMarkup).join("")}</div>
-      </section>` : ""}
+        ${related.items.length ? `
+        <section class="related" aria-labelledby="relatedTitle">
+          <div class="section-head">
+            <h2 id="relatedTitle">${relatedTitle}</h2>
+            <a href="#/character/${encodeURIComponent(character.id)}">查看 ${escapeHtml(character.name)} 的全部作品</a>
+          </div>
+          <div class="related-grid">${related.items.map(cardMarkup).join("")}</div>
+        </section>` : ""}
+      </div>
 
       ${commentsMarkup(sticker)}
     </article>`;
@@ -904,16 +1007,6 @@ const ABOUT_SECTIONS = [
   { slug: "faq", title: "常见问题" },
   { slug: "site", title: "关于本站" }
 ];
-
-const SUBMIT_TEMPLATE = `图片名称：
-角色：
-Tag：
-图片文件：（直接拖进 Issue）
-提交者：
-内容来源：（自己创作 / 原作者投稿 / 网络整理 / 社区创作）
-来源作者：
-来源链接（可选）：
-授权说明：`;
 
 /* 深链落到章节：滚动过去并把左侧目录对应项标为当前 */
 function scrollToDocSection(slug) {
@@ -1009,14 +1102,11 @@ function aboutMarkup(slug) {
           <h2>如何投稿</h2>
           <ol class="steps">
             <li><strong>准备图片。</strong>确认自己有权投稿，或已获得原作者许可。</li>
-            <li><strong>新建 Issue。</strong>在本仓库的 Issue 页面选择投稿模板。</li>
-            <li><strong>填写信息。</strong>按下面的模板填好，把图片文件直接拖进 Issue。</li>
+            <li><strong>打开投稿表单。</strong>点下面的按钮，直接进到本仓库的「表情包投稿」Issue 表单。</li>
+            <li><strong>逐项填写。</strong>角色、内容来源和授权状态都在下拉里选，图片拖进「图片文件」框即可。</li>
             <li><strong>等待审核。</strong>自动校验（格式、体积、重复文件）通过后进入待审，维护者确认后上线。</li>
           </ol>
-          <div class="code-block">
-            <pre>${escapeHtml(SUBMIT_TEMPLATE)}</pre>
-            <button type="button" class="button quiet small copy-button" data-action="copy-template">${icon("copy", 14)}复制模板</button>
-          </div>
+          <p class="meta-line">表单会收集：名称、一句话说明、角色、Tag、图片文件、内容来源、来源作者、来源链接、授权状态与授权说明。</p>
           <div class="action-row">
             <button type="button" class="button" data-action="submit">${icon("github", 16)}前往 GitHub 投稿</button>
             <a class="button ghost" href="#/">返回浏览作品</a>
@@ -1026,7 +1116,8 @@ function aboutMarkup(slug) {
         <section class="doc-section" id="doc-copyright">
           <h2>版权与删除</h2>
           <p>本站是非官方同人整理项目，与各 AI 产品官方无关。图片版权归原作者所有，本站只做索引与展示。</p>
-          <p>如果你是作者，可以要求<strong>署名、修改信息或删除作品</strong>；如果发现来源标注或授权状态有问题，也欢迎通过 Issue 反馈。收到有效的版权投诉时，会先下架作品再核实来源。</p>
+          <p>如果你是作者，可以要求<strong>署名、修改信息或删除作品</strong>：<a href="${issueUrl("takedown-request.yml", "[署名/删除] ")}" target="_blank" rel="noopener noreferrer nofollow">提交「署名与删除申请」</a>。发现来源标注或授权状态有问题，同样走这个模板。收到有效的版权投诉时，会先下架作品再核实来源。</p>
+          <p>其它问题可以用<a href="${issueUrl()}" target="_blank" rel="noopener noreferrer nofollow">Issue 模板选择页</a>。</p>
         </section>
 
         <section class="doc-section" id="doc-faq">
@@ -1054,7 +1145,7 @@ function aboutMarkup(slug) {
             </details>
             <details class="faq-item">
               <summary>作品图看起来还是占位图？</summary>
-              <div class="faq-body"><p>目前展示的是根据角色与尺寸生成的占位示例图，用于先把版式和数据跑通。接入真实图片后，前端结构不需要改动，只替换图片资源即可。</p></div>
+              <div class="faq-body"><p>${dataMode === "local" ? "首批真实图片已经接入，列表与详情页读的都是本站自己托管的资源；少量条目因名称或 Tag 待确认暂不展示。每张作品详情页会标明来源类型与授权状态，授权状态为「不明」时表示原作者信息尚未核实。" : "目前展示的是根据角色与尺寸生成的占位示例图，用于先把版式和数据跑通。接入真实图片后，前端结构不需要改动，只替换图片资源即可。"}</p></div>
             </details>
           </div>
         </section>
@@ -1222,58 +1313,40 @@ async function copyText(text) {
   return ok;
 }
 
-/* 占位示例图的导出：颜色从 Token 里读，避免在 JS 里重复硬编码色值。 */
-function toneColors(tone) {
-  const probe = document.createElement("span");
-  probe.className = `art-${tone}`;
-  probe.style.cssText = "position:absolute;visibility:hidden;pointer-events:none";
-  document.body.appendChild(probe);
-  const computed = getComputedStyle(probe);
-  const result = {
-    a: computed.getPropertyValue("--art-a").trim() || "#6bb9d4",
-    b: computed.getPropertyValue("--art-b").trim() || "#243a7a"
-  };
-  probe.remove();
-  return result;
-}
-
-function placeholderSvg(sticker) {
-  const { a, b } = toneColors(sticker.tone);
-  const character = characterFor(sticker.characterId);
-  return `<svg xmlns="http://www.w3.org/2000/svg" width="${sticker.width}" height="${sticker.height}" viewBox="0 0 600 600">
-  <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop stop-color="${a}"/><stop offset="1" stop-color="${b}"/></linearGradient></defs>
-  <rect width="600" height="600" fill="url(#g)"/>
-  <circle cx="486" cy="88" r="168" fill="#ffffff" opacity="0.2"/>
-  <circle cx="34" cy="556" r="122" fill="#000000" opacity="0.16"/>
-  <text x="300" y="266" fill="#ffffff" font-size="84" text-anchor="middle" font-family="Arial, Helvetica, sans-serif">${escapeHtml(sticker.symbol)}</text>
-  <text x="300" y="352" fill="#ffffff" font-size="40" font-weight="700" text-anchor="middle" font-family="Arial, Helvetica, sans-serif">${escapeHtml(character.name)}</text>
-  <text x="300" y="398" fill="#ffffff" opacity="0.82" font-size="21" text-anchor="middle" font-family="Arial, Helvetica, sans-serif">${escapeHtml(sticker.name)}</text>
-  <text x="300" y="556" fill="#ffffff" opacity="0.6" font-size="16" text-anchor="middle" font-family="Arial, Helvetica, sans-serif">${escapeHtml(CONFIG.siteName)} · ${escapeHtml(sticker.id)}</text>
-</svg>`;
-}
-
 function downloadSticker(id) {
   const sticker = findSticker(id);
   if (!sticker) return;
-  const blob = new Blob([placeholderSvg(sticker)], { type: "image/svg+xml" });
-  const url = URL.createObjectURL(blob);
+  const fileUrl = sticker.path || sticker.fullPath || sticker.thumbnailPath;
+  if (!fileUrl) {
+    showToast("演示作品没有原图文件，接入真实数据后才能下载。");
+    return;
+  }
   const anchor = document.createElement("a");
-  anchor.href = url;
-  anchor.download = `${sticker.name}.svg`;
+  anchor.href = fileUrl;
+  anchor.download = `${sticker.name}.${sticker.format}`;
+  anchor.target = "_blank";
+  anchor.rel = "noopener noreferrer";
   document.body.appendChild(anchor);
   anchor.click();
   anchor.remove();
-  URL.revokeObjectURL(url);
-  /* 真实图片接入后把这句话改成「已开始下载原图」 */
-  showToast(`已下载「${sticker.name}」 · 当前为占位示例图`);
+  showToast(`已开始下载「${sticker.name}」原图`);
+}
+
+/* Issue 模板直链。模板在仓库 .github/ISSUE_TEMPLATE/ 下；不传 template 时打开模板选择页。 */
+function issueUrl(template, title) {
+  const base = `${CONFIG.repositoryUrl.replace(/\/$/, "")}/issues/new`;
+  if (!template) return `${base}/choose`;
+  const params = new URLSearchParams({ template });
+  if (title) params.set("title", title);
+  return `${base}?${params}`;
 }
 
 function goSubmit() {
-  if (CONFIG.repositoryUrl) {
-    window.open(`${CONFIG.repositoryUrl.replace(/\/$/, "")}/issues/new`, "_blank", "noopener");
+  if (!CONFIG.repositoryUrl) {
+    showToast("仓库地址尚未配置：在 app.js 的 CONFIG.repositoryUrl 填入后即可跳转投稿。");
     return;
   }
-  showToast("仓库地址尚未配置：在 app.js 的 CONFIG.repositoryUrl 填入后即可跳转投稿。");
+  window.open(issueUrl("sticker-submission.yml", "[投稿] "), "_blank", "noopener");
 }
 
 async function copyCurrentLink() {
@@ -1297,9 +1370,6 @@ document.addEventListener("click", (event) => {
         return;
       case "copy-link":
         copyCurrentLink();
-        return;
-      case "copy-template":
-        copyText(SUBMIT_TEMPLATE).then((ok) => showToast(ok ? "投稿模板已复制" : "复制失败，请手动选择文本"));
         return;
       case "submit":
         goSubmit();
@@ -1464,4 +1534,6 @@ function render() {
 state.route = readRoute();
 setTheme(currentTheme(), false);
 updateThemeButtons();
-render();
+/* 先等本地首批数据落地再首屏渲染：反过来的话会先把演示数据画出来再整表替换，
+   既闪一次列表，也让用户刚发生的滚动失效。 */
+loadLocalDataset().then(render);

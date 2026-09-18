@@ -1,0 +1,50 @@
+name: 署名与删除申请
+description: 原作者或受委托人申请补充署名、修改来源信息或下架作品
+title: "[署名/删除] "
+labels: ["takedown"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        本站是非官方同人整理项目，图片著作权归原作者。收到这类请求后维护者会处理署名、来源信息或下架，通常一个工作日内响应。
+  - type: dropdown
+    id: request-type
+    attributes:
+      label: 诉求类型
+      options:
+        - "补充或更正署名"
+        - "补充或更正来源链接"
+        - "下架删除这张作品"
+        - "其它"
+    validations:
+      required: true
+  - type: textarea
+    id: work
+    attributes:
+      label: 哪张作品
+      description: 贴作品详情页链接最准（地址形如 `https://xn--pssy23gqgbz2d718b.com/#/work/sticker_bf_001`）；也可以在站内搜索后把名称和角色写在这里。
+      placeholder: 例如：https://xn--pssy23gqgbz2d718b.com/#/work/sticker_bf_001
+    validations:
+      required: true
+  - type: textarea
+    id: claim
+    attributes:
+      label: 你与这张图的关系
+      description: 说明你是原作者、受委托人还是利益相关方。能附上原始发布链接或过程文件会更快通过；不方便公开也可以写「私信提供」并留一个联系方式。
+    validations:
+      required: true
+  - type: textarea
+    id: detail
+    attributes:
+      label: 具体诉求
+      description: 希望改成什么、删除到什么程度。写清署名文案或需要抹去的信息。
+      placeholder: 例如：请把来源作者补为 @xxx，并链接到原始帖子
+    validations:
+      required: true
+  - type: checkboxes
+    id: confirm
+    attributes:
+      label: 确认
+      options:
+        - label: 我确认上述请求真实，并知悉虚假请求会被拒绝。
+          required: true
