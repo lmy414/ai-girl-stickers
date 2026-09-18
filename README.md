@@ -1,193 +1,165 @@
-# 蓝色大肥鱼 · AI 娘二创表情包开放档案
+# 蓝色大肥鱼
 
-蓝色大肥鱼（蓝色大肥鱼.com）是收集不同 AI 角色拟人化二创表情包的开放档案。按角色浏览，按名称、描述、Tag、角色别名和提交者进行模糊搜索；每张作品有独立详情页，支持原图下载、复制链接和 GitHub Issue 投稿。
+**一个收集 AI 娘二创表情包的站。** DeepSeek 娘抱着空饭碗说自己是吃白饭的蓝色大肥鱼，豆包娘、Kimi 娘、通义千问娘、Gemini 娘各自被画成了同人表情包——这些散落在社区帖里的图，这里按角色归了档。
 
-本站是非官方同人整理项目，与任何 AI 产品官方无关。图片版权归原作者所有；仓库中的程序代码与投稿图片的授权状态分开处理。
+线上地址：**[蓝色大肥鱼.com](https://蓝色大肥鱼.com/)**（中文域名，浏览器里会显示成 `xn--pssy23gqgbz2d718b.com`）
+源码仓库：[github.com/lmy414/ai-girl-stickers](https://github.com/lmy414/ai-girl-stickers)
 
-公开仓库：[github.com/lmy414/ai-girl-stickers](https://github.com/lmy414/ai-girl-stickers)
+你能做的事：按角色翻、按名称 / Tag / 角色别名 / 提交者模糊搜索、给单张图开详情页下载原图或复制链接、在详情页留言、把自己的图投进来。
 
-纯静态前端：无构建、无依赖、无后端。直接托管 `dist/` 目录即可。
+三句话说清它的技术形态：**纯静态前端**（没有构建、没有依赖、没有后端），**数据是一个 JSON**，**图片是一堆文件**。把 `dist/` 丢到任何静态托管上就能跑。
 
-```
-dist/
-  index.html    壳层：顶栏、页脚、主题引导脚本、分享用 og
-  tokens.css    设计 Token（原始值 + 语义层，深浅两套主题）
-  styles.css    组件与页面样式（只消费 Token，不写死色值）
-  app.js        数据、路由、视图、评论区适配
-  robots.txt    爬虫规则（/data/ 不放行，避免爬虫吃走图片）
-  data/         首批图片与清单（.gitignore 排除，只在本地和服务器上）
-数据契约.md      字段定义、投稿校验、授权类型
-tools/           favicon 处理脚本（发布脚本按本机运维处理，不进仓库）
-```
+本站是非官方同人整理项目，跟任何 AI 产品的官方都没关系。图片著作权归原作者，程序代码是 MIT——这两件事分开算。
 
-## 本地预览
+---
+
+## 跑起来看看
 
 ```bash
 python -m http.server 5173 -d dist
-# 打开 http://127.0.0.1:5173
+# 然后打开 http://127.0.0.1:5173
 ```
 
-必须用 http 打开才能看到评论区：Giscus 在 `file://` 下没有合法 Origin，加载会被拒绝。用 `file://` 直接打开 `index.html` 只能看版式。
+得用 `http://` 打开。直接双击 `index.html` 用 `file://` 看也行，但评论区不会出来——Giscus 拿不到合法的 Origin，会拒绝加载，你只能看到版式。
 
-## 投稿
+---
 
-投稿和版权请求都走 GitHub Issue，用 **Issue Forms（YAML 模板）**收集，字段与 `数据契约.md` 一一对应：角色、内容来源、授权状态都是下拉单选，取值就是契约里的 `characterId` / `origin.type` / `license.type`，审核时不需要再猜。
+## 数据是怎么来的
 
-模板在 `.github/ISSUE_TEMPLATE/` 下，共两份，`config.yml` 里关掉了空白 Issue：
+站点读两份东西，都在 `dist/data/` 下，而这个目录被 `.gitignore` 排除——**图片不进公开仓库，只存在于维护者本机和服务器的 `releases/` 里**。
 
-| 模板 | 用途 | 打的标签 |
+- `blue-fish-classification.json`：205 条记录，从上游公开清单 `EDMOK/blue-fish-archive` 导入。`app.js` 的 `loadLocalDataset()` 会在首屏渲染**之前**读它，再用 `mapLocalRecord()` 映射成作品记录。名称、Tag、角色三项都齐的才进展示，现在是 146 条，剩下 59 条留在清单里不显示。
+- `blue-fish/previews/`：205 张预览图，约 34 MB，本站自己托管。列表和详情页显示的都是它。
+
+「下载原图」给的是上游仓库里的原始文件（约 189 MB，本站不存）。所以这是一个外部依赖：上游把仓库转私有或删掉，下载就会失效。仓库参数是按记录传的（`rawGithubPath(repo, path)` + `CONFIG.upstreamRepo`），因为以后投稿的图片进的是本仓库而不是上游——别把它写死成一个仓库名。
+
+**关于授权，这个站选择如实标注而不是替你判断。** 上游清单没有逐条记录作者和授权，所以每条记录的 `origin.author` 是空的、`license.type` 是 `unknown`，详情页就明明白白显示「未标注 / 授权状态不明」，并挂一个[署名与删除申请](#投稿与下架是怎么走的)的入口。新收录的条目如果知道作者，就按 [`数据契约.md`](数据契约.md) 把 `submitter` / `origin` / `license` 填上。
+
+万一 JSON 读不到（比如用 `file://` 打开），页面会退回 `app.js` 里的演示数据：12 条手写作品 + 按索引确定性生成的 168 条占位作品，共 180 条，刷新顺序不变。这些演示作品没有图片文件，所以不会去请求任何图片路径。想彻底去掉演示数据，删掉 `generatePlaceholderWorks()` 和 `PLACEHOLDER_*` 常量即可，其余代码不用动。
+
+---
+
+## 投稿与下架是怎么走的
+
+都走 GitHub Issue，用 **Issue Forms**（YAML 模板）收集，字段跟 `数据契约.md` 一一对应：角色、内容来源、授权状态都是下拉单选，选项文字里直接带着 `characterId` / `origin.type` / `license.type` 的原值，审核时不用猜。
+
+模板在 `.github/ISSUE_TEMPLATE/` 下，两份，`config.yml` 里关掉了空白 Issue：
+
+| 模板 | 干什么 | 标签 |
 |---|---|---|
-| `sticker-submission.yml` | 表情包投稿（13 项，图片直接拖进「图片文件」框） | `sticker-submission` |
-| `takedown-request.yml` | 原作者申请署名、更正来源或下架 | `takedown` |
+| `sticker-submission.yml` | 投稿一张图，13 项，图片直接拖进「图片文件」框 | `sticker-submission` |
+| `takedown-request.yml` | 原作者要署名、改来源信息或下架 | `takedown` |
 
-两个标签需要在仓库里存在，否则模板里的 `labels` 会被 GitHub 静默忽略（已建好）。
+两个标签必须在仓库里真实存在，否则模板里的 `labels` 会被 GitHub 静默忽略——建仓库时记得补。
 
-站内入口：首页与页脚的「提交作品」按钮直接打开投稿表单（`app.js` 的 `goSubmit()` → `issueUrl("sticker-submission.yml", "[投稿] ")`）；作品详情页的授权栏和「关于本站 → 版权与删除」链到删除申请模板，并把作品名带进标题。
+站里的入口由 `app.js` 的 `issueUrl(template, title)` 统一生成：首页和页脚的「提交作品」直接打开投稿表单；详情页的授权栏和「关于本站 → 版权与删除」打开删除申请，并把作品名带进 Issue 标题，你不用手动复制是哪张图。
 
-来源链接不是必填项，自己生成或没有公开出处的作品也可以投稿，但仍需要如实填写来源和授权状态。维护者审核后才会进入公开数据。
+来源链接不是必填。自己生成、没有公开出处的图也能投，但来源和授权要如实填，维护者核实后才进公开数据。
 
-图片一律放 GitHub 仓库，不自建对象存储：首批原图仍指向上游 `EDMOK/blue-fish-archive`（`CONFIG.upstreamRepo`），后续投稿的图片进本仓库，所以 `rawGithubPath(repo, path)` 的仓库参数是按记录传的，不要写死。等仓库大到装不下再考虑自托管。
+---
 
-## 路由
+## 页面结构
 
 | Hash | 内容 |
 |---|---|
-| `#/` | 作品列表（无限向下加载）|
-| `#/character/<角色ID>` | 某角色的作品（角色 ID 见 `数据契约.md`）|
-| `#/tag/<标签>` | 带该标签的作品 |
-| `#/work/<作品ID>` | 作品详情页（含评论区）|
-| `#/about` | 关于本站（文档页）|
-| `#/about/<章节>` | 直接跳到文档页某一节，如 `#/about/license` |
+| `#/` | 作品列表（向下滚动持续加载）|
+| `#/character/<角色ID>` | 某个角色的作品，角色 ID 见 `数据契约.md` |
+| `#/tag/<标签>` | 带某个标签的作品 |
+| `#/work/<作品ID>` | 作品详情页，含评论区 |
+| `#/about` | 关于本站（收录范围、来源与授权、版权与删除、常见问题）|
+| `#/about/<章节>` | 直达某一节，例如 `#/about/license` |
 
-作品卡片是真实 `<a>` 链接，中键新标签打开、复制链接分享、前进后退都能用。
+作品卡片是真实的 `<a>`，所以中键新标签打开、复制链接发给别人、前进后退都是正常的。
 
-## 列表的无限向下加载
+文件长这样：
 
-- 首批渲染 `PAGE_SIZE`（24）张，滑到接近底部时追加下一批，全程只往列表后面插节点，
-  不整页重渲染，滚动位置不会被重置；到底后显示「已经到底了 · 共 N 张」。
-- 触发方式用了两条：`IntersectionObserver` 观察底部哨兵，外加 `scroll` 兜底检查。
-  两条都指向同一个幂等的 `loadNextPage()`——IO 在部分内嵌 / 后台渲染环境里回调会延迟，
-  只靠它会出现「滑到底不加载」。
-- **瀑布流不用 CSS `multi-column`**：多列布局在追加内容时会整体重新平衡，实测追加一批
-  （24→48 张）就有 18 张卡片跳列、位移最多 2369px，滚动时脚下内容会乱。现在由
-  `appendToMasonry()` 把卡片投放到「当前最矮的一列」（`--card-min` / `--columns-max`
-  两个变量决定列数，断点仍只写在样式表里），已有卡片永不移动——同样条件下实测位移 0px，
-  180 张加载完四列高度完全相等。
-- 列高用「缩略图高度（按真实宽高比换算）+ `CARD_BODY_HEIGHT`」估算，只影响各列均衡，
-  不影响正确性。改卡片信息区高度时顺手调一下这个常量。
-- 视口宽度变化会防抖重排一次（列数变了）。筛选条件或排序变化时批次数回到第一页。
-
-## 演示数据说明
-
-为了让「一直往下滑」能真的滑起来，`app.js` 里除了 12 条手写作品，还会按索引确定性地生成
-168 条占位作品（名称、Tag、尺寸、格式全部由索引推导，刷新不变），合计 180 条。
-
-接入真实投稿数据时，删掉 `generatePlaceholderWorks()` 与 `PLACEHOLDER_*` 常量即可，
-其余代码不用动。
-
-## 设计 Token 约定
-
-视觉基准是 **pixiv / GitHub 这类成熟内容站**，不是落地页：亮色为默认，中性灰底 + 标准蓝，
-小圆角（2/3/4/6px），正文 14px、页面标题 24px 封顶，区块之间靠 1px 描边划分，
-不用辉光、渐变背景、玻璃拟态、悬浮位移和大阴影。
-
-1. 颜色、字号、间距、圆角、阴影、动效时长只在 `tokens.css` 里定义；
-2. `styles.css` 只使用语义变量（`--text-primary`、`--bg-surface`、`--space-4` …），不出现硬编码色值；
-3. 小屏差异优先"重定义 Token"，其次才加断点样式（`tokens.css` 末尾已有 1080 / 760 两档收缩）；
-4. 分节标题用 `.section-label`（同字号加粗 + 下划线），**不要再用 11px 全大写字母间距的小标签**；
-5. 图标一律内联 SVG（`app.js` 的 `ICONS`），不使用 emoji；
-6. 换主题靠 `data-theme="light|dark"`，两份语义层已就位，组件层不用改。
-   深色是中性灰黑（不带蓝调），默认亮色；主题偏好存在 `localStorage` 的 `aigirl-theme-2`，
-   想强制所有人回到默认主题时换这个键名即可（`index.html` 的引导脚本与 `CONFIG.theme.storageKey` 要同步改）。
-
-作品图容器的底色（`--art-*`）也定义在 Token 里，由 `.sticker-art` 的渐变消费；图片加载失败时的回退块沿用同一容器，JS 里不重复色板。
-
-## 评论接入
-
-**结论：用 Giscus。** 它把评论存在 GitHub Discussions 里，静态站点无需任何服务器、数据库或运维，与本站已有的 GitHub 投稿流程同源。
-
-**当前状态：已开启**，复用博客评论区仓库 [`lmy414/lmy414-blog-comments`](https://github.com/lmy414/lmy414-blog-comments) 的 `Announcements` 分类（`repoId=R_kgDOTUvnVw`、`categoryId=DIC_kwDOTUvnV84DF4fs`，已写进 `dist/app.js`）。派生此项目时按下面三步换成你自己的仓库。
-
-### 三步开启
-
-1. 准备仓库：把站点仓库设为 public，`Settings → Features` 勾选 **Discussions**；在 Discussions 里保留默认的 **Announcements** 分类（该分类只有维护者能发起新讨论，正好对应"评论只能挂在作品讨论串下"）。
-2. 安装并授权 [giscus App](https://github.com/apps/giscus)；打开 [giscus.app/zh-CN](https://giscus.app/zh-CN)，填入仓库与分类，拿到 `repoId` 与 `categoryId`。
-3. 填进 `dist/app.js`：
-
-```js
-comments: {
-  provider: "giscus",
-  giscus: {
-    repo: "你的用户名/仓库名",
-    repoId: "R_kgDO…",
-    category: "Announcements",
-    categoryId: "DIC_kwDO…"
-  }
-}
+```text
+dist/
+  index.html    壳层：顶栏、页脚、主题引导脚本、分享用的 og、站点验证标记
+  tokens.css    设计 Token（原始值 + 语义层，深浅两套）
+  styles.css    组件与页面样式（只用 Token，不写死色值）
+  app.js        数据、路由、视图、评论区
+  robots.txt    爬虫规则（/data/ 不放行，免得爬虫来吃 34 MB 图片）
+  data/         图片与清单（不进仓库）
+assets/         favicon 原图与透明底版本
+tools/          favicon 处理脚本
+数据契约.md      字段定义、投稿校验、来源与授权类型
+.github/        Issue 模板
 ```
 
-四项填全即生效；未填全时详情页会显示"评论尚未开启"的占位说明，不会报错。
+---
 
-### 为什么是 `mapping=specific`
+## 评论区
 
-本站是 hash 路由，所有作品的 `pathname` 完全一样。Giscus 默认按 `pathname` 映射讨论串，会把 12 张作品的评论全部塞进同一个讨论。因此代码里固定使用：
+用 **Giscus**：评论存在 GitHub Discussions 里，静态站不用自己养服务器和数据库，而且跟投稿用的是同一套 GitHub 账号体系。
+
+本站已经跑通，复用的是博客那个评论区仓库 [`lmy414/lmy414-blog-comments`](https://github.com/lmy414/lmy414-blog-comments) 的 `Announcements` 分类，参数写在 `dist/app.js` 的 `CONFIG.comments.giscus` 里（`repoId=R_kgDOTUvnVw`、`categoryId=DIC_kwDOTUvnV84DF4fs`）。2026-09-18 首发评论验证过，讨论串能正常建在 `Announcements` 下。
+
+派生这个项目时换三步：
+
+1. 仓库设成 public，`Settings → Features` 勾上 **Discussions**。留着默认的 **Announcements** 分类——只有维护者能在里面发起新讨论，正好对应"评论只能挂在作品自己的串下"。
+2. 安装并授权 [giscus App](https://github.com/apps/giscus)，去 [giscus.app/zh-CN](https://giscus.app/zh-CN) 填仓库和分类，拿 `repoId` 与 `categoryId`。
+3. 四项填进 `CONFIG.comments.giscus`。填全才生效；没填全时详情页显示"评论功能尚未开启"的说明，不会报错。
+
+### 一个必须记住的坑：`mapping=specific`
+
+本站是 hash 路由，**所有作品的 `pathname` 一模一样**。Giscus 默认按 `pathname` 映射讨论串，那样整站作品的评论会全挤进同一个讨论。所以代码里钉死了：
 
 ```js
 data-mapping = "specific"
 data-term    = `sticker-${sticker.id}`
 ```
 
-保证一张作品一个独立讨论串。**改路由方案时务必回看这一条。**
+一张作品一个串。**改路由方案时一定回来看这条。**
 
-### 备选方案对比
+### 其它方案
 
-| 方案 | 需要服务器吗 | 登录方式 | 深浅色 | 取舍 |
-|---|---|---|---|---|
-| **Giscus**（当前） | 不需要，评论存在 GitHub Discussions | GitHub 账号 | 支持，可跟随本站主题 | 零运维；国内访问 GitHub 不稳定时评论区加载慢 |
-| Utterances | 不需要，存在 GitHub Issues | GitHub 账号 | 支持 | 只支持一层评论，项目维护已放缓 |
-| Waline | 需要部署（Vercel/Netlify 免费层可跑，自带数据库） | 可匿名 | 支持 | 有后台、支持表情与邮件通知；但要自己维护实例 |
-| Twikoo | 需要部署（Serverless + 云数据库） | 可匿名 | 支持 | 功能最全，配置最重 |
-| Disqus | 不需要 | 第三方账号（无 GitHub） | 支持 | 带广告与追踪脚本，与本站"无追踪、纯静态"的定位冲突 |
+不想让访客必须登录 GitHub，就换 Waline（可匿名评论、有后台、免费层能跑），代价是多一个要维护的实例。Utterances 只支持一层评论且维护放缓；Twikoo 功能最全但配置最重；Disqus 带广告和追踪脚本，跟这个站"零追踪"的定位冲突。切换时改 `CONFIG.comments.provider`，并在 `mountComments()` 里加一个分支。
 
-要匿名评论（访客不想登录 GitHub）就换 Waline，代价是引入一个需要维护的免费实例；其余场景 Giscus 是最省事的选择。切换方式：改 `CONFIG.comments.provider`，并按需在 `mountComments()` 里加一个分支。
+---
 
-## 数据现状
+## 视觉规矩
 
-站点已经接入首批真实图片，数据分两层：
+参照对象是 **pixiv、GitHub 这类内容站**，不是营销落地页：默认亮色，中性灰底配标准蓝，小圆角（2 / 3 / 4 / 6px），正文 14px、页面标题最大 24px，区块之间用 1px 描边分开。不用辉光、渐变背景、玻璃拟态、悬浮位移和大阴影。
 
-- `dist/data/blue-fish-classification.json` 是从上游公开清单（`EDMOK/blue-fish-archive`）导入的 205 条记录，`app.js` 的 `loadLocalDataset()` 在首屏渲染前读它并用 `mapLocalRecord()` 映射成作品记录；名称、Tag、角色三项齐全的才进入展示，当前是 146 条，其余 59 条留在清单里不展示。
-- `dist/data/blue-fish/previews/` 是本站自己托管的 205 张预览图（约 34 MB）。这个目录被 `.gitignore` 排除，不进公开仓库，只存在于本地和服务器。
-- 每条记录的 `origin.author` 为空、`license.type` 为 `unknown`，详情页会如实显示「未标注 / 授权状态不明」。**上游清单没有逐条作者与授权信息，这是当前最大的缺口**：收录新条目时要按 `数据契约.md` 补齐 `submitter` / `origin` / `license`。
-- 「下载原图」指向 `raw.githubusercontent.com/EDMOK/blue-fish-archive/...` 的上游原始文件（本站只存预览图，不存约 189 MB 的原图）。这是外部依赖，上游改动作废则该链接失效。
-- 只有清单读取失败（例如用 `file://` 直接打开）时才会回退到 `app.js` 里的 12 条手写作品与 168 条生成占位作品；这些演示作品没有图片文件，因此不会发出图片请求。
+1. 颜色、字号、间距、圆角、阴影、动效时长只在 `tokens.css` 定义；
+2. `styles.css` 只引用语义变量（`--text-primary`、`--bg-surface`、`--space-4`…），不出现硬编码色值；
+3. 小屏差异优先重定义 Token，其次才写断点样式（`tokens.css` 末尾已有 1080 / 760 两档收缩）；
+4. 分节标题用 `.section-label`（同字号加粗 + 下划线），不要再用 11px 全大写、拉字距的那种小标签；
+5. 图标一律内联 SVG（`app.js` 的 `ICONS`），不用 emoji；
+6. 主题靠 `data-theme="light|dark"` 切换，深浅两份语义层都在，组件层不用动。深色是中性灰黑、不带蓝调。偏好存在 `localStorage` 的 `aigirl-theme-2`——想强制所有人回到默认主题，换这个键名就行（`index.html` 的引导脚本和 `CONFIG.theme.storageKey` 要一起改）。
 
-## 目录与发布
+作品图容器的底色（`--art-*`）也在 Token 里，由 `.sticker-art` 的渐变消费；图片加载失败时的回退块沿用同一个容器，JS 里不另存一份色板。
 
-仓库默认把 `dist/` 作为静态站点根目录。GitHub Pages、Cloudflare Pages、Netlify 等静态托管均可直接发布该目录。
+---
 
-```text
-.
-├─ dist/                 # 可直接发布的网站文件
-├─ assets/               # favicon 原始图与透明处理版本
-├─ tools/                # favicon 处理脚本、发布脚本
-├─ 数据契约.md           # 作品、角色、投稿与搜索的数据约定
-└─ .github/              # GitHub Issue 投稿模板
-```
+## 列表加载与瀑布流
 
-### 本站的线上发布
+首批渲染 `PAGE_SIZE`（24）张，快滑到底时追加下一批。只往列表后面插节点，不整页重渲染，所以滚动位置不会被重置；到底显示「已经到底了 · 共 N 张」。
 
-正式站在阿里云香港（QuickSite Studio 里的 `aliyun-hk`）以 nginx 静态站点托管，域名是国际化域名
-`蓝色大肥鱼.com`（punycode `xn--pssy23gqgbz2d718b.com`），旧域名 `dafeiyu.dshregistry.xyz` 整站 301 过来。
-服务器上的布局是发布目录 + 软链：
+触发用了两条路：`IntersectionObserver` 观察底部哨兵，外加一个 `scroll` 兜底检查，两条都指向同一个幂等的 `loadNextPage()`。因为 IO 在部分内嵌 / 后台渲染环境里回调会延迟，只靠它会出现"滑到底不加载"。
+
+**瀑布流故意不用 CSS `multi-column`。** 多列布局在追加内容时会整体重新平衡——实测从 24 张追加到 48 张，有 18 张卡片跳列、最大位移 2369px，滚动时脚下内容是乱的。现在由 `appendToMasonry()` 把每张卡投进「当前最矮的一列」（列数由 `--card-min` 和 `--columns-max` 决定，断点仍只写在样式表里），已有卡片永不移动：同样条件下实测位移 0px，180 张加载完四列高度完全相等。
+
+列高用「缩略图高度（按真实宽高比换算）+ `CARD_BODY_HEIGHT`」估算，它只影响各列是否均衡，不影响正确性；改卡片信息区高度时顺手调一下这个常量。视口宽度变化会防抖重排一次，筛选或排序变化时批次回到第一页。
+
+---
+
+## 发布与回滚
+
+`dist/` 就是站点根目录，GitHub Pages / Cloudflare Pages / Netlify 直接发布这个目录都行。
+
+本站正式跑在阿里云香港的 nginx 上，服务器上是"发布目录 + 软链"：
 
 ```text
 /srv/www/dafeiyu/
-├─ releases/<YYYYmmdd-HHMMSS>/   # 每次发布一个自包含目录
-└─ current -> releases/<版本>     # nginx root 指向它，切软链即切版本
+├─ releases/<YYYYmmdd-HHMMSS>/   每次发布一个自包含目录
+└─ current -> releases/<版本>     nginx root 指向它，切软链就是切版本
 ```
 
-发布脚本 `tools/deploy.mjs` 留在维护者本机（里面写着服务器路径，不进公开仓库）。它经本地 QuickSite Studio
-面板的 `qss` CLI 操作服务器，写命令都会在面板任务中心先显示计划、等人工确认，并落审计日志。等价的四步手工流程：
+旧域名 `dafeiyu.dshregistry.xyz` 整站 301 到中文域名。
+
+发布脚本 `tools/deploy.mjs` 留在维护者本机（里面写着服务器路径，不进公开仓库）。它通过本地 QuickSite Studio 面板的 `qss` CLI 操作服务器，写命令都会在面板任务中心先显示计划、等人工确认，并落审计日志。等价的手工流程就四步：
 
 ```bash
 tar -czf site.tgz -C dist .                                 # 1. 打包 dist/
@@ -198,9 +170,16 @@ qss exec "mkdir -p /srv/www/dafeiyu/releases/<ts> \
 curl -sI https://xn--pssy23gqgbz2d718b.com/                 # 4. 回读验证
 ```
 
-新 release 的目录设成 755、文件设成 644；图片目录用 `cp -al` 从上一版硬链接过来，避免每次重传 34 MB。
-回滚只要把 `current` 指回上一个 `releases/<ts>`，不删任何文件。
+新 release 里目录设 755、文件设 644；图片目录用 `cp -al` 从上一版硬链接过来，不用每次重传 34 MB。回滚就是把 `current` 指回上一个 `releases/<ts>`，不删任何文件。
 
-## 开源与版权边界
+改了 `app.js` 或样式，记得同步 `index.html` 里的 `?v=` 数字，否则访问者拿的还是旧缓存。
 
-程序代码以 [MIT License](LICENSE) 发布。`assets/` 中的站点图标是本项目生成的品牌素材；投稿进入站点的表情包不因进入本仓库而自动获得 MIT 授权，具体使用条件以作品详情页的来源与授权信息为准。发现署名、来源或版权问题，可通过 Issue 申请修改或删除。
+---
+
+## 许可与版权边界
+
+程序代码以 [MIT License](LICENSE) 发布。`assets/` 里的站点图标是本项目生成的品牌素材。
+
+投稿或收录进来的表情包**不会因为进了这个仓库就自动获得 MIT 授权**，能不能用、怎么用，以每张作品详情页上的来源与授权为准。标注「原作者明确授权」或 CC 协议的按对应条款走；标注「授权状态不明」的先联系原作者，别直接商用。
+
+发现署名、来源或授权有问题，走 Issue 模板里的「署名与删除申请」。
