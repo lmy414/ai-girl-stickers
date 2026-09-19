@@ -36,6 +36,8 @@ const CONFIG = {
   },
   /* 本地首批预览导入：仅在本地存在时启用，未导入时仍回退到演示数据。 */
   localDataUrl: "data/blue-fish-classification.json",
+  /* 站长自用板块：清单与预览都进仓库，字段已是 数据契约.md 的正式形状。 */
+  ownerPicksDataUrl: "owner-picks/works.json",
   /* 键名带版本：改版后换键可以让旧的深色偏好失效，默认回到亮色 */
   theme: { storageKey: "aigirl-theme-2", default: "light" }
 };
@@ -52,7 +54,9 @@ const characters = [
   { id: "claude", name: "Claude娘", aliases: ["Claude"] },
   { id: "gemini", name: "Gemini娘", aliases: ["Gemini"] },
   { id: "grok", name: "Grok娘", aliases: ["Grok"] },
-  { id: "other", name: "其他角色", aliases: [] }
+  { id: "other", name: "其他角色", aliases: [] },
+  /* 不是角色，是站长的自用图集；所以不出现在投稿模板的角色下拉里。 */
+  { id: "owner-picks", name: "站长自用", aliases: ["站长自用图", "自用"] }
 ];
 
 const stickers = [
@@ -350,22 +354,32 @@ function mapLocalRecord(record, index) {
   };
 }
 
-async function loadLocalDataset() {
+async function fetchJson(url) {
   try {
-    const response = await fetch(CONFIG.localDataUrl, { cache: "no-store" });
-    if (!response.ok) return;
-    const records = await response.json();
-    if (!Array.isArray(records) || !records.length) return;
-
-    const imported = records.map(mapLocalRecord).filter(Boolean);
-    if (!imported.length) return;
-
-    stickers.splice(0, stickers.length, ...imported);
-    dataMode = "local";
-    localImportSkipped = records.length - imported.length;
+    const response = await fetch(url, { cache: "no-store" });
+    return response.ok ? await response.json() : null;
   } catch (error) {
     /* 直接打开 dist/index.html 时 fetch 可能被浏览器拦截，保留演示回退。 */
+    return null;
   }
+}
+
+async function loadLocalDataset() {
+  const [firstBatch, ownerPicks] = await Promise.all([
+    fetchJson(CONFIG.localDataUrl),
+    fetchJson(CONFIG.ownerPicksDataUrl)
+  ]);
+
+  const records = Array.isArray(firstBatch) ? firstBatch : [];
+  const imported = records.map(mapLocalRecord).filter(Boolean);
+  /* 站长自用清单本身就是 数据契约.md 的正式形状，不需要映射。 */
+  const ownerPickRecords = Array.isArray(ownerPicks) ? ownerPicks : [];
+
+  if (!imported.length && !ownerPickRecords.length) return;
+
+  stickers.splice(0, stickers.length, ...imported, ...ownerPickRecords);
+  dataMode = "local";
+  localImportSkipped = records.length - imported.length;
 }
 
 /* ==========================================================================
@@ -613,7 +627,7 @@ function cardMarkup(sticker) {
 function galleryIntro() {
   const formats = new Set(published().map((sticker) => sticker.format));
   const roleTotal = characters.filter((character) => character.id !== "all").length;
-  const localNote = dataMode === "local"
+  const localNote = dataMode === "local" && localImportSkipped
     ? `<p class="meta-line">首批收录 · 另有 ${localImportSkipped} 条名称或 Tag 待确认，暂不展示</p>`
     : "";
   return `

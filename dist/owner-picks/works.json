@@ -1,0 +1,167 @@
+[
+  {
+    "id": "sticker_op_001",
+    "name": "蓝发女仆",
+    "description": "站长自己用 AI 生成的女仆装蓝发大头贴。",
+    "path": "https://raw.githubusercontent.com/lmy414/ai-girl-stickers/main/owner-picks/blue-maid.png",
+    "thumbnailPath": "owner-picks/previews/blue-maid.webp",
+    "fullPath": "owner-picks/previews/blue-maid.webp",
+    "format": "png",
+    "mimeType": "image/png",
+    "isAnimated": false,
+    "width": 1254,
+    "height": 1254,
+    "fileSize": 1384473,
+    "sha256": "878588e96ea632e216c25773ada6bc5a13475c98f9b59a0a1b1f336f34ce97e5",
+    "characterId": "owner-picks",
+    "tags": [
+      "女仆",
+      "蓝发",
+      "大头"
+    ],
+    "submitter": {
+      "name": "站长",
+      "github": "lmy414"
+    },
+    "origin": {
+      "type": "self-created",
+      "sourceUrl": null,
+      "author": "lmy414",
+      "note": "站长自己用 AI 生成，放在本站「站长自用」板块"
+    },
+    "license": {
+      "type": "submitter-permission",
+      "note": "站长本人的图，允许本站展示与下载"
+    },
+    "status": "published",
+    "createdAt": "2026-09-19T19:18:00+08:00",
+    "updatedAt": "2026-09-19T19:18:00+08:00",
+    "tone": "owner-picks",
+    "symbol": "",
+    "sourceIssue": null
+  },
+  {
+    "id": "sticker_op_002",
+    "name": "橙发看书",
+    "description": "站长自己用 AI 生成的橙发捧书大头贴。",
+    "path": "https://raw.githubusercontent.com/lmy414/ai-girl-stickers/main/owner-picks/orange-reading.png",
+    "thumbnailPath": "owner-picks/previews/orange-reading.webp",
+    "fullPath": "owner-picks/previews/orange-reading.webp",
+    "format": "png",
+    "mimeType": "image/png",
+    "isAnimated": false,
+    "width": 1254,
+    "height": 1254,
+    "fileSize": 1442123,
+    "sha256": "ac38726bff6b266953e82447741e80d8210387f3fa5118d446144f565358aebc",
+    "characterId": "owner-picks",
+    "tags": [
+      "看书",
+      "橙发",
+      "大头"
+    ],
+    "submitter": {
+      "name": "站长",
+      "github": "lmy414"
+    },
+    "origin": {
+      "type": "self-created",
+      "sourceUrl": null,
+      "author": "lmy414",
+      "note": "站长自己用 AI 生成，放在本站「站长自用」板块"
+    },
+    "license": {
+      "type": "submitter-permission",
+      "note": "站长本人的图，允许本站展示与下载"
+    },
+    "status": "published",
+    "createdAt": "2026-09-19T19:18:00+08:00",
+    "updatedAt": "2026-09-19T19:18:00+08:00",
+    "tone": "owner-picks",
+    "symbol": "",
+    "sourceIssue": null
+  },
+  {
+    "id": "sticker_op_003",
+    "name": "白发中国结",
+    "description": "站长自己用 AI 生成的白发中国结发饰大头贴。",
+    "path": "https://raw.githubusercontent.com/lmy414/ai-girl-stickers/main/owner-picks/white-hair-knot.png",
+    "thumbnailPath": "owner-picks/previews/white-hair-knot.webp",
+    "fullPath": "owner-picks/previews/white-hair-knot.webp",
+    "format": "png",
+    "mimeType": "image/png",
+    "isAnimated": false,
+    "width": 1254,
+    "height": 1254,
+    "fileSize": 1222994,
+    "sha256": "597bb0c7eef2c561fbf834e9957547e15cf3f059e31accab7df3e2ea2ff201e1",
+    "characterId": "owner-picks",
+    "tags": [
+      "白发",
+      "中国结",
+      "大头"
+    ],
+    "submitter": {
+      "name": "站长",
+      "github": "lmy414"
+    },
+    "origin": {
+      "type": "self-created",
+      "sourceUrl": null,
+      "author": "lmy414",
+      "note": "站长自己用 AI 生成，放在本站「站长自用」板块"
+    },
+    "license": {
+      "type": "submitter-permission",
+      "note": "站长本人的图，允许本站展示与下载"
+    },
+    "status": "published",
+    "createdAt": "2026-09-19T19:18:00+08:00",
+    "updatedAt": "2026-09-19T19:18:00+08:00",
+    "tone": "owner-picks",
+    "symbol": "",
+    "sourceIssue": null
+  },
+  {
+    "id": "sticker_op_004",
+    "name": "紫发猫耳",
+    "description": "站长自己用 AI 生成的紫发猫耳异色瞳大头贴。",
+    "path": "https://raw.githubusercontent.com/lmy414/ai-girl-stickers/main/owner-picks/purple-cat-ears.png",
+    "thumbnailPath": "owner-picks/previews/purple-cat-ears.webp",
+    "fullPath": "owner-picks/previews/purple-cat-ears.webp",
+    "format": "png",
+    "mimeType": "image/png",
+    "isAnimated": false,
+    "width": 1254,
+    "height": 1254,
+    "fileSize": 1412586,
+    "sha256": "742f25911ddbd578eabf3f163c85eb5dd1d771f8df2a0b91942c844d0bf082af",
+    "characterId": "owner-picks",
+    "tags": [
+      "猫耳",
+      "异色瞳",
+      "星星",
+      "大头"
+    ],
+    "submitter": {
+      "name": "站长",
+      "github": "lmy414"
+    },
+    "origin": {
+      "type": "self-created",
+      "sourceUrl": null,
+      "author": "lmy414",
+      "note": "站长自己用 AI 生成，放在本站「站长自用」板块"
+    },
+    "license": {
+      "type": "submitter-permission",
+      "note": "站长本人的图，允许本站展示与下载"
+    },
+    "status": "published",
+    "createdAt": "2026-09-19T19:18:00+08:00",
+    "updatedAt": "2026-09-19T19:18:00+08:00",
+    "tone": "owner-picks",
+    "symbol": "",
+    "sourceIssue": null
+  }
+]

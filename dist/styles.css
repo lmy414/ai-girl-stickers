@@ -297,6 +297,7 @@ a.tag:hover {
 .art-gemini   { --art-a: var(--art-gemini-a);   --art-b: var(--art-gemini-b); }
 .art-grok     { --art-a: var(--art-grok-a);     --art-b: var(--art-grok-b); }
 .art-other    { --art-a: var(--art-other-a);    --art-b: var(--art-other-b); }
+.art-owner-picks { --art-a: var(--art-owner-picks-a); --art-b: var(--art-owner-picks-b); }
 
 /* --- 作品图：本地首批预览与缺图回退共用同一容器 --- */
 .sticker-art {

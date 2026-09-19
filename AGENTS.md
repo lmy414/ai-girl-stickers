@@ -26,8 +26,8 @@ python -m http.server 5173 -d dist   # 打开 http://127.0.0.1:5173
 - **样式只消费 Token。** 颜色、字号、间距、圆角、阴影、动效时长一律去 `tokens.css` 定义；`styles.css` 里不出现硬编码色值。小屏差异优先重定义 Token，其次才写断点。图标用 `app.js` 的 `ICONS` 内联 SVG，不用 emoji。
 - **Giscus 的 `data-mapping` 必须是 `specific`、`data-term` 必须是 `sticker-<id>`。** 本站是 hash 路由，所有作品的 `pathname` 一模一样，按默认映射会把全部评论塞进同一个讨论串。改路由方案时回看这条。
 - **`rawGithubPath(repo, path)` 的仓库参数按记录传。** 首批原图在上游 `EDMOK/blue-fish-archive`（`CONFIG.upstreamRepo`），以后投稿的图片进本仓库——写死一个仓库名会让投稿作品的原图指向错的地方。
-- **`dist/data/`（图片与清单）、`tools/deploy.mjs`、`staging/` 都不进 git**，已经被 `.gitignore` 排除。别用 `git add -A` 把它们扫进来。
-- 新增角色要同时改两处：`app.js` 的 `characters` 数组，和投稿模板 `sticker-submission.yml` 里的角色下拉选项。
+- **`dist/data/`（图片与清单）、`tools/deploy.mjs`、`staging/` 都不进 git**，已经被 `.gitignore` 排除。别用 `git add -A` 把它们扫进来。例外是 **`dist/owner-picks/`**（站长自用板块的清单与预览）——它不在 `data/` 下，是进 git 的，因为那批图的原图本来就在同一个仓库里。
+- 新增角色要同时改两处：`app.js` 的 `characters` 数组，和投稿模板 `sticker-submission.yml` 里的角色下拉选项。**`owner-picks`（站长自用）是这条的例外**：它借 `characters` 结构做分类，但不是角色，不要加进投稿下拉，也别给它配品牌色 Token（用的是 `--art-owner-picks-*` 那组中性石板蓝）。
 
 ## 已经定下的方向，不用再问
 
