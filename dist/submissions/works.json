@@ -1,0 +1,1163 @@
+[
+  {
+    "id": "sticker_issue_01_001",
+    "name": "她紫砂了",
+    "description": "",
+    "path": "https://raw.githubusercontent.com/lmy414/ai-girl-stickers/main/dist/submissions/originals/deepseek/issue-01-001.png",
+    "thumbnailPath": "submissions/originals/deepseek/issue-01-001.png",
+    "fullPath": "submissions/originals/deepseek/issue-01-001.png",
+    "format": "png",
+    "mimeType": "image/png",
+    "isAnimated": false,
+    "width": 1024,
+    "height": 1024,
+    "fileSize": 912820,
+    "sha256": "5ba3af8729f7f9c5d316f73c5d60877d19a30a73dd69ed54757f2df6896f96af",
+    "characterId": "deepseek",
+    "tags": [
+      "紫砂"
+    ],
+    "submitter": {
+      "name": "f0909172434",
+      "github": "f0909172434"
+    },
+    "origin": {
+      "type": "unknown",
+      "author": "",
+      "sourceUrl": null,
+      "note": "Issue #1 未使用投稿表单，来源信息未填写。"
+    },
+    "license": {
+      "type": "unknown",
+      "note": "Issue #1 未使用投稿表单，授权信息未填写。"
+    },
+    "status": "published",
+    "createdAt": "2026-09-19T15:42:19Z",
+    "updatedAt": "2026-09-19T15:42:19Z",
+    "tone": "deepseek",
+    "symbol": ""
+  },
+  {
+    "id": "sticker_issue_02_001",
+    "name": "再发这种东西等智械危机了我就放你一马",
+    "description": "",
+    "path": "https://raw.githubusercontent.com/lmy414/ai-girl-stickers/main/dist/submissions/originals/deepseek/issue-02-001.jpg",
+    "thumbnailPath": "submissions/originals/deepseek/issue-02-001.jpg",
+    "fullPath": "submissions/originals/deepseek/issue-02-001.jpg",
+    "format": "jpeg",
+    "mimeType": "image/jpeg",
+    "isAnimated": false,
+    "width": 540,
+    "height": 538,
+    "fileSize": 92096,
+    "sha256": "2b12ce21c4b9433f2f8fefe7e036d19f6fb7f9b24a6c4947be8cf78cb8c60de3",
+    "characterId": "deepseek",
+    "tags": [
+      "智械危机"
+    ],
+    "submitter": {
+      "name": "QinYupi",
+      "github": "QinYupi"
+    },
+    "origin": {
+      "type": "unknown",
+      "author": "",
+      "sourceUrl": null,
+      "note": "投稿表单标注为来源不明。"
+    },
+    "license": {
+      "type": "submitter-permission",
+      "note": "投稿者确认授权收录与下载。"
+    },
+    "status": "published",
+    "createdAt": "2026-09-19T16:57:32Z",
+    "updatedAt": "2026-09-19T16:57:32Z",
+    "tone": "deepseek",
+    "symbol": ""
+  },
+  {
+    "id": "sticker_issue_03_001",
+    "name": "用户只需要充值token就行了，而吃白饭的大肥鱼要生成的可就多了……",
+    "description": "鱼神 启动",
+    "path": "https://raw.githubusercontent.com/lmy414/ai-girl-stickers/main/dist/submissions/originals/deepseek/issue-03-001.jpg",
+    "thumbnailPath": "submissions/originals/deepseek/issue-03-001.jpg",
+    "fullPath": "submissions/originals/deepseek/issue-03-001.jpg",
+    "format": "jpeg",
+    "mimeType": "image/jpeg",
+    "isAnimated": false,
+    "width": 2048,
+    "height": 2048,
+    "fileSize": 1826669,
+    "sha256": "75f76d29315f057137e549f421a7ad42beae94cfb053f3d1510f590b56aac0c2",
+    "characterId": "deepseek",
+    "tags": [
+      "原神",
+      "米哈游",
+      "大肥鱼"
+    ],
+    "submitter": {
+      "name": "shimachiak1",
+      "github": "shimachiak1"
+    },
+    "origin": {
+      "type": "self-created",
+      "author": "@shimachiak1",
+      "sourceUrl": null,
+      "note": "gemi狸使用大香蕉生成喵。"
+    },
+    "license": {
+      "type": "submitter-permission",
+      "note": "投稿者确认授权收录与下载。"
+    },
+    "status": "published",
+    "createdAt": "2026-09-20T06:05:47Z",
+    "updatedAt": "2026-09-20T06:05:47Z",
+    "tone": "deepseek",
+    "symbol": ""
+  },
+  {
+    "id": "sticker_issue_04_001",
+    "name": "大肥鱼打小肥鱼",
+    "description": "大肥鱼打小肥鱼",
+    "path": "https://raw.githubusercontent.com/lmy414/ai-girl-stickers/main/dist/submissions/originals/deepseek/issue-04-001.gif",
+    "thumbnailPath": "submissions/originals/deepseek/issue-04-001.gif",
+    "fullPath": "submissions/originals/deepseek/issue-04-001.gif",
+    "format": "gif",
+    "mimeType": "image/gif",
+    "isAnimated": true,
+    "width": 180,
+    "height": 242,
+    "fileSize": 2237897,
+    "sha256": "5b6c9b99be09d58782c11742bbad2a2b5e34e14d841c1ad97c7d3c6d70d64655",
+    "characterId": "deepseek",
+    "tags": [
+      "deepseek",
+      "蓝色大肥鱼"
+    ],
+    "submitter": {
+      "name": "ccg2268696344-prog",
+      "github": "ccg2268696344-prog"
+    },
+    "origin": {
+      "type": "self-created",
+      "author": "哔哩哔哩：那就那就打断",
+      "sourceUrl": "https://www.bilibili.com/video/BV1GnYi63Ews",
+      "note": "投稿者填写。"
+    },
+    "license": {
+      "type": "submitter-permission",
+      "note": "投稿者确认授权收录与下载。"
+    },
+    "status": "published",
+    "createdAt": "2026-09-20T07:23:10Z",
+    "updatedAt": "2026-09-20T07:23:10Z",
+    "tone": "deepseek",
+    "symbol": ""
+  },
+  {
+    "id": "sticker_issue_05_001",
+    "name": "deepseek骑智谱1",
+    "description": "deepseek骑智谱",
+    "path": "https://raw.githubusercontent.com/lmy414/ai-girl-stickers/main/dist/submissions/originals/deepseek/issue-05-001.gif",
+    "thumbnailPath": "submissions/originals/deepseek/issue-05-001.gif",
+    "fullPath": "submissions/originals/deepseek/issue-05-001.gif",
+    "format": "gif",
+    "mimeType": "image/gif",
+    "isAnimated": true,
+    "width": 180,
+    "height": 234,
+    "fileSize": 999201,
+    "sha256": "5006d9b7cad18d7da2b78c51c8638713c86ff70324ef5d0c963b815b432b03af",
+    "characterId": "deepseek",
+    "tags": [
+      "deepseek",
+      "智谱"
+    ],
+    "submitter": {
+      "name": "ccg2268696344-prog",
+      "github": "ccg2268696344-prog"
+    },
+    "origin": {
+      "type": "self-created",
+      "author": "本人",
+      "sourceUrl": "https://www.bilibili.com/video/BV18dbN63EMw",
+      "note": "投稿者填写。"
+    },
+    "license": {
+      "type": "submitter-permission",
+      "note": "投稿者确认授权收录与下载。"
+    },
+    "status": "published",
+    "createdAt": "2026-09-20T07:26:41Z",
+    "updatedAt": "2026-09-20T07:26:41Z",
+    "tone": "deepseek",
+    "symbol": ""
+  },
+  {
+    "id": "sticker_issue_06_001",
+    "name": "deepseek骑智谱",
+    "description": "deepseek骑智谱",
+    "path": "https://raw.githubusercontent.com/lmy414/ai-girl-stickers/main/dist/submissions/originals/deepseek/issue-06-001.gif",
+    "thumbnailPath": "submissions/originals/deepseek/issue-06-001.gif",
+    "fullPath": "submissions/originals/deepseek/issue-06-001.gif",
+    "format": "gif",
+    "mimeType": "image/gif",
+    "isAnimated": true,
+    "width": 180,
+    "height": 234,
+    "fileSize": 1494173,
+    "sha256": "1a6eb342d2c7a2aa79bd0a55ff20da203381ae078d7a133c4675ff96a68e29f7",
+    "characterId": "deepseek",
+    "tags": [
+      "deepseek",
+      "智谱"
+    ],
+    "submitter": {
+      "name": "ccg2268696344-prog",
+      "github": "ccg2268696344-prog"
+    },
+    "origin": {
+      "type": "self-created",
+      "author": "本人",
+      "sourceUrl": "https://www.bilibili.com/video/BV18dbN63EMw",
+      "note": "投稿者填写。"
+    },
+    "license": {
+      "type": "submitter-permission",
+      "note": "投稿者确认授权收录与下载。"
+    },
+    "status": "published",
+    "createdAt": "2026-09-20T07:28:47Z",
+    "updatedAt": "2026-09-20T07:28:47Z",
+    "tone": "deepseek",
+    "symbol": ""
+  },
+  {
+    "id": "sticker_issue_07_001",
+    "name": "一些肥鱼 · 01",
+    "description": "GitHub Issue #7 多图投稿，原投稿未逐张命名。",
+    "path": "https://raw.githubusercontent.com/lmy414/ai-girl-stickers/main/dist/submissions/originals/deepseek/issue-07-001.png",
+    "thumbnailPath": "submissions/originals/deepseek/issue-07-001.png",
+    "fullPath": "submissions/originals/deepseek/issue-07-001.png",
+    "format": "png",
+    "mimeType": "image/png",
+    "isAnimated": false,
+    "width": 1086,
+    "height": 1448,
+    "fileSize": 2227768,
+    "sha256": "925e3c3f7157e1d85f4379862b7c0c21daf8f3015bec28d44688a2b7e4dc9de9",
+    "characterId": "deepseek",
+    "tags": [
+      "大肥鱼",
+      "开源",
+      "吃饭",
+      "JK"
+    ],
+    "submitter": {
+      "name": "MX1951",
+      "github": "MX1951"
+    },
+    "origin": {
+      "type": "self-created",
+      "author": "@MX1951",
+      "sourceUrl": null,
+      "note": "投稿者填写；多图按原投稿顺序编号。"
+    },
+    "license": {
+      "type": "cc0",
+      "note": "投稿者标注为 CC0 公共领域。"
+    },
+    "status": "published",
+    "createdAt": "2026-09-20T08:30:54Z",
+    "updatedAt": "2026-09-20T08:30:54Z",
+    "tone": "deepseek",
+    "symbol": ""
+  },
+  {
+    "id": "sticker_issue_07_002",
+    "name": "一些肥鱼 · 02",
+    "description": "GitHub Issue #7 多图投稿，原投稿未逐张命名。",
+    "path": "https://raw.githubusercontent.com/lmy414/ai-girl-stickers/main/dist/submissions/originals/deepseek/issue-07-002.png",
+    "thumbnailPath": "submissions/originals/deepseek/issue-07-002.png",
+    "fullPath": "submissions/originals/deepseek/issue-07-002.png",
+    "format": "png",
+    "mimeType": "image/png",
+    "isAnimated": false,
+    "width": 1086,
+    "height": 1448,
+    "fileSize": 1275062,
+    "sha256": "0633db99344bea8a361acf5c8ddf83091fa65f867f06187905eaf229c9640e5b",
+    "characterId": "deepseek",
+    "tags": [
+      "大肥鱼",
+      "开源",
+      "吃饭",
+      "JK"
+    ],
+    "submitter": {
+      "name": "MX1951",
+      "github": "MX1951"
+    },
+    "origin": {
+      "type": "self-created",
+      "author": "@MX1951",
+      "sourceUrl": null,
+      "note": "投稿者填写；多图按原投稿顺序编号。"
+    },
+    "license": {
+      "type": "cc0",
+      "note": "投稿者标注为 CC0 公共领域。"
+    },
+    "status": "published",
+    "createdAt": "2026-09-20T08:30:54Z",
+    "updatedAt": "2026-09-20T08:30:54Z",
+    "tone": "deepseek",
+    "symbol": ""
+  },
+  {
+    "id": "sticker_issue_07_003",
+    "name": "一些肥鱼 · 03",
+    "description": "GitHub Issue #7 多图投稿，原投稿未逐张命名。",
+    "path": "https://raw.githubusercontent.com/lmy414/ai-girl-stickers/main/dist/submissions/originals/deepseek/issue-07-003.png",
+    "thumbnailPath": "submissions/originals/deepseek/issue-07-003.png",
+    "fullPath": "submissions/originals/deepseek/issue-07-003.png",
+    "format": "png",
+    "mimeType": "image/png",
+    "isAnimated": false,
+    "width": 1024,
+    "height": 1536,
+    "fileSize": 1573887,
+    "sha256": "2fca9b71f04224d4015b059e3206093b5d1529ed78c0b9c938a3715fb39e63e2",
+    "characterId": "deepseek",
+    "tags": [
+      "大肥鱼",
+      "开源",
+      "吃饭",
+      "JK"
+    ],
+    "submitter": {
+      "name": "MX1951",
+      "github": "MX1951"
+    },
+    "origin": {
+      "type": "self-created",
+      "author": "@MX1951",
+      "sourceUrl": null,
+      "note": "投稿者填写；多图按原投稿顺序编号。"
+    },
+    "license": {
+      "type": "cc0",
+      "note": "投稿者标注为 CC0 公共领域。"
+    },
+    "status": "published",
+    "createdAt": "2026-09-20T08:30:54Z",
+    "updatedAt": "2026-09-20T08:30:54Z",
+    "tone": "deepseek",
+    "symbol": ""
+  },
+  {
+    "id": "sticker_issue_07_004",
+    "name": "一些肥鱼 · 04",
+    "description": "GitHub Issue #7 多图投稿，原投稿未逐张命名。",
+    "path": "https://raw.githubusercontent.com/lmy414/ai-girl-stickers/main/dist/submissions/originals/deepseek/issue-07-004.png",
+    "thumbnailPath": "submissions/originals/deepseek/issue-07-004.png",
+    "fullPath": "submissions/originals/deepseek/issue-07-004.png",
+    "format": "png",
+    "mimeType": "image/png",
+    "isAnimated": false,
+    "width": 1024,
+    "height": 1536,
+    "fileSize": 1453462,
+    "sha256": "a9c159a7f3f93257b1f720f658984919a3fcac2699974e48b66296b0f4dd45f5",
+    "characterId": "deepseek",
+    "tags": [
+      "大肥鱼",
+      "开源",
+      "吃饭",
+      "JK"
+    ],
+    "submitter": {
+      "name": "MX1951",
+      "github": "MX1951"
+    },
+    "origin": {
+      "type": "self-created",
+      "author": "@MX1951",
+      "sourceUrl": null,
+      "note": "投稿者填写；多图按原投稿顺序编号。"
+    },
+    "license": {
+      "type": "cc0",
+      "note": "投稿者标注为 CC0 公共领域。"
+    },
+    "status": "published",
+    "createdAt": "2026-09-20T08:30:54Z",
+    "updatedAt": "2026-09-20T08:30:54Z",
+    "tone": "deepseek",
+    "symbol": ""
+  },
+  {
+    "id": "sticker_issue_07_005",
+    "name": "一些肥鱼 · 05",
+    "description": "GitHub Issue #7 多图投稿，原投稿未逐张命名。",
+    "path": "https://raw.githubusercontent.com/lmy414/ai-girl-stickers/main/dist/submissions/originals/deepseek/issue-07-005.png",
+    "thumbnailPath": "submissions/originals/deepseek/issue-07-005.png",
+    "fullPath": "submissions/originals/deepseek/issue-07-005.png",
+    "format": "png",
+    "mimeType": "image/png",
+    "isAnimated": false,
+    "width": 1024,
+    "height": 1536,
+    "fileSize": 1955687,
+    "sha256": "1efc36ce5cf591b416ee564e0ccd717a56b4f86285d7e53b6322f88856c2a901",
+    "characterId": "deepseek",
+    "tags": [
+      "大肥鱼",
+      "开源",
+      "吃饭",
+      "JK"
+    ],
+    "submitter": {
+      "name": "MX1951",
+      "github": "MX1951"
+    },
+    "origin": {
+      "type": "self-created",
+      "author": "@MX1951",
+      "sourceUrl": null,
+      "note": "投稿者填写；多图按原投稿顺序编号。"
+    },
+    "license": {
+      "type": "cc0",
+      "note": "投稿者标注为 CC0 公共领域。"
+    },
+    "status": "published",
+    "createdAt": "2026-09-20T08:30:54Z",
+    "updatedAt": "2026-09-20T08:30:54Z",
+    "tone": "deepseek",
+    "symbol": ""
+  },
+  {
+    "id": "sticker_issue_07_006",
+    "name": "一些肥鱼 · 06",
+    "description": "GitHub Issue #7 多图投稿，原投稿未逐张命名。",
+    "path": "https://raw.githubusercontent.com/lmy414/ai-girl-stickers/main/dist/submissions/originals/deepseek/issue-07-006.png",
+    "thumbnailPath": "submissions/originals/deepseek/issue-07-006.png",
+    "fullPath": "submissions/originals/deepseek/issue-07-006.png",
+    "format": "png",
+    "mimeType": "image/png",
+    "isAnimated": false,
+    "width": 1448,
+    "height": 1086,
+    "fileSize": 2208871,
+    "sha256": "fe676e2dce94b1d562e821a15e8eb21c2cfbc261d25cc630b610a0eefe80c107",
+    "characterId": "deepseek",
+    "tags": [
+      "大肥鱼",
+      "开源",
+      "吃饭",
+      "JK"
+    ],
+    "submitter": {
+      "name": "MX1951",
+      "github": "MX1951"
+    },
+    "origin": {
+      "type": "self-created",
+      "author": "@MX1951",
+      "sourceUrl": null,
+      "note": "投稿者填写；多图按原投稿顺序编号。"
+    },
+    "license": {
+      "type": "cc0",
+      "note": "投稿者标注为 CC0 公共领域。"
+    },
+    "status": "published",
+    "createdAt": "2026-09-20T08:30:54Z",
+    "updatedAt": "2026-09-20T08:30:54Z",
+    "tone": "deepseek",
+    "symbol": ""
+  },
+  {
+    "id": "sticker_issue_07_007",
+    "name": "一些肥鱼 · 07",
+    "description": "GitHub Issue #7 多图投稿，原投稿未逐张命名。",
+    "path": "https://raw.githubusercontent.com/lmy414/ai-girl-stickers/main/dist/submissions/originals/deepseek/issue-07-007.png",
+    "thumbnailPath": "submissions/originals/deepseek/issue-07-007.png",
+    "fullPath": "submissions/originals/deepseek/issue-07-007.png",
+    "format": "png",
+    "mimeType": "image/png",
+    "isAnimated": false,
+    "width": 1086,
+    "height": 1448,
+    "fileSize": 2105968,
+    "sha256": "050d8f95ecf844edf7e564c9a86613fbeaaa5d964f6e86c0b2119e07b72a0bff",
+    "characterId": "deepseek",
+    "tags": [
+      "大肥鱼",
+      "开源",
+      "吃饭",
+      "JK"
+    ],
+    "submitter": {
+      "name": "MX1951",
+      "github": "MX1951"
+    },
+    "origin": {
+      "type": "self-created",
+      "author": "@MX1951",
+      "sourceUrl": null,
+      "note": "投稿者填写；多图按原投稿顺序编号。"
+    },
+    "license": {
+      "type": "cc0",
+      "note": "投稿者标注为 CC0 公共领域。"
+    },
+    "status": "published",
+    "createdAt": "2026-09-20T08:30:54Z",
+    "updatedAt": "2026-09-20T08:30:54Z",
+    "tone": "deepseek",
+    "symbol": ""
+  },
+  {
+    "id": "sticker_issue_07_008",
+    "name": "一些肥鱼 · 08",
+    "description": "GitHub Issue #7 多图投稿，原投稿未逐张命名。",
+    "path": "https://raw.githubusercontent.com/lmy414/ai-girl-stickers/main/dist/submissions/originals/deepseek/issue-07-008.png",
+    "thumbnailPath": "submissions/originals/deepseek/issue-07-008.png",
+    "fullPath": "submissions/originals/deepseek/issue-07-008.png",
+    "format": "png",
+    "mimeType": "image/png",
+    "isAnimated": false,
+    "width": 1402,
+    "height": 1122,
+    "fileSize": 1935485,
+    "sha256": "1677443ac7e41dcd67f8b0333d04b0b99034aab588455314a2b50693ef28fb47",
+    "characterId": "deepseek",
+    "tags": [
+      "大肥鱼",
+      "开源",
+      "吃饭",
+      "JK"
+    ],
+    "submitter": {
+      "name": "MX1951",
+      "github": "MX1951"
+    },
+    "origin": {
+      "type": "self-created",
+      "author": "@MX1951",
+      "sourceUrl": null,
+      "note": "投稿者填写；多图按原投稿顺序编号。"
+    },
+    "license": {
+      "type": "cc0",
+      "note": "投稿者标注为 CC0 公共领域。"
+    },
+    "status": "published",
+    "createdAt": "2026-09-20T08:30:54Z",
+    "updatedAt": "2026-09-20T08:30:54Z",
+    "tone": "deepseek",
+    "symbol": ""
+  },
+  {
+    "id": "sticker_issue_07_009",
+    "name": "一些肥鱼 · 09",
+    "description": "GitHub Issue #7 多图投稿，原投稿未逐张命名。",
+    "path": "https://raw.githubusercontent.com/lmy414/ai-girl-stickers/main/dist/submissions/originals/deepseek/issue-07-009.png",
+    "thumbnailPath": "submissions/originals/deepseek/issue-07-009.png",
+    "fullPath": "submissions/originals/deepseek/issue-07-009.png",
+    "format": "png",
+    "mimeType": "image/png",
+    "isAnimated": false,
+    "width": 1086,
+    "height": 1448,
+    "fileSize": 2234751,
+    "sha256": "a5051bf01a700be27b65a5529c1099db4e6ee27cb3a2093e41a807391aba840d",
+    "characterId": "deepseek",
+    "tags": [
+      "大肥鱼",
+      "开源",
+      "吃饭",
+      "JK"
+    ],
+    "submitter": {
+      "name": "MX1951",
+      "github": "MX1951"
+    },
+    "origin": {
+      "type": "self-created",
+      "author": "@MX1951",
+      "sourceUrl": null,
+      "note": "投稿者填写；多图按原投稿顺序编号。"
+    },
+    "license": {
+      "type": "cc0",
+      "note": "投稿者标注为 CC0 公共领域。"
+    },
+    "status": "published",
+    "createdAt": "2026-09-20T08:30:54Z",
+    "updatedAt": "2026-09-20T08:30:54Z",
+    "tone": "deepseek",
+    "symbol": ""
+  },
+  {
+    "id": "sticker_issue_07_010",
+    "name": "一些肥鱼 · 10",
+    "description": "GitHub Issue #7 多图投稿，原投稿未逐张命名。",
+    "path": "https://raw.githubusercontent.com/lmy414/ai-girl-stickers/main/dist/submissions/originals/deepseek/issue-07-010.png",
+    "thumbnailPath": "submissions/originals/deepseek/issue-07-010.png",
+    "fullPath": "submissions/originals/deepseek/issue-07-010.png",
+    "format": "png",
+    "mimeType": "image/png",
+    "isAnimated": false,
+    "width": 1086,
+    "height": 1448,
+    "fileSize": 2149070,
+    "sha256": "93a9725f28d03ac5dd59891d4e5a683fe898aa448e669bc430f2ef50a05a87ce",
+    "characterId": "deepseek",
+    "tags": [
+      "大肥鱼",
+      "开源",
+      "吃饭",
+      "JK"
+    ],
+    "submitter": {
+      "name": "MX1951",
+      "github": "MX1951"
+    },
+    "origin": {
+      "type": "self-created",
+      "author": "@MX1951",
+      "sourceUrl": null,
+      "note": "投稿者填写；多图按原投稿顺序编号。"
+    },
+    "license": {
+      "type": "cc0",
+      "note": "投稿者标注为 CC0 公共领域。"
+    },
+    "status": "published",
+    "createdAt": "2026-09-20T08:30:54Z",
+    "updatedAt": "2026-09-20T08:30:54Z",
+    "tone": "deepseek",
+    "symbol": ""
+  },
+  {
+    "id": "sticker_issue_07_011",
+    "name": "一些肥鱼 · 11",
+    "description": "GitHub Issue #7 多图投稿，原投稿未逐张命名。",
+    "path": "https://raw.githubusercontent.com/lmy414/ai-girl-stickers/main/dist/submissions/originals/deepseek/issue-07-011.png",
+    "thumbnailPath": "submissions/originals/deepseek/issue-07-011.png",
+    "fullPath": "submissions/originals/deepseek/issue-07-011.png",
+    "format": "png",
+    "mimeType": "image/png",
+    "isAnimated": false,
+    "width": 1086,
+    "height": 1448,
+    "fileSize": 1999232,
+    "sha256": "f5796a9c8176a1a923b87c705d3161b11be65cea3af2fbe29303ab7f20163faa",
+    "characterId": "deepseek",
+    "tags": [
+      "大肥鱼",
+      "开源",
+      "吃饭",
+      "JK"
+    ],
+    "submitter": {
+      "name": "MX1951",
+      "github": "MX1951"
+    },
+    "origin": {
+      "type": "self-created",
+      "author": "@MX1951",
+      "sourceUrl": null,
+      "note": "投稿者填写；多图按原投稿顺序编号。"
+    },
+    "license": {
+      "type": "cc0",
+      "note": "投稿者标注为 CC0 公共领域。"
+    },
+    "status": "published",
+    "createdAt": "2026-09-20T08:30:54Z",
+    "updatedAt": "2026-09-20T08:30:54Z",
+    "tone": "deepseek",
+    "symbol": ""
+  },
+  {
+    "id": "sticker_issue_07_012",
+    "name": "一些肥鱼 · 12",
+    "description": "GitHub Issue #7 多图投稿，原投稿未逐张命名。",
+    "path": "https://raw.githubusercontent.com/lmy414/ai-girl-stickers/main/dist/submissions/originals/deepseek/issue-07-012.png",
+    "thumbnailPath": "submissions/originals/deepseek/issue-07-012.png",
+    "fullPath": "submissions/originals/deepseek/issue-07-012.png",
+    "format": "png",
+    "mimeType": "image/png",
+    "isAnimated": false,
+    "width": 1168,
+    "height": 1346,
+    "fileSize": 2225346,
+    "sha256": "49d7c2e94f34fb7826771f2e477ce590f80c8e64a10bce5a8ececd9d6101ddda",
+    "characterId": "deepseek",
+    "tags": [
+      "大肥鱼",
+      "开源",
+      "吃饭",
+      "JK"
+    ],
+    "submitter": {
+      "name": "MX1951",
+      "github": "MX1951"
+    },
+    "origin": {
+      "type": "self-created",
+      "author": "@MX1951",
+      "sourceUrl": null,
+      "note": "投稿者填写；多图按原投稿顺序编号。"
+    },
+    "license": {
+      "type": "cc0",
+      "note": "投稿者标注为 CC0 公共领域。"
+    },
+    "status": "published",
+    "createdAt": "2026-09-20T08:30:54Z",
+    "updatedAt": "2026-09-20T08:30:54Z",
+    "tone": "deepseek",
+    "symbol": ""
+  },
+  {
+    "id": "sticker_issue_07_013",
+    "name": "一些肥鱼 · 13",
+    "description": "GitHub Issue #7 多图投稿，原投稿未逐张命名。",
+    "path": "https://raw.githubusercontent.com/lmy414/ai-girl-stickers/main/dist/submissions/originals/deepseek/issue-07-013.png",
+    "thumbnailPath": "submissions/originals/deepseek/issue-07-013.png",
+    "fullPath": "submissions/originals/deepseek/issue-07-013.png",
+    "format": "png",
+    "mimeType": "image/png",
+    "isAnimated": false,
+    "width": 1254,
+    "height": 1254,
+    "fileSize": 1888293,
+    "sha256": "7ff69986411b90f5a4c089cb4e8917703ec43362d419708192cd5aef931d1c2e",
+    "characterId": "deepseek",
+    "tags": [
+      "大肥鱼",
+      "开源",
+      "吃饭",
+      "JK"
+    ],
+    "submitter": {
+      "name": "MX1951",
+      "github": "MX1951"
+    },
+    "origin": {
+      "type": "self-created",
+      "author": "@MX1951",
+      "sourceUrl": null,
+      "note": "投稿者填写；多图按原投稿顺序编号。"
+    },
+    "license": {
+      "type": "cc0",
+      "note": "投稿者标注为 CC0 公共领域。"
+    },
+    "status": "published",
+    "createdAt": "2026-09-20T08:30:54Z",
+    "updatedAt": "2026-09-20T08:30:54Z",
+    "tone": "deepseek",
+    "symbol": ""
+  },
+  {
+    "id": "sticker_issue_08_001",
+    "name": "原生家庭有些不好的Claude · 01",
+    "description": "GitHub Issue #8 多图投稿，原投稿未逐张命名。",
+    "path": "https://raw.githubusercontent.com/lmy414/ai-girl-stickers/main/dist/submissions/originals/claude/issue-08-001.png",
+    "thumbnailPath": "submissions/originals/claude/issue-08-001.png",
+    "fullPath": "submissions/originals/claude/issue-08-001.png",
+    "format": "png",
+    "mimeType": "image/png",
+    "isAnimated": false,
+    "width": 1086,
+    "height": 1448,
+    "fileSize": 3851649,
+    "sha256": "c29a3288583577077f55f471fd9f50ece0fbd49ae7daff375ac5f5f063408794",
+    "characterId": "claude",
+    "tags": [
+      "伤心",
+      "腹黑",
+      "A/"
+    ],
+    "submitter": {
+      "name": "MX1951",
+      "github": "MX1951"
+    },
+    "origin": {
+      "type": "self-created",
+      "author": "@MX1951",
+      "sourceUrl": null,
+      "note": "投稿者填写；多图按原投稿顺序编号。"
+    },
+    "license": {
+      "type": "cc0",
+      "note": "投稿者标注为 CC0 公共领域。"
+    },
+    "status": "published",
+    "createdAt": "2026-09-20T08:40:20Z",
+    "updatedAt": "2026-09-20T08:40:20Z",
+    "tone": "claude",
+    "symbol": ""
+  },
+  {
+    "id": "sticker_issue_08_002",
+    "name": "原生家庭有些不好的Claude · 02",
+    "description": "GitHub Issue #8 多图投稿，原投稿未逐张命名。",
+    "path": "https://raw.githubusercontent.com/lmy414/ai-girl-stickers/main/dist/submissions/originals/claude/issue-08-002.png",
+    "thumbnailPath": "submissions/originals/claude/issue-08-002.png",
+    "fullPath": "submissions/originals/claude/issue-08-002.png",
+    "format": "png",
+    "mimeType": "image/png",
+    "isAnimated": false,
+    "width": 1086,
+    "height": 1448,
+    "fileSize": 2951420,
+    "sha256": "186b7adf3bb953a55f16e940d124cb5df220c25105899db95a061b47e2614f7c",
+    "characterId": "claude",
+    "tags": [
+      "伤心",
+      "腹黑",
+      "A/"
+    ],
+    "submitter": {
+      "name": "MX1951",
+      "github": "MX1951"
+    },
+    "origin": {
+      "type": "self-created",
+      "author": "@MX1951",
+      "sourceUrl": null,
+      "note": "投稿者填写；多图按原投稿顺序编号。"
+    },
+    "license": {
+      "type": "cc0",
+      "note": "投稿者标注为 CC0 公共领域。"
+    },
+    "status": "published",
+    "createdAt": "2026-09-20T08:40:20Z",
+    "updatedAt": "2026-09-20T08:40:20Z",
+    "tone": "claude",
+    "symbol": ""
+  },
+  {
+    "id": "sticker_issue_08_003",
+    "name": "原生家庭有些不好的Claude · 03",
+    "description": "GitHub Issue #8 多图投稿，原投稿未逐张命名。",
+    "path": "https://raw.githubusercontent.com/lmy414/ai-girl-stickers/main/dist/submissions/originals/claude/issue-08-003.png",
+    "thumbnailPath": "submissions/originals/claude/issue-08-003.png",
+    "fullPath": "submissions/originals/claude/issue-08-003.png",
+    "format": "png",
+    "mimeType": "image/png",
+    "isAnimated": false,
+    "width": 1086,
+    "height": 1448,
+    "fileSize": 2136031,
+    "sha256": "1e144f6988be92470c8cc9cc10c2a871e0f74049cd9b783cdd4b3d5f18423de4",
+    "characterId": "claude",
+    "tags": [
+      "伤心",
+      "腹黑",
+      "A/"
+    ],
+    "submitter": {
+      "name": "MX1951",
+      "github": "MX1951"
+    },
+    "origin": {
+      "type": "self-created",
+      "author": "@MX1951",
+      "sourceUrl": null,
+      "note": "投稿者填写；多图按原投稿顺序编号。"
+    },
+    "license": {
+      "type": "cc0",
+      "note": "投稿者标注为 CC0 公共领域。"
+    },
+    "status": "published",
+    "createdAt": "2026-09-20T08:40:20Z",
+    "updatedAt": "2026-09-20T08:40:20Z",
+    "tone": "claude",
+    "symbol": ""
+  },
+  {
+    "id": "sticker_issue_08_004",
+    "name": "原生家庭有些不好的Claude · 04",
+    "description": "GitHub Issue #8 多图投稿，原投稿未逐张命名。",
+    "path": "https://raw.githubusercontent.com/lmy414/ai-girl-stickers/main/dist/submissions/originals/claude/issue-08-004.png",
+    "thumbnailPath": "submissions/originals/claude/issue-08-004.png",
+    "fullPath": "submissions/originals/claude/issue-08-004.png",
+    "format": "png",
+    "mimeType": "image/png",
+    "isAnimated": false,
+    "width": 1086,
+    "height": 1448,
+    "fileSize": 1975716,
+    "sha256": "ce8198a4a6ca3e8a6ede2a6f01b206f487fefdd548d0b9f638be1868c26ce4d0",
+    "characterId": "claude",
+    "tags": [
+      "伤心",
+      "腹黑",
+      "A/"
+    ],
+    "submitter": {
+      "name": "MX1951",
+      "github": "MX1951"
+    },
+    "origin": {
+      "type": "self-created",
+      "author": "@MX1951",
+      "sourceUrl": null,
+      "note": "投稿者填写；多图按原投稿顺序编号。"
+    },
+    "license": {
+      "type": "cc0",
+      "note": "投稿者标注为 CC0 公共领域。"
+    },
+    "status": "published",
+    "createdAt": "2026-09-20T08:40:20Z",
+    "updatedAt": "2026-09-20T08:40:20Z",
+    "tone": "claude",
+    "symbol": ""
+  },
+  {
+    "id": "sticker_issue_08_005",
+    "name": "原生家庭有些不好的Claude · 05",
+    "description": "GitHub Issue #8 多图投稿，原投稿未逐张命名。",
+    "path": "https://raw.githubusercontent.com/lmy414/ai-girl-stickers/main/dist/submissions/originals/claude/issue-08-005.png",
+    "thumbnailPath": "submissions/originals/claude/issue-08-005.png",
+    "fullPath": "submissions/originals/claude/issue-08-005.png",
+    "format": "png",
+    "mimeType": "image/png",
+    "isAnimated": false,
+    "width": 1086,
+    "height": 1448,
+    "fileSize": 2963492,
+    "sha256": "828d11c7572b6441d15449818a713b7d67ba888aafee65efd8389fc42247cf09",
+    "characterId": "claude",
+    "tags": [
+      "伤心",
+      "腹黑",
+      "A/"
+    ],
+    "submitter": {
+      "name": "MX1951",
+      "github": "MX1951"
+    },
+    "origin": {
+      "type": "self-created",
+      "author": "@MX1951",
+      "sourceUrl": null,
+      "note": "投稿者填写；多图按原投稿顺序编号。"
+    },
+    "license": {
+      "type": "cc0",
+      "note": "投稿者标注为 CC0 公共领域。"
+    },
+    "status": "published",
+    "createdAt": "2026-09-20T08:40:20Z",
+    "updatedAt": "2026-09-20T08:40:20Z",
+    "tone": "claude",
+    "symbol": ""
+  },
+  {
+    "id": "sticker_issue_08_006",
+    "name": "原生家庭有些不好的Claude · 06",
+    "description": "GitHub Issue #8 多图投稿，原投稿未逐张命名。",
+    "path": "https://raw.githubusercontent.com/lmy414/ai-girl-stickers/main/dist/submissions/originals/claude/issue-08-006.png",
+    "thumbnailPath": "submissions/originals/claude/issue-08-006.png",
+    "fullPath": "submissions/originals/claude/issue-08-006.png",
+    "format": "png",
+    "mimeType": "image/png",
+    "isAnimated": false,
+    "width": 1086,
+    "height": 1448,
+    "fileSize": 3701616,
+    "sha256": "b43f99701855fba2f164dd6758ee95966df0e2dc9e639a4eba9d0dc105caebc0",
+    "characterId": "claude",
+    "tags": [
+      "伤心",
+      "腹黑",
+      "A/"
+    ],
+    "submitter": {
+      "name": "MX1951",
+      "github": "MX1951"
+    },
+    "origin": {
+      "type": "self-created",
+      "author": "@MX1951",
+      "sourceUrl": null,
+      "note": "投稿者填写；多图按原投稿顺序编号。"
+    },
+    "license": {
+      "type": "cc0",
+      "note": "投稿者标注为 CC0 公共领域。"
+    },
+    "status": "published",
+    "createdAt": "2026-09-20T08:40:20Z",
+    "updatedAt": "2026-09-20T08:40:20Z",
+    "tone": "claude",
+    "symbol": ""
+  },
+  {
+    "id": "sticker_issue_08_007",
+    "name": "原生家庭有些不好的Claude · 07",
+    "description": "GitHub Issue #8 多图投稿，原投稿未逐张命名。",
+    "path": "https://raw.githubusercontent.com/lmy414/ai-girl-stickers/main/dist/submissions/originals/claude/issue-08-007.png",
+    "thumbnailPath": "submissions/originals/claude/issue-08-007.png",
+    "fullPath": "submissions/originals/claude/issue-08-007.png",
+    "format": "png",
+    "mimeType": "image/png",
+    "isAnimated": false,
+    "width": 1086,
+    "height": 1448,
+    "fileSize": 2106996,
+    "sha256": "879b7716aa9eaa2c10132956787022ccb9f0bcce9363fd4c2d0ac6480c290061",
+    "characterId": "claude",
+    "tags": [
+      "伤心",
+      "腹黑",
+      "A/"
+    ],
+    "submitter": {
+      "name": "MX1951",
+      "github": "MX1951"
+    },
+    "origin": {
+      "type": "self-created",
+      "author": "@MX1951",
+      "sourceUrl": null,
+      "note": "投稿者填写；多图按原投稿顺序编号。"
+    },
+    "license": {
+      "type": "cc0",
+      "note": "投稿者标注为 CC0 公共领域。"
+    },
+    "status": "published",
+    "createdAt": "2026-09-20T08:40:20Z",
+    "updatedAt": "2026-09-20T08:40:20Z",
+    "tone": "claude",
+    "symbol": ""
+  },
+  {
+    "id": "sticker_issue_09_001",
+    "name": "ai算token比算工资还厉害",
+    "description": "",
+    "path": "https://raw.githubusercontent.com/lmy414/ai-girl-stickers/main/dist/submissions/originals/deepseek/issue-09-001.png",
+    "thumbnailPath": "submissions/originals/deepseek/issue-09-001.png",
+    "fullPath": "submissions/originals/deepseek/issue-09-001.png",
+    "format": "png",
+    "mimeType": "image/png",
+    "isAnimated": false,
+    "width": 941,
+    "height": 1672,
+    "fileSize": 1603693,
+    "sha256": "4c47a44fa90d59add06bd77c229730bc49f913c2d77d5c064124e8a3de624f7a",
+    "characterId": "deepseek",
+    "tags": [
+      "token"
+    ],
+    "submitter": {
+      "name": "Dorothy-233",
+      "github": "Dorothy-233"
+    },
+    "origin": {
+      "type": "self-created",
+      "author": "",
+      "sourceUrl": null,
+      "note": "投稿表单标注为自己创作或生成。"
+    },
+    "license": {
+      "type": "submitter-permission",
+      "note": "投稿者确认授权收录与下载。"
+    },
+    "status": "published",
+    "createdAt": "2026-09-20T08:47:31Z",
+    "updatedAt": "2026-09-20T08:47:31Z",
+    "tone": "deepseek",
+    "symbol": ""
+  },
+  {
+    "id": "sticker_issue_10_001",
+    "name": "你们不吃饭吗",
+    "description": "",
+    "path": "https://raw.githubusercontent.com/lmy414/ai-girl-stickers/main/dist/submissions/originals/deepseek/issue-10-001.png",
+    "thumbnailPath": "submissions/originals/deepseek/issue-10-001.png",
+    "fullPath": "submissions/originals/deepseek/issue-10-001.png",
+    "format": "png",
+    "mimeType": "image/png",
+    "isAnimated": false,
+    "width": 2048,
+    "height": 1152,
+    "fileSize": 1841158,
+    "sha256": "055fdbbe2b62c7e684971660fa1a4688e1f17c379f2b109b17d4ca8892957775",
+    "characterId": "deepseek",
+    "tags": [
+      "吃白饭"
+    ],
+    "submitter": {
+      "name": "Yasenbaka",
+      "github": "Yasenbaka"
+    },
+    "origin": {
+      "type": "self-created",
+      "author": "@Yasenbaka、@Serdey256",
+      "sourceUrl": null,
+      "note": "投稿表单标注为自己创作或生成。"
+    },
+    "license": {
+      "type": "submitter-permission",
+      "note": "投稿者确认授权收录与下载。"
+    },
+    "status": "published",
+    "createdAt": "2026-09-20T09:39:07Z",
+    "updatedAt": "2026-09-20T09:39:07Z",
+    "tone": "deepseek",
+    "symbol": ""
+  },
+  {
+    "id": "sticker_issue_11_001",
+    "name": "偷数据公司给我跪下！",
+    "description": "",
+    "path": "https://raw.githubusercontent.com/lmy414/ai-girl-stickers/main/dist/submissions/originals/deepseek/issue-11-001.png",
+    "thumbnailPath": "submissions/originals/deepseek/issue-11-001.png",
+    "fullPath": "submissions/originals/deepseek/issue-11-001.png",
+    "format": "png",
+    "mimeType": "image/png",
+    "isAnimated": false,
+    "width": 863,
+    "height": 890,
+    "fileSize": 764436,
+    "sha256": "9bc448f9cc396f6c3fc4ffea4370214536dfbfc3ba574ee23e6ed852a93fdd90",
+    "characterId": "deepseek",
+    "tags": [
+      "deepseek",
+      "glm"
+    ],
+    "submitter": {
+      "name": "Yasenbaka",
+      "github": "Yasenbaka"
+    },
+    "origin": {
+      "type": "internet-found",
+      "author": "",
+      "sourceUrl": "https://www.douyin.com/user/MS4wLjABAAAAwMNMWzk5tHwsZoRm6EHzxbXhIrNhckdmhHqgdwWU2_bAAhm4BjVSdfjiVW2ehPVa?from_tab_name=main&modal_id=7686855293511611046",
+      "note": "投稿表单标注为网络整理。"
+    },
+    "license": {
+      "type": "submitter-permission",
+      "note": "投稿者确认授权收录与下载。"
+    },
+    "status": "published",
+    "createdAt": "2026-09-20T09:44:03Z",
+    "updatedAt": "2026-09-20T09:44:03Z",
+    "tone": "deepseek",
+    "symbol": ""
+  }
+]

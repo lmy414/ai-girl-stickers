@@ -88,6 +88,8 @@ Issue 会带上 `sticker-submission` 标签排队。维护者做四件事：按 
 
 另一份是 **`dist/owner-picks/works.json`（站长自用板块）**：站长自己用 AI 生成的图，不属于任何角色，所以单开一个分类放着。这一份和它的预览图**都进 git**，原图在仓库根的 `owner-picks/` 下——跟首批正好相反，因为首批的原图在上游仓库，而这批本来就是本站自己的东西。分类借的是角色的结构，所以它出现在角色抽屉和 `#/character/owner-picks` 里，但它不是角色，投稿表单的角色下拉里没有这一项。
 
+GitHub Issue 收录的作品放在 **`dist/submissions/works.json`**，原图放在 **`dist/submissions/originals/`**。投稿图片会先复制进仓库、计算尺寸 / 文件大小 / SHA-256，再把清单状态设为 `published`；前端只加载 `published` 记录。详情页和瀑布流直接读取仓库内的文件，下载原图指向本仓库 Raw 地址。多图投稿会按原投稿顺序生成独立记录；如果投稿没有逐张命名，名称会加上序号，避免把维护者的猜测写成原作者信息。
+
 「下载原图」给的是上游仓库里的原始文件（约 189 MB，本站不存）。所以这是一个外部依赖：上游把仓库转私有或删掉，下载就会失效。仓库参数是按记录传的（`rawGithubPath(repo, path)` + `CONFIG.upstreamRepo`），因为以后投稿的图片进的是本仓库而不是上游——别把它写死成一个仓库名。站长自用那批不依赖上游：清单里直接写着本仓库 `owner-picks/` 的 raw 地址。
 
 **关于授权，这个站选择如实标注而不是替你判断。** 上游清单没有逐条记录作者和授权，所以每条记录的 `origin.author` 是空的、`license.type` 是 `unknown`，详情页就明明白白显示「未标注 / 授权状态不明」，并挂一个[署名与删除申请](#想改或想撤)的入口。新收录的条目如果知道作者，就按 [`数据契约.md`](数据契约.md) 把 `submitter` / `origin` / `license` 填上。
@@ -119,6 +121,7 @@ dist/
   app.js        数据、路由、视图、评论区
   robots.txt    爬虫规则（/data/ 不放行，免得爬虫来吃 34 MB 图片）
   data/         图片与清单（不进仓库）
+  submissions/  GitHub Issue 收录清单与原图（进仓库）
 assets/         favicon 原图与透明底版本
 tools/          favicon 处理脚本
 数据契约.md      字段定义、投稿校验、来源与授权类型

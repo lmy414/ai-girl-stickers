@@ -38,6 +38,8 @@ const CONFIG = {
   localDataUrl: "data/blue-fish-classification.json",
   /* 站长自用板块：清单与预览都进仓库，字段已是 数据契约.md 的正式形状。 */
   ownerPicksDataUrl: "owner-picks/works.json",
+  /* GitHub Issue 收录：清单与原图都进本仓库，只有 published 记录进入页面。 */
+  submissionsDataUrl: "submissions/works.json",
   /* 键名带版本：改版后换键可以让旧的深色偏好失效，默认回到亮色 */
   theme: { storageKey: "aigirl-theme-2", default: "light" }
 };
@@ -365,19 +367,24 @@ async function fetchJson(url) {
 }
 
 async function loadLocalDataset() {
-  const [firstBatch, ownerPicks] = await Promise.all([
+  const [firstBatch, ownerPicks, submissions] = await Promise.all([
     fetchJson(CONFIG.localDataUrl),
-    fetchJson(CONFIG.ownerPicksDataUrl)
+    fetchJson(CONFIG.ownerPicksDataUrl),
+    fetchJson(CONFIG.submissionsDataUrl)
   ]);
 
   const records = Array.isArray(firstBatch) ? firstBatch : [];
   const imported = records.map(mapLocalRecord).filter(Boolean);
   /* 站长自用清单本身就是 数据契约.md 的正式形状，不需要映射。 */
   const ownerPickRecords = Array.isArray(ownerPicks) ? ownerPicks : [];
+  /* Issue 收录清单同样已经是正式形状；下架或待审核记录不能进入公开页。 */
+  const submissionRecords = Array.isArray(submissions)
+    ? submissions.filter((record) => record && record.status === "published")
+    : [];
 
-  if (!imported.length && !ownerPickRecords.length) return;
+  if (!imported.length && !ownerPickRecords.length && !submissionRecords.length) return;
 
-  stickers.splice(0, stickers.length, ...imported, ...ownerPickRecords);
+  stickers.splice(0, stickers.length, ...imported, ...submissionRecords, ...ownerPickRecords);
   dataMode = "local";
   localImportSkipped = records.length - imported.length;
 }
@@ -471,7 +478,7 @@ const ICONS = {
    ========================================================================== */
 
 /* --- 作品图 ---
-   列表优先使用本地缩略图；详情页使用上游大图地址，避免首批原图进入仓库。 */
+   列表优先使用清单里的预览路径；详情页使用 fullPath，下载按钮再走 path。 */
 function artMarkup(sticker, className = "", mode = "thumb") {
   const character = characterFor(sticker.characterId);
   const imagePath = mode === "full" ? (sticker.fullPath || sticker.thumbnailPath) : sticker.thumbnailPath;
