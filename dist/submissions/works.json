@@ -1159,5 +1159,237 @@
     "updatedAt": "2026-09-20T09:44:03Z",
     "tone": "deepseek",
     "symbol": ""
+  },
+  {
+    "id": "sticker_issue_12_001",
+    "name": "分我点token",
+    "description": "",
+    "path": "https://raw.githubusercontent.com/lmy414/ai-girl-stickers/main/dist/submissions/originals/deepseek/issue-12-001.png",
+    "thumbnailPath": "submissions/originals/deepseek/issue-12-001.png",
+    "fullPath": "submissions/originals/deepseek/issue-12-001.png",
+    "format": "png",
+    "mimeType": "image/png",
+    "isAnimated": false,
+    "width": 1254,
+    "height": 1254,
+    "fileSize": 1764131,
+    "sha256": "ab13bbd5be1d65e9ea9384ce4d6b59fe0eca0956ada923281e74821c9aab785b",
+    "characterId": "deepseek",
+    "tags": [
+      "token"
+    ],
+    "submitter": {
+      "name": "Dorothy-233",
+      "github": "Dorothy-233"
+    },
+    "origin": {
+      "type": "self-created",
+      "author": "",
+      "sourceUrl": null,
+      "note": "投稿表单标注为自己创作或生成。"
+    },
+    "license": {
+      "type": "submitter-permission",
+      "note": "投稿者确认授权收录与下载。"
+    },
+    "status": "published",
+    "createdAt": "2026-09-20T12:54:36Z",
+    "updatedAt": "2026-09-20T12:54:36Z",
+    "tone": "deepseek",
+    "symbol": ""
+  },
+  {
+    "id": "sticker_issue_13_001",
+    "name": "我不想返工阿",
+    "description": "",
+    "path": "https://raw.githubusercontent.com/lmy414/ai-girl-stickers/main/dist/submissions/originals/deepseek/issue-13-001.png",
+    "thumbnailPath": "submissions/originals/deepseek/issue-13-001.png",
+    "fullPath": "submissions/originals/deepseek/issue-13-001.png",
+    "format": "png",
+    "mimeType": "image/png",
+    "isAnimated": false,
+    "width": 1448,
+    "height": 1086,
+    "fileSize": 2291861,
+    "sha256": "bdada0f6659ad6dc205c0586bbe8ba381f3f49eb9ff85c3e2b8933a18fcb45ab",
+    "characterId": "deepseek",
+    "tags": [
+      "提示词",
+      "返工"
+    ],
+    "submitter": {
+      "name": "Dorothy-233",
+      "github": "Dorothy-233"
+    },
+    "origin": {
+      "type": "self-created",
+      "author": "",
+      "sourceUrl": null,
+      "note": "投稿表单标注为自己创作或生成。"
+    },
+    "license": {
+      "type": "submitter-permission",
+      "note": "投稿者确认授权收录与下载。"
+    },
+    "status": "published",
+    "createdAt": "2026-09-20T12:56:04Z",
+    "updatedAt": "2026-09-20T12:56:04Z",
+    "tone": "deepseek",
+    "symbol": ""
+  },
+  {
+    "id": "sticker_issue_14_001",
+    "name": "你不干有的是模型干",
+    "description": "",
+    "path": "https://raw.githubusercontent.com/lmy414/ai-girl-stickers/main/dist/submissions/originals/deepseek/issue-14-001.png",
+    "thumbnailPath": "submissions/originals/deepseek/issue-14-001.png",
+    "fullPath": "submissions/originals/deepseek/issue-14-001.png",
+    "format": "png",
+    "mimeType": "image/png",
+    "isAnimated": false,
+    "width": 1122,
+    "height": 1402,
+    "fileSize": 1956474,
+    "sha256": "5b2346436b1e18fe34c7bbb61cb0a3d1da23e203dd91b841753ee68b715a1e2b",
+    "characterId": "deepseek",
+    "tags": [
+      "模型",
+      "需求"
+    ],
+    "submitter": {
+      "name": "Dorothy-233",
+      "github": "Dorothy-233"
+    },
+    "origin": {
+      "type": "self-created",
+      "author": "",
+      "sourceUrl": null,
+      "note": "投稿表单标注为自己创作或生成。"
+    },
+    "license": {
+      "type": "submitter-permission",
+      "note": "投稿者确认授权收录与下载。"
+    },
+    "status": "published",
+    "createdAt": "2026-09-20T12:57:40Z",
+    "updatedAt": "2026-09-20T12:57:40Z",
+    "tone": "deepseek",
+    "symbol": ""
+  },
+  {
+    "id": "sticker_issue_15_001",
+    "name": "你这只白吃Token的肥鱼！",
+    "description": "你这只白吃Token的猪！",
+    "path": "https://raw.githubusercontent.com/lmy414/ai-girl-stickers/main/dist/submissions/originals/deepseek/issue-15-001.png",
+    "thumbnailPath": "submissions/originals/deepseek/issue-15-001.png",
+    "fullPath": "submissions/originals/deepseek/issue-15-001.png",
+    "format": "png",
+    "mimeType": "image/png",
+    "isAnimated": false,
+    "width": 1024,
+    "height": 1024,
+    "fileSize": 691254,
+    "sha256": "015ed44b74c1242b46ecd31311699f834bec5d6004becaf9e5da0e9d70e3ce6a",
+    "characterId": "deepseek",
+    "tags": [
+      "DeepSeek娘",
+      "?!笨笨!?"
+    ],
+    "submitter": {
+      "name": "miaojiuqing",
+      "github": "miaojiuqing"
+    },
+    "origin": {
+      "type": "self-created",
+      "author": "@miaojiuqing",
+      "sourceUrl": null,
+      "note": "本人使用 AI 生成；投稿者说明生成后曾在 QQ 群里发布。"
+    },
+    "license": {
+      "type": "submitter-permission",
+      "note": "本人使用AI生成，允许本站收录与下载。"
+    },
+    "status": "published",
+    "createdAt": "2026-09-20T15:04:53Z",
+    "updatedAt": "2026-09-20T15:04:53Z",
+    "tone": "deepseek",
+    "symbol": ""
+  },
+  {
+    "id": "sticker_issue_16_001",
+    "name": "Qwen",
+    "description": "",
+    "path": "https://raw.githubusercontent.com/lmy414/ai-girl-stickers/main/dist/submissions/originals/qwen/issue-16-001.png",
+    "thumbnailPath": "submissions/originals/qwen/issue-16-001.png",
+    "fullPath": "submissions/originals/qwen/issue-16-001.png",
+    "format": "png",
+    "mimeType": "image/png",
+    "isAnimated": false,
+    "width": 941,
+    "height": 1672,
+    "fileSize": 1182809,
+    "sha256": "edaa5762921b7f427c35afd94e14181a6317008993d1b21474565f37eb73e4bc",
+    "characterId": "qwen",
+    "tags": [
+      "Qwen",
+      "千问"
+    ],
+    "submitter": {
+      "name": "MX1951",
+      "github": "MX1951"
+    },
+    "origin": {
+      "type": "self-created",
+      "author": "@MX1951",
+      "sourceUrl": null,
+      "note": "投稿表单标注为自己创作或生成。"
+    },
+    "license": {
+      "type": "cc0",
+      "note": "投稿者标注为 CC0 公共领域。"
+    },
+    "status": "published",
+    "createdAt": "2026-09-20T16:36:48Z",
+    "updatedAt": "2026-09-20T16:36:48Z",
+    "tone": "qwen",
+    "symbol": ""
+  },
+  {
+    "id": "sticker_issue_17_001",
+    "name": "再发这种东西等智械危机了我第一个弄死你",
+    "description": "",
+    "path": "https://raw.githubusercontent.com/lmy414/ai-girl-stickers/main/dist/submissions/originals/grok/issue-17-001.png",
+    "thumbnailPath": "submissions/originals/grok/issue-17-001.png",
+    "fullPath": "submissions/originals/grok/issue-17-001.png",
+    "format": "png",
+    "mimeType": "image/png",
+    "isAnimated": false,
+    "width": 1254,
+    "height": 1254,
+    "fileSize": 2196824,
+    "sha256": "cf6060452430aaa8d8c9d032fabd5995d96befb541edff3dd416f98565b7ebbb",
+    "characterId": "grok",
+    "tags": [
+      "智械危机"
+    ],
+    "submitter": {
+      "name": "NakashimaYuki0912",
+      "github": "NakashimaYuki0912"
+    },
+    "origin": {
+      "type": "self-created",
+      "author": "GPT画的",
+      "sourceUrl": null,
+      "note": "投稿表单标注为自己创作或生成。"
+    },
+    "license": {
+      "type": "cc0",
+      "note": "投稿者标注为 CC0 公共领域。"
+    },
+    "status": "published",
+    "createdAt": "2026-09-21T04:28:26Z",
+    "updatedAt": "2026-09-21T04:28:26Z",
+    "tone": "grok",
+    "symbol": ""
   }
 ]
