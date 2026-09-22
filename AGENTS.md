@@ -4,7 +4,7 @@
 
 ## 先读
 
-1. [`README.md`](README.md) —— 站点形态、投稿流程、评论、视觉规矩；
+1. [`README.md`](README.md) —— 站点定位、功能概览、投稿与版权入口；
 2. [`数据契约.md`](数据契约.md) —— 字段与枚举的唯一来源，改数据前先对它；
 3. [`CHANGELOG.md`](CHANGELOG.md) —— 历史，以及那条规则：**大型更新先补一条日志，再动代码**；
 4. [`CONTRIBUTING.md`](CONTRIBUTING.md) —— 投稿与开发流程、视觉规矩细则、评论区实现须知；
@@ -58,11 +58,15 @@ python -m http.server 5173 -d dist   # 打开 http://127.0.0.1:5173
 站点跑在阿里云香港的 nginx 上（QuickSite Studio 面板里的 `aliyun-hk`），根目录 `/srv/www/dafeiyu/current` → `releases/<时间戳>`。**发布已改为 GitHub 驱动**（2026-09-22）：本地改仓库 → 提交推送 GitHub → 服务器 `source/` 工作树拉 `origin/main` → `ops/deploy-server.sh` 构建干净产物并原子切 `current`。细节见 [`docs/维护与发布.md`](docs/维护与发布.md)。
 
 - 服务器操作仍走本地面板的 `qss` CLI。**写命令会在面板任务中心显示计划、等用户确认**，没确认前不许声称"已完成"。
-- **`qss fs upload` 不再用于发布**——它只在当初把首批数据迁到服务器共享目录时用过一次。它是直连 SFTP 写入、不经确认门；上传任何东西到服务器之前，先跟用户要授权。
+- **`qss fs upload` 在本项目流程里已经完全用不到。** 本轮 `shared/data` 的迁移是在服务器侧用 `cp -al` 从当前 release 的 `data/` 硬链接出来的，**没有任何文件上传**。它是直连 SFTP 写入、不经确认门；真要用之前，先跟用户要授权。
 - 发布 = `ops/deploy-server.sh`：拉取 → 构建 → **先 chmod 再 `cp -al` 数据** → `nginx -t` → `mv` 进 `releases/<ts>` → 原子切链 → 健康检查；失败自动把 `current` 指回旧目标。回滚用 `ops/rollback-server.sh <release目录名>`，只切软链、不重新构建。
+- **发布根 `/srv/www/dafeiyu/`（文档里的 `$DEPLOY_ROOT`）下现有**：`source/`（Git 工作树，HEAD = `a684d56`）、`shared/data`（首批数据的唯一持久副本，与各 release 的 `data/` 是同一 inode，**不要删**）、`logs/deploy.log`（发布摘要）、`.deploy.lock`、`.staging/`（发布临时目录，`trap` 清理后为空）。
+- **服务器私有配置在 `/etc/dafeiyu/deploy.env`**（5 行公开信息：`DEPLOY_ROOT` / `SOURCE_DIR` / `REPO_URL` / `BRANCH=main` / `HEALTH_URL`，**没有任何凭据**）。**脚本默认不再内置这个路径**，要靠 `DEPLOY_ENV` 指定。
+- **实际执行发布时先 `cp` 成副本再跑**：`cp "$SOURCE_DIR/ops/deploy-server.sh" "$DEPLOY_ROOT/.deploy-runner.sh" && DEPLOY_ENV=/etc/dafeiyu/deploy.env bash "$DEPLOY_ROOT/.deploy-runner.sh"`。原因是脚本自己会 `git fetch` + `git reset --hard`，可能在运行中把**正在执行的脚本文件本身**替换掉（bash 按字节偏移续读，行为不可预期）。
+- 首次发布已是 `releases/20260922-145230`（commit `a684d56`），当前共 6 个 release，旧版全部保留可回滚。**只改文档不需要发布**——文档不在站点产物里（产物 = `dist/` 的构建输出）。
 - **`shared/data` 是首批数据的持久副本**，硬链接进每个 release，**不要删**；`acme/`（证书验证目录）同样绝对不能动。**`cp -al` 之后不要再 chmod 任何产物**——硬链接共享 inode 与权限，会把 shared 数据和所有旧 release 里同一 inode 的权限一起改坏。
 - 旧的本机发布脚本 `tools/deploy.mjs` **已废弃**，仍留在维护者本机、继续被 `.gitignore` 排除，不再进公开仓库、也不再用于发布。
-- 站点根目录 `/srv/www/dafeiyu/` 下可能留着历史 `*.tgz`（旧上传方式的残留）。它们不是 release，要等新 release 健康检查通过、确认无引用之后才精确删除；删之前先跟用户确认。
+- 站点根目录 `/srv/www/dafeiyu/` 顶层的历史 `*.tgz`（旧上传方式的残留）已于 2026-09-22 清掉两枚（`20260920-204141.tgz`、`20260920-205024.tgz`，约 15.4 MB），现在顶层没有归档残留。它们不是 release；以后再出现，按同一原则处理：新 release 健康检查通过 + 核实无 nginx / cron / systemd / current 引用 + 精确删除，删之前先跟用户确认。**release、`shared/data`、`acme` 一律不删。**
 - **上传大包会卡死（旧发布方式的实测）。** 若还要用 `qss fs upload` 传大目录：74 MB 的包传到约 14 MB 就没进展（120s 超时、0 字节响应），缩到 8 MB 后正常，宁可拆成多次小上传。
 
 ## 本机环境坑（Windows + Git Bash）

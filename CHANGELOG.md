@@ -8,7 +8,7 @@
 
 ## 2026-09-22 · 发布流程改为 GitHub 驱动
 
-发布：本条只改仓库，尚未上线——落地要等新链路在服务器上跑通并健康检查通过。旧的发布方式此刻仍在生效，`current` 尚未切换。
+发布：已上线 `releases/20260922-145230`（上一版 `releases/20260922-023440`），即提交 `a684d56`。新链路首次发布于 2026-09-22 14:52（+08:00），健康检查全部通过；旧的上传发布方式自本版起停用。
 
 发布这条链路整个换掉了。以前是「维护者本机打包 `dist/` 成 tgz → 用面板的 `qss` CLI SFTP 上传 → 服务器解包成新 release → 切软链」；现在是「本地改仓库并提交推送 GitHub → 服务器上的 Git 工作树拉取 `origin/main` → 服务器构建一份干净 release → 原子切 `current`」。服务器不再接收任何手工上传的整包，构建过程可复现、可审计。
 
@@ -18,9 +18,11 @@
 - **首批 `data/` 迁到服务器持久目录 `shared/data`。** 这 34 MB 清单加预览图以前在每个 release 里各存一份，现在只在 `shared/data` 存在一份，发布时用 `cp -al` 硬链接进新 release。硬链接共享 inode 与权限，所以发布脚本里 `chmod` 必须发生在 `cp -al` **之前**——顺序反了会把共享数据和所有旧 release 里同一 inode 的权限一起改掉。
 - **投稿原图 `dist/submissions/originals/` 继续不进发布产物。** 原件留在 GitHub 仓库供 Raw 下载，本站既不打包也不在线托管。
 - **所有旧 release 保留用于回滚，回滚只切软链，不删除任何文件。** `acme/`、`shared/data` 同样绝不删。
-- 服务器根目录那两枚历史上传残留包 `20260920-204141.tgz`(5.3MB) 与 `20260920-205024.tgz`(10.1MB) 不是 release。它们要等新流程的健康检查通过、确认没有任何引用之后才精确删除，删除动作不在本条实现范围。
+- 服务器根目录那两枚历史上传残留包 `20260920-204141.tgz`(5.3MB) 与 `20260920-205024.tgz`(10.1MB) 不是 release。**已在新 release 健康检查通过、并核实没有 nginx / cron / systemd / current 引用之后精确删除**，共回收约 15.4 MB；`releases/` 目录一个都没动。
 - 本轮不引入前端框架、不引入后端、不改 nginx 配置；前端源码仍在 `dist/`。
 - 本条之前已落地但尚未入库的 1A 加载优化内容（`dist/app.js` 的 `fetchJson` 改 `no-cache` 与图片属性、`dist/avatar.png`、投稿派生图 `previews/` + `large/`、`tools/generate_image_derivatives.py`、`dist/submissions/works.json` 的路径改写）随本条一起提交；它们的详细口径见下方 2026-09-21 的两条记录。
+
+线上回读（2026-09-22）：首次发布生成 `releases/20260922-145230`，`current` 已切过去，旧的 5 个 release 全部保留、可随时切回。产物里没有 `submissions/originals/`、也没有构建内部标记 `.build-output`；投稿派生图 `previews` 35 个 / `large` 35 个、`owner-picks` 预览 4 个；目录 755、文件 644。`shared/data` 与新旧 release 的 `data/` 是同一 inode（硬链接复用，206 个文件）。公网回读首页、`robots.txt`、`submissions/works.json`（35 条 `published`）、抽样预览图与 `data/blue-fish-classification.json` 全部 200；`/submissions/originals/**` 为 404（原图走 GitHub Raw，实测 200 且字节数与清单 `fileSize` 一致）。发布脚本的失败回滚语义、回滚脚本 `ops/rollback-server.sh` 均已就绪（`bash -n` 通过，旧 release 可切回）；只改文档不需要发布——文档不在站点产物里。
 
 ## 2026-09-21 · 平台化升级立项与路线规划
 
@@ -94,7 +96,7 @@
 
 ## 2026-09-19 · 新增「站长自用」板块
 
-发布：尚未上线，等下次发布一起走。
+发布：已上线。本条初记「尚未上线，等下次发布一起走」（`owner-picks` 清单与预览最迟随 `releases/20260919-192940` 上线；2026-09-22 核对线上角色抽屉已含「站长自用 4」），与后来的实际状态不符，已更正。
 
 站长自己用 AI 生成了几张图，想放到站上，但它们不属于任何一个 AI 角色，按角色归档会别扭。所以单开一个分类叫「站长自用」，先把这 4 张收进去。
 
