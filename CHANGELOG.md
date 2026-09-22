@@ -6,6 +6,18 @@
 
 ---
 
+## 2026-09-22 · 架构边界基准与数据边界落地
+
+发布：尚未上线——本条改动推上 `origin/main` 后，待维护者在服务器跑 `ops/deploy-server.sh` 生效。
+
+- **新增 [`架构边界.md`](架构边界.md)**：站点分层地图与数据 / 代码 / 样式 / 构建发布 / 外部服务五个边界的规范基准，附硬性规则总表、变更矩阵（改 X 动哪几处）、已定方向与待决事项。与 [`站点升级路线图.md`](站点升级路线图.md) 的分工：本文约束当前边界，路线图管远期方向。
+- **角色与分类迁出代码**：`app.js` 里硬编码的 `characters` 数组迁到 `dist/characters.json`（11 条，含 owner-picks；`inSubmissionForm` 标记是否进投稿角色下拉）；新增 `dist/categories.json`（分类轴 v0 草案 8 条，作品记录用 `categoryIds` 引用）。两份清单都进 git，前端启动时与作品清单一起加载；分类本轮只落数据边界，UI 与记录归类随「分类重建」一起做。
+- **投稿模板下拉改为脚本同步**：新增 `tools/sync_issue_template.mjs`（`--check` 校验 / `--write` 写回），`sticker-submission.yml` 的角色下拉由 `characters.json` 生成。「新增角色同时改两处」变为「改一处数据 + 跑一次脚本」。
+- **构建补引用断言**：`tools/build.mjs` 新增校验——角色 / 分类清单形状合法且 id 唯一、每条展示记录的 `characterId` / `categoryIds` 可解析、投稿模板下拉与清单一致；任一不过就构建失败，坏数据发不出去。
+- **数据契约升 `v0.3`**：补 `fullPath` / `tone` / `symbol` / `categoryIds` 字段与「分类记录」章节，角色记录加 `inSubmissionForm`，订正 `path`（GitHub Raw 原图地址）与 `thumbnailPath`（列表缩略图）的实际语义。
+- 行为变化一处：`file://` 直开时浏览器拦截清单请求，角色清单取不到后占位演示作品（168 条）不再生成，12 条手写演示仍在；`http://` 方式不受影响。
+- 缓存版本号：`app.js?v=21`（角色加载方式变了）；`styles.css?v=17`、`tokens.css?v=13` 不变。
+
 ## 2026-09-22 · 第三批 GitHub Issue 投稿收录（#19–#22，新立 Stepfun娘 / GLM娘）
 
 发布：已上线 `releases/20260922-175748`。本条初记「尚未上线——内容推上 `origin/main` 后，待维护者在服务器跑 `ops/deploy-server.sh` 生效」，2026-09-22 17:57 发布成功，补记见文末。
