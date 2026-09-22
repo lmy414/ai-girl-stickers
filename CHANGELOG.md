@@ -18,6 +18,8 @@
 
 线上回读（2026-09-22 16:36 reload 后实测）：HTTP/2 掌声成功（Node `http2` 模块 ALPN，首页 200）；`app.js?v=19`、`styles.css?v=17`、`tokens.css?v=13` 均 `Content-Encoding: gzip` + `Cache-Control: public, max-age=31536000, immutable`；不带 `?v=` 的 `app.js` 仍 `no-cache`；`submissions/works.json` 与 `data/blue-fish-classification.json` 为 gzip + `no-cache`；`avatar.png` 为 `public, max-age=604800`；HTML 为 gzip + `no-cache`。`nginx -t` 通过。另需说明两点：其一，`nginx -t` 有 4 条 warn（3 条 `protocol options redefined`、1 条 `duplicate MIME type "text/html"`），都在别的租户 vhost（`mirrorpin` / `wasteland-ring`）上、解析顺序在本站文件之前，不是本次引入，本次未动它们；其二，443 端口的 `listen` 选项是 socket 级的，隔壁 `wasteland-ring` 早就在自己 vhost 里声明过 `http2`，所以 HTTP/2 在本次改动之前可能已对全端口生效——本站现在显式声明，不再依赖别人的配置。
 
+发布落地（2026-09-22 17:01）：已上线 `releases/20260922-170101`（上一版 `releases/20260922-145230`），即提交 `a214d82`（`a214d82773e59caf78761a213d8a27221072233b`）。构建 85 个文件（35 条 `published` 投稿、4 条 owner-picks），`data/` 仍由 `shared/data` 硬链接复用；健康检查全部通过（首页 / `robots.txt` / `submissions/works.json` / 抽样 `previews/*.webp` 均 200），`logs/deploy.log` 已追加记录，旧 release 全部保留（当前共 7 个）。站点内容与上一版一致——本轮只改文档，文档不进产物。
+
 ## 2026-09-22 · 发布流程改为 GitHub 驱动
 
 发布：已上线 `releases/20260922-145230`（上一版 `releases/20260922-023440`），即提交 `a684d56`。新链路首次发布于 2026-09-22 14:52（+08:00），健康检查全部通过；旧的上传发布方式自本版起停用。

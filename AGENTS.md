@@ -75,7 +75,7 @@ python -m http.server 5173 -d dist   # 打开 http://127.0.0.1:5173
 - **发布根 `/srv/www/dafeiyu/`（文档里的 `$DEPLOY_ROOT`）下现有**：`source/`（Git 工作树，HEAD = `a684d56`）、`shared/data`（首批数据的唯一持久副本，与各 release 的 `data/` 是同一 inode，**不要删**）、`logs/deploy.log`（发布摘要）、`.deploy.lock`、`.staging/`（发布临时目录，`trap` 清理后为空）。
 - **服务器私有配置在 `/etc/dafeiyu/deploy.env`**（5 行公开信息：`DEPLOY_ROOT` / `SOURCE_DIR` / `REPO_URL` / `BRANCH=main` / `HEALTH_URL`，**没有任何凭据**）。**脚本默认不再内置这个路径**，要靠 `DEPLOY_ENV` 指定。
 - **实际执行发布时先 `cp` 成副本再跑**：`cp "$SOURCE_DIR/ops/deploy-server.sh" "$DEPLOY_ROOT/.deploy-runner.sh" && DEPLOY_ENV=/etc/dafeiyu/deploy.env bash "$DEPLOY_ROOT/.deploy-runner.sh"`。原因是脚本自己会 `git fetch` + `git reset --hard`，可能在运行中把**正在执行的脚本文件本身**替换掉（bash 按字节偏移续读，行为不可预期）。
-- 首次发布已是 `releases/20260922-145230`（commit `a684d56`），当前共 6 个 release，旧版全部保留可回滚。**只改文档不需要发布**——文档不在站点产物里（产物 = `dist/` 的构建输出）。
+- 首次发布是 `releases/20260922-145230`（commit `a684d56`），最新是 `releases/20260922-170101`（commit `a214d82`），当前共 7 个 release，旧版全部保留可回滚。**只改文档不需要发布**——文档不在站点产物里（产物 = `dist/` 的构建输出）。
 - **`shared/data` 是首批数据的持久副本**，硬链接进每个 release，**不要删**；`acme/`（证书验证目录）同样绝对不能动。**`cp -al` 之后不要再 chmod 任何产物**——硬链接共享 inode 与权限，会把 shared 数据和所有旧 release 里同一 inode 的权限一起改坏。
 - 旧的本机发布脚本 `tools/deploy.mjs` **已废弃**，仍留在维护者本机、继续被 `.gitignore` 排除，不再进公开仓库、也不再用于发布。
 - 站点根目录 `/srv/www/dafeiyu/` 顶层的历史 `*.tgz`（旧上传方式的残留）已于 2026-09-22 清掉两枚（`20260920-204141.tgz`、`20260920-205024.tgz`，约 15.4 MB），现在顶层没有归档残留。它们不是 release；以后再出现，按同一原则处理：新 release 健康检查通过 + 核实无 nginx / cron / systemd / current 引用 + 精确删除，删之前先跟用户确认。**release、`shared/data`、`acme` 一律不删。**
