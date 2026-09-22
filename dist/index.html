@@ -1,87 +1,549 @@
 <!doctype html>
-<html lang="zh-CN" data-theme="light">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#ffffff" />
-    <meta name="description" content="蓝色大肥鱼：收集和下载 AI 娘二创表情包，按角色归档，支持 Tag 检索、原图下载与作品评论。" />
-    <!-- 分享卡片：站内是 hash 路由，只有壳层能被爬虫看到，因此只做站点级 og -->
-    <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="蓝色大肥鱼" />
-    <meta property="og:title" content="蓝色大肥鱼 · AI 娘表情包开放档案" />
-    <meta property="og:description" content="收集不同 AI 角色二创表情包的开放档案，按角色浏览，按名称、Tag 与提交者搜索。" />
-    <meta property="og:url" content="https://xn--pssy23gqgbz2d718b.com/" />
-    <meta property="og:image" content="https://xn--pssy23gqgbz2d718b.com/favicon.png" />
-    <meta name="twitter:card" content="summary" />
-    <!-- Google 搜索控制台站点验证标记：验证通过后也不要移除，移除即失去已验证状态 -->
-    <meta name="google-site-verification" content="0EMOyL056kGpDA5JlH0X_uq7yh6nvqRz_EW2TiyWQIo" />
-    <link rel="canonical" href="https://xn--pssy23gqgbz2d718b.com/" />
-    <title>蓝色大肥鱼 · AI 娘表情包开放档案</title>
-    <link rel="icon" href="favicon.ico" sizes="any" />
-    <link rel="icon" type="image/png" href="favicon.png" />
-    <!-- 主题在样式加载前落地，避免浅色主题闪一下深色（键名与 app.js 的 CONFIG.theme.storageKey 保持一致） -->
-    <script>
-      (function () {
-        try {
-          var saved = localStorage.getItem("aigirl-theme-2");
-          if (saved === "light" || saved === "dark") document.documentElement.dataset.theme = saved;
-        } catch (error) {}
-      })();
-    </script>
-    <link rel="preconnect" href="https://giscus.app" crossorigin />
-    <link rel="stylesheet" href="tokens.css?v=13" />
-    <link rel="stylesheet" href="styles.css?v=17" />
-  </head>
-  <body>
-    <a class="skip-link" href="#app">跳到主要内容</a>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>蓝色大肥鱼 · AI 娘表情包开放档案</title>
+  <meta name="description" content="蓝色大肥鱼：AI 娘二创表情包、梗图与立绘设定图的开放档案。按角色归档，支持名称、Tag 与角色别名检索，可查看高清大图、免费下载原图，每张作品带独立评论区。" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="蓝色大肥鱼" />
+  <meta property="og:title" content="蓝色大肥鱼 · AI 娘表情包开放档案" />
+  <meta property="og:description" content="AI 娘二创表情包、梗图与立绘设定图的开放档案。按角色归档，支持名称、Tag 与角色别名检索，可查看高清大图、免费下载原图，每张作品带独立评论区。" />
+  <meta property="og:url" content="https://xn--pssy23gqgbz2d718b.com/" />
+  <meta property="og:image" content="https://xn--pssy23gqgbz2d718b.com/favicon.png" />
+  <meta name="twitter:card" content="summary" />
+  <!-- Google 搜索控制台站点验证标记：验证通过后也不要移除，移除即失去已验证状态 -->
+  <meta name="google-site-verification" content="0EMOyL056kGpDA5JlH0X_uq7yh6nvqRz_EW2TiyWQIo" />
+  <link rel="canonical" href="https://xn--pssy23gqgbz2d718b.com/" />
+  <link rel="icon" href="favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="stylesheet" href="tokens.css?v=14" />
+  <link rel="stylesheet" href="styles.css?v=18" />
+  <style>
+    /* 首页专属样式 —— 只写页面布局与开屏横幅；纸卡 / 按钮 / 便签 / 工具条 / 卡片等
+       公共组件已在 styles.css，此处不重复。颜色 / 字号 / 间距 / 圆角 / 阴影只用变量。 */
+    html { scroll-behavior: smooth; }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 
-    <div class="site-shell">
-      <header class="topbar">
-        <a class="brand" href="#/" aria-label="蓝色大肥鱼首页">
-          <span class="brand-mark" aria-hidden="true"><img src="avatar.png" alt="" decoding="async" /></span>
-          <span class="brand-text">
-            <strong>蓝色大肥鱼</strong>
-            <small>AI 娘表情包开放档案</small>
-          </span>
-        </a>
+    /* ---------- 开屏横幅：贴在网格纸上的手绘海报 ----------
+       纸卡外观（白底 / 2px 墨线 / 硬投影 / 手绘圆角 / position:relative）来自共享 .panel，
+       这里只补分栏布局与手写歪斜。胶带要伸出纸面，不裁剪 overflow。 */
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 5fr) minmax(0, 4fr);
+      gap: var(--space-5);
+      transform: rotate(-0.5deg);
+    }
+    .hero-body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: var(--space-3);
+      padding: var(--space-6) var(--space-5);
+    }
+    .hero-title {
+      width: fit-content;
+      margin: 0;
+      font-family: var(--font-marker);
+      font-weight: normal;
+      font-size: calc(var(--text-hero) * 1.8);
+      line-height: var(--leading-tight);
+      transform: rotate(-1deg);
+    }
+    .hero-subtitle {
+      width: fit-content;
+      margin: 0;
+      font-family: var(--font-hand);
+      font-size: var(--text-xl);
+      color: var(--text-secondary);
+      transform: rotate(0.5deg);
+    }
+    .hero-lede {
+      margin: 0;
+      font-family: var(--font-hand);
+      font-size: var(--text-lg);
+      color: var(--text-secondary);
+      max-width: var(--measure-base);
+    }
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-3);
+      margin-top: var(--space-2);
+    }
+    .btn svg { flex: none; }
 
-        <nav class="topnav" aria-label="主导航">
-          <a class="nav-link is-active" href="#/" data-route-link="home">作品列表</a>
-          <a class="nav-link" href="#/about" data-route-link="about">关于本站</a>
-        </nav>
+    /* 右侧照片墙：拍立得拼贴。浅蓝底衬（--sticky-* 渐变），主角是贴上去的照片。 */
+    .hero-art {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: var(--space-5);
+      background: linear-gradient(135deg, var(--sticky-1), var(--sticky-2));
+      border: 2px dashed var(--ink);
+      border-radius: var(--radius-sketchy-alt);
+    }
+    .hero-collage {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: var(--space-3);
+      width: min(100%, calc(var(--space-10) * 5));
+    }
+    .polaroid {
+      position: relative;
+      padding: var(--space-1) var(--space-1) var(--space-2);
+      background: var(--paper-card);
+      border: 2px solid var(--ink);
+      border-radius: var(--radius-xs);
+      box-shadow: var(--shadow-paper-sm);
+      transition: transform var(--duration-2) ease, box-shadow var(--duration-2) ease;
+    }
+    .polaroid img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 1;
+      object-fit: cover;
+      border-radius: var(--radius-xs);
+      background: var(--bg-inset);
+    }
+    /* 错落微旋转：只给装饰性照片墙，不给输入控件；悬停与共享 .card 同一约定——摆正抬起 */
+    .polaroid:nth-child(3n+1) { transform: rotate(-2deg); }
+    .polaroid:nth-child(3n+2) { transform: rotate(1.5deg) translateY(var(--space-2)); }
+    .polaroid:nth-child(3n) { transform: rotate(-0.8deg) translateY(calc(var(--space-2) * -1)); }
+    .polaroid:hover {
+      transform: rotate(0) translate(-2px, -2px);
+      box-shadow: var(--shadow-paper);
+      z-index: 2;
+    }
+    /* 共享 .tape-strip 按大纸卡取 104px；照片胶带只缩尺寸、换倾角，不另起一套组件样式 */
+    .polaroid .tape-strip {
+      width: var(--space-10);
+      height: var(--space-4);
+      top: calc(var(--space-2) * -1);
+    }
+    .polaroid:nth-child(even) .tape-strip { transform: rotate(4deg) translateX(-50%); }
 
-        <div class="topbar-actions">
-          <button type="button" class="icon-button" data-action="toggle-theme" aria-label="切换主题" title="切换主题"></button>
-          <button type="button" class="button small" data-action="submit">
-            <svg class="icon" viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true">
-              <path d="M12 .7a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2.2c-3.4.7-4.1-1.6-4.1-1.6-.5-1.4-1.3-1.7-1.3-1.7-1.1-.8.1-.8.1-.8 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.7-.3-5.5-1.4-5.5-6a4.7 4.7 0 0 1 1.2-3.3c-.1-.3-.5-1.6.1-3.2 0 0 1-.3 3.3 1.2a11.4 11.4 0 0 1 6 0C16.3 5.8 17.3 6 17.3 6c.6 1.6.2 2.9.1 3.2a4.7 4.7 0 0 1 1.2 3.3c0 4.6-2.8 5.7-5.5 6 .4.3.7 1 .7 2v3c0 .3.2.7.8.6A12 12 0 0 0 12 .7Z" />
-            </svg>
+    @media (max-width: 760px) {
+      .hero { grid-template-columns: 1fr; }
+      .hero-art { order: -1; padding: var(--space-4); }
+      .hero-body { padding: var(--space-5); }
+    }
+
+    /* ---------- 工具条扩展（.toolbar 容器是共享的，这里只管搜索框与排序标签） ---------- */
+    .search-box {
+      position: relative;
+      flex: 1 1 calc(var(--space-10) * 3);
+      min-width: calc(var(--space-10) * 3);
+      max-width: calc(var(--space-10) * 5);
+    }
+    .search-icon {
+      position: absolute;
+      left: var(--space-2);
+      top: 50%;
+      transform: translateY(-50%);
+      display: block;
+      color: var(--text-tertiary);
+      pointer-events: none;
+    }
+    .search-box input {
+      width: 100%;
+      padding-left: calc(var(--space-2) + var(--space-6));
+    }
+    .sort-label {
+      color: var(--text-secondary);
+      font-family: var(--font-hand);
+      font-size: var(--text-base);
+    }
+
+    /* ---------- 画廊收尾 ---------- */
+    .card-art-link { display: block; }
+    .gallery-end {
+      text-align: center;
+      margin: var(--space-6) 0 0;
+    }
+  </style>
+  <!-- 旧链接兼容：单页应用时代的 hash 路由（#/work/<id>、#/character/<id>）跳到新静态页。
+       slug 只从数据读（submissions/works.json 与 blue-fish-ids.json 的冻结映射），查不到回首页。 -->
+  <script>
+    (function () {
+      "use strict";
+      var hash = String(window.location.hash || "");
+      if (hash.indexOf("#/") !== 0) return; /* 站内锚点（如 #gallery）不动 */
+      var work = hash.match(/^#\/work\/([^/?#]+)/);
+      if (work) {
+        var id = decodeURIComponent(work[1]);
+        var load = function (url) {
+          return fetch(url, { cache: "no-cache" })
+            .then(function (response) { return response.ok ? response.json() : []; })
+            .catch(function () { return []; });
+        };
+        Promise.all([load("submissions/works.json"), load("blue-fish-ids.json")]).then(function (lists) {
+          var slug = "";
+          var tables = [lists[0], lists[1]];
+          for (var i = 0; i < tables.length && !slug; i++) {
+            var rows = Array.isArray(tables[i]) ? tables[i] : [];
+            for (var j = 0; j < rows.length; j++) {
+              if (rows[j] && rows[j].id === id && rows[j].slug) { slug = String(rows[j].slug); break; }
+            }
+          }
+          window.location.replace(slug ? "works/" + slug + ".html" : "index.html");
+        });
+        return;
+      }
+      var character = hash.match(/^#\/character\/([^/?#]+)/);
+      if (character) {
+        window.location.replace("category.html#c=" + encodeURIComponent(decodeURIComponent(character[1])));
+        return;
+      }
+      window.location.replace("index.html"); /* 认不出的旧 hash（含 #/）回首页 */
+    })();
+  </script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="index.html"><span class="brand-mark"><img src="avatar.png" alt="" /></span><span class="brand-text"><strong>蓝色大肥鱼</strong><small>AI 娘表情包开放档案</small></span></a>
+    <nav class="topnav"><a href="index.html">首页</a><a href="category.html">分类</a><a href="submit.html">投稿</a><a href="about.html">关于</a><a href="projects.html">推荐</a></nav>
+  </header>
+  <main class="page">
+    <section class="hero panel" aria-labelledby="hero-title">
+      <span class="tape-strip" aria-hidden="true"></span>
+      <div class="hero-body">
+        <h1 class="hero-title" id="hero-title">蓝色<span class="marker-highlight">大肥鱼</span></h1>
+        <p class="hero-subtitle">AI 娘表情包开放档案</p>
+        <p class="hero-lede">收集与下载 AI 娘二创表情包，按角色归档、按 Tag 检索。</p>
+        <div class="hero-actions">
+          <a class="btn primary hover-wiggle" href="#gallery">
+            <svg width="14" height="14" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 6.5 L8 10.5 L12 6.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+            <span>开始浏览</span>
+          </a>
+          <a class="btn hover-wiggle" href="submit.html">
+            <svg width="14" height="14" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M8 3.5 V12.5 M3.5 8 H12.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path></svg>
             <span>提交作品</span>
-          </button>
+          </a>
         </div>
-      </header>
-
-      <main id="app" tabindex="-1"></main>
-
-      <footer class="site-footer">
-        <div class="footer-inner">
-          <p class="footer-brand">
-            <span class="brand-mark" aria-hidden="true"><img src="avatar.png" alt="" decoding="async" /></span>
-            蓝色大肥鱼 · AI 娘表情包开放档案
-          </p>
-          <nav class="footer-links" aria-label="页脚导航">
-            <a href="#/">作品列表</a>
-            <a href="#/about">关于本站</a>
-            <button type="button" class="button quiet small" data-action="submit">提交作品</button>
-          </nav>
-          <p class="footer-note">
-            非官方同人整理项目，与各 AI 产品官方无关；图片版权归原作者所有。本站为纯静态站点，不统计浏览量、点赞、收藏与下载热度。
-          </p>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="hero-collage">
+          <div class="polaroid"><span class="tape-strip"></span><img src="owner-picks/previews/blue-maid.webp" alt="" /></div>
+          <div class="polaroid"><span class="tape-strip"></span><img src="submissions/previews/deepseek/issue-20-001.webp" alt="" /></div>
+          <div class="polaroid"><span class="tape-strip"></span><img src="submissions/previews/deepseek/issue-07-001.webp" alt="" /></div>
+          <div class="polaroid"><span class="tape-strip"></span><img src="submissions/previews/claude/issue-08-001.webp" alt="" /></div>
+          <div class="polaroid"><span class="tape-strip"></span><img src="submissions/previews/qwen/issue-16-001.webp" alt="" /></div>
+          <div class="polaroid"><span class="tape-strip"></span><img src="submissions/previews/stepfun/issue-19-001.webp" alt="" /></div>
         </div>
-      </footer>
+      </div>
+    </section>
+
+    <h2 class="section-label">全部作品</h2>
+
+    <div class="toolbar">
+      <div class="search-box">
+        <svg class="search-icon" width="14" height="14" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><circle cx="7" cy="7" r="4.5" fill="none" stroke="currentColor" stroke-width="1.5"></circle><path d="M10.5 10.5 L14 14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path></svg>
+        <input id="search" type="text" placeholder="搜索名称、Tag、角色或别名" aria-label="搜索名称、Tag、角色或别名" autocomplete="off" />
+      </div>
+      <label class="sort-label" for="sort">排序</label>
+      <select id="sort">
+        <option value="newest">最新收录</option>
+        <option value="oldest">最早收录</option>
+        <option value="name-asc">名称正序</option>
+        <option value="name-desc">名称倒序</option>
+        <option value="size">文件体积</option>
+        <option value="random">随机浏览</option>
+      </select>
+      <span class="count" id="count">已显示 0 / 0 张</span>
     </div>
 
-    <div class="toast-region" aria-live="polite" aria-atomic="true"></div>
-    <script src="app.js?v=21"></script>
-  </body>
+    <section id="gallery">
+      <div class="masonry cols-4" id="grid"></div>
+      <p class="note gallery-end" id="end-note" hidden></p>
+      <div class="empty" id="empty" hidden>没有匹配的作品，换个关键词试试。</div>
+    </section>
+    <div id="sentinel" aria-hidden="true"></div>
+  </main>
+  <footer class="site-footer"><p>非官方同人整理项目，图片版权归原作者所有。本站不统计浏览量、点赞、收藏与下载热度。</p><p><a href="changelog.html">更新日志</a></p></footer>
+  <script>
+    (async function () {
+      "use strict";
+
+      var PAGE_SIZE = 24;
+      var UPSTREAM_RAW = "https://raw.githubusercontent.com/EDMOK/blue-fish-archive/main/";
+
+      /* 品类词（SEO 规范 §7 公式用）；categoryIds 初分口径见 kindOf */
+      var KIND_WORDS = { meme: "表情包", illustration: "二创插画", setting: "立绘设定图" };
+
+      var grid = document.getElementById("grid");
+      var searchInput = document.getElementById("search");
+      var sortSelect = document.getElementById("sort");
+      var countEl = document.getElementById("count");
+      var endNote = document.getElementById("end-note");
+      var emptyEl = document.getElementById("empty");
+      var sentinel = document.getElementById("sentinel");
+
+      /* 归一：小写化并去掉空格 / 下划线 / 短横线后再比 */
+      function normalize(value) {
+        return String(value == null ? "" : value).toLowerCase().replace(/[\s_\-]+/g, "");
+      }
+
+      function escapeHtml(value) {
+        return String(value == null ? "" : value).replace(/[&<>"']/g, function (ch) {
+          return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[ch];
+        });
+      }
+
+      /* FNV-1a：给 id 算稳定权重，「随机浏览」每次渲染顺序一致 */
+      function hashId(id) {
+        var h = 2166136261;
+        for (var i = 0; i < id.length; i++) {
+          h ^= id.charCodeAt(i);
+          h = Math.imul(h, 16777619);
+        }
+        return h >>> 0;
+      }
+
+      async function fetchJson(url) {
+        try {
+          /* no-cache：清单走协商缓存（ETag / Last-Modified），变了照旧取回新内容 */
+          var response = await fetch(url, { cache: "no-cache" });
+          return response.ok ? await response.json() : null;
+        } catch (error) {
+          return null;
+        }
+      }
+
+      function sourceFileName(value) {
+        return String(value || "").split("/").pop();
+      }
+
+      /* categoryIds 初分：sticker_op_* → 插画；名称含 立绘/设定/三视图 → 设定图；其余 → 表情包 */
+      function kindOf(id, name) {
+        if (String(id || "").indexOf("sticker_op_") === 0) return "illustration";
+        if (/立绘|设定|三视图/.test(String(name || ""))) return "setting";
+        return "meme";
+      }
+
+      /* 收录门槛（与旧站 mapLocalRecord 同口径）：名称非空 + 至少 1 个 Tag + 角色非空 */
+      function gate(record) {
+        var name = String(record.name || "").trim();
+        var tags = Array.isArray(record.tags)
+          ? record.tags.map(function (tag) { return String(tag || "").trim(); }).filter(Boolean)
+          : [];
+        var characterId = String(record.characterId || "").trim();
+        return name && tags.length && characterId ? { name: name, tags: tags, characterId: characterId } : null;
+      }
+
+      /* 投稿 / 站长自用清单已是契约形状；slug 只从数据读，缺 slug 记 warn 跳过 */
+      function mapContractRecord(record) {
+        if (!record || record.status !== "published") return null;
+        var base = gate(record);
+        if (!base) return null;
+        var slug = String(record.slug || "").trim();
+        if (!slug) {
+          console.warn("[works] 记录缺 slug，跳过：", record.id || base.name);
+          return null;
+        }
+        var thumb = String(record.thumbnailPath || "").replace(/^\/+/, "");
+        var full = String(record.fullPath || record.thumbnailPath || "").replace(/^\/+/, "");
+        return {
+          id: String(record.id || ""),
+          slug: slug,
+          name: base.name,
+          characterId: base.characterId,
+          tags: base.tags,
+          categoryIds: [kindOf(record.id, base.name)],
+          format: String(record.format || "").toLowerCase(),
+          isAnimated: !!record.isAnimated,
+          width: Number(record.width) || 1,
+          height: Number(record.height) || 1,
+          fileSize: Number(record.fileSize) || 0,
+          createdAt: String(record.createdAt || ""),
+          thumbUrl: thumb,
+          displayUrl: full,
+          originalUrl: String(record.path || "")
+        };
+      }
+
+      /* 首批 blue-fish：id / slug 按 sourcePath 查冻结映射（blue-fish-ids.json），查不到 warn 跳过。
+         预览只取 previewPath||sourcePath 的 basename 拼 data/blue-fish/previews/；
+         large 目录未部署，详情显示图同预览图（旧站 mapLocalRecord 语义）；
+         原图拼上游 GitHub Raw。 */
+      function mapBlueFishRecord(record, idMap) {
+        if (!record) return null;
+        var base = gate(record);
+        if (!base) return null;
+        var sourcePath = String(record.sourcePath || "");
+        var frozen = idMap.get(sourcePath);
+        if (!frozen || !frozen.id || !frozen.slug) {
+          console.warn("[blue-fish] sourcePath 无冻结 id/slug，跳过：", sourcePath);
+          return null;
+        }
+        var preview = "data/blue-fish/previews/" + encodeURIComponent(sourceFileName(record.previewPath || record.sourcePath));
+        var format = String(record.format || "").toLowerCase();
+        return {
+          id: String(frozen.id),
+          slug: String(frozen.slug),
+          name: base.name,
+          characterId: base.characterId,
+          tags: base.tags,
+          categoryIds: [kindOf(frozen.id, base.name)],
+          format: format,
+          isAnimated: format === "gif" || format === "apng",
+          width: Number(record.width) || 1,
+          height: Number(record.height) || 1,
+          fileSize: Number(record.fileSize) || 0,
+          createdAt: "2026-09-15T00:00:00+08:00",
+          thumbUrl: preview,
+          displayUrl: preview,
+          originalUrl: UPSTREAM_RAW + sourcePath.replace(/^\/+/, "")
+        };
+      }
+
+      /* 四份清单 + 角色清单 → 统一 works 数组，按收录时间倒序（同刻保持来源顺序） */
+      async function loadWorks() {
+        var results = await Promise.all([
+          fetchJson("submissions/works.json"),
+          fetchJson("owner-picks/works.json"),
+          fetchJson("data/blue-fish-classification.json"),
+          fetchJson("blue-fish-ids.json"),
+          fetchJson("characters.json")
+        ]);
+        var idMap = new Map();
+        (Array.isArray(results[3]) ? results[3] : []).forEach(function (row) {
+          if (row && row.sourcePath) idMap.set(String(row.sourcePath), row);
+        });
+        var merged = [];
+        var push = function (work) { if (work) merged.push(work); };
+        (Array.isArray(results[0]) ? results[0] : []).forEach(function (record) { push(mapContractRecord(record)); });
+        (Array.isArray(results[1]) ? results[1] : []).forEach(function (record) { push(mapContractRecord(record)); });
+        (Array.isArray(results[2]) ? results[2] : []).forEach(function (record) { push(mapBlueFishRecord(record, idMap)); });
+        return {
+          characters: (Array.isArray(results[4]) ? results[4] : []).filter(function (c) { return c && c.id && c.id !== "all"; }),
+          works: merged
+            .map(function (work, index) { return { work: work, order: index }; })
+            .sort(function (a, b) {
+              return (Date.parse(b.work.createdAt) || 0) - (Date.parse(a.work.createdAt) || 0) || a.order - b.order;
+            })
+            .map(function (item) { return item.work; })
+        };
+      }
+
+      var data = await loadWorks();
+      var characters = data.characters;
+      var works = data.works;
+      var characterById = new Map(characters.map(function (c) { return [c.id, c]; }));
+
+      var entries = works.map(function (work, index) {
+        var character = characterById.get(work.characterId) || null;
+        var fields = [work.name].concat(work.tags || []);
+        if (character) {
+          fields.push(character.name);
+          fields.push.apply(fields, character.aliases || []);
+        }
+        return {
+          work: work,
+          index: index,
+          characterName: character ? character.name : "未知角色",
+          fields: fields.map(normalize),
+          randomKey: hashId(String(work.id == null ? index : work.id))
+        };
+      });
+
+      var comparators = {
+        newest: function (a, b) { return a.index - b.index; },
+        oldest: function (a, b) { return b.index - a.index; },
+        "name-asc": function (a, b) {
+          return String(a.work.name || "").localeCompare(String(b.work.name || ""), "zh") || a.index - b.index;
+        },
+        "name-desc": function (a, b) {
+          return String(b.work.name || "").localeCompare(String(a.work.name || ""), "zh") || a.index - b.index;
+        },
+        size: function (a, b) { return (a.work.fileSize - b.work.fileSize) || a.index - b.index; },
+        random: function (a, b) { return a.randomKey - b.randomKey || a.index - b.index; }
+      };
+
+      function parseQuery(raw) {
+        return String(raw || "").split(/\s+/).map(normalize).filter(Boolean);
+      }
+
+      function matchesQuery(entry, tokens) {
+        return tokens.every(function (token) {
+          return entry.fields.some(function (field) { return field.indexOf(token) !== -1; });
+        });
+      }
+
+      var filtered = [];
+      var renderedCount = 0;
+
+      /* 卡片图 alt（SEO规范.md §7 列表卡片图公式）：《{name}》{characterName}{kindWord}，{tags顿号}AI娘二创图 */
+      function altFor(work) {
+        var character = characterById.get(work.characterId);
+        var characterName = character ? character.name : "未知角色";
+        var kindId = (work.categoryIds || [])[0] || "";
+        var kindWord = KIND_WORDS[kindId] || "表情包";
+        var tags = (work.tags || []).slice(0, 2).join("、");
+        var text = "《" + String(work.name == null ? "" : work.name) + "》" + characterName + kindWord;
+        return tags ? text + "，" + tags + "AI娘二创图" : text;
+      }
+
+      function cardHtml(entry) {
+        var work = entry.work;
+        var tags = (work.tags || []).slice(0, 3).map(function (tag) { return "#" + tag; }).join(" ");
+        var format = String(work.format || "").toUpperCase();
+        var meta = entry.characterName + " · " + format + " · " + work.width + " × " + work.height;
+        return (
+          '<article class="card">' +
+            `<a class="card-art-link" href="works/${work.slug}.html">` +
+              '<img class="card-art" src="' + escapeHtml(work.thumbUrl) + '" alt="' + escapeHtml(altFor(work)) + '"' +
+                ' width="' + escapeHtml(work.width) + '" height="' + escapeHtml(work.height) + '"' +
+                ' loading="lazy" decoding="async" />' +
+            '</a>' +
+            '<div class="card-body">' +
+              '<h3 class="card-title" title="' + escapeHtml(work.name) + '">' + escapeHtml(work.name) + '</h3>' +
+              '<p class="card-meta">' + escapeHtml(meta) + '</p>' +
+              '<p class="card-tags">' + escapeHtml(tags) + '</p>' +
+            '</div>' +
+          '</article>'
+        );
+      }
+
+      function updateStatus() {
+        var total = filtered.length;
+        var shown = Math.min(renderedCount, total);
+        countEl.textContent = "已显示 " + shown + " / " + total + " 张";
+        var exhausted = total > 0 && renderedCount >= total;
+        endNote.hidden = !exhausted;
+        if (exhausted) {
+          endNote.textContent = "已经到底了 · 共 " + total + " 张";
+        }
+        emptyEl.hidden = total !== 0;
+      }
+
+      function appendNextPage() {
+        if (renderedCount >= filtered.length) { updateStatus(); return; }
+        var slice = filtered.slice(renderedCount, renderedCount + PAGE_SIZE);
+        grid.insertAdjacentHTML("beforeend", slice.map(cardHtml).join(""));
+        renderedCount += slice.length;
+        updateStatus();
+      }
+
+      function refresh() {
+        var tokens = parseQuery(searchInput.value);
+        var compare = comparators[sortSelect.value] || comparators.newest;
+        filtered = entries.filter(function (entry) { return matchesQuery(entry, tokens); }).sort(compare);
+        grid.innerHTML = "";
+        renderedCount = 0;
+        appendNextPage();
+      }
+
+      /* 事件只在初始化绑一次：卡片是委托处理，重渲染不重绑 */
+      searchInput.addEventListener("input", refresh);
+      sortSelect.addEventListener("change", refresh);
+      var observer = new IntersectionObserver(function (records) {
+        if (records.some(function (record) { return record.isIntersecting; })) { appendNextPage(); }
+      }, { rootMargin: "320px 0px" });
+      observer.observe(sentinel);
+
+      refresh();
+    })();
+  </script>
+</body>
 </html>
