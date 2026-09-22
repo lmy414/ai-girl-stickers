@@ -157,12 +157,15 @@ cp -al "${SHARED_DATA_DIR}" "${STAGING_DIR}/site/data"
 for required in \
   "${STAGING_DIR}/site/index.html" \
   "${STAGING_DIR}/site/data/blue-fish-classification.json" \
-  "${STAGING_DIR}/site/submissions/works.json"; do
+  "${STAGING_DIR}/site/submissions/works.json" \
+  "${STAGING_DIR}/site/site-data.json" \
+  "${STAGING_DIR}/site/sitemap.xml" \
+  "${STAGING_DIR}/site/google653ce5fe960a5fb0.html"; do
   if [ ! -f "${required}" ]; then
     die "产物缺少必需文件：${required}"
   fi
 done
-log "产物校验通过：index.html / data/blue-fish-classification.json / submissions/works.json 均存在"
+log "产物校验通过：首页 / 首批数据 / 投稿清单 / site-data / sitemap / Google 验证文件均存在"
 
 # ---------------------------------------------------------------- nginx
 
@@ -217,10 +220,20 @@ PREVIEW_ABS="$(
   find "${RELEASE_PATH}/submissions/previews" -type f -name '*.webp' 2>/dev/null | sort | head -n 1
 )"
 PREVIEW_REL="${PREVIEW_ABS#"${RELEASE_PATH}"/}"
+WORK_ABS="$(
+  set +o pipefail
+  find "${RELEASE_PATH}/works" -type f -name '*.html' 2>/dev/null | sort | head -n 1
+)"
+WORK_REL="${WORK_ABS#"${RELEASE_PATH}"/}"
 if [ -z "${PREVIEW_REL}" ]; then
   log "健康检查失败：release 里找不到 submissions/previews/*.webp"
   restore_current
   die "健康检查失败（无预览图可回读），current 已回滚"
+fi
+if [ -z "${WORK_REL}" ]; then
+  log "健康检查失败：release 里找不到 works/*.html"
+  restore_current
+  die "健康检查失败（无详情页可回读），current 已回滚"
 fi
 
 check_ok() {
@@ -242,7 +255,7 @@ check_ok() {
 }
 
 HEALTH_FAILED=""
-for path in "/" "/robots.txt" "/submissions/works.json"; do
+for path in "/" "/robots.txt" "/submissions/works.json" "/site-data.json" "/sitemap.xml" "/google653ce5fe960a5fb0.html" "/${WORK_REL}"; do
   if ! check_ok "${HEALTH_URL}${path}"; then
     HEALTH_FAILED="${HEALTH_URL}${path}"
     break
@@ -273,7 +286,7 @@ log "发布成功"
 log "旧 release：${OLD_DISPLAY}"
 log "新 release：releases/${RELEASE_NAME}"
 log "提交：${COMMIT_SHA}"
-log "健康检查：全部通过（首页 / robots.txt / submissions/works.json / ${PREVIEW_REL}）"
+log "健康检查：全部通过（首页 / robots / 投稿清单 / site-data / sitemap / Google 验证 / ${WORK_REL} / ${PREVIEW_REL}）"
 
 {
   printf '%s old_release=%s new_release=%s commit=%s health=ok published=%s\n' \

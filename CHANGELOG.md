@@ -12,10 +12,12 @@
 
 - **前端重写为多页手绘涂鸦风（蓝白）**：导航五页（首页 `index.html` / 分类 / 投稿 / 关于 / 推荐）+ 页脚「更新日志」页；网格纸背景 + 贴纸纸卡组件。旧单页应用 `dist/app.js` **退役删除**；hash 路由保留跳转兼容——`index.html` 的内联脚本把 `#/work/<id>`、`#/character/<id>` 转跳到新页面，老分享链接不断。拆多页的理由：一张作品一个 URL，分享卡、搜索引擎收录、前进后退才成立，hash 路由给不了这些。
 - **每张作品一个独立静态详情页**：`works/<slug>.html` 共 191 页（41 投稿 + 4 站长自用 + 146 首批）。slug = `<characterId><YYYYMMDD><NNNN>`（角色 ID 小写 + 收录日期 + 当日该角色 4 位序号，按收录时间升序编），确定性生成、**一经发布即冻结**；数据主键仍是记录 `id`，Giscus 评论 term 保持 `sticker-<id>` 逐字不变——URL 换了，评论串的钥匙没换。
-- **长尾 SEO 进详情页**：title / description / keywords / OG / Twitter / canonical / robots / JSON-LD（`ImageObject`）/ 图片 alt 公式 / 正文长尾段 / H1–H2 层级一次配齐；新增 `dist/sitemap.xml`。标题、描述、alt 都按用户真会搜的长短语写（「DeepSeek娘 表情包下载」这类），不写自说自话的词；口径唯一依据 [`docs/SEO规范.md`](docs/SEO规范.md)，本轮从 demo 敲定稿转正入库。
+- **长尾 SEO 进详情页**：title / description / keywords / OG / Twitter / canonical / robots / JSON-LD（`ImageObject`）/ 图片 alt 公式 / 正文长尾段 / H1–H2 层级一次配齐；新增 `dist/sitemap.xml`。标题、描述、alt 都按用户真会搜的长短语写（「DeepSeek娘 表情包下载」这类），不写自说自话的词；口径唯一依据 [`docs/SEO规范.md`](docs/SEO规范.md)，本轮作为正式规范入库。
 - **数据迁移（`tools/prepare_works.mjs`，幂等可重跑）**：`dist/submissions/works.json` 与 `dist/owner-picks/works.json` 记录新增 `slug`、`categoryIds` 两字段（初分规则：id 形如 `sticker_op_*`→`illustration`，名含 立绘 / 设定 / 三视图→`setting`，其余→`meme`）；新增 `dist/blue-fish-ids.json` **首批 ID 冻结映射**（`sourcePath`→`{id, slug}`，`id` 沿用 `sticker_bf_NNN` 不重编号）——路线图里「冻结首批 ID」风险项就此关闭，将来迁库也不重编号。详情页由 `tools/generate_work_pages.mjs` 幂等生成；`tools/build.mjs` 补断言（清单 `slug` 与 `works/<slug>.html` 一一对应，防断链）。
 - **投稿页改造**：快速投稿入口放在投稿指南旁——GitHub 投稿表单已开通，**飞书投稿占位**「即将开通」；快速投稿表单**暂不开放填写**（全禁用占位，启用后走飞书）；**邮件投稿方案废弃**。
-- **样式两层落地**：`dist/tokens.css` 唯一定值处（涂鸦风的颜色、字号、间距、圆角全进 Token），`dist/styles.css` 组件层（网格纸背景、贴纸纸卡只引用语义变量）。缓存版本：`tokens.css?v=14`、`styles.css?v=18`——`app.js` 已删，JS 不再有版本号。
+- **样式两层落地**：`dist/tokens.css` 唯一定值处（涂鸦风的颜色、字号、间距、圆角全进 Token），`dist/styles.css` 组件层（网格纸背景、贴纸纸卡只引用语义变量）。缓存版本：`tokens.css?v=14`、`styles.css?v=18`——`app.js` 已删，JS 不再有版本号。Google Fonts 外链保留，用于手写标题与便签字体。
+- **搜索与可观测性接入**：加入 Search Console 验证文件 `google653ce5fe960a5fb0.html`；接入 Google tag `GT-NS92WVPQ`（GA4 数据流 `G-4LWN9Z2WT2`），用于聚合访问来源、设备与性能优化。广告个性化 / Google Signals / 广告存储关闭；统计结果不写入作品清单，不生成作品热度分或排行榜。README、关于页、数据契约与架构边界同步改为「最小化统计与透明披露」。
+- **致谢**：关于页新增角色设计致谢——[上善无形](https://space.bilibili.com/4456176)（角色设计）、[ZipZipPipe](https://space.bilibili.com/4168597)（角色二次设计）。
 - 文档同步：[`数据契约.md`](数据契约.md) 升 `v0.4`（`slug` / `categoryIds` / 首批 ID 冻结映射），[`架构边界.md`](架构边界.md) 改多页口径，[`docs/SEO规范.md`](docs/SEO规范.md) 入库，AGENTS / CONTRIBUTING / README / [`docs/维护与发布.md`](docs/维护与发布.md) 随之更新。
 
 ## 2026-09-22 · 架构边界基准与数据边界落地

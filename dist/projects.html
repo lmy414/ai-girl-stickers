@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>项目推荐 - 站长的其他项目与网站 | 蓝色大肥鱼</title>
+  <meta name="description" content="蓝色大肥鱼站长的其他项目和网站推荐页面，项目卡片正在整理中。" />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://xn--pssy23gqgbz2d718b.com/projects.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="蓝色大肥鱼" />
+  <meta property="og:title" content="项目推荐 - 站长的其他项目与网站 | 蓝色大肥鱼" />
+  <meta property="og:description" content="蓝色大肥鱼站长的其他项目和网站推荐页面，项目卡片正在整理中。" />
+  <meta property="og:url" content="https://xn--pssy23gqgbz2d718b.com/projects.html" />
+  <meta property="og:image" content="https://xn--pssy23gqgbz2d718b.com/favicon.png" />
+  <meta name="twitter:card" content="summary" />
+  <link rel="icon" href="favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="stylesheet" href="tokens.css?v=14" />
+  <link rel="stylesheet" href="styles.css?v=18" />
+  <style>
+    /* 项目推荐专属样式：留空占位便签 + 将来项目卡的虚线空版式。
+       公共组件（.panel / .empty / .tape-strip / .grid-2 / .marker-highlight）已在 styles.css，此处不重复。
+       颜色 / 字号 / 间距 / 圆角 / 阴影只用变量，禁止硬编码色值。 */
+
+    /* ---- 征集便签：贴在网格纸上的大便签 ---- */
+    .recruit-card {
+      max-width: var(--measure-wide);
+      padding: var(--space-7) var(--space-5);
+      background: var(--sticky-1);
+      text-align: center;
+      transform: rotate(-0.6deg);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .recruit-card:hover {
+      transform: rotate(0) translate(-2px, -2px);
+      box-shadow: var(--shadow-paper-lg);
+    }
+    .recruit-text {
+      margin: var(--space-2) 0;
+      font-family: var(--font-marker);
+      font-weight: normal;
+      font-size: var(--text-2xl);
+    }
+
+    /* ---- 将来项目卡的版式占位：虚线空卡，微旋转，卡内淡字。旋转只给装饰纸卡，不给交互控件 ---- */
+    .project-slots {
+      max-width: var(--measure-wide);
+      margin-top: var(--space-6);
+    }
+    .project-slot {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: calc(var(--space-10) * 2);
+      padding: var(--space-6);
+      color: var(--text-tertiary);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .project-slot.tilt-l { transform: rotate(-1deg); }
+    .project-slot.tilt-r { transform: rotate(0.8deg); }
+    .project-slot.tilt-l:hover,
+    .project-slot.tilt-r:hover {
+      transform: rotate(0) translate(-2px, -2px);
+      box-shadow: var(--shadow-paper);
+      z-index: 2;
+    }
+  </style>
+  <script src="analytics.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="index.html"><span class="brand-mark"><img src="avatar.png" alt="" /></span><span class="brand-text"><strong>蓝色大肥鱼</strong><small>AI 娘表情包开放档案</small></span></a>
+    <nav class="topnav"><a href="index.html">首页</a><a href="category.html">分类</a><a href="submit.html">投稿</a><a href="about.html">关于</a><a class="is-active" href="projects.html">推荐</a></nav>
+  </header>
+  <main class="page">
+    <h1 class="page-title">项目推荐</h1>
+    <p class="lede">我自己的其他项目和网站，会慢慢搬到这里。</p>
+
+    <div class="panel recruit-card">
+      <span class="tape-strip" aria-hidden="true"></span>
+      <p class="recruit-text"><span class="marker-highlight">项目征集中</span> · 留空占位</p>
+    </div>
+
+    <div class="grid-2 project-slots">
+      <div class="empty project-slot tilt-l">待补充</div>
+      <div class="empty project-slot tilt-r">待补充</div>
+    </div>
+  </main>
+  <footer class="site-footer"><p>非官方同人整理项目，图片版权归原作者所有。本站使用最小化 Google Analytics 了解页面与性能表现，不建立热度排行。</p><p><a href="changelog.html">更新日志</a> · <a href="about.html#analytics">统计与隐私</a></p></footer>
+</body>
+</html>

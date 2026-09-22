@@ -1,6 +1,6 @@
 # 蓝色大肥鱼 · 作品详情页 SEO 规范（长尾版）
 
-> 状态：正式版依据（2026-09-23 入库）。核心原则：**标题、描述、alt 都要接住用户真实的搜索关键词意图**——用户搜的是「deepseek 表情包」「蓝色大肥鱼 梗图」「AI娘 表情包下载」「deepseek娘 立绘」这类长短语，不是「二创表情包开放档案」这类自说自话。详情页 SEO 口径唯一依据本篇，生成器（`tools/generate_work_pages.mjs`）与前端按本篇渲染。
+> 状态：正式版依据（2026-09-23 入库，v2 长尾口径）。核心原则：**标题、描述、alt 都要接住用户真实的搜索关键词意图**——用户搜的是「deepseek 表情包」「蓝色大肥鱼 梗图」「AI娘 表情包下载」「deepseek娘 立绘」这类长短语，不是「二创表情包开放档案」这类自说自话。
 
 每张作品一个**独立静态详情页**。记号：`{name}` 作品名、`{characterId}` 角色 ID、`{characterName}` 角色展示名、`{aliases}` 角色别名串（顿号连接）、`{tags}` 作品标签、`{slug}` 见 §1、`{kindWord}` 作品类型词（见下）。
 
@@ -26,7 +26,7 @@ https://xn--pssy23gqgbz2d718b.com/works/<slug>
 
 - **slug 公式**：`<characterId><YYYYMMDD><NNNN>`（角色 ID 小写 + 收录日期 + 当日该角色 4 位序号，按收录时间升序编）。示例：`deepseek202609220001`。
 - slug **确定性生成、一经发布即冻结**；数据主键仍是 `id`（`sticker_*`），Giscus term 保持 `sticker-<id>`，与 URL 解耦。
-- 路径口径：`works/<slug>` 无扩展名，以线上为准；页面构建期生成。
+- 当前正式路径为 `works/<slug>.html`；未来若 nginx 增加无扩展名重写，canonical 与 sitemap 再一起切到 `/works/<slug>`。
 
 ## 2. `<title>`（接住主搜索意图，25–32 字，≤60 字符）
 
@@ -69,7 +69,7 @@ https://xn--pssy23gqgbz2d718b.com/works/<slug>
 
 ## 6. canonical 与 robots
 
-- `<link rel="canonical" href="https://xn--pssy23gqgbz2d718b.com/works/<slug>" />`
+- `<link rel="canonical" href="https://xn--pssy23gqgbz2d718b.com/works/<slug>.html" />`
 - `<meta name="robots" content="index,follow">`
 
 域名在脚本、日志与 `og:url` 里一律 punycode。
@@ -88,7 +88,7 @@ https://xn--pssy23gqgbz2d718b.com/works/<slug>
 - 渲染例：`《分我点token》DeepSeek娘表情包，token、打工人AI娘二创图`。
 - 主图放在 `<figure>` 里，配 `<figcaption>`（`《{name}》· {characterName}`）——图旁的可见文本同样喂给图片检索。
 - `<img>` 带 `width`/`height`（防布局偏移，利于图片质量评估）；主图 `loading="eager"`，列表图 `loading="lazy"`。
-- **图片文件名也参与图片 SEO**：派生图沿用现状文件名，由 alt / figcaption 补语义；语义化文件名（`<slug>.webp`）仍是建议项。图片 sitemap 可后续补。
+- **图片文件名也参与图片 SEO**：后续派生图可迁到语义化文件名（`<slug>.webp`）；当前沿用既有文件名，由 alt / figcaption / JSON-LD 补语义。图片 sitemap 可后续补。
 
 ## 8. 正文长尾段（每页一段，紧跟 H1——长尾流量的主承接）
 
@@ -134,7 +134,7 @@ https://xn--pssy23gqgbz2d718b.com/works/<slug>
 
 ## 迁移要点
 
-1. `/works/<slug>` 真实路径随本轮落地，OG 分享卡与 SEO 由此成立（架构边界待决事项「每作品静态页 + OG 分享卡」关闭）。
+1. 真实路径 `/works/<slug>.html` 已上线，OG 分享卡与 SEO 由每张独立静态页承载。
 2. Giscus 映射保持 `specific` / `sticker-<id>`（term 用 id 不用 slug）。
-3. 旧链接 `#/work/<id>` 重定向到 `/works/<slug>` 过渡一段时间。
-4. 长尾文案公式的渲染器集中在生成器一处（`tools/generate_work_pages.mjs`），改公式只改一处。
+3. 旧链接 `#/work/<id>` 由首页兼容脚本重定向到 `/works/<slug>.html`。
+4. 长尾文案公式集中在 `tools/generate_work_pages.mjs` 一处，改公式后全量重跑生成器。

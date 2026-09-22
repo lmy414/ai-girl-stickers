@@ -35,7 +35,11 @@
     "createdAt": "2026-09-19T15:42:19Z",
     "updatedAt": "2026-09-19T15:42:19Z",
     "tone": "deepseek",
-    "symbol": ""
+    "symbol": "",
+    "slug": "deepseek202609190001",
+    "categoryIds": [
+      "meme"
+    ]
   },
   {
     "id": "sticker_issue_02_001",
@@ -73,7 +77,11 @@
     "createdAt": "2026-09-19T16:57:32Z",
     "updatedAt": "2026-09-19T16:57:32Z",
     "tone": "deepseek",
-    "symbol": ""
+    "symbol": "",
+    "slug": "deepseek202609190002",
+    "categoryIds": [
+      "meme"
+    ]
   },
   {
     "id": "sticker_issue_03_001",
@@ -113,7 +121,11 @@
     "createdAt": "2026-09-20T06:05:47Z",
     "updatedAt": "2026-09-20T06:05:47Z",
     "tone": "deepseek",
-    "symbol": ""
+    "symbol": "",
+    "slug": "deepseek202609200001",
+    "categoryIds": [
+      "meme"
+    ]
   },
   {
     "id": "sticker_issue_04_001",
@@ -152,7 +164,11 @@
     "createdAt": "2026-09-20T07:23:10Z",
     "updatedAt": "2026-09-20T07:23:10Z",
     "tone": "deepseek",
-    "symbol": ""
+    "symbol": "",
+    "slug": "deepseek202609200002",
+    "categoryIds": [
+      "meme"
+    ]
   },
   {
     "id": "sticker_issue_05_001",
@@ -191,7 +207,11 @@
     "createdAt": "2026-09-20T07:26:41Z",
     "updatedAt": "2026-09-20T07:26:41Z",
     "tone": "deepseek",
-    "symbol": ""
+    "symbol": "",
+    "slug": "deepseek202609200003",
+    "categoryIds": [
+      "meme"
+    ]
   },
   {
     "id": "sticker_issue_06_001",
@@ -230,7 +250,11 @@
     "createdAt": "2026-09-20T07:28:47Z",
     "updatedAt": "2026-09-20T07:28:47Z",
     "tone": "deepseek",
-    "symbol": ""
+    "symbol": "",
+    "slug": "deepseek202609200004",
+    "categoryIds": [
+      "meme"
+    ]
   },
   {
     "id": "sticker_issue_07_001",
@@ -271,7 +295,11 @@
     "createdAt": "2026-09-20T08:30:54Z",
     "updatedAt": "2026-09-20T08:30:54Z",
     "tone": "deepseek",
-    "symbol": ""
+    "symbol": "",
+    "slug": "deepseek202609200005",
+    "categoryIds": [
+      "meme"
+    ]
   },
   {
     "id": "sticker_issue_07_002",
@@ -312,7 +340,11 @@
     "createdAt": "2026-09-20T08:30:54Z",
     "updatedAt": "2026-09-20T08:30:54Z",
     "tone": "deepseek",
-    "symbol": ""
+    "symbol": "",
+    "slug": "deepseek202609200006",
+    "categoryIds": [
+      "meme"
+    ]
   },
   {
     "id": "sticker_issue_07_003",
@@ -353,7 +385,11 @@
     "createdAt": "2026-09-20T08:30:54Z",
     "updatedAt": "2026-09-20T08:30:54Z",
     "tone": "deepseek",
-    "symbol": ""
+    "symbol": "",
+    "slug": "deepseek202609200007",
+    "categoryIds": [
+      "meme"
+    ]
   },
   {
     "id": "sticker_issue_07_004",
@@ -394,7 +430,11 @@
     "createdAt": "2026-09-20T08:30:54Z",
     "updatedAt": "2026-09-20T08:30:54Z",
     "tone": "deepseek",
-    "symbol": ""
+    "symbol": "",
+    "slug": "deepseek202609200008",
+    "categoryIds": [
+      "meme"
+    ]
   },
   {
     "id": "sticker_issue_07_005",
@@ -435,7 +475,11 @@
     "createdAt": "2026-09-20T08:30:54Z",
     "updatedAt": "2026-09-20T08:30:54Z",
     "tone": "deepseek",
-    "symbol": ""
+    "symbol": "",
+    "slug": "deepseek202609200009",
+    "categoryIds": [
+      "meme"
+    ]
   },
   {
     "id": "sticker_issue_07_006",
@@ -476,7 +520,11 @@
     "createdAt": "2026-09-20T08:30:54Z",
     "updatedAt": "2026-09-20T08:30:54Z",
     "tone": "deepseek",
-    "symbol": ""
+    "symbol": "",
+    "slug": "deepseek202609200010",
+    "categoryIds": [
+      "meme"
+    ]
   },
   {
     "id": "sticker_issue_07_007",
@@ -517,7 +565,11 @@
     "createdAt": "2026-09-20T08:30:54Z",
     "updatedAt": "2026-09-20T08:30:54Z",
     "tone": "deepseek",
-    "symbol": ""
+    "symbol": "",
+    "slug": "deepseek202609200011",
+    "categoryIds": [
+      "meme"
+    ]
   },
   {
     "id": "sticker_issue_07_008",
@@ -558,7 +610,11 @@
     "createdAt": "2026-09-20T08:30:54Z",
     "updatedAt": "2026-09-20T08:30:54Z",
     "tone": "deepseek",
-    "symbol": ""
+    "symbol": "",
+    "slug": "deepseek202609200012",
+    "categoryIds": [
+      "meme"
+    ]
   },
   {
     "id": "sticker_issue_07_009",
@@ -599,7 +655,11 @@
     "createdAt": "2026-09-20T08:30:54Z",
     "updatedAt": "2026-09-20T08:30:54Z",
     "tone": "deepseek",
-    "symbol": ""
+    "symbol": "",
+    "slug": "deepseek202609200013",
+    "categoryIds": [
+      "meme"
+    ]
   },
   {
     "id": "sticker_issue_07_010",
@@ -640,7 +700,11 @@
     "createdAt": "2026-09-20T08:30:54Z",
     "updatedAt": "2026-09-20T08:30:54Z",
     "tone": "deepseek",
-    "symbol": ""
+    "symbol": "",
+    "slug": "deepseek202609200014",
+    "categoryIds": [
+      "meme"
+    ]
   },
   {
     "id": "sticker_issue_07_011",
@@ -681,7 +745,11 @@
     "createdAt": "2026-09-20T08:30:54Z",
     "updatedAt": "2026-09-20T08:30:54Z",
     "tone": "deepseek",
-    "symbol": ""
+    "symbol": "",
+    "slug": "deepseek202609200015",
+    "categoryIds": [
+      "meme"
+    ]
   },
   {
     "id": "sticker_issue_07_012",
@@ -722,7 +790,11 @@
     "createdAt": "2026-09-20T08:30:54Z",
     "updatedAt": "2026-09-20T08:30:54Z",
     "tone": "deepseek",
-    "symbol": ""
+    "symbol": "",
+    "slug": "deepseek202609200016",
+    "categoryIds": [
+      "meme"
+    ]
   },
   {
     "id": "sticker_issue_07_013",
@@ -763,7 +835,11 @@
     "createdAt": "2026-09-20T08:30:54Z",
     "updatedAt": "2026-09-20T08:30:54Z",
     "tone": "deepseek",
-    "symbol": ""
+    "symbol": "",
+    "slug": "deepseek202609200017",
+    "categoryIds": [
+      "meme"
+    ]
   },
   {
     "id": "sticker_issue_08_001",
@@ -803,7 +879,11 @@
     "createdAt": "2026-09-20T08:40:20Z",
     "updatedAt": "2026-09-20T08:40:20Z",
     "tone": "claude",
-    "symbol": ""
+    "symbol": "",
+    "slug": "claude202609200001",
+    "categoryIds": [
+      "meme"
+    ]
   },
   {
     "id": "sticker_issue_08_002",
@@ -843,7 +923,11 @@
     "createdAt": "2026-09-20T08:40:20Z",
     "updatedAt": "2026-09-20T08:40:20Z",
     "tone": "claude",
-    "symbol": ""
+    "symbol": "",
+    "slug": "claude202609200002",
+    "categoryIds": [
+      "meme"
+    ]
   },
   {
     "id": "sticker_issue_08_003",
@@ -883,7 +967,11 @@
     "createdAt": "2026-09-20T08:40:20Z",
     "updatedAt": "2026-09-20T08:40:20Z",
     "tone": "claude",
-    "symbol": ""
+    "symbol": "",
+    "slug": "claude202609200003",
+    "categoryIds": [
+      "meme"
+    ]
   },
   {
     "id": "sticker_issue_08_004",
@@ -923,7 +1011,11 @@
     "createdAt": "2026-09-20T08:40:20Z",
     "updatedAt": "2026-09-20T08:40:20Z",
     "tone": "claude",
-    "symbol": ""
+    "symbol": "",
+    "slug": "claude202609200004",
+    "categoryIds": [
+      "meme"
+    ]
   },
   {
     "id": "sticker_issue_08_005",
@@ -963,7 +1055,11 @@
     "createdAt": "2026-09-20T08:40:20Z",
     "updatedAt": "2026-09-20T08:40:20Z",
     "tone": "claude",
-    "symbol": ""
+    "symbol": "",
+    "slug": "claude202609200005",
+    "categoryIds": [
+      "meme"
+    ]
   },
   {
     "id": "sticker_issue_08_006",
@@ -1003,7 +1099,11 @@
     "createdAt": "2026-09-20T08:40:20Z",
     "updatedAt": "2026-09-20T08:40:20Z",
     "tone": "claude",
-    "symbol": ""
+    "symbol": "",
+    "slug": "claude202609200006",
+    "categoryIds": [
+      "meme"
+    ]
   },
   {
     "id": "sticker_issue_08_007",
@@ -1043,7 +1143,11 @@
     "createdAt": "2026-09-20T08:40:20Z",
     "updatedAt": "2026-09-20T08:40:20Z",
     "tone": "claude",
-    "symbol": ""
+    "symbol": "",
+    "slug": "claude202609200007",
+    "categoryIds": [
+      "meme"
+    ]
   },
   {
     "id": "sticker_issue_09_001",
@@ -1081,7 +1185,11 @@
     "createdAt": "2026-09-20T08:47:31Z",
     "updatedAt": "2026-09-20T08:47:31Z",
     "tone": "deepseek",
-    "symbol": ""
+    "symbol": "",
+    "slug": "deepseek202609200018",
+    "categoryIds": [
+      "meme"
+    ]
   },
   {
     "id": "sticker_issue_10_001",
@@ -1119,7 +1227,11 @@
     "createdAt": "2026-09-20T09:39:07Z",
     "updatedAt": "2026-09-20T09:39:07Z",
     "tone": "deepseek",
-    "symbol": ""
+    "symbol": "",
+    "slug": "deepseek202609200019",
+    "categoryIds": [
+      "meme"
+    ]
   },
   {
     "id": "sticker_issue_11_001",
@@ -1158,7 +1270,11 @@
     "createdAt": "2026-09-20T09:44:03Z",
     "updatedAt": "2026-09-20T09:44:03Z",
     "tone": "deepseek",
-    "symbol": ""
+    "symbol": "",
+    "slug": "deepseek202609200020",
+    "categoryIds": [
+      "meme"
+    ]
   },
   {
     "id": "sticker_issue_12_001",
@@ -1196,7 +1312,11 @@
     "createdAt": "2026-09-20T12:54:36Z",
     "updatedAt": "2026-09-20T12:54:36Z",
     "tone": "deepseek",
-    "symbol": ""
+    "symbol": "",
+    "slug": "deepseek202609200021",
+    "categoryIds": [
+      "meme"
+    ]
   },
   {
     "id": "sticker_issue_13_001",
@@ -1235,7 +1355,11 @@
     "createdAt": "2026-09-20T12:56:04Z",
     "updatedAt": "2026-09-20T12:56:04Z",
     "tone": "deepseek",
-    "symbol": ""
+    "symbol": "",
+    "slug": "deepseek202609200022",
+    "categoryIds": [
+      "meme"
+    ]
   },
   {
     "id": "sticker_issue_14_001",
@@ -1274,7 +1398,11 @@
     "createdAt": "2026-09-20T12:57:40Z",
     "updatedAt": "2026-09-20T12:57:40Z",
     "tone": "deepseek",
-    "symbol": ""
+    "symbol": "",
+    "slug": "deepseek202609200023",
+    "categoryIds": [
+      "meme"
+    ]
   },
   {
     "id": "sticker_issue_15_001",
@@ -1313,7 +1441,11 @@
     "createdAt": "2026-09-20T15:04:53Z",
     "updatedAt": "2026-09-20T15:04:53Z",
     "tone": "deepseek",
-    "symbol": ""
+    "symbol": "",
+    "slug": "deepseek202609200024",
+    "categoryIds": [
+      "meme"
+    ]
   },
   {
     "id": "sticker_issue_16_001",
@@ -1352,7 +1484,11 @@
     "createdAt": "2026-09-20T16:36:48Z",
     "updatedAt": "2026-09-20T16:36:48Z",
     "tone": "qwen",
-    "symbol": ""
+    "symbol": "",
+    "slug": "qwen202609200001",
+    "categoryIds": [
+      "meme"
+    ]
   },
   {
     "id": "sticker_issue_17_001",
@@ -1390,7 +1526,11 @@
     "createdAt": "2026-09-21T04:28:26Z",
     "updatedAt": "2026-09-21T04:28:26Z",
     "tone": "grok",
-    "symbol": ""
+    "symbol": "",
+    "slug": "grok202609210001",
+    "categoryIds": [
+      "meme"
+    ]
   },
   {
     "id": "sticker_issue_19_001",
@@ -1430,7 +1570,11 @@
     "createdAt": "2026-09-21T10:20:50Z",
     "updatedAt": "2026-09-21T10:20:50Z",
     "tone": "other",
-    "symbol": ""
+    "symbol": "",
+    "slug": "stepfun202609210001",
+    "categoryIds": [
+      "setting"
+    ]
   },
   {
     "id": "sticker_issue_19_002",
@@ -1470,7 +1614,11 @@
     "createdAt": "2026-09-21T10:20:50Z",
     "updatedAt": "2026-09-21T10:20:50Z",
     "tone": "other",
-    "symbol": ""
+    "symbol": "",
+    "slug": "stepfun202609210002",
+    "categoryIds": [
+      "setting"
+    ]
   },
   {
     "id": "sticker_issue_19_003",
@@ -1510,7 +1658,11 @@
     "createdAt": "2026-09-21T10:20:50Z",
     "updatedAt": "2026-09-21T10:20:50Z",
     "tone": "other",
-    "symbol": ""
+    "symbol": "",
+    "slug": "stepfun202609210003",
+    "categoryIds": [
+      "setting"
+    ]
   },
   {
     "id": "sticker_issue_20_001",
@@ -1548,7 +1700,11 @@
     "createdAt": "2026-09-21T15:47:25Z",
     "updatedAt": "2026-09-21T15:47:25Z",
     "tone": "deepseek",
-    "symbol": ""
+    "symbol": "",
+    "slug": "deepseek202609210001",
+    "categoryIds": [
+      "meme"
+    ]
   },
   {
     "id": "sticker_issue_21_001",
@@ -1587,7 +1743,11 @@
     "createdAt": "2026-09-21T23:54:01Z",
     "updatedAt": "2026-09-21T23:54:01Z",
     "tone": "deepseek",
-    "symbol": ""
+    "symbol": "",
+    "slug": "deepseek202609210002",
+    "categoryIds": [
+      "meme"
+    ]
   },
   {
     "id": "sticker_issue_22_001",
@@ -1627,6 +1787,10 @@
     "createdAt": "2026-09-22T08:59:21Z",
     "updatedAt": "2026-09-22T08:59:21Z",
     "tone": "other",
-    "symbol": ""
+    "symbol": "",
+    "slug": "glm202609220001",
+    "categoryIds": [
+      "meme"
+    ]
   }
 ]

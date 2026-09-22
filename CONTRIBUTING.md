@@ -78,7 +78,7 @@ python -m http.server 5173 -d dist   # 打开 http://127.0.0.1:5173
 
 ### 改了前端三件套要 bump 缓存版本号
 
-改了 `dist/app.js` / `dist/styles.css` / `dist/tokens.css`，**必须同步引用处的 `?v=` 数字**，否则访问者拿的还是旧缓存，你会以为修复没生效。`app.js` 已随旧单页应用退役删除，现役是后两个；`index.html` 等手写页逐个改，`works/` 详情页是生成物，bump 后重跑 `tools/generate_work_pages.mjs` 一并出新号。
+改了 `dist/styles.css` / `dist/tokens.css`，**必须同步引用处的 `?v=` 数字**，否则访问者拿的还是旧缓存，你会以为修复没生效。`app.js` 已随旧单页应用退役删除，现役是后两个；`index.html` 等手写页逐个改，`works/` 详情页是生成物，bump 后重跑 `tools/generate_work_pages.mjs` 一并出新号。
 
 当前值：`tokens.css?v=14`、`styles.css?v=18`。
 
@@ -93,10 +93,13 @@ python tools/generate_image_derivatives.py
 ### 改清单 / 加作品后要跑迁移与详情页生成
 
 ```bash
-node tools/prepare_works.mjs && node tools/generate_work_pages.mjs
+node tools/prepare_works.mjs
+node tools/build_site_snapshot.mjs
+node tools/generate_work_pages.mjs
+node tools/generate_sitemap.mjs
 ```
 
-两个脚本都**幂等、可重跑**：`prepare_works.mjs` 给两份 `works.json` 补 `slug` / `categoryIds`，并维护 `dist/blue-fish-ids.json` 首批 ID 冻结映射（已有条目永不改写，只补缺）；`generate_work_pages.mjs` 读清单**全量重建** `dist/works/<slug>.html`。**构建前先跑这一步**——清单变了不重跑，`tools/build.mjs` 的「清单 `slug` 与详情页一一对应」断言会失败。`works/` 是生成物，别手改（下次重跑就被冲掉）；要改详情页的字段、文案或 SEO 头，改 `tools/generate_work_pages.mjs`，口径见 [`docs/SEO规范.md`](docs/SEO规范.md)。
+四个脚本都**幂等、可重跑**：`prepare_works.mjs` 给两份 `works.json` 补 `slug` / `categoryIds` 并维护首批 ID 冻结映射；`build_site_snapshot.mjs` 把三路来源归一成 191 条 `site-data.json/js`；`generate_work_pages.mjs` 全量重建 `dist/works/<slug>.html`；`generate_sitemap.mjs` 生成首页、功能页与详情页 URL。**构建前按此顺序跑完整链路**——清单变了不重跑，`tools/build.mjs` 的「site-data 与详情页一一对应」断言会失败。生成物别手改；详情页字段、长尾文案或 SEO 头统一改生成器，口径见 [`docs/SEO规范.md`](docs/SEO规范.md)。
 
 ### 本地构建检查
 
@@ -135,7 +138,7 @@ diff /tmp/a.txt /tmp/b.txt        # 必须为空
 2. `styles.css` 只引用语义变量（`--text-primary`、`--bg-surface`、`--space-4`…），不出现硬编码色值；
 3. 小屏差异优先重定义 Token，其次才写断点样式（`tokens.css` 末尾已有 1080 / 760 两档收缩）；
 4. 分节标题用 `.section-label`（同字号加粗 + 下划线），不要再用 11px 全大写、拉字距的那种小标签；
-5. 图标一律内联 SVG（`app.js` 的 `ICONS`），不用 emoji；
+5. 图标一律内联 SVG，不用 emoji；
 6. 主题靠 `data-theme="light|dark"` 切换，深浅两份语义层都在，组件层不用动。深色是中性灰黑、不带蓝调。偏好存在 `localStorage` 的 `aigirl-theme-2`——想强制所有人回到默认主题，换这个键名就行（`index.html` 的引导脚本和 `CONFIG.theme.storageKey` 要一起改）。
 
 作品图容器的底色（`--art-*`）也在 Token 里，由 `.sticker-art` 的渐变消费；图片加载失败时的回退块沿用同一个容器，JS 里不另存一份色板。
@@ -167,7 +170,7 @@ data-term    = `sticker-${sticker.id}`
 
 ### 其它方案
 
-不想让访客必须登录 GitHub，就换 Waline（可匿名评论、有后台、免费层能跑），代价是多一个要维护的实例。Utterances 只支持一层评论且维护放缓；Twikoo 功能最全但配置最重；Disqus 带广告和追踪脚本，跟这个站「零追踪」的定位冲突。切换时在评论接入点（生成器 / 页面模板一处）换 provider，并加一个分支。
+不想让访客必须登录 GitHub，就换 Waline（可匿名评论、有后台、免费层能跑），代价是多一个要维护的实例。Utterances 只支持一层评论且维护放缓；Twikoo 功能最全但配置最重；Disqus 带广告、用户画像与额外追踪，不符合本站「最小化统计与透明披露」边界。切换时在评论接入点（生成器 / 页面模板一处）换 provider，并加一个分支。
 
 ---
 

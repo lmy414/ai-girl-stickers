@@ -1,0 +1,498 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI娘表情包投稿 - GitHub投稿与飞书快速投稿 | 蓝色大肥鱼</title>
+  <meta name="description" content="阅读 AI娘表情包收录规则，通过 GitHub 投稿表单提交作品；飞书快速投稿通道与表单正在筹备中。" />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://xn--pssy23gqgbz2d718b.com/submit.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="蓝色大肥鱼" />
+  <meta property="og:title" content="AI娘表情包投稿 - GitHub投稿与飞书快速投稿 | 蓝色大肥鱼" />
+  <meta property="og:description" content="阅读 AI娘表情包收录规则，通过 GitHub 投稿表单提交作品；飞书快速投稿通道与表单正在筹备中。" />
+  <meta property="og:url" content="https://xn--pssy23gqgbz2d718b.com/submit.html" />
+  <meta property="og:image" content="https://xn--pssy23gqgbz2d718b.com/favicon.png" />
+  <meta name="twitter:card" content="summary" />
+  <link rel="icon" href="favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="stylesheet" href="tokens.css?v=14" />
+  <link rel="stylesheet" href="styles.css?v=18" />
+  <style>
+    /* 页面专属样式：只做本页组合，公共组件（.panel/.form/.btn/.email-preview…）一律用 styles.css。
+       颜色只用变量，禁止硬编码色值。旋转只给装饰容器，表单控件保持水平。 */
+
+    /* ---- 投稿指南纸卡 ---- */
+    .guide-card {
+      max-width: var(--measure-base);
+      transform: rotate(-0.5deg);
+    }
+    .rule-list {
+      margin: 0 0 var(--space-3);
+      padding-left: var(--space-5);
+    }
+    .rule-list li { margin-bottom: var(--space-1); }
+    .rule-list li:last-child { margin-bottom: 0; }
+    .rule-list li::marker { color: var(--marker); font-weight: var(--weight-bold); }
+    .req-mark {
+      color: var(--marker);
+      font-family: var(--font-hand);
+      margin-left: 2px;
+    }
+    .group-label {
+      font-family: var(--font-marker);
+      font-weight: normal;
+      font-size: var(--text-lg);
+    }
+
+    /* ---- 占位提示：表单顶部的醒目便签 ---- */
+    .form-notice {
+      margin: 0 0 var(--space-4);
+      padding: var(--space-2) var(--space-3);
+      background: var(--sticky-1);
+      border: 2px solid var(--ink);
+      border-radius: var(--radius-xs);
+      box-shadow: var(--shadow-paper-sm);
+      color: var(--text-primary);
+      font-family: var(--font-hand);
+      font-size: var(--text-lg);
+      font-weight: var(--weight-bold);
+      line-height: var(--leading-tight);
+      text-align: center;
+      transform: rotate(-0.6deg);
+    }
+
+    /* ---- 快速投稿：摊开的投稿单（大纸卡 + 胶带） ---- */
+    .form-sheet { margin-top: var(--space-2); }
+
+    /* ---- 三条确认：淡蓝便签块 ---- */
+    .confirm-note {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-3);
+      max-width: var(--measure-wide);
+      background: var(--sticky-1);
+      transform: rotate(-0.8deg);
+    }
+
+    .form-actions {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: var(--space-3);
+      margin-top: var(--space-2);
+    }
+    .missing-hint {
+      color: var(--text-secondary);
+      font-family: var(--font-hand);
+      font-size: var(--text-sm);
+      margin: 0;
+    }
+
+    /* ---- 投稿邮件草稿面板 ---- */
+    .email-panel { margin-top: var(--space-4); }
+    .email-title {
+      font-family: var(--font-marker);
+      font-weight: normal;
+      font-size: var(--text-xl);
+      margin: 0 0 var(--space-2);
+      transform: rotate(-1deg);
+    }
+    .email-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-2);
+      margin-top: var(--space-3);
+    }
+
+    /* ---- 快速投稿入口：两张便签纸片（GitHub 已开通 / 飞书占位） ---- */
+    .channel-card.tilt-l { transform: rotate(-1deg); }
+    .channel-card.tilt-r { transform: rotate(0.8deg); }
+    .channel-head {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: var(--space-2);
+      margin-bottom: var(--space-2);
+    }
+    .channel-head h3 {
+      font-family: var(--font-marker);
+      font-weight: normal;
+      font-size: var(--text-xl);
+      margin: 0;
+    }
+    .channel-desc {
+      color: var(--text-secondary);
+      font-family: var(--font-hand);
+      font-size: var(--text-base);
+      margin: 0 0 var(--space-3);
+    }
+
+    /* ---- 手写小贴纸徽标（替代扁平 badge） ---- */
+    .sticker-tag {
+      display: inline-block;
+      font-family: var(--font-hand);
+      font-size: var(--text-sm);
+      font-weight: var(--weight-bold);
+      line-height: var(--leading-tight);
+      color: var(--text-primary);
+      background: var(--sticky-1);
+      border: 1.5px solid var(--ink);
+      border-radius: var(--radius-xs);
+      padding: var(--space-1) var(--space-2);
+      transform: rotate(-1.5deg);
+    }
+    .sticker-tag.is-on {
+      background: var(--marker-soft);
+      transform: rotate(1.5deg);
+    }
+
+    /* ---- 占位形态：控件整体禁用 ---- */
+    input:disabled, select:disabled, textarea:disabled {
+      background: var(--bg-inset);
+      color: var(--text-tertiary);
+      box-shadow: none;
+      cursor: not-allowed;
+    }
+    .checkbox-row input:disabled { cursor: not-allowed; }
+
+    .icon { flex: none; }
+  </style>
+  <script src="analytics.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="index.html"><span class="brand-mark"><img src="avatar.png" alt="" /></span><span class="brand-text"><strong>蓝色大肥鱼</strong><small>AI 娘表情包开放档案</small></span></a>
+    <nav class="topnav"><a href="index.html">首页</a><a href="category.html">分类</a><a class="is-active" href="submit.html">投稿</a><a href="about.html">关于</a><a href="projects.html">推荐</a></nav>
+  </header>
+  <main class="page">
+    <h1 class="page-title">投稿</h1>
+    <p class="lede">把你的 AI 娘二创表情包交给我们归档。先看收录规则，投稿可走 GitHub 表单，或使用即将开通的飞书快速投稿。</p>
+
+    <h2 class="section-label">投稿指南</h2>
+    <div class="panel guide-card">
+      <p>本站收录 <strong>AI 角色的拟人化二创表情包</strong>：梗图、插画、设定图都可以，主角是各大 AI 产品的娘化角色（DeepSeek娘、豆包娘、Kimi娘……）就行。</p>
+      <p><strong class="marker-highlight">以下四类不收：</strong></p>
+      <ol class="rule-list">
+        <li>真人肖像、未授权的商业素材，以及跟 AI 角色无关的通用表情包；</li>
+        <li>违法、仇恨、骚扰他人的内容；</li>
+        <li>来源和授权都说不清、又拒绝补充的图片；</li>
+        <li>血腥、裸露、猎奇等明显让人不适的内容。</li>
+      </ol>
+      <p>没写到的边界按常识判断，维护者保留是否收录的最终决定权。</p>
+      <p><strong>格式要求：</strong>PNG / JPG / GIF / WebP / APNG，单张 ≤ 10 MB；尽量传原图，别传带聊天框的截图或二次压缩过的图。<strong class="marker-highlight">Tag 至少填 1 个</strong>——没有 Tag 的作品不进展示。</p>
+      <p><strong class="marker-highlight">提交前必须确认三条：</strong></p>
+      <ol class="rule-list">
+        <li>我确认自己有权提交这张图片，或已获原作者允许；</li>
+        <li>同意维护者核实后收录，并在收到版权要求时修改信息或删除；</li>
+        <li>知道本站是非官方同人整理项目，图片著作权始终归原作者。</li>
+      </ol>
+    </div>
+
+    <h2 class="section-label">快速投稿入口</h2>
+    <div class="grid-2">
+      <div class="panel channel-card tilt-l">
+        <span class="tape-strip" aria-hidden="true"></span>
+        <div class="channel-head">
+          <h3>GitHub 投稿表单</h3>
+          <span class="sticker-tag is-on">已开通 · 推荐</span>
+        </div>
+        <p class="channel-desc">可直接拖图上传，字段与本页一致。</p>
+        <a class="btn" href="https://github.com/lmy414/ai-girl-stickers/issues/new?template=sticker-submission.yml" target="_blank" rel="noopener">
+          <svg class="icon" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9.5 2.5H13.5V6.5" /><path d="M13.5 2.5 7.5 8.5" /><path d="M12 9.5V13.5H2.5V4H6.5" /></svg>
+          打开投稿表单
+        </a>
+      </div>
+      <div class="panel channel-card tilt-r">
+        <span class="tape-strip" aria-hidden="true"></span>
+        <div class="channel-head">
+          <h3>飞书投稿</h3>
+          <span class="sticker-tag">占位 · 即将开通</span>
+        </div>
+        <p class="channel-desc">填好下方表单后可一键经飞书提交给维护者，通道筹备中。</p>
+        <button type="button" class="btn" disabled>
+          <svg class="icon" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 1.3 10 14.7 7.3 8.7 1.3 6z" /><path d="M14.7 1.3 7.3 8.7" /></svg>
+          即将开通
+        </button>
+      </div>
+    </div>
+
+    <h2 class="section-label">快速投稿</h2>
+    <div class="panel form-sheet">
+      <span class="tape-strip" aria-hidden="true"></span>
+      <p class="form-notice"><strong class="marker-highlight">快速投稿表单暂不开放填写</strong> · 启用后支持飞书一键投稿</p>
+      <form class="form" id="submission-form" novalidate>
+      <div class="form-row">
+        <label for="f-name">图片名称<span class="req-mark">*</span></label>
+        <input type="text" id="f-name" autocomplete="off" disabled />
+      </div>
+      <div class="form-row">
+        <label for="f-desc">一句话说明</label>
+        <input type="text" id="f-desc" autocomplete="off" disabled />
+      </div>
+      <div class="form-row">
+        <label for="f-character">角色<span class="req-mark">*</span></label>
+        <select id="f-character" disabled></select>
+      </div>
+      <div class="form-row">
+        <label for="f-kind">作品类型<span class="req-mark">*</span></label>
+        <select id="f-kind" disabled></select>
+      </div>
+      <div class="form-row">
+        <label for="f-tags">Tag<span class="req-mark">*</span></label>
+        <span class="hint">空格或逗号分隔，至少 1 个；没有 Tag 的作品不进展示。</span>
+        <input type="text" id="f-tags" autocomplete="off" disabled />
+      </div>
+      <div class="form-row">
+        <label for="f-origin">内容来源<span class="req-mark">*</span></label>
+        <select id="f-origin" disabled></select>
+      </div>
+      <div class="form-row">
+        <label for="f-origin-author">来源作者</label>
+        <input type="text" id="f-origin-author" autocomplete="off" disabled />
+      </div>
+      <div class="form-row">
+        <label for="f-origin-url">来源链接</label>
+        <input type="url" id="f-origin-url" autocomplete="off" disabled />
+      </div>
+      <div class="form-row">
+        <label for="f-license">授权状态<span class="req-mark">*</span></label>
+        <select id="f-license" disabled></select>
+      </div>
+      <div class="form-row">
+        <label for="f-license-note">授权说明</label>
+        <textarea id="f-license-note" disabled></textarea>
+      </div>
+      <div class="form-row">
+        <label for="f-contact">联系邮箱或 GitHub 用户名</label>
+        <span class="hint">可选，仅用于回复，不公开。</span>
+        <input type="text" id="f-contact" autocomplete="off" disabled />
+      </div>
+      <div class="panel confirm-note">
+        <div class="form-row">
+          <span class="group-label">提交前确认<span class="req-mark">*</span></span>
+          <span class="hint">三条全部勾选后才能提交。</span>
+        </div>
+        <label class="checkbox-row"><input type="checkbox" id="f-confirm-1" disabled /><span>我确认自己有权提交这张图片，或已获原作者允许。</span></label>
+        <label class="checkbox-row"><input type="checkbox" id="f-confirm-2" disabled /><span>同意维护者核实后收录，并在收到版权要求时修改信息或删除。</span></label>
+        <label class="checkbox-row"><input type="checkbox" id="f-confirm-3" disabled /><span>知道本站是非官方同人整理项目，图片著作权始终归原作者。</span></label>
+      </div>
+      <div class="form-actions">
+        <button type="submit" class="btn primary" id="btn-generate" disabled>
+          <svg class="icon" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3.5" width="12" height="9" rx="1" /><path d="m2.5 4.5 5.5 4 5.5-4" /></svg>
+          通过飞书提交 · 即将开通
+        </button>
+        <p class="missing-hint" id="generate-hint" hidden></p>
+      </div>
+      </form>
+    </div>
+    <p class="note">飞书投稿通道筹备中，现阶段请优先使用 GitHub 投稿表单。</p>
+
+    <div class="panel email-panel" id="email-panel" hidden>
+      <p class="email-title">投稿邮件草稿</p>
+      <pre class="email-preview" id="email-text"></pre>
+      <div class="email-actions">
+        <button type="button" class="btn hover-wiggle" id="btn-copy">
+          <svg class="icon" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5.5" y="5.5" width="8" height="8" rx="1" /><path d="M10.5 5.5v-2a1 1 0 0 0-1-1h-6a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2" /></svg>
+          <span id="btn-copy-text">复制邮件内容</span>
+        </button>
+        <a class="btn hover-wiggle" id="btn-mail" href="#">
+          <svg class="icon" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3.5" width="12" height="9" rx="1" /><path d="m2.5 4.5 5.5 4 5.5-4" /></svg>
+          打开邮件客户端
+        </a>
+      </div>
+    </div>
+
+    <p class="note">投稿不会立即上线：维护者核实来源与授权后收录，期间可能通过你留下的联系方式与你确认。</p>
+  </main>
+  <footer class="site-footer"><p>非官方同人整理项目，图片版权归原作者所有。本站使用最小化 Google Analytics 了解页面与性能表现，不建立热度排行。</p><p><a href="changelog.html">更新日志</a> · <a href="about.html#analytics">统计与隐私</a></p></footer>
+  <script src="site-data.js"></script>
+  <script>
+    // 占位期：快速投稿表单暂不开放填写，飞书投稿通道筹备中；
+    // 邮件草稿逻辑原样保留备用，现阶段投稿请走 GitHub 投稿表单。
+    var SUBMIT_EMAIL = "submit@xn--pssy23gqgbz2d718b.com";
+
+    var ORIGIN_OPTIONS = [
+      { id: "self-created", name: "自己创作或生成" },
+      { id: "author-submitted", name: "原作者本人投稿" },
+      { id: "internet-found", name: "网络整理" },
+      { id: "community-created", name: "社区成员创作" },
+      { id: "unknown", name: "来源不明" }
+    ];
+    var LICENSE_OPTIONS = [
+      { id: "submitter-permission", name: "投稿者确认授权收录与下载" },
+      { id: "author-permission", name: "原作者明确授权" },
+      { id: "cc0", name: "CC0 公共领域" },
+      { id: "cc-by", name: "CC BY 署名" },
+      { id: "cc-by-nc", name: "CC BY-NC 署名·非商用" },
+      { id: "unknown", name: "授权状态不明" }
+    ];
+
+    var characters = DEMO.characters.filter(function (c) { return c.inSubmissionForm; });
+    var categories = DEMO.categories;
+
+    var elForm = document.getElementById("submission-form");
+    var elName = document.getElementById("f-name");
+    var elDesc = document.getElementById("f-desc");
+    var elCharacter = document.getElementById("f-character");
+    var elKind = document.getElementById("f-kind");
+    var elTags = document.getElementById("f-tags");
+    var elOrigin = document.getElementById("f-origin");
+    var elOriginAuthor = document.getElementById("f-origin-author");
+    var elOriginUrl = document.getElementById("f-origin-url");
+    var elLicense = document.getElementById("f-license");
+    var elLicenseNote = document.getElementById("f-license-note");
+    var elContact = document.getElementById("f-contact");
+    var elConfirms = [
+      document.getElementById("f-confirm-1"),
+      document.getElementById("f-confirm-2"),
+      document.getElementById("f-confirm-3")
+    ];
+    var elGenerate = document.getElementById("btn-generate");
+    var elHint = document.getElementById("generate-hint");
+    var elPanel = document.getElementById("email-panel");
+    var elEmailText = document.getElementById("email-text");
+    var elCopy = document.getElementById("btn-copy");
+    var elCopyText = document.getElementById("btn-copy-text");
+    var elMail = document.getElementById("btn-mail");
+
+    var currentMail = { subject: "", body: "" };
+
+    function fillSelect(select, options, placeholder) {
+      select.innerHTML = "";
+      var ph = document.createElement("option");
+      ph.value = "";
+      ph.textContent = placeholder;
+      select.appendChild(ph);
+      options.forEach(function (opt) {
+        var o = document.createElement("option");
+        o.value = opt.id;
+        o.textContent = opt.name;
+        select.appendChild(o);
+      });
+    }
+    fillSelect(elCharacter, characters, "请选择角色");
+    fillSelect(elKind, categories, "请选择作品类型");
+    fillSelect(elOrigin, ORIGIN_OPTIONS, "请选择内容来源");
+    fillSelect(elLicense, LICENSE_OPTIONS, "请选择授权状态");
+
+    function parseTags(raw) {
+      return raw.split(/[\s,，、]+/).map(function (t) { return t.trim(); }).filter(Boolean);
+    }
+
+    function labelOf(options, id) {
+      for (var i = 0; i < options.length; i++) {
+        if (options[i].id === id) return options[i].name + "（" + options[i].id + "）";
+      }
+      return "";
+    }
+
+    function readState() {
+      return {
+        name: elName.value.trim(),
+        description: elDesc.value.trim(),
+        characterId: elCharacter.value,
+        kindId: elKind.value,
+        tags: parseTags(elTags.value),
+        originType: elOrigin.value,
+        originAuthor: elOriginAuthor.value.trim(),
+        originUrl: elOriginUrl.value.trim(),
+        licenseType: elLicense.value,
+        licenseNote: elLicenseNote.value.trim(),
+        contact: elContact.value.trim(),
+        confirmed: elConfirms.every(function (c) { return c.checked; })
+      };
+    }
+
+    function missingOf(state) {
+      var missing = [];
+      if (!state.name) missing.push("图片名称");
+      if (!state.characterId) missing.push("角色");
+      if (!state.kindId) missing.push("作品类型");
+      if (state.tags.length < 1) missing.push("Tag（至少 1 个）");
+      if (!state.originType) missing.push("内容来源");
+      if (!state.licenseType) missing.push("授权状态");
+      if (!state.confirmed) missing.push("三条确认");
+      return missing;
+    }
+
+    function refreshValidity() {
+      var missing = missingOf(readState());
+      // 占位期：表单不开放填写，生成按钮常锁为「通过飞书提交 · 即将开通」
+      //（原逻辑为 missing.length > 0 才禁用；启用表单时改回即可）。
+      elGenerate.disabled = true;
+      // 「还缺」提示行已隐藏，隐藏状态下不再写文案。
+      if (!elHint.hidden) elHint.textContent = missing.length > 0 ? "还缺：" + missing.join("、") : "";
+    }
+
+    function buildMail(state) {
+      var body = [
+        "name: " + state.name,
+        "description: " + state.description,
+        "character: " + labelOf(characters, state.characterId),
+        "kind: " + labelOf(categories, state.kindId),
+        "tags: " + state.tags.join(" "),
+        "origin_type: " + labelOf(ORIGIN_OPTIONS, state.originType),
+        "origin_author: " + state.originAuthor,
+        "origin_url: " + state.originUrl,
+        "license_type: " + labelOf(LICENSE_OPTIONS, state.licenseType),
+        "license_note: " + state.licenseNote,
+        "contact: " + state.contact,
+        "",
+        "图片请作为附件一并发送（单张 ≤ 10 MB）。",
+        "确认三条已勾选：我确认有权提交这张图片或已获原作者允许；同意维护者核实后收录，并在收到版权要求时修改信息或删除；知晓本站是非官方同人整理项目，图片著作权始终归原作者。"
+      ].join("\n");
+      return { subject: "[投稿] " + state.name, body: body };
+    }
+
+    elForm.addEventListener("submit", function (event) {
+      event.preventDefault();
+      refreshValidity();
+      if (elGenerate.disabled) return;
+      var state = readState();
+      currentMail = buildMail(state);
+      elEmailText.textContent = "主题：" + currentMail.subject + "\n\n" + currentMail.body;
+      elMail.href = "mailto:" + SUBMIT_EMAIL
+        + "?subject=" + encodeURIComponent(currentMail.subject)
+        + "&body=" + encodeURIComponent(currentMail.body);
+      elPanel.hidden = false;
+    });
+
+    elForm.addEventListener("input", refreshValidity);
+    elForm.addEventListener("change", refreshValidity);
+
+    function copyMail() {
+      var text = "主题：" + currentMail.subject + "\n\n" + currentMail.body;
+      var done = function () {
+        elCopyText.textContent = "已复制";
+        window.setTimeout(function () { elCopyText.textContent = "复制邮件内容"; }, 1600);
+      };
+      var fail = function () {
+        elCopyText.textContent = "复制失败，请手动选择";
+        window.setTimeout(function () { elCopyText.textContent = "复制邮件内容"; }, 2400);
+      };
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(done).catch(fail);
+        return;
+      }
+      try {
+        var ta = document.createElement("textarea");
+        ta.value = text;
+        ta.setAttribute("readonly", "");
+        ta.style.position = "fixed";
+        ta.style.opacity = "0";
+        document.body.appendChild(ta);
+        ta.select();
+        var ok = document.execCommand("copy");
+        document.body.removeChild(ta);
+        ok ? done() : fail();
+      } catch (err) {
+        fail();
+      }
+    }
+    elCopy.addEventListener("click", copyMail);
+
+    refreshValidity();
+  </script>
+</body>
+</html>

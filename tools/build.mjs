@@ -81,14 +81,24 @@ const SKIP_DIRS = ["data", "submissions/originals"];
 // 产物必须存在且非空的文件（POSIX 风格相对路径）。
 const REQUIRED_FILES = [
   "index.html",
-  "app.js",
+  "category.html",
+  "submit.html",
+  "about.html",
+  "projects.html",
+  "changelog.html",
   "styles.css",
   "tokens.css",
   "robots.txt",
+  "sitemap.xml",
+  "analytics.js",
+  "google653ce5fe960a5fb0.html",
   "favicon.png",
   "avatar.png",
   "characters.json",
   "categories.json",
+  "blue-fish-ids.json",
+  "site-data.json",
+  "site-data.js",
   "submissions/works.json",
   "owner-picks/works.json",
 ];
@@ -331,13 +341,16 @@ function countFiles(rootDir) {
   return total;
 }
 
-function readJsonArray(filePath) {
-  let parsed;
+function readJson(filePath) {
   try {
-    parsed = JSON.parse(fs.readFileSync(filePath, "utf8"));
+    return JSON.parse(fs.readFileSync(filePath, "utf8"));
   } catch (error) {
     throw new Error(`${filePath} 不是合法 JSON：${error.message}`);
   }
+}
+
+function readJsonArray(filePath) {
+  const parsed = readJson(filePath);
   if (!Array.isArray(parsed)) {
     throw new Error(`${filePath} 顶层必须是数组`);
   }
@@ -385,7 +398,7 @@ function indexManifest(entries, label) {
 }
 
 // 引用完整性：作品的 characterId / categoryIds 必须能在清单里解析到。
-function assertReferences(record, source, characterIds, categoryIds) {
+function assertReferences(record, source, characterIds, categoryIds, outAbs) {
   if (typeof record.characterId !== "string" || !characterIds.has(record.characterId)) {
     throw new Error(
       `${source} 的 characterId 在 characters.json 里解析不到：${JSON.stringify(record.characterId)}`,
@@ -403,6 +416,10 @@ function assertReferences(record, source, characterIds, categoryIds) {
       }
     }
   }
+  if (typeof record.slug !== "string" || record.slug.trim() === "") {
+    throw new Error(`${source} 缺 slug`);
+  }
+  requireAsset(outAbs, `works/${record.slug}.html`, `${source}.slug`);
 }
 
 function validateOutput(outAbs) {
@@ -434,7 +451,7 @@ function validateOutput(outAbs) {
     if (typeof record.fullPath === "string" && record.fullPath !== "") {
       requireAsset(outAbs, record.fullPath, `submissions/${record.id}.fullPath`);
     }
-    assertReferences(record, `submissions/${record.id}`, characterIds, categoryIds);
+    assertReferences(record, `submissions/${record.id}`, characterIds, categoryIds, outAbs);
   }
 
   const ownerPicks = readJsonArray(path.join(outAbs, "owner-picks", "works.json"));
@@ -444,7 +461,29 @@ function validateOutput(outAbs) {
     if (typeof record.fullPath === "string" && record.fullPath !== "") {
       requireAsset(outAbs, record.fullPath, `owner-picks/${record.id}.fullPath`);
     }
-    assertReferences(record, `owner-picks/${record.id}`, characterIds, categoryIds);
+    assertReferences(record, `owner-picks/${record.id}`, characterIds, categoryIds, outAbs);
+  }
+
+  const siteData = readJson(path.join(outAbs, "site-data.json"));
+  if (!siteData || !Array.isArray(siteData.works) || !Array.isArray(siteData.characters)) {
+    throw new Error("site-data.json 必须包含 works 与 characters 数组");
+  }
+  const siteIds = new Set();
+  const siteSlugs = new Set();
+  for (const record of siteData.works) {
+    if (!record || typeof record.id !== "string" || siteIds.has(record.id)) {
+      throw new Error(`site-data.json 的作品 id 缺失或重复：${JSON.stringify(record && record.id)}`);
+    }
+    if (typeof record.slug !== "string" || siteSlugs.has(record.slug)) {
+      throw new Error(`site-data.json 的 slug 缺失或重复：${JSON.stringify(record && record.slug)}`);
+    }
+    siteIds.add(record.id);
+    siteSlugs.add(record.slug);
+    requireAsset(outAbs, `works/${record.slug}.html`, `site-data/${record.id}.slug`);
+  }
+  const generatedPages = fs.readdirSync(path.join(outAbs, "works")).filter((name) => name.endsWith(".html"));
+  if (generatedPages.length !== siteData.works.length) {
+    throw new Error(`works/ 详情页数量 ${generatedPages.length} 与 site-data 作品数 ${siteData.works.length} 不一致`);
   }
 
   // 投稿模板一致性：用仓库根的模板文本对产物里的 characters.json 校验下拉。

@@ -41,9 +41,9 @@
 
 原作者要补署名、改来源信息或下架作品，用[署名与删除申请](https://github.com/lmy414/ai-girl-stickers/issues/new?template=takedown-request.yml)。作品详情页授权栏里的那个链接打开的就是它，而且会把作品名直接带进 Issue 标题，你不用手动复制是哪张图。收到有效的版权投诉，会先下架再核实。
 
-## 零追踪承诺
+## 统计与隐私
 
-本站**不统计** PV / UV、点赞、收藏、分享、下载次数，也没有任何热度分数或排行榜，不加载追踪脚本、不写 Cookie、不建立用户标识。评论内容托管在 GitHub Discussions，本站自己不存评论、也不存评论者身份。
+本站使用 **Google Analytics 4** 统计聚合的页面访问、来源、设备与性能数据，用于发现加载问题和优化网站。广告个性化、Google Signals 与广告存储均关闭；统计数据不用于建立作品热度分或排行榜。Google Analytics 可能设置第一方分析 Cookie，Google Fonts 会从 Google 字体服务加载。评论托管在 GitHub Discussions，本站自己不保存评论内容与评论者身份。
 
 ## 本地跑起来看看
 

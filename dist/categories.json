@@ -1,50 +1,20 @@
 [
   {
-    "id": "complaint",
-    "name": "吐槽疑问",
-    "description": "吐槽、质疑、发问",
+    "id": "meme",
+    "name": "梗图",
+    "description": "表情包梗、聊天用图",
     "status": "active"
   },
   {
-    "id": "speechless",
-    "name": "无语冷漠",
-    "description": "无语、淡定、懒得理",
+    "id": "illustration",
+    "name": "插画",
+    "description": "完整构图的绘画作品",
     "status": "active"
   },
   {
-    "id": "meltdown",
-    "name": "崩溃破防",
-    "description": "崩溃、受挫、破防",
-    "status": "active"
-  },
-  {
-    "id": "cute",
-    "name": "卖萌可爱",
-    "description": "卖萌、贴贴、软软",
-    "status": "active"
-  },
-  {
-    "id": "cheering",
-    "name": "打气加油",
-    "description": "加油、鼓劲、庆祝",
-    "status": "active"
-  },
-  {
-    "id": "slacking",
-    "name": "摆烂躺平",
-    "description": "摆烂、摸鱼、躺平",
-    "status": "active"
-  },
-  {
-    "id": "smug",
-    "name": "得意炫耀",
-    "description": "得意、自信、小炫耀",
-    "status": "active"
-  },
-  {
-    "id": "shocked",
-    "name": "震惊疑惑",
-    "description": "震惊、瞳孔地震、疑惑",
+    "id": "setting",
+    "name": "设定图",
+    "description": "立绘、三视图、设定稿",
     "status": "active"
   }
 ]

@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>关于蓝色大肥鱼 - AI娘表情包开放档案与版权说明</title>
+  <meta name="description" content="了解蓝色大肥鱼 AI娘表情包开放档案、图片版权与授权、Google Analytics 统计隐私、评论机制、角色设计致谢和删除申请方式。" />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://xn--pssy23gqgbz2d718b.com/about.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="蓝色大肥鱼" />
+  <meta property="og:title" content="关于蓝色大肥鱼 - AI娘表情包开放档案与版权说明" />
+  <meta property="og:description" content="了解蓝色大肥鱼 AI娘表情包开放档案、图片版权与授权、Google Analytics 统计隐私、评论机制、角色设计致谢和删除申请方式。" />
+  <meta property="og:url" content="https://xn--pssy23gqgbz2d718b.com/about.html" />
+  <meta property="og:image" content="https://xn--pssy23gqgbz2d718b.com/favicon.png" />
+  <meta name="twitter:card" content="summary" />
+  <link rel="icon" href="favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="stylesheet" href="tokens.css?v=14" />
+  <link rel="stylesheet" href="styles.css?v=18" />
+  <style>
+    /* 页面专属样式：五张错落纸卡 + 便签强调，公共组件（.panel/.btn/.section-label…）一律用 styles.css。
+       颜色只用变量，禁止硬编码色值。 */
+
+    /* ---- 错落纸卡：微旋转交替 ---- */
+    .about-card { max-width: var(--measure-base); }
+    .about-card.tilt-l { transform: rotate(-0.8deg); }
+    .about-card.tilt-r { transform: rotate(0.7deg); margin-left: var(--space-7); }
+
+    /* ---- 「署名与删除」突出便签卡 ---- */
+    .sticky-note { background: var(--sticky-1); }
+
+    .prose p { margin: 0 0 var(--space-3); }
+    .prose p:last-child { margin-bottom: 0; }
+    .plain-list {
+      margin: 0;
+      padding-left: var(--space-5);
+    }
+    .plain-list li { margin-bottom: var(--space-1); }
+    .plain-list li:last-child { margin-bottom: 0; }
+    .plain-list li::marker { color: var(--marker); font-weight: var(--weight-bold); }
+
+    /* ---- 术语强调：手写体 ---- */
+    .term {
+      font-family: var(--font-hand);
+      font-size: var(--text-md);
+      font-weight: var(--weight-bold);
+    }
+
+    .icon { flex: none; }
+    .action-row { margin-top: var(--space-4); margin-bottom: 0; }
+  </style>
+  <script src="analytics.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="index.html"><span class="brand-mark"><img src="avatar.png" alt="" /></span><span class="brand-text"><strong>蓝色大肥鱼</strong><small>AI 娘表情包开放档案</small></span></a>
+    <nav class="topnav"><a href="index.html">首页</a><a href="category.html">分类</a><a href="submit.html">投稿</a><a class="is-active" href="about.html">关于</a><a href="projects.html">推荐</a></nav>
+  </header>
+  <main class="page">
+    <h1 class="page-title">关于</h1>
+    <p class="lede">蓝色大肥鱼是一个非官方同人整理项目，讲清楚它是干什么的、版权归谁、以及我们不收集你的哪些数据。</p>
+
+    <h2 class="section-label">关于本站</h2>
+    <div class="panel about-card tilt-l">
+      <div class="prose">
+        <p>「蓝色大肥鱼」是收集 <strong>AI 娘二创表情包</strong>的开放档案：作品按角色归档，支持按名称、Tag 与角色别名检索；每张作品都有独立详情页，可以查看来源与授权、下载原图，还带一个独立的评论区。更新日志见页脚。</p>
+        <p>你能在这里做的事：按角色与分类浏览全部作品；用关键词搜名称、Tag 或别名；进详情页拿原图；在作品下留言讨论；也可以把自己的作品<a href="submit.html">投稿</a>进来。</p>
+      </div>
+    </div>
+
+    <h2 class="section-label">许可与版权</h2>
+    <div class="panel about-card tilt-r">
+      <div class="prose">
+        <p>本站的<strong>程序代码</strong>以 <span class="term">MIT</span> 协议发布，随便用。</p>
+        <p>但投稿或被收录的<strong>表情包不会因为进了本站仓库就自动获得 <span class="term">MIT</span> 授权</strong>——图片的著作权始终归原作者所有。能不能用、怎么用，以每张作品详情页标注的来源与授权为准。</p>
+        <p>标注为「授权状态不明」的作品，请先联系原作者取得许可，勿直接商用。</p>
+      </div>
+    </div>
+
+    <h2 class="section-label" id="analytics">统计与隐私</h2>
+    <div class="panel about-card tilt-l">
+      <ul class="plain-list">
+        <li>本站使用 <span class="term">Google Analytics 4</span> 统计聚合的页面访问、来源、设备与性能数据，用于发现加载问题和改进页面；Google 可能设置第一方分析 Cookie。</li>
+        <li><span class="marker-highlight">广告个性化、Google Signals 与广告存储均已关闭</span>；本站不建立账号画像，不把统计数据做成作品热度分或排行榜。</li>
+        <li>Google Fonts 会从 Google 字体服务加载；评论托管在 <span class="term">GitHub Discussions</span>，本站不自行保存评论者身份。</li>
+      </ul>
+    </div>
+
+    <h2 class="section-label">评论</h2>
+    <div class="panel about-card tilt-r">
+      <div class="prose">
+        <p>评论由 <span class="term">GitHub Discussions</span>（<span class="term">Giscus</span>）托管，需要登录 GitHub 账号才能发言；一张作品对应一个独立讨论串，互不串台。</p>
+      </div>
+    </div>
+
+    <h2 class="section-label">致谢</h2>
+    <div class="panel about-card tilt-l">
+      <div class="prose">
+        <p>感谢以下创作者为本站所收录角色提供设计基础：</p>
+        <ul class="plain-list">
+          <li><a href="https://space.bilibili.com/4456176" target="_blank" rel="noopener">上善无形</a>：角色设计；</li>
+          <li><a href="https://space.bilibili.com/4168597" target="_blank" rel="noopener">ZipZipPipe</a>：角色二次设计。</li>
+        </ul>
+      </div>
+    </div>
+
+    <h2 class="section-label">署名与删除</h2>
+    <div class="panel about-card sticky-note tilt-r">
+      <span class="tape-strip" aria-hidden="true"></span>
+      <div class="prose">
+        <p>原作者需要补署名、修改来源信息或下架作品，走 GitHub 上的「署名与删除申请」表单，维护者会尽快处理。</p>
+        <p>收到有效的版权投诉后，会<strong>先下架相关作品，再核实情况</strong>。</p>
+      </div>
+      <p class="action-row">
+        <a class="btn primary hover-wiggle" href="https://github.com/lmy414/ai-girl-stickers/issues/new?template=takedown-request.yml" target="_blank" rel="noopener">
+        <svg class="icon" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9.5 2.5H13.5V6.5" /><path d="M13.5 2.5 7.5 8.5" /><path d="M12 9.5V13.5H2.5V4H6.5" /></svg>
+        打开署名与删除申请
+        </a>
+      </p>
+    </div>
+  </main>
+  <footer class="site-footer"><p>非官方同人整理项目，图片版权归原作者所有。本站使用最小化 Google Analytics 了解页面与性能表现，不建立热度排行。</p><p><a href="changelog.html">更新日志</a> · <a href="about.html#analytics">统计与隐私</a></p></footer>
+  <script src="site-data.js"></script>
+  <script>/* 关于页为纯静态内容，无页面逻辑 */</script>
+</body>
+</html>

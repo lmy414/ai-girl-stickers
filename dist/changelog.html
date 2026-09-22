@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>更新日志 - 蓝色大肥鱼网站改版与收录记录</title>
+  <meta name="description" content="查看蓝色大肥鱼 AI娘表情包站的页面改版、数据迁移、作品收录、SEO 和性能优化记录。" />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://xn--pssy23gqgbz2d718b.com/changelog.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="蓝色大肥鱼" />
+  <meta property="og:title" content="更新日志 - 蓝色大肥鱼网站改版与收录记录" />
+  <meta property="og:description" content="查看蓝色大肥鱼 AI娘表情包站的页面改版、数据迁移、作品收录、SEO 和性能优化记录。" />
+  <meta property="og:url" content="https://xn--pssy23gqgbz2d718b.com/changelog.html" />
+  <meta property="og:image" content="https://xn--pssy23gqgbz2d718b.com/favicon.png" />
+  <meta name="twitter:card" content="summary" />
+  <link rel="icon" href="favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="stylesheet" href="tokens.css?v=14" />
+  <link rel="stylesheet" href="styles.css?v=18" />
+  <style>
+    /* 更新日志专属样式：时间线条目 + 交替微旋转纸卡 + 日期便签。
+       公共组件（.panel / .card-title / .marker-highlight / .tape-strip / .note）已在 styles.css，此处不重复。
+       颜色 / 字号 / 间距 / 圆角 / 阴影只用变量，禁止硬编码色值。 */
+
+    /* ---- 时间线：左侧手绘虚线 + 墨点 ---- */
+    .timeline {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-6);
+      max-width: var(--measure-wide);
+      margin: 0;
+      padding: var(--space-2) 0 var(--space-2) var(--space-7);
+      list-style: none;
+    }
+    .timeline::before {
+      content: "";
+      position: absolute;
+      left: var(--space-2);
+      top: 0;
+      bottom: 0;
+      border-left: 3px dashed var(--ink-45);
+    }
+    .tl-item { position: relative; }
+    .tl-item::before {
+      content: "";
+      position: absolute;
+      left: calc(var(--space-1) - var(--space-7));
+      top: var(--space-6);
+      width: var(--space-3);
+      height: var(--space-3);
+      background: var(--marker-soft);
+      border: 2px solid var(--ink);
+      border-radius: 50%;
+    }
+
+    /* ---- 条目纸卡：交替 ±0.8deg，悬停摆正抬起。旋转只给装饰纸卡，不给交互控件 ---- */
+    .entry-card { transition: transform 0.2s ease, box-shadow 0.2s ease; }
+    .entry-card.tilt-l { transform: rotate(-0.8deg); }
+    .entry-card.tilt-r { transform: rotate(0.8deg); }
+    .entry-card.tilt-l:hover,
+    .entry-card.tilt-r:hover {
+      transform: rotate(0) translate(-2px, -2px);
+      box-shadow: var(--shadow-paper-lg);
+      z-index: 2;
+    }
+
+    /* ---- 卡头：日期小贴纸 + marker 标题 ---- */
+    .entry-head {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: var(--space-3);
+      margin-bottom: var(--space-3);
+    }
+    .date-sticker {
+      display: inline-block;
+      padding: var(--space-1) var(--space-3);
+      background: var(--sticky-1);
+      border: 2px solid var(--ink);
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-paper-sm);
+      font-family: var(--font-hand);
+      font-size: var(--text-lg);
+      font-weight: var(--weight-bold);
+      transform: rotate(-2deg);
+    }
+    .entry-card.tilt-r .date-sticker { transform: rotate(1.5deg); }
+    /* .card-title 的 ellipsis 是给瀑布流卡的，条目标题要能换行 */
+    .entry-title {
+      margin: 0;
+      font-family: var(--font-marker);
+      font-weight: normal;
+      font-size: var(--text-xl);
+      white-space: normal;
+      overflow: visible;
+      text-overflow: clip;
+    }
+
+    /* ---- 要点列表 ---- */
+    .entry-points { margin: 0; padding-left: var(--space-5); }
+    .entry-points li { margin-bottom: var(--space-1); }
+    .entry-points li:last-child { margin-bottom: 0; }
+    .entry-points li::marker { color: var(--marker); font-weight: var(--weight-bold); }
+
+    @media (max-width: 760px) {
+      .timeline { padding-left: var(--space-6); }
+      .tl-item::before { left: calc(var(--space-1) - var(--space-6)); }
+    }
+  </style>
+  <script src="analytics.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="index.html"><span class="brand-mark"><img src="avatar.png" alt="" /></span><span class="brand-text"><strong>蓝色大肥鱼</strong><small>AI 娘表情包开放档案</small></span></a>
+    <nav class="topnav"><a href="index.html">首页</a><a href="category.html">分类</a><a href="submit.html">投稿</a><a href="about.html">关于</a><a href="projects.html">推荐</a></nav>
+  </header>
+  <main class="page">
+    <h1 class="page-title">更新日志</h1>
+    <p class="lede">本站的变更记录，大事小事都记一笔。</p>
+
+    <ol class="timeline">
+      <li class="tl-item">
+        <article class="panel entry-card tilt-l">
+          <span class="tape-strip" aria-hidden="true"></span>
+          <div class="entry-head">
+            <span class="date-sticker">2026-09-22</span>
+            <h2 class="card-title entry-title"><span class="marker-highlight">架构边界</span>基准与数据边界落地</h2>
+          </div>
+          <ul class="entry-points">
+            <li>新增《架构边界》规范基准。</li>
+            <li>角色与分类迁出代码为 JSON 清单。</li>
+            <li>构建补引用完整性断言。</li>
+          </ul>
+        </article>
+      </li>
+      <li class="tl-item">
+        <article class="panel entry-card tilt-r">
+          <div class="entry-head">
+            <span class="date-sticker">2026-09-22</span>
+            <h2 class="card-title entry-title">第三批<span class="marker-highlight">投稿收录</span>（#19–#22）</h2>
+          </div>
+          <ul class="entry-points">
+            <li>收录 6 张图。</li>
+            <li>新立 Stepfun 娘与 GLM 娘两个角色。</li>
+          </ul>
+        </article>
+      </li>
+      <li class="tl-item">
+        <article class="panel entry-card tilt-l">
+          <span class="tape-strip" aria-hidden="true"></span>
+          <div class="entry-head">
+            <span class="date-sticker">2026-09-21</span>
+            <h2 class="card-title entry-title">第一期<span class="marker-highlight">加载优化</span>落地</h2>
+          </div>
+          <ul class="entry-points">
+            <li>投稿补缩略图与详情图派生。</li>
+            <li>发布包 73.7 MB → 8.3 MB。</li>
+          </ul>
+        </article>
+      </li>
+    </ol>
+    <p class="note">示例内容；正式版由仓库 CHANGELOG.md 同步。</p>
+  </main>
+  <footer class="site-footer"><p>非官方同人整理项目，图片版权归原作者所有。本站使用最小化 Google Analytics 了解页面与性能表现，不建立热度排行。</p><p><a href="changelog.html">更新日志</a> · <a href="about.html#analytics">统计与隐私</a></p></footer>
+</body>
+</html>

@@ -15,7 +15,7 @@
 
 纯静态前端：**没有前端框架、没有后端、没有测试框架**。`dist/` 仍是站点根目录，也是前端权威源码。2026-09-23 多页改版后站点是**多页静态路由**（网格纸背景 + 贴纸纸卡的手绘涂鸦风）：手写六页（首页 `index.html`、分类 / 投稿 / 关于 / 推荐，加页脚的「更新日志」页）+ `dist/works/` 下 191 个 `works/<slug>.html` 详情页（**生成物**，`tools/generate_work_pages.mjs` 从清单渲染，别手改）。旧单页应用 `dist/app.js` **已退役删除**；`index.html` 只留一段内联转跳脚本，把老 hash 链接 `#/work/<id>`、`#/character/<id>` 转到新页面。
 
-`tools/` 下与作品数据打交道的脚本：[`tools/prepare_works.mjs`](tools/prepare_works.mjs)（幂等迁移：两份 `works.json` 补 `slug` / `categoryIds`，维护 `dist/blue-fish-ids.json` 首批 ID 冻结映射）、[`tools/generate_work_pages.mjs`](tools/generate_work_pages.mjs)（幂等生成详情页）、`tools/generate_image_derivatives.py`（投稿派生图）。**零依赖构建** [`tools/build.mjs`](tools/build.mjs)（Node 内置模块 only，把 `dist/` 复制成一份干净发布产物，跳过 `dist/data/` 与 `dist/submissions/originals/`，并断言清单 `slug` 与详情页一一对应），以及**服务器侧发布 / 回滚脚本** `ops/deploy-server.sh` / `ops/rollback-server.sh`。`package.json` 只提供 `npm run build`。
+`tools/` 下与作品数据打交道的脚本：[`tools/prepare_works.mjs`](tools/prepare_works.mjs)（幂等迁移与 ID / slug 冻结）、`tools/build_site_snapshot.mjs`（三路来源归一成 `site-data.json/js`）、[`tools/generate_work_pages.mjs`](tools/generate_work_pages.mjs)（幂等生成详情页）、`tools/generate_sitemap.mjs`（生成 sitemap）、`tools/generate_image_derivatives.py`（投稿派生图）。**零依赖构建** [`tools/build.mjs`](tools/build.mjs)（Node 内置模块 only，把 `dist/` 复制成一份干净发布产物，跳过 `dist/data/` 与 `dist/submissions/originals/`，并断言清单 `slug` 与详情页一一对应），以及**服务器侧发布 / 回滚脚本** `ops/deploy-server.sh` / `ops/rollback-server.sh`。`package.json` 只提供 `npm run build`。
 
 改完必须自己起服务在浏览器里看过，不要只靠读代码判断：
 
@@ -27,7 +27,7 @@ python -m http.server 5173 -d dist   # 打开 http://127.0.0.1:5173
 
 ## 硬性约定
 
-- **改了 `app.js` / `styles.css` / `tokens.css`，同步 `index.html` 里的 `?v=` 数字。**（`app.js` 已退役删除，现役是后两个，当前值 `tokens.css?v=14`、`styles.css?v=18`。）不改版本号，访问者拿的还是旧缓存，你会以为修复没生效。详情页里的同名引用是生成物——bump 后重跑 `tools/generate_work_pages.mjs` 一并同步。
+- **改了 `styles.css` / `tokens.css`，同步全部引用处的 `?v=` 数字。**（当前值 `tokens.css?v=14`、`styles.css?v=18`；详情页由生成器同步。）不改版本号，访问者拿的还是旧缓存，你会以为修复没生效。详情页里的同名引用是生成物——bump 后重跑 `tools/generate_work_pages.mjs` 一并同步。
 - **样式只消费 Token。** 颜色、字号、间距、圆角、阴影、动效时长一律去 `tokens.css` 定义；`styles.css` 里不出现硬编码色值。小屏差异优先重定义 Token，其次才写断点。图标用内联 SVG，不用 emoji。
 - **Giscus 的 `data-mapping` 必须是 `specific`、`data-term` 必须是 `sticker-<id>`。** **term 与 id 绑定、不随 URL 变**（URL 走 slug）；换默认映射或改 term，会把全部评论塞进同一个讨论串，已有讨论串也会跟作品对不上。改路由 / URL 方案时回看这条。
 - **`rawGithubPath(repo, path)` 的仓库参数按记录传。** 首批原图在上游 `EDMOK/blue-fish-archive`（`CONFIG.upstreamRepo`），以后投稿的图片进本仓库——写死一个仓库名会让投稿作品的原图指向错的地方。
@@ -51,14 +51,14 @@ python -m http.server 5173 -d dist   # 打开 http://127.0.0.1:5173
 2026-09-22 实测的现状。这些都是**当前事实**，不是待办承诺；动到相关代码前先知道它们存在。
 
 - **详情页与清单的 slug 同源，不许重算（2026-09-23 起）。** slug = `<characterId><YYYYMMDD><NNNN>`，由 `tools/prepare_works.mjs` 生成、写进两份 `works.json`；`tools/generate_work_pages.mjs` 只读清单里的现值，不再自己算。首批另有 `dist/blue-fish-ids.json` 冻结映射（`sourcePath`→`{id, slug}`）。**一经发布即冻结**——重算一次，URL、外链和评论串对应就断一次；数据主键始终是 `id`，Giscus term 始终是 `sticker-<id>`，跟 URL 是两套东西。
-- **`file://` 直开时浏览器会拦截清单请求。** 角色清单（`dist/characters.json`）取不到后，168 条占位演示不再生成（12 条手写演示保留）；`http://` 本地服务不受影响。
+- **`file://` 直开不作为功能验收方式。** 多页站的数据由 `site-data.js` 直接加载，但 Giscus 与外部服务仍需要合法 Origin；统一用 `python -m http.server 5173 -d dist` 验收。旧单页演示数据已随 `app.js` 退役删除。
 - **投稿缩略图已补齐（2026-09-22 起）。** `dist/submissions/works.json` 的 `thumbnailPath` 指向 `submissions/previews/<角色>/<文件名>.webp`（约 480px），`fullPath` 指向 `submissions/large/...webp`（最长边 ≤1280），`path` 仍是 GitHub Raw 原图。派生图由 `tools/generate_image_derivatives.py` 生成，**幂等可重跑**；改投稿数据后要重跑一次，否则新记录没有派生图。
 - **投稿原图不进发布产物，线上也不托管原图。** 原件在 GitHub 仓库（下载走 Raw）。`tools/build.mjs`（以及已废弃的 `tools/deploy.mjs`）都会跳过 `dist/submissions/originals/`；这一条 2026-09-22 之前不成立——那时每次发布都把 63.7 MB 原图整个传上去，包因此有 73.7 MB。
 - **`dist/data/blue-fish/previews/` 里仍有 4 张 1.25–10.35 MB 的 GIF**（合计 26.6 MB），顶着 `previews/` 的名字却是原始动图。本机已用脚本把它们转成动画 WebP 并同步了本地清单，但 `dist/data/` 不进发布包，**线上仍是原来的 GIF**（那 4 条被收录门槛挡着、不展示）。
 - **`dist/data/blue-fish-classification.json` 由仓库外的导入流程生成、会被重新生成。** 任何对它的加工都必须做成幂等、可重跑的脚本，否则下次导入就被覆盖。另外 `localPreviewPath()` 是**从清单的 `previewPath` 取文件名**去拼本地路径的，换预览图的扩展名时必须同步改清单，不然前端会去找不存在的文件。
-- **服务器压缩、HTTP/2 与缓存分层已收尾（2026-09-22，改 nginx vhost，不产生新 release）。** gzip 覆盖 css / js / json / xml / svg / plain（带 `Vary: Accept-Encoding`），实测 `app.js`、`styles.css`、三份清单全部 `Content-Encoding: gzip`；HTTP/2 实测可用（ALPN 掌声 200）。**Brotli 不启用**——服务器没有 ngx_brotli 模块。注意 443 端口的 `listen` 选项是 socket 级的，同机别的 vhost（`wasteland-ring` 等）也声明过 `http2`，`nginx -t` 会有 `protocol options redefined` warn（不是本站引入的，别去动别人的 vhost）。
+- **服务器压缩、HTTP/2 与缓存分层已收尾（2026-09-22，改 nginx vhost，不产生新 release）。** gzip 覆盖 css / js / json / xml / svg / plain（带 `Vary: Accept-Encoding`），`styles.css`、`analytics.js` 与数据快照均应压缩；HTTP/2 实测可用（ALPN 掌声 200）。**Brotli 不启用**——服务器没有 ngx_brotli 模块。注意 443 端口的 `listen` 选项是 socket 级的，同机别的 vhost（`wasteland-ring` 等）也声明过 `http2`，`nginx -t` 会有 `protocol options redefined` warn（不是本站引入的，别去动别人的 vhost）。
 - **`?v=` 现在真的提供长缓存。** 带 `?v=` 的 js / css 响应是 `public, max-age=31536000, immutable`，不带的仍 `no-cache`；清单（含 `submissions/works.json`）与 HTML 永远回源校验，图片 7 天（`max-age=604800`）。**这把 bump `?v=` 升级成硬前提**：改了三件套不 bump，访问者最长一年拿旧缓存，不再是"多一次回源"的小事。分层实现在站点 vhost 的 `map $arg_v`，口径见 `docs/维护与发布.md` §6。
-- **`fetchJson()` 用的是 `cache: "no-cache"`**（`app.js`，2026-09-22 从 `no-store` 改过来），各份清单走协商缓存，不再每次重下。
+- **公开数据快照分两份**：`site-data.json` 给旧链接兼容与程序回读，`site-data.js` 给首页 / 分类页直接加载；两者由 `tools/build_site_snapshot.mjs` 同源生成，改清单后必须一起重跑。
 - **头像与站标已拆开。** 卡片/作者栏/角色列表/页眉页脚用 15 KB 的 `dist/avatar.png`；`favicon.png`（262 KB）只留给 favicon 与 `og:image`，不能删。加新的可见头像位时用 `avatar.png`。
 
 ## 已经定下的方向，不用再问

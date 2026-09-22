@@ -3,22 +3,42 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>蓝色大肥鱼 · AI 娘表情包开放档案</title>
-  <meta name="description" content="蓝色大肥鱼：AI 娘二创表情包、梗图与立绘设定图的开放档案。按角色归档，支持名称、Tag 与角色别名检索，可查看高清大图、免费下载原图，每张作品带独立评论区。" />
+  <title>蓝色大肥鱼 - AI娘表情包、DeepSeek娘梗图与二创立绘下载</title>
+  <meta name="description" content="蓝色大肥鱼收录 DeepSeek娘、Claude娘、Qwen娘、GLM娘等 AI娘表情包、梗图、插画和立绘设定，支持按角色分类、Tag 搜索、高清查看和原图下载。" />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://xn--pssy23gqgbz2d718b.com/" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="蓝色大肥鱼" />
-  <meta property="og:title" content="蓝色大肥鱼 · AI 娘表情包开放档案" />
-  <meta property="og:description" content="AI 娘二创表情包、梗图与立绘设定图的开放档案。按角色归档，支持名称、Tag 与角色别名检索，可查看高清大图、免费下载原图，每张作品带独立评论区。" />
+  <meta property="og:title" content="蓝色大肥鱼 - AI娘表情包、DeepSeek娘梗图与二创立绘下载" />
+  <meta property="og:description" content="蓝色大肥鱼收录 DeepSeek娘、Claude娘、Qwen娘、GLM娘等 AI娘表情包、梗图、插画和立绘设定，支持按角色分类、Tag 搜索、高清查看和原图下载。" />
   <meta property="og:url" content="https://xn--pssy23gqgbz2d718b.com/" />
   <meta property="og:image" content="https://xn--pssy23gqgbz2d718b.com/favicon.png" />
   <meta name="twitter:card" content="summary" />
-  <!-- Google 搜索控制台站点验证标记：验证通过后也不要移除，移除即失去已验证状态 -->
-  <meta name="google-site-verification" content="0EMOyL056kGpDA5JlH0X_uq7yh6nvqRz_EW2TiyWQIo" />
-  <link rel="canonical" href="https://xn--pssy23gqgbz2d718b.com/" />
   <link rel="icon" href="favicon.ico" sizes="any" />
   <link rel="icon" type="image/png" href="favicon.png" />
   <link rel="stylesheet" href="tokens.css?v=14" />
   <link rel="stylesheet" href="styles.css?v=18" />
+  <script>
+    (function () {
+      var hash = String(location.hash || "");
+      if (!hash.startsWith("#/")) return;
+      var workMatch = hash.match(/^#\/work\/([^/?#]+)/);
+      if (workMatch) {
+        fetch("site-data.json", { cache: "no-cache" }).then(function (r) { return r.json(); }).then(function (data) {
+          var id = decodeURIComponent(workMatch[1]);
+          var work = (data.works || []).find(function (item) { return item.id === id; });
+          location.replace(work && work.slug ? "works/" + work.slug + ".html" : "index.html");
+        }).catch(function () { location.replace("index.html"); });
+        return;
+      }
+      var characterMatch = hash.match(/^#\/character\/([^/?#]+)/);
+      if (characterMatch) {
+        location.replace("category.html#c=" + encodeURIComponent(decodeURIComponent(characterMatch[1])));
+        return;
+      }
+      location.replace("index.html");
+    })();
+  </script>
   <style>
     /* 首页专属样式 —— 只写页面布局与开屏横幅；纸卡 / 按钮 / 便签 / 工具条 / 卡片等
        公共组件已在 styles.css，此处不重复。颜色 / 字号 / 间距 / 圆角 / 阴影只用变量。 */
@@ -73,7 +93,8 @@
     }
     .btn svg { flex: none; }
 
-    /* 右侧照片墙：拍立得拼贴。浅蓝底衬（--sticky-* 渐变），主角是贴上去的照片。 */
+    /* 右侧照片墙：拍立得拼贴。原 --art-deepseek-* 深色艺术带降级成浅蓝底衬（--sticky-* 渐变），
+       蓝白纸面基调不变，主角是贴上去的照片。 */
     .hero-art {
       display: flex;
       align-items: center;
@@ -96,7 +117,7 @@
       border: 2px solid var(--ink);
       border-radius: var(--radius-xs);
       box-shadow: var(--shadow-paper-sm);
-      transition: transform var(--duration-2) ease, box-shadow var(--duration-2) ease;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
     .polaroid img {
       display: block;
@@ -162,47 +183,12 @@
       margin: var(--space-6) 0 0;
     }
   </style>
-  <!-- 旧链接兼容：单页应用时代的 hash 路由（#/work/<id>、#/character/<id>）跳到新静态页。
-       slug 只从数据读（submissions/works.json 与 blue-fish-ids.json 的冻结映射），查不到回首页。 -->
-  <script>
-    (function () {
-      "use strict";
-      var hash = String(window.location.hash || "");
-      if (hash.indexOf("#/") !== 0) return; /* 站内锚点（如 #gallery）不动 */
-      var work = hash.match(/^#\/work\/([^/?#]+)/);
-      if (work) {
-        var id = decodeURIComponent(work[1]);
-        var load = function (url) {
-          return fetch(url, { cache: "no-cache" })
-            .then(function (response) { return response.ok ? response.json() : []; })
-            .catch(function () { return []; });
-        };
-        Promise.all([load("submissions/works.json"), load("blue-fish-ids.json")]).then(function (lists) {
-          var slug = "";
-          var tables = [lists[0], lists[1]];
-          for (var i = 0; i < tables.length && !slug; i++) {
-            var rows = Array.isArray(tables[i]) ? tables[i] : [];
-            for (var j = 0; j < rows.length; j++) {
-              if (rows[j] && rows[j].id === id && rows[j].slug) { slug = String(rows[j].slug); break; }
-            }
-          }
-          window.location.replace(slug ? "works/" + slug + ".html" : "index.html");
-        });
-        return;
-      }
-      var character = hash.match(/^#\/character\/([^/?#]+)/);
-      if (character) {
-        window.location.replace("category.html#c=" + encodeURIComponent(decodeURIComponent(character[1])));
-        return;
-      }
-      window.location.replace("index.html"); /* 认不出的旧 hash（含 #/）回首页 */
-    })();
-  </script>
+  <script src="analytics.js" defer></script>
 </head>
 <body>
   <header class="topbar">
     <a class="brand" href="index.html"><span class="brand-mark"><img src="avatar.png" alt="" /></span><span class="brand-text"><strong>蓝色大肥鱼</strong><small>AI 娘表情包开放档案</small></span></a>
-    <nav class="topnav"><a href="index.html">首页</a><a href="category.html">分类</a><a href="submit.html">投稿</a><a href="about.html">关于</a><a href="projects.html">推荐</a></nav>
+    <nav class="topnav"><a href="index.html" class="is-active">首页</a><a href="category.html">分类</a><a href="submit.html">投稿</a><a href="about.html">关于</a><a href="projects.html">推荐</a></nav>
   </header>
   <main class="page">
     <section class="hero panel" aria-labelledby="hero-title">
@@ -260,24 +246,27 @@
     </section>
     <div id="sentinel" aria-hidden="true"></div>
   </main>
-  <footer class="site-footer"><p>非官方同人整理项目，图片版权归原作者所有。本站不统计浏览量、点赞、收藏与下载热度。</p><p><a href="changelog.html">更新日志</a></p></footer>
+  <footer class="site-footer"><p>非官方同人整理项目，图片版权归原作者所有。本站使用最小化 Google Analytics 了解页面与性能表现，不建立热度排行。</p><p><a href="changelog.html">更新日志</a> · <a href="about.html#analytics">统计与隐私</a></p></footer>
+  <script src="site-data.js"></script>
   <script>
-    (async function () {
+    (function () {
       "use strict";
 
       var PAGE_SIZE = 24;
-      var UPSTREAM_RAW = "https://raw.githubusercontent.com/EDMOK/blue-fish-archive/main/";
-
-      /* 品类词（SEO 规范 §7 公式用）；categoryIds 初分口径见 kindOf */
-      var KIND_WORDS = { meme: "表情包", illustration: "二创插画", setting: "立绘设定图" };
+      var DEMO = window.DEMO || {};
+      var characters = Array.isArray(DEMO.characters) ? DEMO.characters : [];
+      var works = Array.isArray(DEMO.works) ? DEMO.works : [];
 
       var grid = document.getElementById("grid");
+      var gallery = document.getElementById("gallery");
       var searchInput = document.getElementById("search");
       var sortSelect = document.getElementById("sort");
       var countEl = document.getElementById("count");
       var endNote = document.getElementById("end-note");
       var emptyEl = document.getElementById("empty");
       var sentinel = document.getElementById("sentinel");
+
+      var characterById = new Map(characters.map(function (c) { return [c.id, c]; }));
 
       /* 归一：小写化并去掉空格 / 下划线 / 短横线后再比 */
       function normalize(value) {
@@ -299,137 +288,6 @@
         }
         return h >>> 0;
       }
-
-      async function fetchJson(url) {
-        try {
-          /* no-cache：清单走协商缓存（ETag / Last-Modified），变了照旧取回新内容 */
-          var response = await fetch(url, { cache: "no-cache" });
-          return response.ok ? await response.json() : null;
-        } catch (error) {
-          return null;
-        }
-      }
-
-      function sourceFileName(value) {
-        return String(value || "").split("/").pop();
-      }
-
-      /* categoryIds 初分：sticker_op_* → 插画；名称含 立绘/设定/三视图 → 设定图；其余 → 表情包 */
-      function kindOf(id, name) {
-        if (String(id || "").indexOf("sticker_op_") === 0) return "illustration";
-        if (/立绘|设定|三视图/.test(String(name || ""))) return "setting";
-        return "meme";
-      }
-
-      /* 收录门槛（与旧站 mapLocalRecord 同口径）：名称非空 + 至少 1 个 Tag + 角色非空 */
-      function gate(record) {
-        var name = String(record.name || "").trim();
-        var tags = Array.isArray(record.tags)
-          ? record.tags.map(function (tag) { return String(tag || "").trim(); }).filter(Boolean)
-          : [];
-        var characterId = String(record.characterId || "").trim();
-        return name && tags.length && characterId ? { name: name, tags: tags, characterId: characterId } : null;
-      }
-
-      /* 投稿 / 站长自用清单已是契约形状；slug 只从数据读，缺 slug 记 warn 跳过 */
-      function mapContractRecord(record) {
-        if (!record || record.status !== "published") return null;
-        var base = gate(record);
-        if (!base) return null;
-        var slug = String(record.slug || "").trim();
-        if (!slug) {
-          console.warn("[works] 记录缺 slug，跳过：", record.id || base.name);
-          return null;
-        }
-        var thumb = String(record.thumbnailPath || "").replace(/^\/+/, "");
-        var full = String(record.fullPath || record.thumbnailPath || "").replace(/^\/+/, "");
-        return {
-          id: String(record.id || ""),
-          slug: slug,
-          name: base.name,
-          characterId: base.characterId,
-          tags: base.tags,
-          categoryIds: [kindOf(record.id, base.name)],
-          format: String(record.format || "").toLowerCase(),
-          isAnimated: !!record.isAnimated,
-          width: Number(record.width) || 1,
-          height: Number(record.height) || 1,
-          fileSize: Number(record.fileSize) || 0,
-          createdAt: String(record.createdAt || ""),
-          thumbUrl: thumb,
-          displayUrl: full,
-          originalUrl: String(record.path || "")
-        };
-      }
-
-      /* 首批 blue-fish：id / slug 按 sourcePath 查冻结映射（blue-fish-ids.json），查不到 warn 跳过。
-         预览只取 previewPath||sourcePath 的 basename 拼 data/blue-fish/previews/；
-         large 目录未部署，详情显示图同预览图（旧站 mapLocalRecord 语义）；
-         原图拼上游 GitHub Raw。 */
-      function mapBlueFishRecord(record, idMap) {
-        if (!record) return null;
-        var base = gate(record);
-        if (!base) return null;
-        var sourcePath = String(record.sourcePath || "");
-        var frozen = idMap.get(sourcePath);
-        if (!frozen || !frozen.id || !frozen.slug) {
-          console.warn("[blue-fish] sourcePath 无冻结 id/slug，跳过：", sourcePath);
-          return null;
-        }
-        var preview = "data/blue-fish/previews/" + encodeURIComponent(sourceFileName(record.previewPath || record.sourcePath));
-        var format = String(record.format || "").toLowerCase();
-        return {
-          id: String(frozen.id),
-          slug: String(frozen.slug),
-          name: base.name,
-          characterId: base.characterId,
-          tags: base.tags,
-          categoryIds: [kindOf(frozen.id, base.name)],
-          format: format,
-          isAnimated: format === "gif" || format === "apng",
-          width: Number(record.width) || 1,
-          height: Number(record.height) || 1,
-          fileSize: Number(record.fileSize) || 0,
-          createdAt: "2026-09-15T00:00:00+08:00",
-          thumbUrl: preview,
-          displayUrl: preview,
-          originalUrl: UPSTREAM_RAW + sourcePath.replace(/^\/+/, "")
-        };
-      }
-
-      /* 四份清单 + 角色清单 → 统一 works 数组，按收录时间倒序（同刻保持来源顺序） */
-      async function loadWorks() {
-        var results = await Promise.all([
-          fetchJson("submissions/works.json"),
-          fetchJson("owner-picks/works.json"),
-          fetchJson("data/blue-fish-classification.json"),
-          fetchJson("blue-fish-ids.json"),
-          fetchJson("characters.json")
-        ]);
-        var idMap = new Map();
-        (Array.isArray(results[3]) ? results[3] : []).forEach(function (row) {
-          if (row && row.sourcePath) idMap.set(String(row.sourcePath), row);
-        });
-        var merged = [];
-        var push = function (work) { if (work) merged.push(work); };
-        (Array.isArray(results[0]) ? results[0] : []).forEach(function (record) { push(mapContractRecord(record)); });
-        (Array.isArray(results[1]) ? results[1] : []).forEach(function (record) { push(mapContractRecord(record)); });
-        (Array.isArray(results[2]) ? results[2] : []).forEach(function (record) { push(mapBlueFishRecord(record, idMap)); });
-        return {
-          characters: (Array.isArray(results[4]) ? results[4] : []).filter(function (c) { return c && c.id && c.id !== "all"; }),
-          works: merged
-            .map(function (work, index) { return { work: work, order: index }; })
-            .sort(function (a, b) {
-              return (Date.parse(b.work.createdAt) || 0) - (Date.parse(a.work.createdAt) || 0) || a.order - b.order;
-            })
-            .map(function (item) { return item.work; })
-        };
-      }
-
-      var data = await loadWorks();
-      var characters = data.characters;
-      var works = data.works;
-      var characterById = new Map(characters.map(function (c) { return [c.id, c]; }));
 
       var entries = works.map(function (work, index) {
         var character = characterById.get(work.characterId) || null;
@@ -478,7 +336,7 @@
         var character = characterById.get(work.characterId);
         var characterName = character ? character.name : "未知角色";
         var kindId = (work.categoryIds || [])[0] || "";
-        var kindWord = KIND_WORDS[kindId] || "表情包";
+        var kindWord = ({ meme: "表情包", illustration: "二创插画", setting: "立绘设定图" })[kindId] || "表情包";
         var tags = (work.tags || []).slice(0, 2).join("、");
         var text = "《" + String(work.name == null ? "" : work.name) + "》" + characterName + kindWord;
         return tags ? text + "，" + tags + "AI娘二创图" : text;

@@ -7,8 +7,8 @@
      ③ component  组件样式（styles.css）—— 禁止硬编码色值，一律 var(--*)
 
    视觉基准：网格纸背景 + 白纸卡片（2px 墨线 + 硬投影 + 微旋转），蓝白配色。
-   本文件由 demo 的 shared/demo.css 顶部 :root（涂鸦调色板与语义层）与
-   shared/tokens.css（字体 / 字号 / 间距 / 层级 / 作品占位色板）合并去重而来：
+   本文件由 demo 的 shared/styles.css 顶部 :root（涂鸦调色板与语义层）与
+   tokens.css（字体 / 字号 / 间距 / 层级 / 作品占位色板）合并去重而来：
    同名冲突以涂鸦层为准（--radius-md 8px、--shell-max 1120px、
    --control-height 38px、--measure-base 34em），圆角尺度随之重排为 2/4/8/12
    保持递增；扁平时代的灰蓝色板与深色主题不带入；动效时长取涂鸦层实际用值
