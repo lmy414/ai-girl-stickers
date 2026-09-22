@@ -25,7 +25,7 @@
 | 角色 | `characterId` | 只存 ID，所以角色改名不影响已有图片 |
 | 角色补充 | — | 选了「其他角色」时用来判断要不要新增角色 |
 | Tag | `tags` | 至少 1 个 |
-| 图片文件 | `path` `thumbnailPath` `format` `width` `height` `fileSize` `sha256` | 由维护者从文件本身算出来，你不用填 |
+| 图片文件 | `path` `thumbnailPath` `fullPath` `format` `width` `height` `fileSize` `sha256` | 由维护者从文件本身算出来，你不用填 |
 | 内容来源 | `origin.type` | 五种取值 |
 | 来源作者 | `origin.author` | 能填就填；留空的话详情页会显示「未标注」 |
 | 来源链接 | `origin.sourceUrl` | 可空，没有公开出处也能投 |
@@ -49,6 +49,8 @@ Issue 会带上 `sticker-submission` 标签排队。维护者做四件事：
 ### 模板与标签维护须知
 
 两份模板在 `.github/ISSUE_TEMPLATE/` 下：`sticker-submission.yml`（投稿，13 项）和 `takedown-request.yml`（署名与删除）。`config.yml` 里保留了空白 Issue，所以报 bug、提版式建议这类也能提，只是投稿和删除请走模板。
+
+角色下拉由 `node tools/sync_issue_template.mjs --write` 从 `dist/characters.json` 生成并校验，改角色清单后必须跑一次，否则 `tools/build.mjs` 断言会失败。
 
 两个标签 `sticker-submission`、`takedown` 必须在仓库里**真实存在**，否则模板里的 `labels` 会被 GitHub 静默忽略——派生这个仓库时记得补建。
 
@@ -76,7 +78,7 @@ python -m http.server 5173 -d dist   # 打开 http://127.0.0.1:5173
 
 改了 `dist/app.js` / `dist/styles.css` / `dist/tokens.css`，**必须同步 `dist/index.html` 里的 `?v=` 数字**，否则访问者拿的还是旧缓存，你会以为修复没生效。
 
-当前值：`tokens.css?v=13`、`styles.css?v=17`、`app.js?v=20`。
+当前值：`tokens.css?v=13`、`styles.css?v=17`、`app.js?v=21`。
 
 ### 新增投稿图片后要生成派生图
 
