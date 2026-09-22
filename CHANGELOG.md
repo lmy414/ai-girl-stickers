@@ -8,7 +8,7 @@
 
 ## 2026-09-22 · 第三批 GitHub Issue 投稿收录（#19–#22，新立 Stepfun娘 / GLM娘）
 
-发布：尚未上线——内容推上 `origin/main` 后，待维护者在服务器跑 `ops/deploy-server.sh` 生效。
+发布：已上线 `releases/20260922-175748`。本条初记「尚未上线——内容推上 `origin/main` 后，待维护者在服务器跑 `ops/deploy-server.sh` 生效」，2026-09-22 17:57 发布成功，补记见文末。
 
 - 收录开放投稿 Issue #19–#22 共 6 张图：#19「Stepfun娘立绘」3 张（Stepfun 娘）、#20「大肥鱼敲锅」1 张动图（DeepSeek 娘）、#21「生鱼片」1 张（DeepSeek 娘）、#22「代码在自己上传」1 张（GLM 娘）。多图按原投稿顺序编号（`Stepfun娘立绘 · 01–03`）。sha256 与既有 35 条互查无重复。
 - **新立两个角色：Stepfun 娘（`stepfun`）、GLM 娘（`glm`）**——都来自投稿表单的「角色补充」，按硬性约定 `app.js` 的 `characters` 与 `sticker-submission.yml` 角色下拉两处同步补上。**不新增配色**：卡片占位色沿用「其他角色」那组（记录 `tone` 为 `other`），等作品多起来真需要品牌色时再补 `--art-<角色>-*` Token。
@@ -17,6 +17,8 @@
 - 派生图照常生成：480px 列表缩略图 + 1280px 详情图（#20 动图 GIF 转动画 WebP，保持动态）。原图进 `dist/submissions/originals/`，不进发布产物。
 - 缓存版本号：`app.js?v=20`（角色数组变了）；`styles.css?v=17`、`tokens.css?v=13` 不变。
 - 四条投稿 Issue 回复收录结果后关闭。
+
+发布落地（2026-09-22 17:57）：已上线 `releases/20260922-175748`（上一版 `releases/20260922-170101`），即提交 `f4b6c24`（`f4b6c245fc084a02db2707bf51efb32d9575f922`）。构建 97 个文件（41 条 `published` 投稿、4 条 owner-picks），`data/` 仍由 `shared/data` 硬链接复用；健康检查全部通过（首页 / `robots.txt` / `submissions/works.json` / 抽样 `previews/*.webp` 均 200），公网回读 `works.json` 41 条含本批 6 条、`app.js?v=20` 与本批派生图均 200、`/submissions/originals/**` 为 404（原图走 GitHub Raw）。`logs/deploy.log` 已追加记录，旧 release 全部保留（当前共 8 个）。发布照旧跑副本 `.deploy-runner.sh`，经 `qss` 面板确认门执行（任务 `tk_muchq1q9_e73968`）。
 
 ## 2026-09-22 · git 更新规范入册；服务器压缩、HTTP/2 与缓存分层收尾
 
