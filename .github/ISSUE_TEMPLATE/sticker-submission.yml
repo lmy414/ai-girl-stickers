@@ -41,6 +41,8 @@ body:
         - "Claude娘（claude · 别名 Claude）"
         - "Gemini娘（gemini · 别名 Gemini）"
         - "Grok娘（grok · 别名 Grok）"
+        - "Stepfun娘（stepfun · 别名 StepFun / 阶跃星辰）"
+        - "GLM娘（glm · 别名 GLM / 智谱）"
         - "其他角色（other）"
     validations:
       required: true

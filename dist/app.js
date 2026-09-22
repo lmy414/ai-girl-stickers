@@ -56,6 +56,8 @@ const characters = [
   { id: "claude", name: "Claude娘", aliases: ["Claude"] },
   { id: "gemini", name: "Gemini娘", aliases: ["Gemini"] },
   { id: "grok", name: "Grok娘", aliases: ["Grok"] },
+  { id: "stepfun", name: "Stepfun娘", aliases: ["StepFun", "阶跃星辰"] },
+  { id: "glm", name: "GLM娘", aliases: ["GLM", "智谱"] },
   { id: "other", name: "其他角色", aliases: [] },
   /* 不是角色，是站长的自用图集；所以不出现在投稿模板的角色下拉里。 */
   { id: "owner-picks", name: "站长自用", aliases: ["站长自用图", "自用"] }

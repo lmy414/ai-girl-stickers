@@ -76,7 +76,7 @@ python -m http.server 5173 -d dist   # 打开 http://127.0.0.1:5173
 
 改了 `dist/app.js` / `dist/styles.css` / `dist/tokens.css`，**必须同步 `dist/index.html` 里的 `?v=` 数字**，否则访问者拿的还是旧缓存，你会以为修复没生效。
 
-当前值：`tokens.css?v=13`、`styles.css?v=17`、`app.js?v=19`。
+当前值：`tokens.css?v=13`、`styles.css?v=17`、`app.js?v=20`。
 
 ### 新增投稿图片后要生成派生图
 

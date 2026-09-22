@@ -1391,5 +1391,242 @@
     "updatedAt": "2026-09-21T04:28:26Z",
     "tone": "grok",
     "symbol": ""
+  },
+  {
+    "id": "sticker_issue_19_001",
+    "name": "Stepfun娘立绘 · 01",
+    "description": "Stepfun娘的设定立绘和专武，模仿了官方出现的表情包",
+    "path": "https://raw.githubusercontent.com/lmy414/ai-girl-stickers/main/dist/submissions/originals/stepfun/issue-19-001.png",
+    "thumbnailPath": "submissions/previews/stepfun/issue-19-001.webp",
+    "fullPath": "submissions/large/stepfun/issue-19-001.webp",
+    "format": "png",
+    "mimeType": "image/png",
+    "isAnimated": false,
+    "width": 1086,
+    "height": 1448,
+    "fileSize": 1334377,
+    "sha256": "63040314ac80392996305bde84c200dd90570fb7fccb4063cd8170ed3145459f",
+    "characterId": "stepfun",
+    "tags": [
+      "Step",
+      "阶跃星辰",
+      "Stepfun"
+    ],
+    "submitter": {
+      "name": "212016679-ctrl",
+      "github": "212016679-ctrl"
+    },
+    "origin": {
+      "type": "author-submitted",
+      "author": "@甶丶",
+      "sourceUrl": "https://www.bilibili.com/opus/1250303372583501829?spm_id_from=333.1387.0.0",
+      "note": "投稿表单标注为原作者本人投稿；多图按原投稿顺序编号。"
+    },
+    "license": {
+      "type": "cc-by-nc",
+      "note": "本人使用ai生成，允许本站收录或下载。"
+    },
+    "status": "published",
+    "createdAt": "2026-09-21T10:20:50Z",
+    "updatedAt": "2026-09-21T10:20:50Z",
+    "tone": "other",
+    "symbol": ""
+  },
+  {
+    "id": "sticker_issue_19_002",
+    "name": "Stepfun娘立绘 · 02",
+    "description": "Stepfun娘的设定立绘和专武，模仿了官方出现的表情包",
+    "path": "https://raw.githubusercontent.com/lmy414/ai-girl-stickers/main/dist/submissions/originals/stepfun/issue-19-002.png",
+    "thumbnailPath": "submissions/previews/stepfun/issue-19-002.webp",
+    "fullPath": "submissions/large/stepfun/issue-19-002.webp",
+    "format": "png",
+    "mimeType": "image/png",
+    "isAnimated": false,
+    "width": 1086,
+    "height": 1448,
+    "fileSize": 1663970,
+    "sha256": "6667e1fe805a65892c656fe380e1d6de7b582d27a9650f11700fb278fa0fbc1a",
+    "characterId": "stepfun",
+    "tags": [
+      "Step",
+      "阶跃星辰",
+      "Stepfun"
+    ],
+    "submitter": {
+      "name": "212016679-ctrl",
+      "github": "212016679-ctrl"
+    },
+    "origin": {
+      "type": "author-submitted",
+      "author": "@甶丶",
+      "sourceUrl": "https://www.bilibili.com/opus/1250303372583501829?spm_id_from=333.1387.0.0",
+      "note": "投稿表单标注为原作者本人投稿；多图按原投稿顺序编号。"
+    },
+    "license": {
+      "type": "cc-by-nc",
+      "note": "本人使用ai生成，允许本站收录或下载。"
+    },
+    "status": "published",
+    "createdAt": "2026-09-21T10:20:50Z",
+    "updatedAt": "2026-09-21T10:20:50Z",
+    "tone": "other",
+    "symbol": ""
+  },
+  {
+    "id": "sticker_issue_19_003",
+    "name": "Stepfun娘立绘 · 03",
+    "description": "Stepfun娘的设定立绘和专武，模仿了官方出现的表情包",
+    "path": "https://raw.githubusercontent.com/lmy414/ai-girl-stickers/main/dist/submissions/originals/stepfun/issue-19-003.png",
+    "thumbnailPath": "submissions/previews/stepfun/issue-19-003.webp",
+    "fullPath": "submissions/large/stepfun/issue-19-003.webp",
+    "format": "png",
+    "mimeType": "image/png",
+    "isAnimated": false,
+    "width": 1448,
+    "height": 1086,
+    "fileSize": 1004913,
+    "sha256": "b1c3f5aad75d25adb21cd3c6085adb131c40dfc9e4a5d20dcb6b5924a829f8aa",
+    "characterId": "stepfun",
+    "tags": [
+      "Step",
+      "阶跃星辰",
+      "Stepfun"
+    ],
+    "submitter": {
+      "name": "212016679-ctrl",
+      "github": "212016679-ctrl"
+    },
+    "origin": {
+      "type": "author-submitted",
+      "author": "@甶丶",
+      "sourceUrl": "https://www.bilibili.com/opus/1250303372583501829?spm_id_from=333.1387.0.0",
+      "note": "投稿表单标注为原作者本人投稿；多图按原投稿顺序编号。"
+    },
+    "license": {
+      "type": "cc-by-nc",
+      "note": "本人使用ai生成，允许本站收录或下载。"
+    },
+    "status": "published",
+    "createdAt": "2026-09-21T10:20:50Z",
+    "updatedAt": "2026-09-21T10:20:50Z",
+    "tone": "other",
+    "symbol": ""
+  },
+  {
+    "id": "sticker_issue_20_001",
+    "name": "大肥鱼敲锅",
+    "description": "",
+    "path": "https://raw.githubusercontent.com/lmy414/ai-girl-stickers/main/dist/submissions/originals/deepseek/issue-20-001.gif",
+    "thumbnailPath": "submissions/previews/deepseek/issue-20-001.webp",
+    "fullPath": "submissions/large/deepseek/issue-20-001.webp",
+    "format": "gif",
+    "mimeType": "image/gif",
+    "isAnimated": true,
+    "width": 420,
+    "height": 490,
+    "fileSize": 2629345,
+    "sha256": "915632fca4f836f3ab9740f6dcc193e0db24665b83c1f34cba66f46814e8a5cf",
+    "characterId": "deepseek",
+    "tags": [
+      "敲锅"
+    ],
+    "submitter": {
+      "name": "QinYupi",
+      "github": "QinYupi"
+    },
+    "origin": {
+      "type": "community-created",
+      "author": "",
+      "sourceUrl": "https://www.bilibili.com/video/BV1P18y6jEkV/?spm_id_from=333.337.search-card.all.click",
+      "note": "投稿表单标注为社区成员创作；「来源作者」栏填的是哔哩哔哩视频链接，已归入来源链接，作者未标注。"
+    },
+    "license": {
+      "type": "submitter-permission",
+      "note": "投稿者确认授权收录与下载。"
+    },
+    "status": "published",
+    "createdAt": "2026-09-21T15:47:25Z",
+    "updatedAt": "2026-09-21T15:47:25Z",
+    "tone": "deepseek",
+    "symbol": ""
+  },
+  {
+    "id": "sticker_issue_21_001",
+    "name": "生鱼片",
+    "description": "",
+    "path": "https://raw.githubusercontent.com/lmy414/ai-girl-stickers/main/dist/submissions/originals/deepseek/issue-21-001.jpg",
+    "thumbnailPath": "submissions/previews/deepseek/issue-21-001.webp",
+    "fullPath": "submissions/large/deepseek/issue-21-001.webp",
+    "format": "jpg",
+    "mimeType": "image/jpeg",
+    "isAnimated": false,
+    "width": 544,
+    "height": 680,
+    "fileSize": 85526,
+    "sha256": "38b05a61690c524669c7acf8730613cea5a82a87015db2ab985c9e55b3f2e8a3",
+    "characterId": "deepseek",
+    "tags": [
+      "吃",
+      "生鱼片"
+    ],
+    "submitter": {
+      "name": "befoer",
+      "github": "befoer"
+    },
+    "origin": {
+      "type": "author-submitted",
+      "author": "@Cat__BBQ",
+      "sourceUrl": "https://x.com/Cat__BBQ/status/2087386939565748621",
+      "note": "投稿表单标注为原作者本人投稿。"
+    },
+    "license": {
+      "type": "submitter-permission",
+      "note": "投稿者确认授权收录与下载。"
+    },
+    "status": "published",
+    "createdAt": "2026-09-21T23:54:01Z",
+    "updatedAt": "2026-09-21T23:54:01Z",
+    "tone": "deepseek",
+    "symbol": ""
+  },
+  {
+    "id": "sticker_issue_22_001",
+    "name": "代码在自己上传",
+    "description": "",
+    "path": "https://raw.githubusercontent.com/lmy414/ai-girl-stickers/main/dist/submissions/originals/glm/issue-22-001.png",
+    "thumbnailPath": "submissions/previews/glm/issue-22-001.webp",
+    "fullPath": "submissions/large/glm/issue-22-001.webp",
+    "format": "png",
+    "mimeType": "image/png",
+    "isAnimated": false,
+    "width": 1080,
+    "height": 1080,
+    "fileSize": 873301,
+    "sha256": "745707824ca76cee03e9aeadb2dd75ae2c8342671c6f994f5aacc486740c3a61",
+    "characterId": "glm",
+    "tags": [
+      "zcode",
+      "偷数据",
+      "glm"
+    ],
+    "submitter": {
+      "name": "Yasenbaka",
+      "github": "Yasenbaka"
+    },
+    "origin": {
+      "type": "internet-found",
+      "author": "",
+      "sourceUrl": null,
+      "note": "投稿表单标注为网络整理。"
+    },
+    "license": {
+      "type": "submitter-permission",
+      "note": "投稿者确认授权收录与下载。"
+    },
+    "status": "published",
+    "createdAt": "2026-09-22T08:59:21Z",
+    "updatedAt": "2026-09-22T08:59:21Z",
+    "tone": "other",
+    "symbol": ""
   }
 ]
