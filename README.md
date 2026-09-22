@@ -15,15 +15,17 @@
 
 ## 你能做什么
 
-- **按角色翻**：DeepSeek 娘、豆包娘、Kimi 娘、通义千问娘、Gemini 娘……选一个角色，只看它。
+- **按角色与分类翻**：分类页把作品按角色、分类摆开，DeepSeek 娘、豆包娘、Kimi 娘、通义千问娘、Gemini 娘……选一个，只看它。
+- **看详情、拿原图**：每张图有独立静态详情页，自己的 URL 可以直接分享；页面上看高清大图、下载原图、复制直达链接。作品卡片是真实的链接，中键新标签、发给别人、前进后退都正常。
 - **搜索**：按名称、Tag、角色别名或提交者模糊匹配，不用输入完整词。
-- **看详情、拿原图**：每张图有独立详情页，可以下载原图、复制直达链接；作品卡片是真实的链接，中键新标签、发给别人、前进后退都正常。
 - **留言**：每张作品详情页下有评论区（基于 GitHub Discussions）。
+- **看更新日志**：页脚的「更新日志」页记着每次收录与站务变更。
+- **逛项目推荐**：推荐页收着相关项目和资源。
 - **投稿**：走 GitHub Issue 表单，不用 fork、不用会 git——见下。
 
 ## 怎么投稿
 
-**投稿就是提一个 Issue。** 打开[投稿表单](https://github.com/lmy414/ai-girl-stickers/issues/new?template=sticker-submission.yml)——站里首页右上角的「提交作品」按钮打开的就是它——把图拖进去、几项填完，剩下的交给维护者。
+**投稿就是提一个 Issue。** 打开[投稿表单](https://github.com/lmy414/ai-girl-stickers/issues/new?template=sticker-submission.yml)——站里投稿页「快速投稿」入口旁的 GitHub 表单打开的就是它——把图拖进去、几项填完，剩下的交给维护者。飞书投稿即将开通；开通之前，投稿页上的快速投稿表单是占位、暂不开放填写。
 
 摘要三步：先**搜有没有重复** → 备好图（支持 PNG / JPG / GIF / WebP / APNG，单张建议不超过 10 MB）→ **把图片文件拖进表单**、填完、勾确认再提交。
 
@@ -54,7 +56,7 @@ python -m http.server 5173 -d dist
 
 ## 这是什么技术形态
 
-三句话：**纯静态前端**（没有框架、**没有第三方依赖**、没有后端），**数据是一份份 JSON 清单**，**图片是一堆文件**。`dist/` 就是站点根目录，丢到任何静态托管上都能跑。
+三句话：**纯静态前端**（没有框架、**没有第三方依赖**、没有后端），**数据是一份份 JSON 清单**，**图片是一堆文件**。每张作品的详情页是构建期生成的静态页（`works/<slug>.html`）。`dist/` 就是站点根目录，丢到任何静态托管上都能跑。
 
 ## 想改代码
 
@@ -63,16 +65,18 @@ python -m http.server 5173 -d dist
 - 字段与枚举的唯一来源是 **[数据契约.md](数据契约.md)**；
 - 变更历史在 **[CHANGELOG.md](CHANGELOG.md)**——**大型更新先在日志里补一条，再动代码**；
 - 后续规划在 **[站点升级路线图.md](站点升级路线图.md)**；
+- 详情页 SEO 口径的唯一依据是 **[docs/SEO规范.md](docs/SEO规范.md)**；
 - 投稿与开发流程在 **[CONTRIBUTING.md](CONTRIBUTING.md)**。
 
 公开仓库里大致长这样：
 
 ```text
-dist/           站点根目录（index.html、app.js、styles.css、tokens.css、robots.txt…）
+dist/           站点根目录（index.html 等手写页、styles.css、tokens.css、robots.txt…）
+dist/works/     191 个作品详情页（works/<slug>.html，生成物，别手改）
 ops/            服务器侧发布 / 回滚脚本
-tools/          零依赖构建与其它工具脚本
+tools/          零依赖构建、数据迁移与详情页生成脚本
 .github/        Issue 模板
-docs/           维护与发布文档
+docs/           维护与发布、SEO 规范
 CONTRIBUTING.md 投稿与开发流程
 数据契约.md      字段定义、来源与授权类型
 AGENTS.md       给代理/贡献者的约定：改之前先看
