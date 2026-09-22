@@ -6,6 +6,18 @@
 
 ---
 
+## 2026-09-22 · git 更新规范入册；服务器压缩、HTTP/2 与缓存分层收尾
+
+发布：随 GitHub 驱动流程上线（release 目录名与提交 SHA 见文末补记）。文档不进站点产物，站点内容与上一版一致；nginx 配置改动也不走发布脚本——经 `qss fs write` 改 `sites-available`（自动留 `.bak`）→ `nginx -t` → reload 即生效。线上回读补记在文末。
+
+- **`AGENTS.md` 新增「git 更新规范」**（本次主要更新内容）：功能分支（`chore/` / `feat/` 前缀）→ 大更新先补本日志 → 显式列文件名暂存（禁 `git add -A`）→ 提交前本地起服务浏览器验收、涉及投稿图片跑派生图脚本、涉及产物跑 `node tools/build.mjs`、改前端三件套 bump `?v=` → 提交信息用 `feat:` / `fix:` / `docs:` / `chore:` 前缀加中文简述，一次提交只做一件事 → 推功能分支，维护者复核后 fast-forward `main` 再推 `origin/main` → **推送不等于发布**，发布仍是维护者在服务器跑 `ops/deploy-server.sh` 副本。细则见 `CONTRIBUTING.md` §四。
+- **服务器压缩收尾**：nginx 的 `gzip on` 一直开着（`nginx.conf` 是发行版默认文件，mtime 2023-12），但 `gzip_types` 没配，只有 HTML 在压缩——`styles.css`(38 KB)、`app.js`(74 KB)、三份清单(187 KB) 全部裸传。本次在站点 vhost 内补 `gzip_types`（css / js / json / xml / svg / plain）、`gzip_vary on`、`gzip_comp_level 5`、`gzip_min_length 1024`。**Brotli 不启用**：服务器 `modules-enabled` 为空、没有 ngx_brotli，按路线图「以线上环境实际支持为准」用 gzip。
+- **HTTP/2**：vhost 里两个 `listen 443 ssl` 都补 `http2`（nginx 1.24 语法）。
+- **缓存分层补齐**：此前只有三档——图片 7 天、`/data/` 与 HTML `no-cache`、其余（js / css / json）落到 `location /` 的 `no-cache`，`?v=` 因此一直拿不到长缓存。现在加 `map $arg_v`：**带 `?v=` 的 js / css 为 `public, max-age=31536000, immutable`，不带的仍 `no-cache`**；清单（含 `submissions/works.json`）与 HTML 保持回源校验，图片维持 7 天。代价是 **bump `?v=` 升级为硬性前提**——改了 `app.js` / `styles.css` / `tokens.css` 不 bump，访问者最长一年拿旧缓存。
+- 回滚方式：`fs write` 自动留了 `.bak` 与面板本地历史快照，写回旧内容再 reload 即回滚；不涉及 release 与发布脚本。
+
+线上回读（2026-09-22 16:36 reload 后实测）：HTTP/2 掌声成功（Node `http2` 模块 ALPN，首页 200）；`app.js?v=19`、`styles.css?v=17`、`tokens.css?v=13` 均 `Content-Encoding: gzip` + `Cache-Control: public, max-age=31536000, immutable`；不带 `?v=` 的 `app.js` 仍 `no-cache`；`submissions/works.json` 与 `data/blue-fish-classification.json` 为 gzip + `no-cache`；`avatar.png` 为 `public, max-age=604800`；HTML 为 gzip + `no-cache`。`nginx -t` 通过。另需说明两点：其一，`nginx -t` 有 4 条 warn（3 条 `protocol options redefined`、1 条 `duplicate MIME type "text/html"`），都在别的租户 vhost（`mirrorpin` / `wasteland-ring`）上、解析顺序在本站文件之前，不是本次引入，本次未动它们；其二，443 端口的 `listen` 选项是 socket 级的，隔壁 `wasteland-ring` 早就在自己 vhost 里声明过 `http2`，所以 HTTP/2 在本次改动之前可能已对全端口生效——本站现在显式声明，不再依赖别人的配置。
+
 ## 2026-09-22 · 发布流程改为 GitHub 驱动
 
 发布：已上线 `releases/20260922-145230`（上一版 `releases/20260922-023440`），即提交 `a684d56`。新链路首次发布于 2026-09-22 14:52（+08:00），健康检查全部通过；旧的上传发布方式自本版起停用。
