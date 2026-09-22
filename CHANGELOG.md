@@ -8,7 +8,7 @@
 
 ## 2026-09-23 · 多页手绘涂鸦风改版：每张作品独立详情页、长尾 SEO、首批 ID 冻结
 
-发布：尚未上线——随本轮合并推上 `origin/main` 后，待维护者在服务器跑 `ops/deploy-server.sh` 生效；上线后在本条末尾补记 release 目录与提交 SHA。
+发布：已上线 `releases/20260923-054453`（上一版 `releases/20260922-175748`），对应提交 `eb8d48e`（`eb8d48edee1e740a7356b0ed7d94a968ac5bddc9`）。
 
 - **前端重写为多页手绘涂鸦风（蓝白）**：导航五页（首页 `index.html` / 分类 / 投稿 / 关于 / 推荐）+ 页脚「更新日志」页；网格纸背景 + 贴纸纸卡组件。旧单页应用 `dist/app.js` **退役删除**；hash 路由保留跳转兼容——`index.html` 的内联脚本把 `#/work/<id>`、`#/character/<id>` 转跳到新页面，老分享链接不断。拆多页的理由：一张作品一个 URL，分享卡、搜索引擎收录、前进后退才成立，hash 路由给不了这些。
 - **每张作品一个独立静态详情页**：`works/<slug>.html` 共 191 页（41 投稿 + 4 站长自用 + 146 首批）。slug = `<characterId><YYYYMMDD><NNNN>`（角色 ID 小写 + 收录日期 + 当日该角色 4 位序号，按收录时间升序编），确定性生成、**一经发布即冻结**；数据主键仍是记录 `id`，Giscus 评论 term 保持 `sticker-<id>` 逐字不变——URL 换了，评论串的钥匙没换。
@@ -19,6 +19,8 @@
 - **搜索与可观测性接入**：加入 Search Console 验证文件 `google653ce5fe960a5fb0.html`；接入 Google tag `GT-NS92WVPQ`（GA4 数据流 `G-4LWN9Z2WT2`），用于聚合访问来源、设备与性能优化。广告个性化 / Google Signals / 广告存储关闭；统计结果不写入作品清单，不生成作品热度分或排行榜。README、关于页、数据契约与架构边界同步改为「最小化统计与透明披露」。
 - **致谢**：关于页新增角色设计致谢——[上善无形](https://space.bilibili.com/4456176)（角色设计）、[ZipZipPipe](https://space.bilibili.com/4168597)（角色二次设计）。
 - 文档同步：[`数据契约.md`](数据契约.md) 升 `v0.4`（`slug` / `categoryIds` / 首批 ID 冻结映射），[`架构边界.md`](架构边界.md) 改多页口径，[`docs/SEO规范.md`](docs/SEO规范.md) 入库，AGENTS / CONTRIBUTING / README / [`docs/维护与发布.md`](docs/维护与发布.md) 随之更新。
+
+发布落地（2026-09-23 05:44 +08:00）：服务器工作树拉到 `eb8d48e`，构建 300 个文件，原子切换 `current -> releases/20260923-054453`；`nginx -t` 通过（保留同机其它 vhost 的既有 warn），脚本健康检查全部 200。公网补充回读：首页、分类 / 投稿 / 关于 / 推荐 / 更新日志、`site-data.json`（191 条且 slug 唯一）、`sitemap.xml`（197 URL）、Search Console 验证文件、GA4 脚本、抽样详情页与首批预览图均 200。曾发现首批快照漏写统一 `thumbUrl` / `displayUrl` / `originalUrl`，导致部分详情页主图指向站点根；已在 `tools/build_site_snapshot.mjs` 修正，并对 191 条图片路径批量扫描（0 错误），问题页 `deepseek202609150134.html` 实测主图 480×480 加载成功。发布任务 `tk_mud7cp7o_2380bd`，旧 release 完整保留可回滚。
 
 ## 2026-09-22 · 架构边界基准与数据边界落地
 
