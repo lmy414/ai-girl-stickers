@@ -15,7 +15,10 @@
 //      dist/submissions/originals/（既不复制、也不创建空目录）。
 //   2. 纯字节拷贝：不改写 JSON、不写时间戳、不访问网络、不修改原图、不跑压缩。
 //      同一输入两次构建，文件集合与每个文件的 SHA-256 必须完全一致。
-//   3. 复制后做断言，任一失败就删掉产物并非零退出。
+//   3. 复制后做断言，任一失败就删掉产物并非零退出：必需文件齐全、被排除目录
+//      未混入、清单形状与 id 唯一、作品的 characterId / categoryIds 都能在清单里
+//      解析到（引用完整性），以及投稿模板的角色下拉与产物里的 characters.json
+//      一致（断言逻辑复用 tools/sync_issue_template.mjs）。
 //
 // 相对路径的 --out 按仓库根解析，且必须留在仓库根内（拒绝 `..` 穿越）。
 // 绝对路径的 --out 允许指向仓库外（服务器发布把产物建在 git 工作树之外的
@@ -27,11 +30,21 @@ import fs from "node:fs";
 import os from "node:os";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { checkTemplateSync } from "./sync_issue_template.mjs";
 
 const SCRIPT_DIR = path.dirname(fileURLToPath(import.meta.url));
 const REPO_ROOT = path.resolve(SCRIPT_DIR, "..");
 const DIST_DIR = path.join(REPO_ROOT, "dist");
 const DEFAULT_OUT = path.join(REPO_ROOT, ".build", "site");
+
+// 仓库里的投稿模板（不在产物里）。路径与 tools/sync_issue_template.mjs 的
+// TEMPLATE_PATH 保持一致——「仓库根的 sticker-submission.yml」指的就是它。
+const TEMPLATE_PATH = path.join(
+  REPO_ROOT,
+  ".github",
+  "ISSUE_TEMPLATE",
+  "sticker-submission.yml",
+);
 
 // 构建产物根上的标记文件：内容固定、无时间戳，保证两次构建逐字节一致。
 // 下次运行时凭它识别「这确实是本脚本的产物」，才允许直接清空重建。
@@ -74,6 +87,8 @@ const REQUIRED_FILES = [
   "robots.txt",
   "favicon.png",
   "avatar.png",
+  "characters.json",
+  "categories.json",
   "submissions/works.json",
   "owner-picks/works.json",
 ];
@@ -347,6 +362,49 @@ function isExhibited(record) {
   return record && (record.status === undefined || record.status === "published");
 }
 
+// 校验清单（characters.json / categories.json）形状：条目是对象、id 与 name
+// 是非空字符串、id 在各自清单内唯一。返回 id 集合供引用解析用。
+function indexManifest(entries, label) {
+  const ids = new Set();
+  for (const entry of entries) {
+    if (entry === null || typeof entry !== "object" || Array.isArray(entry)) {
+      throw new Error(`${label} 的条目必须是对象`);
+    }
+    if (typeof entry.id !== "string" || entry.id.trim() === "") {
+      throw new Error(`${label} 的条目 id 必须是非空字符串：${JSON.stringify(entry)}`);
+    }
+    if (typeof entry.name !== "string" || entry.name.trim() === "") {
+      throw new Error(`${label} 条目 ${entry.id} 的 name 必须是非空字符串`);
+    }
+    if (ids.has(entry.id)) {
+      throw new Error(`${label} 的 id 重复：${entry.id}`);
+    }
+    ids.add(entry.id);
+  }
+  return ids;
+}
+
+// 引用完整性：作品的 characterId / categoryIds 必须能在清单里解析到。
+function assertReferences(record, source, characterIds, categoryIds) {
+  if (typeof record.characterId !== "string" || !characterIds.has(record.characterId)) {
+    throw new Error(
+      `${source} 的 characterId 在 characters.json 里解析不到：${JSON.stringify(record.characterId)}`,
+    );
+  }
+  if (record.categoryIds !== undefined) {
+    if (!Array.isArray(record.categoryIds)) {
+      throw new Error(`${source} 的 categoryIds 必须是数组：${JSON.stringify(record.categoryIds)}`);
+    }
+    for (const categoryId of record.categoryIds) {
+      if (typeof categoryId !== "string" || !categoryIds.has(categoryId)) {
+        throw new Error(
+          `${source} 的 categoryId 在 categories.json 里解析不到：${JSON.stringify(categoryId)}`,
+        );
+      }
+    }
+  }
+}
+
 function validateOutput(outAbs) {
   for (const rel of REQUIRED_FILES) {
     const target = path.join(outAbs, ...rel.split("/"));
@@ -364,6 +422,11 @@ function validateOutput(outAbs) {
     }
   }
 
+  const characters = readJsonArray(path.join(outAbs, "characters.json"));
+  const categories = readJsonArray(path.join(outAbs, "categories.json"));
+  const characterIds = indexManifest(characters, "characters.json");
+  const categoryIds = indexManifest(categories, "categories.json");
+
   const submissions = readJsonArray(path.join(outAbs, "submissions", "works.json"));
   for (const record of submissions) {
     if (!isExhibited(record)) continue;
@@ -371,6 +434,7 @@ function validateOutput(outAbs) {
     if (typeof record.fullPath === "string" && record.fullPath !== "") {
       requireAsset(outAbs, record.fullPath, `submissions/${record.id}.fullPath`);
     }
+    assertReferences(record, `submissions/${record.id}`, characterIds, categoryIds);
   }
 
   const ownerPicks = readJsonArray(path.join(outAbs, "owner-picks", "works.json"));
@@ -380,6 +444,21 @@ function validateOutput(outAbs) {
     if (typeof record.fullPath === "string" && record.fullPath !== "") {
       requireAsset(outAbs, record.fullPath, `owner-picks/${record.id}.fullPath`);
     }
+    assertReferences(record, `owner-picks/${record.id}`, characterIds, categoryIds);
+  }
+
+  // 投稿模板一致性：用仓库根的模板文本对产物里的 characters.json 校验下拉。
+  let yamlText;
+  try {
+    yamlText = fs.readFileSync(TEMPLATE_PATH, "utf8");
+  } catch (error) {
+    throw new Error(`读不到投稿模板 ${TEMPLATE_PATH}：${error.message}`);
+  }
+  const sync = checkTemplateSync({ characters, yamlText });
+  if (!sync.ok) {
+    throw new Error(
+      `模板下拉与角色清单不一致，跑 node tools/sync_issue_template.mjs --write\n${sync.message}`,
+    );
   }
 
   const published = submissions.filter((record) => record.status === "published").length;
