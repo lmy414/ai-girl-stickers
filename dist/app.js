@@ -301,6 +301,10 @@ function sourceFileName(value) {
   return String(value || "").split("/").pop();
 }
 
+/* 预览图只取文件名再拼本地路径——所以清单的 previewPath 换了扩展名（比如
+   tools/generate_image_derivatives.py 把首批 4 张超大 GIF 转成动画 WebP）
+   必须同步落到 data/blue-fish/previews/ 里真实存在的文件上。
+   previewPath 为空时回退到 sourcePath 的文件名，是清单被重新生成后的兜底。 */
 function localPreviewPath(record) {
   const filename = sourceFileName(record.previewPath || record.sourcePath);
   return `data/blue-fish/previews/${encodeURIComponent(filename)}`;
@@ -349,7 +353,9 @@ function mapLocalRecord(record, index) {
     mimeType: MIME_BY_FORMAT[format] || "application/octet-stream",
     path: rawGithubPath(CONFIG.upstreamRepo, originalPath),
     thumbnailPath: localPreviewPath(record),
-    /* 详情预览也保持本地，原图下载按钮再访问上游原始文件。 */
+    /* 详情也用本地预览图。清单里的 largePath 指向 data/blue-fish/large/，那个目录
+       没有随站点部署（本地与线上都只有 previews/），把它拼成 fullPath 只会让详情页
+       404。确认本地真的存在大图目录之前，这里保持指向确实存在的预览文件。 */
     fullPath: localPreviewPath(record),
     status: "published",
     updatedAt: "2026-09-15T00:00:00+08:00"
@@ -358,7 +364,9 @@ function mapLocalRecord(record, index) {
 
 async function fetchJson(url) {
   try {
-    const response = await fetch(url, { cache: "no-store" });
+    /* no-cache：允许浏览器用协商缓存（ETag / Last-Modified）复用清单，而不是每次
+       重下 187 KB。清单变了，校验失败会照旧取回新内容，不会把老数据锁在缓存里。 */
+    const response = await fetch(url, { cache: "no-cache" });
     return response.ok ? await response.json() : null;
   } catch (error) {
     /* 直接打开 dist/index.html 时 fetch 可能被浏览器拦截，保留演示回退。 */
@@ -478,14 +486,17 @@ const ICONS = {
    ========================================================================== */
 
 /* --- 作品图 ---
-   列表优先使用清单里的预览路径；详情页使用 fullPath，下载按钮再走 path。 */
+   列表优先使用清单里的预览路径；详情页使用 fullPath，下载按钮再走 path。
+   首屏关键的那张（详情页大图）用 eager + high，列表一律 lazy + low，
+   避免滚动出来的卡片跟首屏抢带宽。 */
 function artMarkup(sticker, className = "", mode = "thumb") {
   const character = characterFor(sticker.characterId);
   const imagePath = mode === "full" ? (sticker.fullPath || sticker.thumbnailPath) : sticker.thumbnailPath;
   const alt = `${sticker.name}，${character.name}作品`;
+  const priority = mode === "full" ? "high" : "low";
   if (imagePath) {
     return `<div class="sticker-art art-${sticker.tone} ${className}" style="${ratioStyle(sticker)}" role="img" aria-label="${escapeHtml(alt)}">
-      <img class="sticker-image" src="${escapeHtml(imagePath)}" width="${sticker.width}" height="${sticker.height}" alt="${escapeHtml(alt)}" loading="${mode === "full" ? "eager" : "lazy"}" referrerpolicy="no-referrer" onerror="this.hidden=true;this.nextElementSibling.hidden=false" />
+      <img class="sticker-image" src="${escapeHtml(imagePath)}" width="${sticker.width}" height="${sticker.height}" alt="${escapeHtml(alt)}" loading="${mode === "full" ? "eager" : "lazy"}" fetchpriority="${priority}" decoding="async" referrerpolicy="no-referrer" onerror="this.hidden=true;this.nextElementSibling.hidden=false" />
       <div class="art-copy image-fallback" hidden><span class="art-symbol">${escapeHtml(sticker.symbol || "?")}</span><strong>${escapeHtml(character.name)}</strong><small>${escapeHtml(sticker.name)}</small></div>
     </div>`;
   }
@@ -622,7 +633,7 @@ function cardMarkup(sticker) {
       <div class="card-body">
         <h2 class="card-title">${escapeHtml(sticker.name)}</h2>
         <p class="card-byline">
-          <span class="avatar art-${sticker.tone}" aria-hidden="true"><img src="favicon.png" alt="" /></span>
+          <span class="avatar art-${sticker.tone}" aria-hidden="true"><img src="avatar.png" alt="" decoding="async" /></span>
           <span class="card-character">${escapeHtml(character.name)}</span>
           <span class="card-spec">${sticker.width}×${sticker.height}</span>
         </p>
@@ -950,7 +961,7 @@ function workMarkup(id) {
           </div>
 
           <div class="author-row">
-            <span class="avatar large art-${sticker.tone}" aria-hidden="true"><img src="favicon.png" alt="" /></span>
+            <span class="avatar large art-${sticker.tone}" aria-hidden="true"><img src="avatar.png" alt="" decoding="async" /></span>
             <div>
               <p class="author-name">${escapeHtml(character.name)}</p>
               <p class="author-sub">别名 ${escapeHtml(aliases)}</p>
@@ -1046,7 +1057,7 @@ function aboutMarkup(slug) {
     .filter((character) => character.id !== "all")
     .map((character) => `
       <a class="chip art-${character.id}" href="#/character/${encodeURIComponent(character.id)}">
-        <span class="avatar" aria-hidden="true"><img src="favicon.png" alt="" /></span>${escapeHtml(character.name)}
+        <span class="avatar" aria-hidden="true"><img src="avatar.png" alt="" decoding="async" /></span>${escapeHtml(character.name)}
         <span class="role-count">${counts[character.id]}</span>
       </a>`).join("");
 
