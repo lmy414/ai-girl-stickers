@@ -5,10 +5,11 @@
 ## 先读
 
 1. [`README.md`](README.md) —— 站点定位、功能概览、投稿与版权入口；
-2. [`数据契约.md`](数据契约.md) —— 字段与枚举的唯一来源，改数据前先对它；
-3. [`CHANGELOG.md`](CHANGELOG.md) —— 历史，以及那条规则：**大型更新先补一条日志，再动代码**；
-4. [`CONTRIBUTING.md`](CONTRIBUTING.md) —— 投稿与开发流程、视觉规矩细则、评论区实现须知；
-5. [`docs/维护与发布.md`](docs/维护与发布.md) —— 发布拓扑、`ops/` 脚本用法与数据边界。
+2. [`架构边界.md`](架构边界.md) —— 分层边界与规范基准：数据 / 代码 / 样式 / 构建发布 / 外部服务，以及变更矩阵；
+3. [`数据契约.md`](数据契约.md) —— 字段与枚举的唯一来源，改数据前先对它；
+4. [`CHANGELOG.md`](CHANGELOG.md) —— 历史，以及那条规则：**大型更新先补一条日志，再动代码**；
+5. [`CONTRIBUTING.md`](CONTRIBUTING.md) —— 投稿与开发流程、视觉规矩细则、评论区实现须知；
+6. [`docs/维护与发布.md`](docs/维护与发布.md) —— 发布拓扑、`ops/` 脚本用法与数据边界。
 
 ## 这个仓库的形状
 
@@ -31,7 +32,7 @@ python -m http.server 5173 -d dist   # 打开 http://127.0.0.1:5173
 - **Giscus 的 `data-mapping` 必须是 `specific`、`data-term` 必须是 `sticker-<id>`。** 本站是 hash 路由，所有作品的 `pathname` 一模一样，按默认映射会把全部评论塞进同一个讨论串。改路由方案时回看这条。
 - **`rawGithubPath(repo, path)` 的仓库参数按记录传。** 首批原图在上游 `EDMOK/blue-fish-archive`（`CONFIG.upstreamRepo`），以后投稿的图片进本仓库——写死一个仓库名会让投稿作品的原图指向错的地方。
 - **`dist/data/`（图片与清单）、`staging/`、`.zcode/`、`小红书素材/` 都不进 git**，已被 `.gitignore` 排除。**`tools/deploy.mjs`（已废弃的本机发布脚本）也仍然被排除**，不再进公开仓库。别用 `git add -A` 把它们扫进来，暂存时逐个列文件名。例外是 **`dist/owner-picks/`**（站长自用板块的清单与预览）——它不在 `data/` 下，是进 git 的，因为那批图的原图本来就在同一个仓库里。
-- 新增角色要同时改两处：`app.js` 的 `characters` 数组，和投稿模板 `sticker-submission.yml` 里的角色下拉选项。**`owner-picks`（站长自用）是这条的例外**：它借 `characters` 结构做分类，但不是角色，不要加进投稿下拉，也别给它配品牌色 Token（用的是 `--art-owner-picks-*` 那组中性石板蓝）。
+- **新增角色只改一处数据：`dist/characters.json`**，然后 `node tools/sync_issue_template.mjs --write` 同步投稿表单的角色下拉（`node tools/build.mjs` 有断言，两边漂移会构建失败）。可选在 `tokens.css` 补 `--art-<角色>-*` 色板 Token，不补就沿用 `other` 占位色。**`owner-picks`（站长自用）是这条的例外**：`inSubmissionForm: false`，不进投稿下拉、不配品牌色（用的是 `--art-owner-picks-*` 那组中性石板蓝）。
 
 ## git 更新规范
 
@@ -49,13 +50,14 @@ python -m http.server 5173 -d dist   # 打开 http://127.0.0.1:5173
 
 2026-09-22 实测的现状。这些都是**当前事实**，不是待办承诺；动到相关代码前先知道它们存在。
 
+- **`file://` 直开时浏览器会拦截清单请求。** 角色清单（`dist/characters.json`）取不到后，168 条占位演示不再生成（12 条手写演示保留）；`http://` 本地服务不受影响。
 - **投稿缩略图已补齐（2026-09-22 起）。** `dist/submissions/works.json` 的 `thumbnailPath` 指向 `submissions/previews/<角色>/<文件名>.webp`（约 480px），`fullPath` 指向 `submissions/large/...webp`（最长边 ≤1280），`path` 仍是 GitHub Raw 原图。派生图由 `tools/generate_image_derivatives.py` 生成，**幂等可重跑**；改投稿数据后要重跑一次，否则新记录没有派生图。
 - **投稿原图不进发布产物，线上也不托管原图。** 原件在 GitHub 仓库（下载走 Raw）。`tools/build.mjs`（以及已废弃的 `tools/deploy.mjs`）都会跳过 `dist/submissions/originals/`；这一条 2026-09-22 之前不成立——那时每次发布都把 63.7 MB 原图整个传上去，包因此有 73.7 MB。
 - **`dist/data/blue-fish/previews/` 里仍有 4 张 1.25–10.35 MB 的 GIF**（合计 26.6 MB），顶着 `previews/` 的名字却是原始动图。本机已用脚本把它们转成动画 WebP 并同步了本地清单，但 `dist/data/` 不进发布包，**线上仍是原来的 GIF**（那 4 条被收录门槛挡着、不展示）。
 - **`dist/data/blue-fish-classification.json` 由仓库外的导入流程生成、会被重新生成。** 任何对它的加工都必须做成幂等、可重跑的脚本，否则下次导入就被覆盖。另外 `localPreviewPath()` 是**从清单的 `previewPath` 取文件名**去拼本地路径的，换预览图的扩展名时必须同步改清单，不然前端会去找不存在的文件。
 - **服务器压缩、HTTP/2 与缓存分层已收尾（2026-09-22，改 nginx vhost，不产生新 release）。** gzip 覆盖 css / js / json / xml / svg / plain（带 `Vary: Accept-Encoding`），实测 `app.js`、`styles.css`、三份清单全部 `Content-Encoding: gzip`；HTTP/2 实测可用（ALPN 掌声 200）。**Brotli 不启用**——服务器没有 ngx_brotli 模块。注意 443 端口的 `listen` 选项是 socket 级的，同机别的 vhost（`wasteland-ring` 等）也声明过 `http2`，`nginx -t` 会有 `protocol options redefined` warn（不是本站引入的，别去动别人的 vhost）。
 - **`?v=` 现在真的提供长缓存。** 带 `?v=` 的 js / css 响应是 `public, max-age=31536000, immutable`，不带的仍 `no-cache`；清单（含 `submissions/works.json`）与 HTML 永远回源校验，图片 7 天（`max-age=604800`）。**这把 bump `?v=` 升级成硬前提**：改了三件套不 bump，访问者最长一年拿旧缓存，不再是"多一次回源"的小事。分层实现在站点 vhost 的 `map $arg_v`，口径见 `docs/维护与发布.md` §6。
-- **`fetchJson()` 用的是 `cache: "no-cache"`**（`app.js`，2026-09-22 从 `no-store` 改过来），三份清单走协商缓存，不再每次重下。
+- **`fetchJson()` 用的是 `cache: "no-cache"`**（`app.js`，2026-09-22 从 `no-store` 改过来），各份清单走协商缓存，不再每次重下。
 - **头像与站标已拆开。** 卡片/作者栏/角色列表/页眉页脚用 15 KB 的 `dist/avatar.png`；`favicon.png`（262 KB）只留给 favicon 与 `og:image`，不能删。加新的可见头像位时用 `avatar.png`。
 
 ## 已经定下的方向，不用再问
