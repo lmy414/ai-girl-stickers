@@ -36,6 +36,9 @@ const CONFIG = {
   },
   /* 本地首批预览导入：仅在本地存在时启用，未导入时仍回退到演示数据。 */
   localDataUrl: "data/blue-fish-classification.json",
+  /* 角色与分类的权威清单：进 git，新增角色/分类只改清单（见 架构边界.md 变更矩阵） */
+  charactersDataUrl: "characters.json",
+  categoriesDataUrl: "categories.json",
   /* 站长自用板块：清单与预览都进仓库，字段已是 数据契约.md 的正式形状。 */
   ownerPicksDataUrl: "owner-picks/works.json",
   /* GitHub Issue 收录：清单与原图都进本仓库，只有 published 记录进入页面。 */
@@ -47,21 +50,11 @@ const CONFIG = {
 /* ==========================================================================
    2 · 数据（字段与 数据契约.md 对齐；下载量等热度字段已移除）
    ========================================================================== */
-const characters = [
-  { id: "all", name: "全部角色", aliases: [] },
-  { id: "deepseek", name: "DeepSeek娘", aliases: ["蓝色大肥鱼", "鲸鱼娘"] },
-  { id: "doubao", name: "豆包娘", aliases: ["豆包"] },
-  { id: "kimi", name: "Kimi娘", aliases: ["Kimi"] },
-  { id: "qwen", name: "通义千问娘", aliases: ["千问娘", "Qwen"] },
-  { id: "claude", name: "Claude娘", aliases: ["Claude"] },
-  { id: "gemini", name: "Gemini娘", aliases: ["Gemini"] },
-  { id: "grok", name: "Grok娘", aliases: ["Grok"] },
-  { id: "stepfun", name: "Stepfun娘", aliases: ["StepFun", "阶跃星辰"] },
-  { id: "glm", name: "GLM娘", aliases: ["GLM", "智谱"] },
-  { id: "other", name: "其他角色", aliases: [] },
-  /* 不是角色，是站长的自用图集；所以不出现在投稿模板的角色下拉里。 */
-  { id: "owner-picks", name: "站长自用", aliases: ["站长自用图", "自用"] }
-];
+/* "all" 是筛选 UI 的哨兵，不是数据；真实角色在 characters.json（数据契约.md §4） */
+const ALL_CHARACTER = { id: "all", name: "全部角色", aliases: [] };
+let characters = [ALL_CHARACTER];
+/* 分类清单本轮只加载不消费，分类 UI 随分类重建落地（数据契约.md §4.1） */
+let categories = [];
 
 const stickers = [
   {
@@ -238,6 +231,7 @@ const PLACEHOLDER_ASPECTS = [
 
 function generatePlaceholderWorks(total) {
   const roles = characters.filter((character) => character.id !== "all");
+  if (!roles.length) return [];
   const origins = Object.keys(ORIGIN_LABELS);
   const licenses = Object.keys(LICENSE_LABELS);
   const formats = ["webp", "png", "jpg", "gif", "apng"];
@@ -277,17 +271,6 @@ function generatePlaceholderWorks(total) {
   }
   return works;
 }
-
-stickers.push(...generatePlaceholderWorks(PLACEHOLDER_TOTAL));
-
-/* 补全由流水线生成的字段（MIME、状态）。演示作品没有图片文件，因此不写
-   path / thumbnailPath，让 artMarkup 直接走无图版式；否则会请求一批
-   生产环境不存在的 /previews/*，每张卡片都产生一条 404。 */
-stickers.forEach((sticker) => {
-  sticker.mimeType = MIME_BY_FORMAT[sticker.format] || "application/octet-stream";
-  sticker.status = "published";
-  sticker.updatedAt = sticker.createdAt;
-});
 
 /* ===========================================================================
    2.1 · 本地首批数据导入
@@ -376,12 +359,31 @@ async function fetchJson(url) {
   }
 }
 
+/* 演示兜底：没有任何真实清单时才生成占位作品；角色清单也取不到时只显示 12 条手写演示 */
+function activateDemoFallback() {
+  stickers.push(...generatePlaceholderWorks(PLACEHOLDER_TOTAL));
+  /* 补全由流水线生成的字段（MIME、状态）。演示作品没有图片文件，因此不写
+     path / thumbnailPath，让 artMarkup 直接走无图版式；否则会请求一批
+     生产环境不存在的 /previews/*，每张卡片都产生一条 404。 */
+  stickers.forEach((sticker) => {
+    sticker.mimeType = MIME_BY_FORMAT[sticker.format] || "application/octet-stream";
+    sticker.status = "published";
+    sticker.updatedAt = sticker.createdAt;
+  });
+}
+
 async function loadLocalDataset() {
-  const [firstBatch, ownerPicks, submissions] = await Promise.all([
+  const [firstBatch, ownerPicks, submissions, rawCharacters, rawCategories] = await Promise.all([
     fetchJson(CONFIG.localDataUrl),
     fetchJson(CONFIG.ownerPicksDataUrl),
-    fetchJson(CONFIG.submissionsDataUrl)
+    fetchJson(CONFIG.submissionsDataUrl),
+    fetchJson(CONFIG.charactersDataUrl),
+    fetchJson(CONFIG.categoriesDataUrl)
   ]);
+
+  const characterRecords = Array.isArray(rawCharacters) ? rawCharacters : [];
+  characters = [ALL_CHARACTER, ...characterRecords.filter((character) => character && character.id && character.id !== "all")];
+  categories = Array.isArray(rawCategories) ? rawCategories : [];
 
   const records = Array.isArray(firstBatch) ? firstBatch : [];
   const imported = records.map(mapLocalRecord).filter(Boolean);
@@ -392,7 +394,10 @@ async function loadLocalDataset() {
     ? submissions.filter((record) => record && record.status === "published")
     : [];
 
-  if (!imported.length && !ownerPickRecords.length && !submissionRecords.length) return;
+  if (!imported.length && !ownerPickRecords.length && !submissionRecords.length) {
+    activateDemoFallback();
+    return;
+  }
 
   stickers.splice(0, stickers.length, ...imported, ...submissionRecords, ...ownerPickRecords);
   dataMode = "local";
@@ -423,7 +428,7 @@ const toastRegion = document.querySelector(".toast-region");
 const published = () => stickers.filter((sticker) => sticker.status === "published");
 const findSticker = (id) => stickers.find((sticker) => sticker.id === id && sticker.status === "published");
 const findCharacter = (id) => characters.find((character) => character.id === id);
-const characterFor = (id) => findCharacter(id) || characters[0];
+const characterFor = (id) => findCharacter(id) || { id: String(id || ""), name: String(id || "未知角色"), aliases: [] };
 
 function normalize(value) {
   return String(value || "").toLocaleLowerCase("zh-CN").replace(/[\s_\-—–]+/g, "");
