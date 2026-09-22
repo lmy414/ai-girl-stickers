@@ -27,3 +27,6 @@ __pycache__/
 
 # 构建输出
 /.build/
+
+# 并行子代理的 git worktree（不进仓库）
+/.worktrees/
