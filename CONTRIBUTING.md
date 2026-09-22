@@ -6,7 +6,9 @@
 
 ## 一、投稿
 
-**投稿就是提一个 Issue，不用 fork、不用会 git。** 打开[投稿表单](https://github.com/lmy414/ai-girl-stickers/issues/new?template=sticker-submission.yml)——站里首页右上角的「提交作品」按钮打开的就是它。
+**投稿就是提一个 Issue，不用 fork、不用会 git。** 打开[投稿表单](https://github.com/lmy414/ai-girl-stickers/issues/new?template=sticker-submission.yml)——站里投稿页「快速投稿」入口旁的 GitHub 表单打开的就是它。
+
+投稿页现状（2026-09-23 多页改版）：快速投稿入口在投稿指南旁，**GitHub 表单已开通**，**飞书投稿是占位**（「即将开通」）；页上的快速投稿表单**暂不开放填写**（全禁用占位，启用后走飞书）；**邮件投稿方案已废弃**。
 
 ### 五步
 
@@ -54,7 +56,7 @@ Issue 会带上 `sticker-submission` 标签排队。维护者做四件事：
 
 两个标签 `sticker-submission`、`takedown` 必须在仓库里**真实存在**，否则模板里的 `labels` 会被 GitHub 静默忽略——派生这个仓库时记得补建。
 
-站内入口统一由 `app.js` 的 `issueUrl(template, title)` 生成，要改模板文件名时只改这一处。
+站内投稿 / 删除申请入口统一从一处生成（原 `app.js` 的 `issueUrl()` 随旧单页应用退役），要改模板文件名时只改那一处。
 
 ---
 
@@ -76,9 +78,9 @@ python -m http.server 5173 -d dist   # 打开 http://127.0.0.1:5173
 
 ### 改了前端三件套要 bump 缓存版本号
 
-改了 `dist/app.js` / `dist/styles.css` / `dist/tokens.css`，**必须同步 `dist/index.html` 里的 `?v=` 数字**，否则访问者拿的还是旧缓存，你会以为修复没生效。
+改了 `dist/app.js` / `dist/styles.css` / `dist/tokens.css`，**必须同步引用处的 `?v=` 数字**，否则访问者拿的还是旧缓存，你会以为修复没生效。`app.js` 已随旧单页应用退役删除，现役是后两个；`index.html` 等手写页逐个改，`works/` 详情页是生成物，bump 后重跑 `tools/generate_work_pages.mjs` 一并出新号。
 
-当前值：`tokens.css?v=13`、`styles.css?v=17`、`app.js?v=21`。
+当前值：`tokens.css?v=14`、`styles.css?v=18`。
 
 ### 新增投稿图片后要生成派生图
 
@@ -87,6 +89,14 @@ python tools/generate_image_derivatives.py
 ```
 
 这个脚本为投稿生成 480px 左右的列表缩略图和最长边不超过 1280px 的详情图，**幂等、可重跑**；只有加 `--force` 才会重新编码已存在的派生图。改了投稿数据后要跑一次，否则新记录没有派生图，构建校验会失败。
+
+### 改清单 / 加作品后要跑迁移与详情页生成
+
+```bash
+node tools/prepare_works.mjs && node tools/generate_work_pages.mjs
+```
+
+两个脚本都**幂等、可重跑**：`prepare_works.mjs` 给两份 `works.json` 补 `slug` / `categoryIds`，并维护 `dist/blue-fish-ids.json` 首批 ID 冻结映射（已有条目永不改写，只补缺）；`generate_work_pages.mjs` 读清单**全量重建** `dist/works/<slug>.html`。**构建前先跑这一步**——清单变了不重跑，`tools/build.mjs` 的「清单 `slug` 与详情页一一对应」断言会失败。`works/` 是生成物，别手改（下次重跑就被冲掉）；要改详情页的字段、文案或 SEO 头，改 `tools/generate_work_pages.mjs`，口径见 [`docs/SEO规范.md`](docs/SEO规范.md)。
 
 ### 本地构建检查
 
@@ -108,18 +118,18 @@ diff /tmp/a.txt /tmp/b.txt        # 必须为空
 
 ### 浏览器验收清单
 
-起本地服务实际打开过一遍：
+起本地服务实际打开过一遍（多页口径）：
 
-- [ ] 首页列表能滚动加载到底；
-- [ ] 搜索（名称 / Tag / 角色别名 / 提交者）能命中；
-- [ ] 角色抽屉能筛出对应角色的作品；
-- [ ] 作品详情页能打开、能下载原图；
-- [ ] 评论区能加载（**要 `http://`，不要 `file://`**）；
-- [ ] 深浅两套主题切换正常。
+- [ ] 首页卡片网格正常，点卡片进得了 `works/<slug>` 详情页、能下载原图；
+- [ ] 分类筛选能筛出对应角色 / 分类的作品；
+- [ ] 投稿页占位状态对：GitHub 表单入口可用、飞书「即将开通」、快速投稿表单全禁用；
+- [ ] 详情页 Giscus 评论区能加载（**要 `http://`，不要 `file://`**），讨论串挂在 `sticker-<id>` 上；
+- [ ] 详情页推荐区两块都在（同角色 + 猜你喜欢；孤品角色第一块显示便签提示）；
+- [ ] 旧链接跳转兼容：`#/work/<id>`、`#/character/<id>` 能转到新页面。
 
 ### 视觉规矩六条
 
-参照对象是 **pixiv、GitHub 这类内容站**，不是营销落地页：默认亮色，中性灰底配标准蓝，小圆角（2 / 3 / 4 / 6px），正文 14px、页面标题最大 24px，区块之间用 1px 描边分开。不用辉光、渐变背景、玻璃拟态、悬浮位移和大阴影。
+参照对象是 **pixiv、GitHub 这类内容站**，不是营销落地页。视觉体系是**手绘涂鸦风（蓝白）**：网格纸背景 + 贴纸纸卡组件（2026-09-23 多页改版起），风格值全部进 `tokens.css`。不用辉光、玻璃拟态、悬浮位移和大阴影这类营销页装饰。
 
 1. 颜色、字号、间距、圆角、阴影、动效时长只在 `tokens.css` 定义；
 2. `styles.css` 只引用语义变量（`--text-primary`、`--bg-surface`、`--space-4`…），不出现硬编码色值；
@@ -136,7 +146,7 @@ diff /tmp/a.txt /tmp/b.txt        # 必须为空
 
 评论区用 **Giscus**：评论存在 GitHub Discussions 里，静态站不用自己养服务器和数据库，而且跟投稿用的是同一套 GitHub 账号体系。
 
-本站复用的是博客那个评论区仓库 [`lmy414/lmy414-blog-comments`](https://github.com/lmy414/lmy414-blog-comments) 的 `Announcements` 分类，参数写在 `dist/app.js` 的 `CONFIG.comments.giscus` 里。
+本站复用的是博客那个评论区仓库 [`lmy414/lmy414-blog-comments`](https://github.com/lmy414/lmy414-blog-comments) 的 `Announcements` 分类；参数固定在详情页生成器 / 页面模板一处（原 `dist/app.js` 的 `CONFIG.comments.giscus` 随旧单页应用退役，接入点边界见 [`架构边界.md`](架构边界.md) §3）。
 
 派生这个项目时换三步：
 
@@ -144,20 +154,20 @@ diff /tmp/a.txt /tmp/b.txt        # 必须为空
 2. 安装并授权 [giscus App](https://github.com/apps/giscus)，去 [giscus.app/zh-CN](https://giscus.app/zh-CN) 填仓库和分类，拿到仓库与分类 ID。
 3. 四项填进 `CONFIG.comments.giscus`。填全才生效；没填全时详情页显示「评论功能尚未开启」的说明，不会报错。
 
-### 一个必须记住的坑：`mapping=specific`
+### 一个必须记住的规矩：`mapping=specific`
 
-本站是 hash 路由，**所有作品的 `pathname` 一模一样**。Giscus 默认按 `pathname` 映射讨论串，那样整站作品的评论会全挤进同一个讨论。所以代码里钉死了：
+Giscus 默认按 `pathname` 映射讨论串，而本站的 URL 走 slug、路由方案还换过一次（hash 单页 → 多页静态）——**term 必须与作品 `id` 绑定，不随 URL 变**。所以代码里钉死了：
 
 ```js
 data-mapping = "specific"
 data-term    = `sticker-${sticker.id}`
 ```
 
-一张作品一个串。**改路由方案时一定回来看这条。**
+一张作品一个串。原警告保留：换默认映射、或把 term 改成 slug，整站作品的评论会全挤进同一个讨论，已有讨论串也会跟作品对不上。**改路由 / URL 方案时一定回来看这条。**
 
 ### 其它方案
 
-不想让访客必须登录 GitHub，就换 Waline（可匿名评论、有后台、免费层能跑），代价是多一个要维护的实例。Utterances 只支持一层评论且维护放缓；Twikoo 功能最全但配置最重；Disqus 带广告和追踪脚本，跟这个站「零追踪」的定位冲突。切换时改 `CONFIG.comments.provider`，并在 `mountComments()` 里加一个分支。
+不想让访客必须登录 GitHub，就换 Waline（可匿名评论、有后台、免费层能跑），代价是多一个要维护的实例。Utterances 只支持一层评论且维护放缓；Twikoo 功能最全但配置最重；Disqus 带广告和追踪脚本，跟这个站「零追踪」的定位冲突。切换时在评论接入点（生成器 / 页面模板一处）换 provider，并加一个分支。
 
 ---
 

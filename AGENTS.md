@@ -13,9 +13,9 @@
 
 ## 这个仓库的形状
 
-纯静态前端：**没有前端框架、没有后端、没有测试框架**。`dist/` 仍是站点根目录，也是前端权威源码，`app.js` 一个文件里装着数据、路由和视图（**本轮没做 `src/` 迁移**）。
+纯静态前端：**没有前端框架、没有后端、没有测试框架**。`dist/` 仍是站点根目录，也是前端权威源码。2026-09-23 多页改版后站点是**多页静态路由**（网格纸背景 + 贴纸纸卡的手绘涂鸦风）：手写六页（首页 `index.html`、分类 / 投稿 / 关于 / 推荐，加页脚的「更新日志」页）+ `dist/works/` 下 191 个 `works/<slug>.html` 详情页（**生成物**，`tools/generate_work_pages.mjs` 从清单渲染，别手改）。旧单页应用 `dist/app.js` **已退役删除**；`index.html` 只留一段内联转跳脚本，把老 hash 链接 `#/work/<id>`、`#/character/<id>` 转到新页面。
 
-现在**有了零依赖构建** [`tools/build.mjs`](tools/build.mjs)（Node 内置模块 only，把 `dist/` 复制成一份干净发布产物，跳过 `dist/data/` 与 `dist/submissions/originals/`），以及**服务器侧发布 / 回滚脚本** `ops/deploy-server.sh` / `ops/rollback-server.sh`。`package.json` 只提供 `npm run build`。
+`tools/` 下与作品数据打交道的脚本：[`tools/prepare_works.mjs`](tools/prepare_works.mjs)（幂等迁移：两份 `works.json` 补 `slug` / `categoryIds`，维护 `dist/blue-fish-ids.json` 首批 ID 冻结映射）、[`tools/generate_work_pages.mjs`](tools/generate_work_pages.mjs)（幂等生成详情页）、`tools/generate_image_derivatives.py`（投稿派生图）。**零依赖构建** [`tools/build.mjs`](tools/build.mjs)（Node 内置模块 only，把 `dist/` 复制成一份干净发布产物，跳过 `dist/data/` 与 `dist/submissions/originals/`，并断言清单 `slug` 与详情页一一对应），以及**服务器侧发布 / 回滚脚本** `ops/deploy-server.sh` / `ops/rollback-server.sh`。`package.json` 只提供 `npm run build`。
 
 改完必须自己起服务在浏览器里看过，不要只靠读代码判断：
 
@@ -27,9 +27,9 @@ python -m http.server 5173 -d dist   # 打开 http://127.0.0.1:5173
 
 ## 硬性约定
 
-- **改了 `app.js` / `styles.css` / `tokens.css`，同步 `index.html` 里的 `?v=` 数字。** 不改版本号，访问者拿的还是旧缓存，你会以为修复没生效。
-- **样式只消费 Token。** 颜色、字号、间距、圆角、阴影、动效时长一律去 `tokens.css` 定义；`styles.css` 里不出现硬编码色值。小屏差异优先重定义 Token，其次才写断点。图标用 `app.js` 的 `ICONS` 内联 SVG，不用 emoji。
-- **Giscus 的 `data-mapping` 必须是 `specific`、`data-term` 必须是 `sticker-<id>`。** 本站是 hash 路由，所有作品的 `pathname` 一模一样，按默认映射会把全部评论塞进同一个讨论串。改路由方案时回看这条。
+- **改了 `app.js` / `styles.css` / `tokens.css`，同步 `index.html` 里的 `?v=` 数字。**（`app.js` 已退役删除，现役是后两个，当前值 `tokens.css?v=14`、`styles.css?v=18`。）不改版本号，访问者拿的还是旧缓存，你会以为修复没生效。详情页里的同名引用是生成物——bump 后重跑 `tools/generate_work_pages.mjs` 一并同步。
+- **样式只消费 Token。** 颜色、字号、间距、圆角、阴影、动效时长一律去 `tokens.css` 定义；`styles.css` 里不出现硬编码色值。小屏差异优先重定义 Token，其次才写断点。图标用内联 SVG，不用 emoji。
+- **Giscus 的 `data-mapping` 必须是 `specific`、`data-term` 必须是 `sticker-<id>`。** **term 与 id 绑定、不随 URL 变**（URL 走 slug）；换默认映射或改 term，会把全部评论塞进同一个讨论串，已有讨论串也会跟作品对不上。改路由 / URL 方案时回看这条。
 - **`rawGithubPath(repo, path)` 的仓库参数按记录传。** 首批原图在上游 `EDMOK/blue-fish-archive`（`CONFIG.upstreamRepo`），以后投稿的图片进本仓库——写死一个仓库名会让投稿作品的原图指向错的地方。
 - **`dist/data/`（图片与清单）、`staging/`、`.zcode/`、`小红书素材/` 都不进 git**，已被 `.gitignore` 排除。**`tools/deploy.mjs`（已废弃的本机发布脚本）也仍然被排除**，不再进公开仓库。别用 `git add -A` 把它们扫进来，暂存时逐个列文件名。例外是 **`dist/owner-picks/`**（站长自用板块的清单与预览）——它不在 `data/` 下，是进 git 的，因为那批图的原图本来就在同一个仓库里。
 - **新增角色只改一处数据：`dist/characters.json`**，然后 `node tools/sync_issue_template.mjs --write` 同步投稿表单的角色下拉（`node tools/build.mjs` 有断言，两边漂移会构建失败）。可选在 `tokens.css` 补 `--art-<角色>-*` 色板 Token，不补就沿用 `other` 占位色。**`owner-picks`（站长自用）是这条的例外**：`inSubmissionForm: false`，不进投稿下拉、不配品牌色（用的是 `--art-owner-picks-*` 那组中性石板蓝）。
@@ -50,6 +50,7 @@ python -m http.server 5173 -d dist   # 打开 http://127.0.0.1:5173
 
 2026-09-22 实测的现状。这些都是**当前事实**，不是待办承诺；动到相关代码前先知道它们存在。
 
+- **详情页与清单的 slug 同源，不许重算（2026-09-23 起）。** slug = `<characterId><YYYYMMDD><NNNN>`，由 `tools/prepare_works.mjs` 生成、写进两份 `works.json`；`tools/generate_work_pages.mjs` 只读清单里的现值，不再自己算。首批另有 `dist/blue-fish-ids.json` 冻结映射（`sourcePath`→`{id, slug}`）。**一经发布即冻结**——重算一次，URL、外链和评论串对应就断一次；数据主键始终是 `id`，Giscus term 始终是 `sticker-<id>`，跟 URL 是两套东西。
 - **`file://` 直开时浏览器会拦截清单请求。** 角色清单（`dist/characters.json`）取不到后，168 条占位演示不再生成（12 条手写演示保留）；`http://` 本地服务不受影响。
 - **投稿缩略图已补齐（2026-09-22 起）。** `dist/submissions/works.json` 的 `thumbnailPath` 指向 `submissions/previews/<角色>/<文件名>.webp`（约 480px），`fullPath` 指向 `submissions/large/...webp`（最长边 ≤1280），`path` 仍是 GitHub Raw 原图。派生图由 `tools/generate_image_derivatives.py` 生成，**幂等可重跑**；改投稿数据后要重跑一次，否则新记录没有派生图。
 - **投稿原图不进发布产物，线上也不托管原图。** 原件在 GitHub 仓库（下载走 Raw）。`tools/build.mjs`（以及已废弃的 `tools/deploy.mjs`）都会跳过 `dist/submissions/originals/`；这一条 2026-09-22 之前不成立——那时每次发布都把 63.7 MB 原图整个传上去，包因此有 73.7 MB。
