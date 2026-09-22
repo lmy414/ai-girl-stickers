@@ -1,0 +1,50 @@
+[
+  {
+    "id": "complaint",
+    "name": "吐槽疑问",
+    "description": "吐槽、质疑、发问",
+    "status": "active"
+  },
+  {
+    "id": "speechless",
+    "name": "无语冷漠",
+    "description": "无语、淡定、懒得理",
+    "status": "active"
+  },
+  {
+    "id": "meltdown",
+    "name": "崩溃破防",
+    "description": "崩溃、受挫、破防",
+    "status": "active"
+  },
+  {
+    "id": "cute",
+    "name": "卖萌可爱",
+    "description": "卖萌、贴贴、软软",
+    "status": "active"
+  },
+  {
+    "id": "cheering",
+    "name": "打气加油",
+    "description": "加油、鼓劲、庆祝",
+    "status": "active"
+  },
+  {
+    "id": "slacking",
+    "name": "摆烂躺平",
+    "description": "摆烂、摸鱼、躺平",
+    "status": "active"
+  },
+  {
+    "id": "smug",
+    "name": "得意炫耀",
+    "description": "得意、自信、小炫耀",
+    "status": "active"
+  },
+  {
+    "id": "shocked",
+    "name": "震惊疑惑",
+    "description": "震惊、瞳孔地震、疑惑",
+    "status": "active"
+  }
+]

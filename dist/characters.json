@@ -1,0 +1,79 @@
+[
+  {
+    "id": "deepseek",
+    "name": "DeepSeek娘",
+    "aliases": ["蓝色大肥鱼", "鲸鱼娘"],
+    "status": "active",
+    "inSubmissionForm": true
+  },
+  {
+    "id": "doubao",
+    "name": "豆包娘",
+    "aliases": ["豆包"],
+    "status": "active",
+    "inSubmissionForm": true
+  },
+  {
+    "id": "kimi",
+    "name": "Kimi娘",
+    "aliases": ["Kimi"],
+    "status": "active",
+    "inSubmissionForm": true
+  },
+  {
+    "id": "qwen",
+    "name": "通义千问娘",
+    "aliases": ["千问娘", "Qwen"],
+    "status": "active",
+    "inSubmissionForm": true
+  },
+  {
+    "id": "claude",
+    "name": "Claude娘",
+    "aliases": ["Claude"],
+    "status": "active",
+    "inSubmissionForm": true
+  },
+  {
+    "id": "gemini",
+    "name": "Gemini娘",
+    "aliases": ["Gemini"],
+    "status": "active",
+    "inSubmissionForm": true
+  },
+  {
+    "id": "grok",
+    "name": "Grok娘",
+    "aliases": ["Grok"],
+    "status": "active",
+    "inSubmissionForm": true
+  },
+  {
+    "id": "stepfun",
+    "name": "Stepfun娘",
+    "aliases": ["StepFun", "阶跃星辰"],
+    "status": "active",
+    "inSubmissionForm": true
+  },
+  {
+    "id": "glm",
+    "name": "GLM娘",
+    "aliases": ["GLM", "智谱"],
+    "status": "active",
+    "inSubmissionForm": true
+  },
+  {
+    "id": "other",
+    "name": "其他角色",
+    "aliases": [],
+    "status": "active",
+    "inSubmissionForm": true
+  },
+  {
+    "id": "owner-picks",
+    "name": "站长自用",
+    "aliases": ["站长自用图", "自用"],
+    "status": "active",
+    "inSubmissionForm": false
+  }
+]
