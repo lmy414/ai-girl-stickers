@@ -84,6 +84,10 @@ CHANGELOG.md    更新日志
 LICENSE         程序代码的 MIT 许可
 ```
 
+## 友情链接
+
+- [LINUX DO](https://linux.do/)
+
 ## 许可与版权边界
 
 程序代码以 [MIT License](LICENSE) 发布。`assets/` 里的站点图标是本项目生成的品牌素材。
