@@ -17,6 +17,10 @@
 //   3. categoryIds 初分（先 id 后名字，已有不覆盖）：
 //      id 以 sticker_op_ 开头 → ["illustration"]；name 含 立绘|设定|三视图 → ["setting"]；
 //      其余 → ["meme"]。
+//      这是「新条目入库时的兜底初分」，判不出漫画——多格分镜只有看图才知道，
+//      所以 comic 一律由视觉复核结果写入清单，本脚本不会自动给出。
+//      视觉复核（2026-09-25）已把存量 191 件的 categoryIds 全部重写并冻结在清单里，
+//      本脚本的「已有不覆盖」保证重跑不会把它们冲掉。
 //
 // 首批 raw 清单不在本 worktree（dist/data/ 不进 git）：默认读维护者主工作树的
 // dist/data/blue-fish-classification.json，可用环境变量 BLUE_FISH_RAW 覆盖，
@@ -81,8 +85,9 @@ function serializeLikeManifest(records, originalText) {
   return JSON.stringify(records, null, 2).replace(/\n/g, eol) + eol;
 }
 
-/* categoryIds 初分（口径 3）。tools/generate_work_pages.mjs 里同款一份——
-   那边是给 blue-fish 归一记录用的，改规则两处一起改。 */
+/* categoryIds 兜底初分（口径 3）。站点仓 tools/build_site_snapshot.mjs 的 kindFor 是同款一份——
+   那边是给投稿/owner-picks 缺字段时兜底用的，改规则两处一起改。
+   注意：两种兜底都判不出 comic（多格分镜要靠看图），comic 只来自视觉复核写进清单的结果。 */
 function classifyCategoryIds(record) {
   const id = String(record.id || "");
   const name = String(record.name || "");

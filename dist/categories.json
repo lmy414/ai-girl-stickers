@@ -16,5 +16,11 @@
     "name": "设定图",
     "description": "立绘、三视图、设定稿",
     "status": "active"
+  },
+  {
+    "id": "comic",
+    "name": "漫画",
+    "description": "多格分镜、连环画、条漫",
+    "status": "active"
   }
 ]

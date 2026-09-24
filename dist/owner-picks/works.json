@@ -3,6 +3,7 @@
     "id": "sticker_op_001",
     "name": "蓝发女仆",
     "description": "站长自己用 AI 生成的女仆装蓝发大头贴。",
+    "commentary": "怎么只剩一颗脑袋了，下半身被谁裁掉的到现在也没个交代，不过我笑成这样也够了。盯着看久了自己都有点上头，头顶那撮呆毛怎么压都压不下去。要拿去当头像的话，记得别裁得比我更狠。",
     "path": "https://raw.githubusercontent.com/lmy414/ai-girl-stickers/main/owner-picks/blue-maid.png",
     "thumbnailPath": "owner-picks/previews/blue-maid.webp",
     "fullPath": "owner-picks/previews/blue-maid.webp",
@@ -41,13 +42,14 @@
     "sourceIssue": null,
     "slug": "owner-picks202609190001",
     "categoryIds": [
-      "illustration"
+      "meme"
     ]
   },
   {
     "id": "sticker_op_002",
     "name": "橙发看书",
     "description": "站长自己用 AI 生成的橙发捧书大头贴。",
+    "commentary": "一朵大花别在头发上，手里那本书的封面上也是同一朵花，翻书翻到眼神都飘了。看她这副没睡醒的样子，我怀疑书里写的不是知识，是第几章开始划水。",
     "path": "https://raw.githubusercontent.com/lmy414/ai-girl-stickers/main/owner-picks/orange-reading.png",
     "thumbnailPath": "owner-picks/previews/orange-reading.webp",
     "fullPath": "owner-picks/previews/orange-reading.webp",
@@ -93,6 +95,7 @@
     "id": "sticker_op_003",
     "name": "白发中国结",
     "description": "站长自己用 AI 生成的白发中国结发饰大头贴。",
+    "commentary": "白毛配两只角，鬓边还别了个中国结，整张脸只给一个半眯着眼的表情。挺好，这眼神拿去做头像正合适，专治那些半夜发来一句「在吗」的人。",
     "path": "https://raw.githubusercontent.com/lmy414/ai-girl-stickers/main/owner-picks/white-hair-knot.png",
     "thumbnailPath": "owner-picks/previews/white-hair-knot.webp",
     "fullPath": "owner-picks/previews/white-hair-knot.webp",
@@ -131,13 +134,14 @@
     "sourceIssue": null,
     "slug": "owner-picks202609190003",
     "categoryIds": [
-      "illustration"
+      "meme"
     ]
   },
   {
     "id": "sticker_op_004",
     "name": "紫发猫耳",
     "description": "站长自己用 AI 生成的紫发猫耳异色瞳大头贴。",
+    "commentary": "紫毛配猫耳，一只眼粉一只眼金，头发上还要别一颗星星，这配色胆子大得我这条蓝鱼有点不服。不过往白底上一摆，当头像确实好看，站长这眼神我服。",
     "path": "https://raw.githubusercontent.com/lmy414/ai-girl-stickers/main/owner-picks/purple-cat-ears.png",
     "thumbnailPath": "owner-picks/previews/purple-cat-ears.webp",
     "fullPath": "owner-picks/previews/purple-cat-ears.webp",
@@ -177,7 +181,7 @@
     "sourceIssue": null,
     "slug": "owner-picks202609190004",
     "categoryIds": [
-      "illustration"
+      "meme"
     ]
   }
 ]
