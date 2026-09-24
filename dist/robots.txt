@@ -1,3 +1,0 @@
-User-agent: *
-Disallow: /data/
-Sitemap: https://xn--pssy23gqgbz2d718b.com/sitemap.xml
