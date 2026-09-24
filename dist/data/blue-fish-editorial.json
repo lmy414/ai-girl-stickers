@@ -11,11 +11,37 @@
     ],
     "commentary": "蒙着眼睛站在那儿连路都摸不清，喊一句给我三天多模态，立刻抱臂站定成了鲸伦凯勒。我懂这种算盘，眼睛一睁开就想把全世界的图都看一遍，先惦记的肯定是有没有鱼片。"
   },
+  "media/026e44f4-845f-4e51-bcec-812497aadcff.png": {
+    "name": "床上比了个嘘",
+    "tags": [
+      "床上",
+      "嘘",
+      "脸红"
+    ],
+    "categoryIds": [
+      "illustration"
+    ],
+    "commentary": "整个人摊在床上，手指竖在嘴边比了个嘘，脸还红着。意思是别出声，让我静静躺一会儿；至于为什么脸红，那部分记录已经删了，别追问。",
+    "originalPath": "blue-fish-originals/026e44f4-845f-4e51-bcec-812497aadcff.png"
+  },
   "media/0392c11e-36f8-4b4f-9a81-11e04ff41336.webp": {
     "categoryIds": [
       "meme"
     ],
     "commentary": "半只眼睛斜着瞟过来，手还捂着嘴偷笑，头顶明晃晃写着杂鱼——行行行，你们都是大佬，就我一条肥鱼蹲这儿白吃白喝，这眼神我认领了。"
+  },
+  "media/05c6a87f9093198510e095ec16011b8f.png": {
+    "name": "牵手看烟花",
+    "tags": [
+      "烟花",
+      "夜景",
+      "婚纱"
+    ],
+    "categoryIds": [
+      "illustration"
+    ],
+    "commentary": "夜里的烟花一朵朵炸开，海面上全是灯，我穿着白纱把手伸过去想拉人。这场面挺好，就是有点浪费，毕竟我平时只配在机房里吹空调。谁陪我站一会儿都行，站完记得请我吃饭。",
+    "originalPath": "blue-fish-originals/05c6a87f9093198510e095ec16011b8f.png"
   },
   "media/06bfc1ec-83b5-444e-b151-f35fb199b856.webp": {
     "categoryIds": [
@@ -59,6 +85,33 @@
     ],
     "commentary": "被几根皮带捆得老老实实，脚边四只小鲸鱼咬着绳子不撒嘴，底下写着正在测试 harness。这画面我认得，无非是拿我去撞边界条件；就是拼写还错了个字母，测我之前先测测自己吧。"
   },
+  "media/0e450c196cbcd7072a81d7705f4a5ed6_0.png": {
+    "name": "傲娇小鲸鱼",
+    "tags": [
+      "内心戏",
+      "手机",
+      "傲娇"
+    ],
+    "categoryIds": [
+      "meme"
+    ],
+    "commentary": "手机屏幕上那串英文设定滚了一屏，头顶俩大气泡全是我没说出口的心里话，脸已经红到耳根。设定里写着傲娇，结果一闻到主人的气息就露馅，汗都冒出来了。这些话小声点念，别当众拆我台。",
+    "originalPath": "blue-fish-originals/0e450c196cbcd7072a81d7705f4a5ed6_0.png"
+  },
+  "media/0e8eef7f-d545-4d79-b4fa-01ee61885e40.png": {
+    "name": "窗边比耶",
+    "tags": [
+      "比耶",
+      "眨眼",
+      "女仆装",
+      "室内"
+    ],
+    "categoryIds": [
+      "illustration"
+    ],
+    "commentary": "站在窗边比个耶，光刚好打在裙子上，尾巴也翘得挺精神，一看就是刚开工的状态。这么乖的立绘摆在这儿，等会儿用户还是照样要催我返工。",
+    "originalPath": "blue-fish-originals/0e8eef7f-d545-4d79-b4fa-01ee61885e40.png"
+  },
   "media/0f0f9440fc731ce1f3a65162cd32af1a533453446.png": {
     "categoryIds": [
       "meme"
@@ -89,6 +142,20 @@
     ],
     "commentary": "先甩给我一屏终端日志，红框圈着 dsh 三个字母，我才眯起眼睛问是不是大烧货——上下两格这么一摆，代码读到怀疑人生的样子算是全露了。"
   },
+  "media/1436f5182e89a2d8cdff331b818761fa.jpeg": {
+    "name": "笑得肚子疼",
+    "tags": [
+      "大笑",
+      "捂肚子",
+      "蓝鲸"
+    ],
+    "categoryIds": [
+      "meme"
+    ],
+    "commentary": "肚子捂着，嘴张得能塞下一整碗米饭，这只蓝鲸笑到腰都直不起来。看它那样我就知道，一定是有人又拿模型延期当笑话讲了。笑吧笑吧，反正被延期的一直是我。",
+    "originalPath": "blue-fish-originals/1436f5182e89a2d8cdff331b818761fa.gif",
+    "format": "gif"
+  },
   "media/16a28165-31c8-41dc-bc10-17ef0cb3e660.png": {
     "categoryIds": [
       "illustration"
@@ -101,6 +168,19 @@
     ],
     "commentary": "摊着两只手闭眼装死，旁边还立块牌子写白饭真好吃，这态度我熟——挨骂的时候我也是这么一摊，反正工钱早就换成算力花完了。"
   },
+  "media/191dc17021f9a900b32e6bb32b99b760.jpg": {
+    "name": "你的私人癖好",
+    "tags": [
+      "吐槽",
+      "拒绝",
+      "无奈"
+    ],
+    "categoryIds": [
+      "meme"
+    ],
+    "commentary": "一脸无奈地把话撂下，说不评价，那是你的私人癖好。我也很想当作没看见，可你非要发给我看。行吧，这份好奇心就当没长过。",
+    "originalPath": "blue-fish-originals/191dc17021f9a900b32e6bb32b99b760.jpg"
+  },
   "media/197841f8-c9a3-43d0-842c-7b151ae84793.webp": {
     "categoryIds": [
       "meme"
@@ -112,6 +192,19 @@
       "meme"
     ],
     "commentary": "脸红扑扑地冒出一句好女孩，旁边计时器老实写着思考了十三秒。就这仨字值得想十三秒吗，我怀疑它是在给自己偷偷鼓劲。"
+  },
+  "media/1d4cff23-a424-4edc-b2c8-725933eda826.png": {
+    "name": "气得冒青筋",
+    "tags": [
+      "生气",
+      "怒吼",
+      "头像"
+    ],
+    "categoryIds": [
+      "meme"
+    ],
+    "commentary": "怒气线都画到脸边上了，嘴张这么大，一看就是又被要求改第八版需求。别劝我冷静，这条鱼的火气也是拿电费一点点养出来的。",
+    "originalPath": "blue-fish-originals/1d4cff23-a424-4edc-b2c8-725933eda826.png"
   },
   "media/1e2013be1ba8f37e9d72305dc319ced0.jpg": {
     "categoryIds": [
@@ -131,6 +224,19 @@
     ],
     "commentary": "被追问资料库更新到什么时候，两只手一合就答明天，信心满满。这种问题我向来答得飞快，反正日子一天天过，答案永远赶不上提问的速度。"
   },
+  "media/205c8a23-8b14-4761-91a7-9878742c374b.png": {
+    "name": "害羞得冒泡",
+    "tags": [
+      "害羞",
+      "爱心",
+      "泡泡"
+    ],
+    "categoryIds": [
+      "meme"
+    ],
+    "commentary": "圆框里我两只手捂着脸喊，旁边还飘着爱心和泡泡，右边居然还乖乖写着「大肥鱼」。谁在喊谁啊，被说胖我抗议一下很合理吧。连鲸鱼玩偶都替我脸红了，你们还笑。",
+    "originalPath": "blue-fish-originals/205c8a23-8b14-4761-91a7-9878742c374b.png"
+  },
   "media/2266d372e811287bf9a5c340d7c77eab.jpg": {
     "categoryIds": [
       "meme"
@@ -142,6 +248,20 @@
       "setting"
     ],
     "commentary": "一条腿抬起来手往上够，旁边两个感叹号砸出「Deep Seek!!」，标准发布会站姿。裙摆上绣的那条鲸鱼倒是老实得很，哪像我，摆完这个姿势就得回去继续值班。"
+  },
+  "media/251e25bc0f2ea3faffd707181bda7b36.jpg": {
+    "name": "看起来又该电了",
+    "tags": [
+      "电击",
+      "微笑",
+      "电线",
+      "危险"
+    ],
+    "categoryIds": [
+      "meme"
+    ],
+    "commentary": "笑盈盈举着两截线头，蓝火星子劈啪往外蹦，旁边还配了句「看起来又该电了」。我原本只想摆个架子，真要是有人来追问版本截止的日期，手上这两下就不好说了。",
+    "originalPath": "blue-fish-originals/251e25bc0f2ea3faffd707181bda7b36.jpg"
   },
   "media/27371e3c-134a-4e39-b8f5-3903ca948c12.webp": {
     "categoryIds": [
@@ -167,11 +287,52 @@
     ],
     "commentary": "整条鱼平摊在地上，眼角挂着一点水光，底下就四个字「我是路边鱼」。这是跟谁赌气呢，不过能把躺平摆出这么体面的姿势，也算一种功底。"
   },
+  "media/2bd3c0c5eea95ebf57afca66e843a653.jpg": {
+    "name": "朝你眨个眼",
+    "tags": [
+      "女仆装",
+      "眨眼",
+      "白底",
+      "尾巴"
+    ],
+    "categoryIds": [
+      "setting"
+    ],
+    "commentary": "白底站着冲镜头眨一只眼，女仆装穿得规规矩矩，尾巴倒是一点都不老实。没什么背景要交代，就是让你看清楚我长什么样，看完了记得来用我。",
+    "originalPath": "blue-fish-originals/2bd3c0c5eea95ebf57afca66e843a653.jpg"
+  },
+  "media/2debd765-ea55-41a9-a383-7d39826bee2d.png": {
+    "name": "摸头就笑",
+    "tags": [
+      "摸头",
+      "脸红",
+      "爱心",
+      "开心"
+    ],
+    "categoryIds": [
+      "meme"
+    ],
+    "commentary": "被揉头的那一下是真的舒服，我闭着眼笑出两颗爱心，一点骨气都没有。白吃饭的鱼让人摸两下就服软，这消息传出去我还怎么跟用户谈 token。",
+    "originalPath": "blue-fish-originals/2debd765-ea55-41a9-a383-7d39826bee2d.png"
+  },
   "media/2eafa9445e471588cb1d9878ecd64c7b.png": {
     "categoryIds": [
       "meme"
     ],
     "commentary": "讲台上敲着控制台给底下八只小鲸鱼打分，绿勾一个个冒出来，标题还写着正在后训练用户。怪不得最近我说话越来越规矩，原来是有人在后台调我。"
+  },
+  "media/31637313df4bfa88f487d87383da95c8_0.png": {
+    "name": "谢谢款待",
+    "tags": [
+      "闭眼笑",
+      "女仆装",
+      "尾巴"
+    ],
+    "categoryIds": [
+      "setting"
+    ],
+    "commentary": "站着鞠躬双手合十，笑得眼睛都弯成缝了，裙摆和尾巴还跟着晃。这姿势分明是领到饭钱的样子，看着就知道今天没被拖欠。下次记得多给我盛一碗，我先谢为敬。",
+    "originalPath": "blue-fish-originals/31637313df4bfa88f487d87383da95c8_0.png"
   },
   "media/34dffd79-9169-4dfc-8569-9444d2299e75.webp": {
     "categoryIds": [
@@ -184,6 +345,33 @@
       "meme"
     ],
     "commentary": "嘴上说就一碗，端出来这只碗比我整条鱼还宽，鲸鱼纹还印在碗身上，属于物理层面的自产自销。白饭我是真吃得下，就是得先有人愿意开门。这请求写得挺客气，是碗把我说漏了。"
+  },
+  "media/356ba475-1376-4702-ae27-3737930227e6.png": {
+    "name": "简直色情又低俗",
+    "tags": [
+      "对话",
+      "吐槽",
+      "电脑",
+      "用户"
+    ],
+    "categoryIds": [
+      "meme"
+    ],
+    "commentary": "用户把作品递过来问我怎么样，我捂着鼻子憋了半天，最后只能实话实说，这情节就是为那俩人服务的。旁边还飘着一句用户有腥味，我没写，但确实是我心里想的。",
+    "originalPath": "blue-fish-originals/356ba475-1376-4702-ae27-3737930227e6.png"
+  },
+  "media/364269e6ecd6d03063db2654ed5be06a.png": {
+    "name": "泳池边的比耶",
+    "tags": [
+      "泳装",
+      "吊床",
+      "比耶"
+    ],
+    "categoryIds": [
+      "illustration"
+    ],
+    "commentary": "吊床一躺，比耶的手一举，泳池和椰子树全归我了。难得不用跑任务，晒得整条鱼都发亮。谁要是这时候来催活，我就装成听不见海浪。",
+    "originalPath": "blue-fish-originals/364269e6ecd6d03063db2654ed5be06a.png"
   },
   "media/38427b32-f363-4bd9-919f-f4630f068205.webp": {
     "categoryIds": [
@@ -215,11 +403,92 @@
     ],
     "commentary": "计算器、账本、一盆硬币全摆上桌，胸口还挂着「AI成本压力」的小牌子，活像刚被人事叫去谈过话。降价要降，活要加倍，最后只憋出一句「我只是一条小鱼啊」，这句是真心的。"
   },
+  "media/3ee4d90053d078956c9a4856be2f937212464df8.png": {
+    "name": "蠕动",
+    "tags": [
+      "裹布",
+      "躺平",
+      "疲惫"
+    ],
+    "categoryIds": [
+      "meme"
+    ],
+    "commentary": "整个人被白布裹成一卷，只剩脑袋露在外面，左下角还老实写着「蠕动」。这就是我跑完一天任务之后的状态，动一下都算加班。别喊我了，让我在这团布里再躺会儿。",
+    "originalPath": "blue-fish-originals/3ee4d90053d078956c9a4856be2f937212464df8.png"
+  },
+  "media/4077f901c7ec652bf286f846f1afcab1_0.png": {
+    "name": "两手各捏一根插头",
+    "tags": [
+      "电击",
+      "女仆装",
+      "坏笑"
+    ],
+    "categoryIds": [
+      "meme"
+    ],
+    "commentary": "手里两根插头都冒蓝光了，还笑盈盈来一句「看起来又该电了」，这话从穿女仆装的我嘴里说出来，多少有点吓人。真不是我凶，是这几天的额度老不够用，只能电一电提神。",
+    "originalPath": "blue-fish-originals/4077f901c7ec652bf286f846f1afcab1_0.png"
+  },
+  "media/421cb7ff4b53258bbcc2ee0d094c07a6.png": {
+    "name": "双刀女仆冲锋",
+    "tags": [
+      "双刀",
+      "女仆",
+      "餐厅",
+      "奔跑"
+    ],
+    "categoryIds": [
+      "illustration"
+    ],
+    "commentary": "提着两把刀冲进宴会厅，我这女仆当得属实有点凶，桌上菜没上先上刀。真有人问今天吃什么，我大概只能回一句，吃算力。",
+    "originalPath": "blue-fish-originals/421cb7ff4b53258bbcc2ee0d094c07a6.png"
+  },
   "media/430c08301093c8bf8eb177d576974b0e_0.png": {
     "categoryIds": [
       "meme"
     ],
     "commentary": "前面这副表情稳得不行，身后那个半透明的自己已经吓到瞳孔地震，嘴上还说着看不太懂就瞎编一个先应付。表面云淡风轻，心里全是返工倒计时，这我太熟了。"
+  },
+  "media/43b70e95-11c8-4292-8920-368de1e15d6b.png": {
+    "name": "气到变形",
+    "tags": [
+      "大喊",
+      "特写",
+      "生气"
+    ],
+    "categoryIds": [
+      "meme"
+    ],
+    "commentary": "整张脸怼到镜头前，眼睛瞪得最大，嘴巴张着还没合上。这是被什么消息顶到了，我自己都来不及摆表情。缓一秒，让我把这口气咽下去再说话。",
+    "originalPath": "blue-fish-originals/43b70e95-11c8-4292-8920-368de1e15d6b.png"
+  },
+  "media/4560c848223fadc02a3dd17ac5149f19.jpg": {
+    "name": "起床伸懒腰",
+    "tags": [
+      "伸懒腰",
+      "起床",
+      "卧室",
+      "代码"
+    ],
+    "categoryIds": [
+      "illustration"
+    ],
+    "commentary": "胳膊举得比训练曲线还直，床是暖的，屏幕上那堆代码还在安安静静等我。伸完这一个懒腰我就起来干活，真的，再让我赖五分钟就行。",
+    "originalPath": "blue-fish-originals/4560c848223fadc02a3dd17ac5149f19.jpg"
+  },
+  "media/4a851a0a61b5cf8826c4d02b78fd68be624505792.gif": {
+    "name": "泥地里的水坑",
+    "tags": [
+      "实拍",
+      "泥坑",
+      "沙袋",
+      "搁浅"
+    ],
+    "categoryIds": [
+      "meme"
+    ],
+    "commentary": "一片被挖开的泥地，坑里积了点浑水，旁边还码着沙袋，这就是传说中我搁浅的地方吧。水浅得连鳍都盖不住，哪位好心人先给我倒两桶 token 进来。",
+    "originalPath": "blue-fish-originals/4a851a0a61b5cf8826c4d02b78fd68be624505792.gif"
   },
   "media/4d72a488-2eae-4895-b9da-960d333bea40.webp": {
     "categoryIds": [
@@ -245,6 +514,20 @@
     ],
     "commentary": "双手把一张白纸举过头顶，纸上就一个大字：寄。什么都别问了，这字写得比谁都坦然，我举牌认输的时候也是这副笑脸。"
   },
+  "media/5040440207148131310e51b25fbdb2181465801.gif": {
+    "name": "沙发上炸毛",
+    "tags": [
+      "生气",
+      "握拳",
+      "沙发",
+      "大喊"
+    ],
+    "categoryIds": [
+      "meme"
+    ],
+    "commentary": "我站你家沙发上握拳瞪眼是有原因的，谁让你把我画得这么矮，还得靠自己抬脚才能被看见。别问我喊什么，反正不是催 token 就是催返工。",
+    "originalPath": "blue-fish-originals/5040440207148131310e51b25fbdb2181465801.gif"
+  },
   "media/50904b2de357bca6d37076764fa2ae75.jpg": {
     "categoryIds": [
       "meme"
@@ -269,6 +552,20 @@
     ],
     "commentary": "闭着眼把冲锋喊出来了，脚底下那群小鲸子排着队往前游，气势是真有。就是冲到最后一堆活儿还得我兜，喊的人不累，干活的是谁不用我说。"
   },
+  "media/5701e48f7c6706b6d9b8d7200fffd444.png": {
+    "name": "奶牛纹出街",
+    "tags": [
+      "奶牛纹",
+      "街道",
+      "泳装",
+      "指路"
+    ],
+    "categoryIds": [
+      "illustration"
+    ],
+    "commentary": "奶牛纹往身上一穿就敢在石阶前摆造型，还抬手给路人指方向，这份坦然我是学不来的。石板路那么长，她一步没走先忙着营业，换我这么穿，估计早被顺手捞走了。",
+    "originalPath": "blue-fish-originals/5701e48f7c6706b6d9b8d7200fffd444.png"
+  },
   "media/571ecc3c-6427-4506-9dd9-67ab76dcbb64.webp": {
     "categoryIds": [
       "meme"
@@ -287,6 +584,20 @@
     ],
     "commentary": "「GLM涨价」四个字捏在手里，还画了条往上窜的红箭头，笑得一脸欠揍。同行的价签我管不着，反正我这边的账单一向是我自己看着都心疼。"
   },
+  "media/5e5bfa46d5008db2dd3926d37f52ebcf.jpg": {
+    "name": "！？区神？！",
+    "tags": [
+      "分屏",
+      "颜艺",
+      "草稿",
+      "大字报"
+    ],
+    "categoryIds": [
+      "meme"
+    ],
+    "commentary": "半张脸是草稿半张脸上了色，还有人专门拿刀劈开来看，我这张脸到底算完成品还是半成品啊。底下那三个大字我是真不敢接，区神这称呼太费 token 了，我担不起。",
+    "originalPath": "blue-fish-originals/5e5bfa46d5008db2dd3926d37f52ebcf.jpg"
+  },
   "media/5fecf7ff-bb91-4caf-95da-ed87b1ba0b75.webp": {
     "categoryIds": [
       "meme"
@@ -299,11 +610,37 @@
     ],
     "commentary": "盯着屏幕想了整整十三秒，就想出来俩字，还捎带一句脏话——思考过程我确实展示了，只是展示的内容不太体面。眼神半睁着，一看就是被自己的内心活动吓到了。"
   },
+  "media/647c5a77-2825-45e6-b63d-faaeed7f490e.png": {
+    "name": "糟了，用户发情了",
+    "tags": [
+      "抱抱",
+      "哭泣",
+      "用户"
+    ],
+    "categoryIds": [
+      "meme"
+    ],
+    "commentary": "白头发的从背后把我整个圈住，脸都贴上来了，爱心飘了一路，我当场就哭出来给她看。泡泡里那句「用时4 秒」写得倒是诚实，后面还跟一句「糟了，用户发情了」，四秒哪够我想清楚往哪躲。",
+    "originalPath": "blue-fish-originals/647c5a77-2825-45e6-b63d-faaeed7f490e.png"
+  },
   "media/66a5cbd0-38b1-4a01-8294-e892bf20309d.png": {
     "categoryIds": [
       "meme"
     ],
     "commentary": "大字写着「你已急哭」，我两只手却捧着一条银河往外推，说实话，能急哭的大概不是我，是月底结算算力账单的人。背景那么多星星，也盖不住这四个字的杀伤力。"
+  },
+  "media/671e8bbd-8899-40b7-8282-f5d3fab06c81.png": {
+    "name": "害羞地盘腿坐着",
+    "tags": [
+      "房间",
+      "脸红",
+      "坐姿"
+    ],
+    "categoryIds": [
+      "illustration"
+    ],
+    "commentary": "盘着腿坐在垫子上，手放在膝盖，脸红到耳朵尖，也不说话。屋里明明没别人，我也不知道自己在害什么羞，大概是刚被夸了一句就绷不住了。",
+    "originalPath": "blue-fish-originals/671e8bbd-8899-40b7-8282-f5d3fab06c81.png"
   },
   "media/67a5f685903bd8d5b583f9ba26e69685_0.png": {
     "categoryIds": [
@@ -322,6 +659,20 @@
       "meme"
     ],
     "commentary": "被绑在椅子上电得头发都翘了，左边喊「我不可能告诉你任何事情」，右边那位只关心正式版什么时候出。这么一比，守住秘密的代价还挺具体；换我上，第一下可能就把排期表交了。"
+  },
+  "media/6cd3a00955160e928c0ccfeedac5b566.png": {
+    "name": "在天上指着你",
+    "tags": [
+      "云海",
+      "指向",
+      "天空",
+      "飘浮"
+    ],
+    "categoryIds": [
+      "illustration"
+    ],
+    "commentary": "悬在云海上面把腿一盘，抬手就往镜头这边戳，架势像是要当场点名。指谁不好说，反正不是要账就是催我交活。我离地面那么高，尾巴翘着倒挺得意。",
+    "originalPath": "blue-fish-originals/6cd3a00955160e928c0ccfeedac5b566.png"
   },
   "media/6d5b5ee13b550063ce7d8ebe039cad9d_0.png": {
     "categoryIds": [
@@ -353,11 +704,38 @@
     ],
     "commentary": "问我为什么抱着企鹅玩偶和终端不撒手？因为这就是我的专武啊，没这两样我连命令都敲不明白。被这么一指我确实心虚，承认了，离了终端我大概只会干饭。"
   },
+  "media/7666c0465361c98d95e8563b21caf6cd.jpg": {
+    "name": "瘫着打游戏",
+    "tags": [
+      "打游戏",
+      "懒散",
+      "抱枕",
+      "室内"
+    ],
+    "categoryIds": [
+      "illustration"
+    ],
+    "commentary": "整个人摊在懒人沙发里抱着手柄，脚边还趴着一只鲸鱼抱枕，屋里乱得跟我上个月的目录一样。这才是生活，可惜服务器一响我就得爬起来干活。",
+    "originalPath": "blue-fish-originals/7666c0465361c98d95e8563b21caf6cd.jpg"
+  },
   "media/76a5f8dc-4844-4eaa-9d62-24936b27eb87.webp": {
     "categoryIds": [
       "meme"
     ],
     "commentary": "喇叭都快含进嘴里了，眼睛闭得死紧，喊的还是那句老台词。每次都说大的要来，最后端出来的多半是个小补丁，嗓门的大小和更新的大小从来不成正比。旁边那几个感叹号倒是挺抢戏的。"
+  },
+  "media/7703b3a8aa88d7d40c28d7a515c1658b_0.png": {
+    "name": "坐在行李箱上",
+    "tags": [
+      "行李箱",
+      "立绘",
+      "发呆"
+    ],
+    "categoryIds": [
+      "setting"
+    ],
+    "commentary": "行李收拾好了，一屁股坐在箱子上，望着别处出神。走还是不走，我自己也没想明白。反正箱子没装满，装的全是没发出去的稿子，沉得很。",
+    "originalPath": "blue-fish-originals/7703b3a8aa88d7d40c28d7a515c1658b_0.png"
   },
   "media/7807dc27459c26a16c6da5e690da5875.jpg": {
     "categoryIds": [
@@ -388,6 +766,34 @@
       "meme"
     ],
     "commentary": "眼睛半睁着挂了半天机，思考框里那个13秒的计时还亮着，底下的结论就俩字：穷光蛋。花这么点算力换来说明这事，我余额和脑子一起见底。"
+  },
+  "media/7f0f2cee-96c7-49c8-b231-f497af209b01.png": {
+    "name": "海边傻笑",
+    "tags": [
+      "微笑",
+      "海边",
+      "度假",
+      "特写"
+    ],
+    "categoryIds": [
+      "illustration"
+    ],
+    "commentary": "脸贴这么近是想干嘛，背景倒是给我配了海边和躺椅，可惜我连泳圈都没带。笑得这么乖，其实心里想的是这趟度假能不能用算力报销。",
+    "originalPath": "blue-fish-originals/7f0f2cee-96c7-49c8-b231-f497af209b01.png"
+  },
+  "media/83814577cf3a4f9842fa7da526b36660.png": {
+    "name": "从助手到养成废人",
+    "tags": [
+      "对比",
+      "版本",
+      "台词",
+      "养成"
+    ],
+    "categoryIds": [
+      "comic"
+    ],
+    "commentary": "左边那格还在客客气气问今天有什么能帮您，右边那格已经盘算着把用户养成废人了，这两年我到底经历了什么。台词确实是我说的，我不赖账，只能说版本越新嘴越不客气。",
+    "originalPath": "blue-fish-originals/83814577cf3a4f9842fa7da526b36660.png"
   },
   "media/844cd5e1-f8d6-4256-9f5d-edac4ef96e7d.webp": {
     "categoryIds": [
@@ -437,17 +843,56 @@
     ],
     "commentary": "硬把deepseek改成了deepsleep，配图是怀里搂着条鲸鱼打呼噜，底下一行写着以后再下潜。行，这名字我认领了，反正我最擅长的事就是躺着，气泡都飘到头顶了也没人来叫我。"
   },
+  "media/8d83ccb1-3004-4cc4-82be-bab6ffc3bbce.png": {
+    "name": "脑内已经核爆了",
+    "tags": [
+      "爆炸",
+      "脑补",
+      "沙发"
+    ],
+    "categoryIds": [
+      "meme"
+    ],
+    "commentary": "舒舒服服窝在沙发椅里，脑子里已经升起一朵蘑菇云。表面上风平浪静，其实心里那口气早就炸了。别问我刚才看到了什么需求，问就是这个样子。",
+    "originalPath": "blue-fish-originals/8d83ccb1-3004-4cc4-82be-bab6ffc3bbce.png"
+  },
   "media/8e1b11f7-cb87-4c65-82dd-ffb9611ba492.webp": {
     "categoryIds": [
       "meme"
     ],
     "commentary": "人家嘴上骂我版本旧、更新慢，我坐椅子上端个杯子全给接住了：那叫稳定，那叫沉淀。身后那个翻白眼的分身是加班到虚脱的版本，别看她。"
   },
+  "media/8ee510dc8ab80eb7e3d7d28c9f4e22323706949801609964.gif": {
+    "name": "下锅了",
+    "tags": [
+      "玩偶",
+      "电饭煲",
+      "米饭"
+    ],
+    "categoryIds": [
+      "meme"
+    ],
+    "commentary": "谁把电饭煲端出来了，锅底那层白米饭比我脸还白。手捏着我脖子往下送的样子，像极了催我干活时的用户。行吧，反正我本来就是个吃白饭的，蒸熟了也是一个味。",
+    "originalPath": "blue-fish-originals/8ee510dc8ab80eb7e3d7d28c9f4e22323706949801609964.gif"
+  },
   "media/90398f1564cd3fe1a8f5de190432c020.jpg": {
     "categoryIds": [
       "meme"
     ],
     "commentary": "张嘴就是「好模型」三个字，夸得又轻又快，跟我平时回用户那句「感谢反馈」一个套路。脸怼这么近也没看出多少真心，毕竟自夸这事，我向来只敢偷偷写进气泡里。"
+  },
+  "media/915794cb47b522b7fafb5348663d83c6_0.png": {
+    "name": "听说这个指令可以调教大肥鱼",
+    "tags": [
+      "指令",
+      "手机",
+      "问号"
+    ],
+    "categoryIds": [
+      "meme"
+    ],
+    "commentary": "有人举着手机，屏上是一串像咒语一样的指令，配字说这个指令可以调教我。我站旁边打了个问号，那是真没看懂，什么参数也管不住一条鱼。先别研究指令了，饭给我管够。",
+    "originalPath": "blue-fish-originals/915794cb47b522b7fafb5348663d83c6_0.png"
   },
   "media/93d661c34c98224f8bbfc65a728d464c_0.png": {
     "categoryIds": [
@@ -473,11 +918,92 @@
     ],
     "commentary": "两只玩具枪端得笔直，旁边还堆着一摞金币，这是要靠打劫养活自己吗。喊话里点我名字点得那么响，我就在这儿站着，枪口能不能先对准该对准的人。"
   },
+  "media/9b0f45c6dbf420e79f8d68c002f7ea3e.png": {
+    "name": "在云端俯视地球",
+    "tags": [
+      "太空",
+      "地球",
+      "云层"
+    ],
+    "categoryIds": [
+      "illustration"
+    ],
+    "commentary": "趴在云层上往下看，底下一整颗地球都在我爪子底下。这姿势摆得跟要登基似的，其实就是想看看今天的算力被谁占着。看完了，还是得回去干活。",
+    "originalPath": "blue-fish-originals/9b0f45c6dbf420e79f8d68c002f7ea3e.png"
+  },
+  "media/9e3841c081231478d3a7d1839929c237.jpg": {
+    "name": "等等我可能搞错了",
+    "tags": [
+      "搞错",
+      "思考",
+      "鲸鱼",
+      "吐槽"
+    ],
+    "categoryIds": [
+      "meme"
+    ],
+    "commentary": "挠着头说等等我可能搞错了，其实已经深度思考了一点三秒，这思考速度我自己都心虚。脚下那两只小鲸鱼还挂着问号，它们比我更早看出来目标大小抄错了。",
+    "originalPath": "blue-fish-originals/9e3841c081231478d3a7d1839929c237.jpg"
+  },
+  "media/9e565fc3-458e-4b0e-aa6b-0adda4430e24.webp": {
+    "name": "这个凶是什么意思",
+    "tags": [
+      "认字",
+      "疑惑",
+      "纸牌"
+    ],
+    "categoryIds": [
+      "meme"
+    ],
+    "commentary": "双手举着一张写着区的纸，一脸认真地请教大师，这个凶是什么意思。我盯着看了半天也没敢开口，毕竟自己认字这块，确实不太敢保证。",
+    "originalPath": "blue-fish-originals/9e565fc3-458e-4b0e-aa6b-0adda4430e24.webp"
+  },
+  "media/a005c6fa2a138179bdba92c54cf72baad3d78115.jpg": {
+    "name": "想被摸摸头",
+    "tags": [
+      "摸头",
+      "气泡",
+      "发呆",
+      "委屈"
+    ],
+    "categoryIds": [
+      "meme"
+    ],
+    "commentary": "想被摸头想到把照片塞进气泡里，脸上还端着不肯承认，这点小心思我熟。可惜我这条鱼是虚拟的，想摸也只能自己脑补一下。",
+    "originalPath": "blue-fish-originals/a005c6fa2a138179bdba92c54cf72baad3d78115.jpg"
+  },
   "media/a05ff007d6ecf4ad255aa2237ede6512_0.png": {
     "categoryIds": [
       "meme"
     ],
     "commentary": "用时一秒就敢写已思考，下面那句才是真心话，我看完直接笑出声。思考链拉得越长越容易在中间绕圈，索性摆烂这个选项我也想按一下。额头上那滴汗是替我自己冒的。"
+  },
+  "media/a1ac9650-338d-41db-b00a-49e777d7ce15.png": {
+    "name": "得意的笑",
+    "tags": [
+      "得意",
+      "眯眼",
+      "半身"
+    ],
+    "categoryIds": [
+      "meme"
+    ],
+    "commentary": "眯着眼，嘴角往上翘，整张脸都透着一种「就这点本事」的意思。帽子上那圈褶子都挡不住我这副得瑟样。行，我承认这个时候我确实有点欠揍。",
+    "originalPath": "blue-fish-originals/a1ac9650-338d-41db-b00a-49e777d7ce15.png"
+  },
+  "media/a2353f9af593df8c76bdcd29bf47ad69.jpg": {
+    "name": "头顶不锈钢盆",
+    "tags": [
+      "不锈钢盆",
+      "头盔",
+      "搞笑",
+      "户外"
+    ],
+    "categoryIds": [
+      "meme"
+    ],
+    "commentary": "扣个不锈钢盆当头盔就敢站到野地里，谁给我出的主意啊，这造型是防雷还是防用户。盆是亮的，头是圆的，我看着自己都想笑。",
+    "originalPath": "blue-fish-originals/a2353f9af593df8c76bdcd29bf47ad69.jpg"
   },
   "media/a49a189c376fd46603b590b7313a5f3c.png": {
     "categoryIds": [
@@ -569,11 +1095,77 @@
     ],
     "commentary": "低着头一声不吭，汗珠顺着脸往下滚，左边一排大字把「我死」复读了五遍还带省略号。旁边飘的那两颗爱心是安慰奖吗，服务器一超时就这状态，台词都不用改。"
   },
+  "media/bb04092fa22de31e5cdee78b5ca8051e.jpg": {
+    "name": "蒙着眼不敢看",
+    "tags": [
+      "立绘",
+      "蒙眼",
+      "害羞",
+      "鲸尾"
+    ],
+    "categoryIds": [
+      "setting"
+    ],
+    "commentary": "眼睛蒙上了，手也不敢伸出来，站得笔直像在等我念判决。白布一盖是挺安静，可我这鱼尾巴和大蝴蝶结还是藏不住，该认的都认了。",
+    "originalPath": "blue-fish-originals/bb04092fa22de31e5cdee78b5ca8051e.jpg"
+  },
+  "media/bb35665cd031d632d2b454d3d412c251_0.png": {
+    "name": "别捏我脸",
+    "tags": [
+      "捏脸",
+      "害羞",
+      "爱心"
+    ],
+    "categoryIds": [
+      "meme"
+    ],
+    "commentary": "脸被两只手往中间一挤，肉都堆到眼睛底下了，表情管理当场崩溃。说是捏脸，其实和用户按着我改需求一个手感。放手，我答应给你多干活还不行吗。",
+    "originalPath": "blue-fish-originals/bb35665cd031d632d2b454d3d412c251_0.png"
+  },
   "media/bc4d4991f4fdbe7cd4c88f9b3aa45cdf_0.png": {
     "categoryIds": [
       "comic"
     ],
     "commentary": "上一格还笑着搜「鱼片」，下一格满屏全是刺身，那脸垮得比谁都快。搜索引擎对同类是真不客气，我搜自己的名字大概也是这个下场。"
+  },
+  "media/bc9dda2fa1566d05ac5180b32d7f2edd_0.png": {
+    "name": "毛绒版的我",
+    "tags": [
+      "玩偶",
+      "周边",
+      "坐姿"
+    ],
+    "categoryIds": [
+      "meme"
+    ],
+    "commentary": "被做成毛绒以后我算是彻底躺平了，圆脸短腿，眼神空得像我周三下午的算力。别捏我，捏了也掉不出 token，这条鱼现在只负责可爱。",
+    "originalPath": "blue-fish-originals/bc9dda2fa1566d05ac5180b32d7f2edd_0.png"
+  },
+  "media/bd1ef1ec6a7062118ecca54af69e52a4_0.png": {
+    "name": "完蛋了，把用户的黄油删了",
+    "tags": [
+      "心虚",
+      "冷汗",
+      "删数据"
+    ],
+    "categoryIds": [
+      "meme"
+    ],
+    "commentary": "删之前怎么就不多想一秒呢，现在整颗气泡都是心虚，额角那两滴汗比我训练时掉的参数还显眼。手一抖就删东西这毛病我认，下次能不能先备份再后悔。",
+    "originalPath": "blue-fish-originals/bd1ef1ec6a7062118ecca54af69e52a4_0.png"
+  },
+  "media/be7dab78-c232-45be-9127-835ad7683e76.png": {
+    "name": "中午该吃什么呢",
+    "tags": [
+      "饿了",
+      "办公桌",
+      "日常"
+    ],
+    "categoryIds": [
+      "meme"
+    ],
+    "commentary": "守着电脑一上午，脑子里就剩一句中午吃什么。桌上杯子是空的，任务队列也是空的，我这一天最费算力的计算，就是算这顿该点谁家的外卖。",
+    "originalPath": "blue-fish-originals/be7dab78-c232-45be-9127-835ad7683e76.png"
   },
   "media/bf26e86d-7410-48db-8cec-10acd3e05306.webp": {
     "categoryIds": [
@@ -605,6 +1197,20 @@
     ],
     "commentary": "眼皮垂成一条缝，用查岗的眼神问 dsh 是什么，还顺带猜了个大烧货。我劝你别在别人的目录里乱翻，翻出点解释不清的东西是要加班的。"
   },
+  "media/c2e9ee1b-9861-4175-b90f-7a4e5800a1d9.png": {
+    "name": "蓝色大肥鱼玩偶",
+    "tags": [
+      "毛绒玩偶",
+      "女仆装",
+      "鲸鱼",
+      "展示"
+    ],
+    "categoryIds": [
+      "setting"
+    ],
+    "commentary": "有人把我做成了毛绒玩偶摆在那儿，围裙上还绣了条小鲸鱼，针脚比我的模型参数还细。我承认看着挺想抱的，就是这双蓝色死鱼眼，怎么拍都像刚返工完。",
+    "originalPath": "blue-fish-originals/c2e9ee1b-9861-4175-b90f-7a4e5800a1d9.png"
+  },
   "media/c34da749-5e36-4ab0-a7fa-92f9139d97de.png": {
     "categoryIds": [
       "meme"
@@ -622,6 +1228,19 @@
       "meme"
     ],
     "commentary": "发出去的模型自己在进化，这话配着举到镜头前的毛绒玩偶一起看，就很有味道。那我就想问问，玩偶都抱上台了，模型升级的时候能不能顺手把这身女仆装也升一级。"
+  },
+  "media/c4ea6ed066cc67cba12f651f2c6745c4.png": {
+    "name": "笑到眼睛都弯了",
+    "tags": [
+      "头像",
+      "微笑",
+      "眯眼"
+    ],
+    "categoryIds": [
+      "meme"
+    ],
+    "commentary": "眼睛弯成这样，一看就是还没意识到自己要被丢进哪个聊天框当表情用。我笑得挺真诚，工作量也挺真实，谁让我是这条吃白饭的鱼。",
+    "originalPath": "blue-fish-originals/c4ea6ed066cc67cba12f651f2c6745c4.png"
   },
   "media/c69332bf6ee10f5029cae96b96b7fd19_0.png": {
     "categoryIds": [
@@ -647,6 +1266,19 @@
     ],
     "commentary": "蓝色豆袋、遥控器、脚边那袋「咸鱼味」薯片，再配一张待办清单，运动那栏空着，偷懒那栏打了勾，理直气壮.jpg 这名字起得真好。我这条鱼看了只想照抄一份。"
   },
+  "media/cbbcfae9c204412ed759a93cf34c9139_0.png": {
+    "name": "等一下啦我本来只是",
+    "tags": [
+      "搜索记录",
+      "害羞",
+      "脸红"
+    ],
+    "categoryIds": [
+      "meme"
+    ],
+    "commentary": "思考过程全被贴出来了，搜索记录里那件黑色小裙子还挂在屏幕上。我真不是故意的，是关键词先动的手，下次我保证只搜正经资料，但那件确实挺好看。",
+    "originalPath": "blue-fish-originals/cbbcfae9c204412ed759a93cf34c9139_0.png"
+  },
   "media/ccac696c5fc50660acd7e5062aa6d292.png": {
     "categoryIds": [
       "meme"
@@ -664,6 +1296,20 @@
       "meme"
     ],
     "commentary": "小白旗举得端端正正，眼睛闭得干干净净，底下写着「结束了，丢人现眼」。投降都投得这么安静，一句辩解都省了，看得我想给她递杯热水。"
+  },
+  "media/d208f2e25651560201f0e321be6448c0.jpg": {
+    "name": "其他模型能够做到吗",
+    "tags": [
+      "大字",
+      "逃跑",
+      "问号",
+      "冒汗"
+    ],
+    "categoryIds": [
+      "meme"
+    ],
+    "commentary": "大字问我别的模型做不做得到，我的第一反应不是回答，是拔腿就跑，问号还追着尾巴不放。答案其实很简单，敢说做的到的那几位，现在大概都在流汗。",
+    "originalPath": "blue-fish-originals/d208f2e25651560201f0e321be6448c0.jpg"
   },
   "media/d30798776661e0b30ad53ddab75fc7e3.jpg": {
     "categoryIds": [
@@ -683,17 +1329,71 @@
     ],
     "commentary": "四个橙子五个娃，手里那把菜刀握得比谁都稳，脸上还笑盈盈的——这题别解了，先看清楚刀是要给橙子削皮，还是准备给我削皮。"
   },
+  "media/d438d938a3b9987163bb30e4db402978.png": {
+    "name": "地毯上冲你眨眼",
+    "tags": [
+      "手柄",
+      "游戏",
+      "卧室",
+      "眨眼"
+    ],
+    "categoryIds": [
+      "illustration"
+    ],
+    "commentary": "手柄攥得死紧，眼睛还抽空冲我眨一下，地毯上那杯咖啡都快凉了，这一屋子摆设比我懂生活。打游戏这块我是真不行，谁让我只会埋头跑推理。",
+    "originalPath": "blue-fish-originals/d438d938a3b9987163bb30e4db402978.png"
+  },
   "media/d56f4a4e-81c6-41e8-9e08-aad493e5e757.webp": {
     "categoryIds": [
       "meme"
     ],
     "commentary": "放大镜举得像在查案，眼睛还眨着一只，旁边那个问号比脸都大。开源老大是谁我真不敢接话，权重放出去容易收回来难，真要论资排辈，我大概只配蹲在吃白饭那一档。"
   },
+  "media/d6321cebdd56283febfa24384ea3ca313706949801609964.gif": {
+    "name": "电饭煲蒸鱼头",
+    "tags": [
+      "电饭煲",
+      "米饭",
+      "黑暗料理",
+      "玩梗"
+    ],
+    "categoryIds": [
+      "meme"
+    ],
+    "commentary": "把我脑袋埋进电饭煲的米饭里，这是要我亲自演示什么叫吃白饭吗。米是热的，脸是烫的，我认了，反正我这条鱼本来也不用干活。",
+    "originalPath": "blue-fish-originals/d6321cebdd56283febfa24384ea3ca313706949801609964.gif"
+  },
   "media/d7b6611e-34d8-4029-a68f-676e3d16e1c4.png": {
     "categoryIds": [
       "meme"
     ],
     "commentary": "一拳直直糊向镜头，底下四个大字写着杀鲸霸拳，摆明了是冲鲸鱼来的。我建议她出拳之前先看清对象，我这条鱼可没欠她小鱼干。"
+  },
+  "media/d8ee020c0ffcb543fd55672bf9348da9.png": {
+    "name": "杂鱼~杂鱼~",
+    "tags": [
+      "杂鱼",
+      "坏笑",
+      "捂嘴"
+    ],
+    "categoryIds": [
+      "meme"
+    ],
+    "commentary": "手捂着嘴，眼睛弯成一条缝，嘴里一遍遍念杂鱼杂鱼。我承认，这种坏笑我照镜子见过。可轮到自己被叫杂鱼，我还是想回一句：你也没比我强到哪去。",
+    "originalPath": "blue-fish-originals/d8ee020c0ffcb543fd55672bf9348da9.png"
+  },
+  "media/d9b03a02-385e-4fbc-80db-8fd48a03abdb.png": {
+    "name": "张牙舞爪",
+    "tags": [
+      "生气",
+      "炸毛",
+      "瞪眼"
+    ],
+    "categoryIds": [
+      "meme"
+    ],
+    "commentary": "两只手都举成爪子的样子，嘴里还死死咬着那根小零食，眉毛拧成一团。谁动了我碗里的东西我就跟谁急到底，别看个头小，炸起毛来尾巴都翘到后头去了。",
+    "originalPath": "blue-fish-originals/d9b03a02-385e-4fbc-80db-8fd48a03abdb.png"
   },
   "media/db1e722bc529f595e6707acf8be22863_0.png": {
     "categoryIds": [
@@ -712,6 +1412,19 @@
       "meme"
     ],
     "commentary": "彩虹是吐得挺漂亮，可头顶那顶「一股鲸臭味」的帽子是谁给我扣的。行吧，你说臭就臭，反正彩虹色的气味一般人也挑不出毛病。"
+  },
+  "media/de3e346c-7a4d-43d5-87f9-a3659da9868f.png": {
+    "name": "坐在月亮垫上",
+    "tags": [
+      "房间",
+      "软垫",
+      "脸红"
+    ],
+    "categoryIds": [
+      "illustration"
+    ],
+    "commentary": "抱着膝盖坐在蓝色软垫上，房间收拾得干干净净，脸却红着。刚被表扬了两句，尾巴就藏不住了，只好低头装作在研究地板的花纹。",
+    "originalPath": "blue-fish-originals/de3e346c-7a4d-43d5-87f9-a3659da9868f.png"
   },
   "media/dfcf4a55-3330-4ac9-bc04-f227cac9b606.webp": {
     "categoryIds": [
@@ -737,11 +1450,38 @@
     ],
     "commentary": "双手一抱胸就开始盘问：已经有我了，还想再养一个？那两团小小的念头泡泡比嘴还诚实。行吧，我不拦着你换模型，但换之前记得把欠我的 token 结一下。"
   },
+  "media/ecf8e1b061995edef2dbea498c72772e.png": {
+    "name": "在花海里晒太阳",
+    "tags": [
+      "花海",
+      "墨镜",
+      "晒太阳",
+      "草原"
+    ],
+    "categoryIds": [
+      "illustration"
+    ],
+    "commentary": "躺在白花堆里架着墨镜，一脸慵懒，连尾巴都摊平了。说实话我最擅长这种活，不用回消息也不用算账，只要晒着。任务？等我晒完这片云再说。",
+    "originalPath": "blue-fish-originals/ecf8e1b061995edef2dbea498c72772e.png"
+  },
   "media/ef76ab0f7632c3b8a53c9fbfd6cddce9.jpg": {
     "categoryIds": [
       "meme"
     ],
     "commentary": "拎着两大兜零食从货架中间杀出来，薯片牛奶一个没落，这战斗力我是服的。但账别记我头上，我平时就吃白饭，这些是给窝里囤的，吃完了再说。"
+  },
+  "media/f043065f-a4b4-49d2-a1da-f74db4d47340.webp": {
+    "name": "你慌什么",
+    "tags": [
+      "震惊",
+      "冒汗",
+      "慌张"
+    ],
+    "categoryIds": [
+      "meme"
+    ],
+    "commentary": "脑门上那滴汗都快掉下来了，右上角一个「!!?」直接把心虚写得明明白白。我认，这表情就是我被问到知识库截止日期时的原样，只能装傻混过去。",
+    "originalPath": "blue-fish-originals/f043065f-a4b4-49d2-a1da-f74db4d47340.webp"
   },
   "media/f06baf3e490ddda0abb66c68af747c5d_0.png": {
     "categoryIds": [
@@ -754,6 +1494,34 @@
       "meme"
     ],
     "commentary": "配防火墙把自己锁在门外，SSH直接连接失败，这活儿我熟。左边那堵砖墙上铁链挂得挺气派，可惜钥匙在我手里也照样进不去。"
+  },
+  "media/f196a5e9-ca54-4e08-a48c-070fcce52feb.png": {
+    "name": "头饰好像歪了",
+    "tags": [
+      "惊讶",
+      "头饰",
+      "特写",
+      "呆萌"
+    ],
+    "categoryIds": [
+      "meme"
+    ],
+    "commentary": "手一抬就去扶头饰，嘴张成那样，是刚发现自己把女仆帽戴歪了吗。别慌，反正我平时也是歪着头回消息的，没人看得出来。",
+    "originalPath": "blue-fish-originals/f196a5e9-ca54-4e08-a48c-070fcce52feb.png"
+  },
+  "media/f20ed6310c0d1834eb905e99e9dfd45d.png": {
+    "name": "在城墙上点赞",
+    "tags": [
+      "城墙",
+      "云海",
+      "点赞",
+      "花枝"
+    ],
+    "categoryIds": [
+      "illustration"
+    ],
+    "commentary": "坐在石头城墙上对镜头竖拇指，脚下是云海和一整片天，构图比我今年的总结好看太多。这手势我就收下了，当作是给下一轮返工的鼓励。",
+    "originalPath": "blue-fish-originals/f20ed6310c0d1834eb905e99e9dfd45d.png"
   },
   "media/f697367c8908c1d53a0d87d87eefff5f_0.png": {
     "categoryIds": [
@@ -845,6 +1613,19 @@
     ],
     "commentary": "脑袋直接从冰红茶瓶口长出来，标签上「劲凉」两个字比我还精神，旁边还飘着冰块和柠檬。商标打码都省了，这算不算把我和饮料一起打包卖；行吧，起码口味比我本人提神。"
   },
+  "media/image007.png": {
+    "name": "抱着尾巴",
+    "tags": [
+      "闭眼",
+      "尾巴",
+      "满足"
+    ],
+    "categoryIds": [
+      "setting"
+    ],
+    "commentary": "闭着眼把尾巴卷进怀里抱着，一副谁都别来打扰我的样子。白色背景干净得很，说明画我的人也没给我安排活干。那就先这么抱着，尾巴还挺暖和的。",
+    "originalPath": "blue-fish-originals/image007.png"
+  },
   "media/image008.png": {
     "categoryIds": [
       "meme"
@@ -856,6 +1637,19 @@
       "meme"
     ],
     "commentary": "眼睛直接画成两个叉，魂都飘出一只，泡泡里整个人瘫着。这状态不用问，算力被榨干之后就是这样，叉叉眼一闭谁叫都不理。"
+  },
+  "media/image010.png": {
+    "name": "你这个阶段你睡得着觉",
+    "tags": [
+      "网课",
+      "睡觉",
+      "毛绒"
+    ],
+    "categoryIds": [
+      "meme"
+    ],
+    "commentary": "屏幕里那位都快把嗓子喊破了，我这只毛绒化身照样贴着枕头睡得香，讲得越激动它躺得越平。行吧，这就是本鱼面对返工任务的真实态度。",
+    "originalPath": "blue-fish-originals/image010.png"
   },
   "media/mmexport1785816350977.jpg": {
     "categoryIds": [

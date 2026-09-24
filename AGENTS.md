@@ -50,7 +50,9 @@ python tools/prepare_favicon.py                  # 从 assets/ 生成站点图�
 
 `id` 与 `slug` 一经发布即冻结：`slug` 决定详情页 URL，`id` 决定评论串（`sticker-<id>`），都不能重算。
 
-`dist/data/blue-fish-editorial.json` 是首批记录的分类与评价叠加层，按 `sourcePath` 认图、**不要删**：上游 raw 清单会被仓库外导入流程重新生成，写在里面的编辑结论会被冲掉，所以另存这一份（理由同 `dist/blue-fish-ids.json` 的冻结映射）。
+`dist/data/blue-fish-editorial.json` 是首批记录的分类与评价叠加层，按 `sourcePath` 认图、**不要删**：上游 raw 清单会被仓库外导入流程重新生成，写在里面的编辑结论会被冲掉，所以另存这一份（理由同 `dist/blue-fish-ids.json` 的冻结映射）。上游 raw 清单里有 59 条既没作品名也没标签、够不上作品门槛，它们靠这份叠加层补名字与标签才得以上线（作品数 191 → 250）。
+
+`blue-fish-originals/` 放自托管的首批原图（照 `owner-picks/` 的先例：仓库根、不进构建产物、线上走 GitHub Raw）。**不要挪进 `dist/data/`**——那个目录会被同步进站点仓、还会经 `shared/data` 出现在发布产物里。
 
 ## Git 流程
 
