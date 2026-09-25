@@ -30,10 +30,21 @@
 
 投稿走 GitHub Issue 表单，投稿者不接触 git：
 
-- 投稿：`sticker-submission.yml`；
+- 投稿：`sticker-submission.yml`，投稿者只需上传图片、填写图片名称和角色，一句话说明可选；
 - 署名 / 删除：`takedown-request.yml`。
 
-维护者收录：按 `sha256` 查重 → 原图入库 → 跑派生图脚本 → 补齐系统字段 → 按契约校验 → 置 `published`。
+维护者收录：按 `sha256` 查重 → 原图入库 → 补至少一个 Tag、分类、来源、授权和正文 → 跑派生图脚本 → 按契约校验 → 置 `published`。
+
+维护者也可以先把本地图片或 GitHub Issue 附件放进**仓库外的收录中转区**，再人工看图和收录：
+
+```bash
+node tools/intake/cli.mjs add ./image.png --name "作品名" --character deepseek --description "可选说明"
+node tools/intake/cli.mjs pull-issues
+node tools/intake/cli.mjs verify
+node tools/intake/cli.mjs prune --apply   # 仅在回源 sha256 已确认后执行
+```
+
+中转区不写 `dist/`、不进 git、不会被站点读取；管理 API 只是站长自用的回环接口，不是公开投稿 API。完整约定见 [`tools/intake/README.md`](tools/intake/README.md)。
 
 **分类与正文评价都靠看图定，不能只按作品名猜**：`categoryIds` 要按四类判据（梗图 / 插画 / 设定图 / 漫画，见 `archive/2026-09-24/数据契约.md` §4.1）逐张看图后写进清单；`commentary`（详情页正文的蓝色大肥鱼第一人称评价）同样逐张看图手写。多格分镜只会是 `comic`，而 `tools/` 里的兜底启发式判不出来——它只会给前三个，所以别指望脚本自动分类。
 
