@@ -63,6 +63,13 @@
     "inSubmissionForm": true
   },
   {
+    "id": "gpt",
+    "name": "GPT娘",
+    "aliases": ["GPT", "ChatGPT", "OpenAI"],
+    "status": "active",
+    "inSubmissionForm": true
+  },
+  {
     "id": "other",
     "name": "其他角色",
     "aliases": [],
