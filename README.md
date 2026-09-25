@@ -11,7 +11,18 @@ AI 娘表情包站「蓝色大肥鱼」的**图片 / 内容 / 投稿仓库**。�
 - 申请署名 / 删除：<https://github.com/lmy414/ai-girl-stickers/issues/new?template=takedown-request.yml>
 - 表单本体在 [`.github/ISSUE_TEMPLATE/`](.github/ISSUE_TEMPLATE/)；角色下拉由 `tools/sync_issue_template.mjs` 与 `dist/characters.json` 保持同步。
 
-投稿流程不涉及 git：走 Issue 表单提交，维护者审核后用下面的脚本处理。
+投稿流程不涉及 git：走 Issue 表单提交，投稿者只需上传图片、填写图片名称和角色，一句话说明可选；维护者审核时再补 Tag、分类、来源、授权和详情页正文。
+
+维护者也可以把本地图片或 Issue 附件先放进**仓库外的收录中转区**，再人工收录；中转区不进 git、不写 `dist/`，并且只有按 `origin/main` 回源 sha256 校验通过后才允许清理。站长自用管理 API 只监听回环地址，不是公开上传 API。
+
+```bash
+node tools/intake/cli.mjs add ./image.png --name "作品名" --character deepseek --description "可选说明"
+node tools/intake/cli.mjs pull-issues
+node tools/intake/cli.mjs verify
+node tools/intake/cli.mjs prune --apply   # 仅在回源校验确认后执行
+```
+
+完整操作、内部 API、SSH 隧道和服务器 systemd 模板见 [`tools/intake/README.md`](tools/intake/README.md)。
 
 ## 目录
 
