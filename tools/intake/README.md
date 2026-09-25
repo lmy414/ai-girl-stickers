@@ -15,7 +15,7 @@
 确认 main 上的原图与中转副本一致后，才允许清理中转副本
 ```
 
-`main` 仍然是唯一公开内容真源。中转区不是作品数据库，不能直接被站点读取。
+`main` 仍然是唯一公开内容真源。中转区不是作品数据库，站点不能直接读它。
 
 ## 目录与安全边界
 
@@ -26,7 +26,7 @@
 /srv/www/dafeiyu/dafeiyu-intake # INTAKE_ROOT，服务私有中转区
 ```
 
-也可以用 `INTAKE_ROOT` 显式指定，但它必须在内容仓库目录之外；如果配到内容仓库内部，脚本会拒绝启动，避免被 `git reset --hard` 或误提交影响。中转区里有：
+也可以用 `INTAKE_ROOT` 显式指定，但它必须在内容仓库目录之外。配进内容仓库时脚本会拒绝启动，这样 `git reset --hard` 和误提交都碰不到中转区。中转区里有：
 
 ```text
 inbox/   <sha256>.<ext>         原图字节
@@ -94,7 +94,7 @@ node tools/intake/cli.mjs pull-issues
 node tools/intake/cli.mjs pull-issues --issue 123
 ```
 
-当前实现支持 `INTAKE_GITHUB_TOKEN` / `GITHUB_TOKEN` 环境变量。生产环境不要把令牌写进命令历史，建议由 systemd `EnvironmentFile` 或受限权限的凭据文件注入。令牌只需能读取仓库 Issue；不要给写仓库权限。
+当前实现支持 `INTAKE_GITHUB_TOKEN` / `GITHUB_TOKEN` 环境变量。生产环境不要把令牌写进命令历史，建议用 systemd `EnvironmentFile` 或权限受限的凭据文件注入。令牌只需能读取仓库 Issue。不要给写仓库权限。
 
 Issue 的幂等键是 `Issue number + attachment asset id`，重复轮询不会重复下载。同一图片如果已经在 main，也会直接返回 `published`。
 
@@ -123,13 +123,13 @@ node tools/intake/cli.mjs prune --apply
 node tools/intake/cli.mjs drop <sha256> --reason "重复投稿"
 ```
 
-`verify` 使用的是当前 `INTAKE_REF`，默认 `origin/main`。如果本地工作树刚推送过，先 `git fetch --prune origin`，不要用未推送的工作区文件冒充回源证据。
+`verify` 基于当前 `INTAKE_REF`，默认 `origin/main`。如果本地工作树刚推送过，先 `git fetch --prune origin`，不要用未推送的工作区文件冒充回源证据。
 
 ## 管理 API
 
 这是给站长后续管理面板、脚本和飞书适配器调用的**内部 API 包装**，不是给访客用的公共 API。
 
-启动前必须设置令牌；服务默认只监听回环：
+启动前必须设置令牌。服务默认只监听回环：
 
 ```bash
 export INTAKE_API_TOKEN="$(openssl rand -hex 32)"
@@ -160,7 +160,7 @@ curl -H "Authorization: Bearer $INTAKE_API_TOKEN" \
 | `POST` | `/api/v1/prune` | JSON `{"apply":false}`；`true` 才删除 |
 | `POST` | `/api/v1/drop` | JSON `{"sha256":"...","reason":"..."}` |
 
-`PUT` 上传只接受 `INTAKE_MAX_BYTES`（默认 16 MiB）以内的 PNG/JPEG/GIF/WebP 字节；API 层不接受 multipart，也不替前端做匿名投稿表单。API 永远只监听回环地址，不能通过 `INTAKE_API_HOST` 改成公网地址。以后接飞书，只需把飞书附件下载后调用同一个 `stageBuffer` / `PUT` 入口，核心查重和清理规则不变。
+`PUT` 上传只接受 `INTAKE_MAX_BYTES`（默认 16 MiB）以内的 PNG/JPEG/GIF/WebP 字节；API 层不接受 multipart，也不替前端做匿名投稿表单。API 永远只监听回环地址，不能通过 `INTAKE_API_HOST` 改成公网地址。以后接飞书：下载飞书附件后，调用同一个 `stageBuffer` / `PUT` 入口即可，核心查重和清理规则不变。
 
 ## systemd 示例
 
@@ -195,7 +195,7 @@ ReadOnlyPaths=/srv/www/dafeiyu/content
 WantedBy=multi-user.target
 ```
 
-`ProtectSystem=strict` / `ReadOnlyPaths` 是额外防线；如果服务器上的 Node、git 或发布脚本需要不同权限，先在 staging 环境验证。服务本身不会自动提交 GitHub、不会自动合并 PR、不会自动发布站点。
+`ProtectSystem=strict` / `ReadOnlyPaths` 是额外防线；如果服务器上的 Node、git 或发布脚本需要不同权限，先在 staging 环境验证。服务本身不会自动往 GitHub 提交、不会自动合并 PR、也不会自动发布站点。
 
 ## 配置变量
 
@@ -211,4 +211,4 @@ WantedBy=multi-user.target
 | `INTAKE_API_HOST` | `127.0.0.1` | 只允许回环监听 |
 | `INTAKE_API_PORT` | `8787` | 管理 API 端口 |
 
-生产环境还应给中转目录做磁盘配额和备份；这部分属于服务器运维配置，不写进公开仓库。
+生产环境还要给中转目录做磁盘配额和备份；这部分属于服务器运维配置，不写进公开仓库。
