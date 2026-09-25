@@ -35,6 +35,7 @@ node tools/intake/cli.mjs prune --apply   # 仅在回源校验确认后执行
 | `owner-picks/` | 站长自用板块的**原图** |
 | `dist/owner-picks/works.json`、`dist/owner-picks/previews/` | 该板块的清单与预览 |
 | `dist/data/` | 首批「蓝色大肥鱼档案馆」数据：`blue-fish-classification.json` 清单 + `blue-fish/previews/` 预览图 |
+| `blue-fish-originals/` | 首批已收编的 59 件无名作品**原图**（自托管，线上走 GitHub Raw；不要挪进 `dist/data/`） |
 | `dist/characters.json`、`dist/categories.json`、`dist/blue-fish-ids.json` | 角色 / 分类 / 首批 ID 冻结映射 |
 | `dist/favicon.ico`、`dist/favicon.png`、`dist/avatar.png` | 站点图标与头像（内容侧原件） |
 | `dist/qq-group.png` | 关于页「交流群」的 QQ 群二维码（518×518，纠错 M）。payload 是群链接 `https://qm.qq.com/q/2HPjWFjgRG`，群链接变了就照它重生成一张 |
@@ -50,7 +51,7 @@ https://raw.githubusercontent.com/lmy414/ai-girl-stickers/main/dist/submissions/
 https://raw.githubusercontent.com/lmy414/ai-girl-stickers/main/owner-picks/<文件>
 ```
 
-首批 146 条的原图在上游仓库 [`EDMOK/blue-fish-archive`](https://github.com/EDMOK/blue-fish-archive)（`media/` 下），本站只托管其预览图与清单。改路径等于同时断掉线上图片和外链。
+首批 205 条里，已收编的 59 条原图自托管在根目录 [`blue-fish-originals/`](blue-fish-originals/)；其余 146 条的原图仍在上游仓库 [`EDMOK/blue-fish-archive`](https://github.com/EDMOK/blue-fish-archive)（`media/` 下），本站只托管其预览图与清单。改路径等于同时断掉线上图片和外链。
 
 `dist/submissions/works.json` 的 `id` 与 `slug` 由 `tools/prepare_works.mjs` 生成后冻结；`slug` 决定站点详情页 URL，`id` 决定评论串（Giscus term `sticker-<id>`），二者都不能重算。
 
