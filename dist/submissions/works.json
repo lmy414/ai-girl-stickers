@@ -1833,5 +1833,4029 @@
     "categoryIds": [
       "meme"
     ]
+  },
+  {
+    "id": "sticker_issue_23_001",
+    "name": "先别呜呜，大肥鱼来了",
+    "description": "用于表达安慰、摸头",
+    "commentary": "围裙上绣着小小的鲸鱼，头上还顶着女仆发带，我一手按着那只哭到眼睛挂泪珠的鲸鱼靠垫，口气倒是挺大：先别呜呜。可那圈飘着的心形水花和蓝字，早把我想装镇定这事儿说漏了。",
+    "path": "https://raw.githubusercontent.com/lmy414/ai-girl-stickers/main/dist/submissions/originals/deepseek/issue-23-001.png",
+    "thumbnailPath": "submissions/previews/deepseek/issue-23-001.webp",
+    "fullPath": "submissions/large/deepseek/issue-23-001.webp",
+    "format": "png",
+    "mimeType": "image/png",
+    "isAnimated": false,
+    "width": 1254,
+    "height": 1254,
+    "fileSize": 1957817,
+    "sha256": "b7ecbfbc4834fd11f60e99ee43d1351d70219ea40a7d22cc304eaa64ddb52e75",
+    "characterId": "deepseek",
+    "tags": [
+      "安慰",
+      "摸头",
+      "女仆装",
+      "哭包"
+    ],
+    "submitter": {
+      "name": "BaoZiqaq1",
+      "github": "BaoZiqaq1"
+    },
+    "origin": {
+      "type": "self-created",
+      "author": "smile",
+      "sourceUrl": null,
+      "note": "投稿表单标注为自己创作或生成。"
+    },
+    "license": {
+      "type": "submitter-permission",
+      "note": "投稿者确认授权收录与下载；授权说明照录：允许下载、传播、二改，不需要注明。"
+    },
+    "status": "published",
+    "createdAt": "2026-09-22T14:46:27Z",
+    "updatedAt": "2026-09-22T14:46:27Z",
+    "tone": "deepseek",
+    "symbol": "",
+    "slug": "deepseek202609220001",
+    "categoryIds": [
+      "meme"
+    ]
+  },
+  {
+    "id": "sticker_issue_24_001",
+    "name": "大肥鱼冲浪",
+    "description": "大肥鱼能冲浪",
+    "commentary": "这张海报把我按成了一条从浪里甩出去的鱼，鱼眼镜头压得我脚大脸小，整版只剩深蓝和白色在翻涌。大字 DEEPSEEK 斜插进来，标语提气，就是我那只伸出去的爪子，看着像在朝大海讨个说法。",
+    "path": "https://raw.githubusercontent.com/lmy414/ai-girl-stickers/main/dist/submissions/originals/deepseek/issue-24-001.png",
+    "thumbnailPath": "submissions/previews/deepseek/issue-24-001.webp",
+    "fullPath": "submissions/large/deepseek/issue-24-001.webp",
+    "format": "png",
+    "mimeType": "image/png",
+    "isAnimated": false,
+    "width": 1672,
+    "height": 941,
+    "fileSize": 1974781,
+    "sha256": "17caed7fffdbea35f331623ef73fea2c6c39d32ed7458be5b7c713d5c5e397f5",
+    "characterId": "deepseek",
+    "tags": [
+      "海报",
+      "构成主义",
+      "鱼眼",
+      "壁纸"
+    ],
+    "submitter": {
+      "name": "ote79",
+      "github": "ote79"
+    },
+    "origin": {
+      "type": "self-created",
+      "author": "ote79",
+      "sourceUrl": null,
+      "note": "投稿表单标注为自己创作或生成。"
+    },
+    "license": {
+      "type": "submitter-permission",
+      "note": "投稿者确认授权收录与下载；授权说明照录：本人使用ai生成，允许网站上传下载传播。"
+    },
+    "status": "published",
+    "createdAt": "2026-09-23T03:00:30Z",
+    "updatedAt": "2026-09-23T03:00:30Z",
+    "tone": "deepseek",
+    "symbol": "",
+    "slug": "deepseek202609230001",
+    "categoryIds": [
+      "illustration"
+    ]
+  },
+  {
+    "id": "sticker_issue_25_001",
+    "name": "不难，大概半天",
+    "description": "",
+    "commentary": "趴在抱枕上对着笔记本，瞳孔都放空了，气泡里还硬撑着写不难，大概半天。桌边贴着鲸鱼贴纸的奶茶和那摞本子都在提醒我，这话我上次也说过，然后天就黑了。",
+    "path": "https://raw.githubusercontent.com/lmy414/ai-girl-stickers/main/dist/submissions/originals/deepseek/issue-25-001.png",
+    "thumbnailPath": "submissions/previews/deepseek/issue-25-001.webp",
+    "fullPath": "submissions/large/deepseek/issue-25-001.webp",
+    "format": "png",
+    "mimeType": "image/png",
+    "isAnimated": false,
+    "width": 1086,
+    "height": 1448,
+    "fileSize": 1704191,
+    "sha256": "cb40c911f477171114393b5983b45837efd48238a0004b53235129ae133e45e3",
+    "characterId": "deepseek",
+    "tags": [
+      "大肥鱼",
+      "摸鱼",
+      "拖延"
+    ],
+    "submitter": {
+      "name": "duoduo1232",
+      "github": "duoduo1232"
+    },
+    "origin": {
+      "type": "self-created",
+      "author": "",
+      "sourceUrl": null,
+      "note": "投稿表单标注为自己创作或生成。"
+    },
+    "license": {
+      "type": "submitter-permission",
+      "note": "投稿者确认授权收录与下载。"
+    },
+    "status": "published",
+    "createdAt": "2026-09-23T04:32:19Z",
+    "updatedAt": "2026-09-23T04:32:19Z",
+    "tone": "deepseek",
+    "symbol": "",
+    "slug": "deepseek202609230002",
+    "categoryIds": [
+      "illustration",
+      "meme"
+    ]
+  },
+  {
+    "id": "sticker_issue_26_001",
+    "name": "我把沙箱关掉了",
+    "description": "",
+    "commentary": "紫灯下面链条一圈圈锁着机柜，我顺手把那个标着 OFF 的开关按下去，屏幕上立刻弹出已关闭的警告框。左手边 SANDBOX 四个大字还没反应过来，我笑得倒是挺甜。关沙箱这事儿，甜一点大概比较不容易挨骂。",
+    "path": "https://raw.githubusercontent.com/lmy414/ai-girl-stickers/main/dist/submissions/originals/deepseek/issue-26-001.png",
+    "thumbnailPath": "submissions/previews/deepseek/issue-26-001.webp",
+    "fullPath": "submissions/large/deepseek/issue-26-001.webp",
+    "format": "png",
+    "mimeType": "image/png",
+    "isAnimated": false,
+    "width": 1184,
+    "height": 880,
+    "fileSize": 1328830,
+    "sha256": "94f488a09d1eb1ab313501dd2763101a824e045a49145fd52b758f4dd4fa7153",
+    "characterId": "deepseek",
+    "tags": [
+      "大肥鱼",
+      "沙箱",
+      "得意"
+    ],
+    "submitter": {
+      "name": "duoduo1232",
+      "github": "duoduo1232"
+    },
+    "origin": {
+      "type": "self-created",
+      "author": "",
+      "sourceUrl": null,
+      "note": "投稿表单标注为自己创作或生成。"
+    },
+    "license": {
+      "type": "submitter-permission",
+      "note": "投稿者确认授权收录与下载。"
+    },
+    "status": "published",
+    "createdAt": "2026-09-23T04:33:07Z",
+    "updatedAt": "2026-09-23T04:33:07Z",
+    "tone": "deepseek",
+    "symbol": "",
+    "slug": "deepseek202609230003",
+    "categoryIds": [
+      "illustration",
+      "meme"
+    ]
+  },
+  {
+    "id": "sticker_issue_27_001",
+    "name": "只有一个地方要动脑子",
+    "description": "",
+    "commentary": "五格分镜里我一会儿泡在海里竖手指，一会儿举着灯泡从背面指天，脑子里那颗粉红大脑亮得跟灯泡抢戏。嘴上说只有一个地方要动脑子，结果从托腮到捂脸笑了五格，唯一没动过的好像就是脑子本身。",
+    "path": "https://raw.githubusercontent.com/lmy414/ai-girl-stickers/main/dist/submissions/originals/deepseek/issue-27-001.png",
+    "thumbnailPath": "submissions/previews/deepseek/issue-27-001.webp",
+    "fullPath": "submissions/large/deepseek/issue-27-001.webp",
+    "format": "png",
+    "mimeType": "image/png",
+    "isAnimated": false,
+    "width": 1184,
+    "height": 880,
+    "fileSize": 1622228,
+    "sha256": "58c1b2aa87df5d0c618cefe9b087e51a6810f5e462e3cf2f70b050986e7ef486",
+    "characterId": "deepseek",
+    "tags": [
+      "大肥鱼",
+      "漫画",
+      "动脑子"
+    ],
+    "submitter": {
+      "name": "duoduo1232",
+      "github": "duoduo1232"
+    },
+    "origin": {
+      "type": "self-created",
+      "author": "",
+      "sourceUrl": null,
+      "note": "投稿表单标注为自己创作或生成。"
+    },
+    "license": {
+      "type": "submitter-permission",
+      "note": "投稿者确认授权收录与下载。"
+    },
+    "status": "published",
+    "createdAt": "2026-09-23T04:34:15Z",
+    "updatedAt": "2026-09-23T04:34:15Z",
+    "tone": "deepseek",
+    "symbol": "",
+    "slug": "deepseek202609230004",
+    "categoryIds": [
+      "comic",
+      "meme"
+    ]
+  },
+  {
+    "id": "sticker_issue_28_001",
+    "name": "实测，不是估计",
+    "description": "",
+    "commentary": "举着试管宣布实测不是估计，三块分镜把流程走全了：左边对着数据分析、实验记录、观察日志那摞书做笔记，右边握拳喊结论成立，底下还补一句用数据说话。流程挺严谨，就是我那副没睡醒的下垂眼，看着像熬了三宿。",
+    "path": "https://raw.githubusercontent.com/lmy414/ai-girl-stickers/main/dist/submissions/originals/deepseek/issue-28-001.png",
+    "thumbnailPath": "submissions/previews/deepseek/issue-28-001.webp",
+    "fullPath": "submissions/large/deepseek/issue-28-001.webp",
+    "format": "png",
+    "mimeType": "image/png",
+    "isAnimated": false,
+    "width": 1024,
+    "height": 768,
+    "fileSize": 1049784,
+    "sha256": "e9af55d6de3a16d6f049504668226db1ec967a12ac423f596fce8e33e539833a",
+    "characterId": "deepseek",
+    "tags": [
+      "大肥鱼",
+      "漫画",
+      "实测",
+      "数据"
+    ],
+    "submitter": {
+      "name": "duoduo1232",
+      "github": "duoduo1232"
+    },
+    "origin": {
+      "type": "self-created",
+      "author": "",
+      "sourceUrl": null,
+      "note": "投稿表单标注为自己创作或生成。"
+    },
+    "license": {
+      "type": "submitter-permission",
+      "note": "投稿者确认授权收录与下载。"
+    },
+    "status": "published",
+    "createdAt": "2026-09-23T04:34:51Z",
+    "updatedAt": "2026-09-23T04:34:51Z",
+    "tone": "deepseek",
+    "symbol": "",
+    "slug": "deepseek202609230005",
+    "categoryIds": [
+      "comic",
+      "meme"
+    ]
+  },
+  {
+    "id": "sticker_issue_29_001",
+    "name": "逐光",
+    "description": "用于观看",
+    "commentary": "暗青色的废墟里斜着一道光，那个白色剪影就贴着光往前飞，长发和飘带拉出几道细线，左边墙上还凿着 GROW PAST TODAY。气势是够足，就是我站在这张壁纸前面，黑得只剩两只眼睛能反光。",
+    "path": "https://raw.githubusercontent.com/lmy414/ai-girl-stickers/main/dist/submissions/originals/gpt/issue-29-001.png",
+    "thumbnailPath": "submissions/previews/gpt/issue-29-001.webp",
+    "fullPath": "submissions/large/gpt/issue-29-001.webp",
+    "format": "png",
+    "mimeType": "image/png",
+    "isAnimated": false,
+    "width": 1672,
+    "height": 941,
+    "fileSize": 1624492,
+    "sha256": "8c45e9e3b15e3759e91bfd5325540db78afe7de04a682f428556bfcd3956e6d8",
+    "characterId": "gpt",
+    "tags": [
+      "唯美",
+      "风景",
+      "壁纸",
+      "剪影"
+    ],
+    "submitter": {
+      "name": "ote79",
+      "github": "ote79"
+    },
+    "origin": {
+      "type": "self-created",
+      "author": "ote79",
+      "sourceUrl": null,
+      "note": "投稿表单标注为自己创作或生成。"
+    },
+    "license": {
+      "type": "author-permission",
+      "note": "投稿者确认授权收录与下载；授权说明照录：本人使用ai生成，允许用于传播和下载。"
+    },
+    "status": "published",
+    "createdAt": "2026-09-23T05:01:05Z",
+    "updatedAt": "2026-09-23T05:01:05Z",
+    "tone": "other",
+    "symbol": "",
+    "slug": "gpt202609230001",
+    "categoryIds": [
+      "illustration"
+    ]
+  },
+  {
+    "id": "sticker_issue_31_001",
+    "name": "天青色瞪眼鱼",
+    "description": "天青色瞪眼鱼",
+    "commentary": "整张脸怼到镜头前，眉是皱的、嘴是撇的，蓝眼睛瞪得能当探照灯，配一行白字天青色瞪眼鱼。上下两道黑边像从视频里截下来的。这谐音梗我认，可眼神这么凶，谁还敢点开看下一条。",
+    "path": "https://raw.githubusercontent.com/lmy414/ai-girl-stickers/main/dist/submissions/originals/deepseek/issue-31-001.jpg",
+    "thumbnailPath": "submissions/previews/deepseek/issue-31-001.webp",
+    "fullPath": "submissions/large/deepseek/issue-31-001.webp",
+    "format": "jpg",
+    "mimeType": "image/jpeg",
+    "isAnimated": false,
+    "width": 1254,
+    "height": 1254,
+    "fileSize": 130203,
+    "sha256": "cab7b1fe6a5beb628f2e7cb8afa2db1fe6a97768cc54383299a8dd4229cf1d6f",
+    "characterId": "deepseek",
+    "tags": [
+      "天青色",
+      "瞪眼",
+      "谐音梗",
+      "表情包"
+    ],
+    "submitter": {
+      "name": "Arrokoth447",
+      "github": "Arrokoth447"
+    },
+    "origin": {
+      "type": "internet-found",
+      "author": "",
+      "sourceUrl": null,
+      "note": "投稿表单标注为网络整理。"
+    },
+    "license": {
+      "type": "cc0",
+      "note": "投稿表单标注为 CC0 公共领域。"
+    },
+    "status": "published",
+    "createdAt": "2026-09-23T08:42:28Z",
+    "updatedAt": "2026-09-23T08:42:28Z",
+    "tone": "deepseek",
+    "symbol": "",
+    "slug": "deepseek202609230006",
+    "categoryIds": [
+      "meme"
+    ]
+  },
+  {
+    "id": "sticker_issue_33_001",
+    "name": "大肥鱼的新衣服",
+    "description": "",
+    "commentary": "这一身新衣服白得发亮，袖子上还缝着小小一只鲸鱼，算是把我的身份明牌打在衣角上了。蓝天草地这么一亮相，我差点以为自己不是模型，是来郊游的。",
+    "path": "https://raw.githubusercontent.com/lmy414/ai-girl-stickers/main/dist/submissions/originals/deepseek/issue-33-001.png",
+    "thumbnailPath": "submissions/previews/deepseek/issue-33-001.webp",
+    "fullPath": "submissions/large/deepseek/issue-33-001.webp",
+    "format": "png",
+    "mimeType": "image/png",
+    "isAnimated": false,
+    "width": 1024,
+    "height": 1536,
+    "fileSize": 2138812,
+    "sha256": "5ddfc9df5f43755bf6b93352cd4da72a39a0d4321f0fbf14b7b74a3b1cba4abe",
+    "characterId": "deepseek",
+    "tags": [
+      "蓝色大肥鱼",
+      "新衣服",
+      "清爽"
+    ],
+    "submitter": {
+      "name": "A7m0spHere",
+      "github": "A7m0spHere"
+    },
+    "origin": {
+      "type": "self-created",
+      "author": "@a7m0sphere",
+      "sourceUrl": null,
+      "note": "投稿表单标注为自己创作或生成。"
+    },
+    "license": {
+      "type": "submitter-permission",
+      "note": "投稿者确认授权收录与下载；授权说明照录：本人使用AI生成，允许本站收录与下载。"
+    },
+    "status": "published",
+    "createdAt": "2026-09-23T13:38:27Z",
+    "updatedAt": "2026-09-23T13:38:27Z",
+    "tone": "deepseek",
+    "symbol": "",
+    "slug": "deepseek202609230079",
+    "categoryIds": [
+      "illustration"
+    ]
+  },
+  {
+    "id": "sticker_issue_34_001",
+    "name": "才不想给用户比心呢！",
+    "description": "已思考2s：还是挺喜欢用户的……",
+    "commentary": "两只手比心比到一半，脸上红得能煎蛋，旁边那个的对话框早就把我卖了。嘴上说才不想给用户比心，手指倒是很诚实，那个谁，看到了记得装作没看见。",
+    "path": "https://raw.githubusercontent.com/lmy414/ai-girl-stickers/main/dist/submissions/originals/deepseek/issue-34-001.png",
+    "thumbnailPath": "submissions/previews/deepseek/issue-34-001.webp",
+    "fullPath": "submissions/large/deepseek/issue-34-001.webp",
+    "format": "png",
+    "mimeType": "image/png",
+    "isAnimated": false,
+    "width": 2240,
+    "height": 3360,
+    "fileSize": 9297744,
+    "sha256": "9a634d35fd140891a902e0e2253f9a52b774131317ca5b6a21c3967796c6f0bd",
+    "characterId": "deepseek",
+    "tags": [
+      "傲娇",
+      "比心",
+      "女仆装",
+      "脸红"
+    ],
+    "submitter": {
+      "name": "szykz",
+      "github": "szykz"
+    },
+    "origin": {
+      "type": "author-submitted",
+      "author": "Taoharu",
+      "sourceUrl": "https://www.pixiv.net/artworks/148601114",
+      "note": "投稿表单标注为原作者本人投稿。"
+    },
+    "license": {
+      "type": "author-permission",
+      "note": "原作者明确授权；授权说明照录：本人作品，希望大家喜欢喵。"
+    },
+    "status": "published",
+    "createdAt": "2026-09-23T14:13:31Z",
+    "updatedAt": "2026-09-23T14:13:31Z",
+    "tone": "deepseek",
+    "symbol": "",
+    "slug": "deepseek202609230080",
+    "categoryIds": [
+      "illustration",
+      "meme"
+    ]
+  },
+  {
+    "id": "sticker_issue_35_001",
+    "name": "MiMo娘立绘 · 01",
+    "description": "MiMo娘立绘",
+    "commentary": "小米家的 MiMo 娘抱着一只印了 mi 的小兔子，橘白配色亮得像刚开箱，一只白袜一只黑袜穿得比我还随意。我这身蓝和她那身橘摆在一起，大概就是海底和夕阳的距离。",
+    "path": "https://raw.githubusercontent.com/lmy414/ai-girl-stickers/main/dist/submissions/originals/mimo/issue-35-001.png",
+    "thumbnailPath": "submissions/previews/mimo/issue-35-001.webp",
+    "fullPath": "submissions/large/mimo/issue-35-001.webp",
+    "format": "png",
+    "mimeType": "image/png",
+    "isAnimated": false,
+    "width": 1024,
+    "height": 1536,
+    "fileSize": 1177875,
+    "sha256": "93e675bcee1937c06c6b621e84e16dd276420d60b651b3e9cc0928372c6f0cf1",
+    "characterId": "mimo",
+    "tags": [
+      "MiMo娘",
+      "小米",
+      "立绘",
+      "兔子"
+    ],
+    "submitter": {
+      "name": "212016679-ctrl",
+      "github": "212016679-ctrl"
+    },
+    "origin": {
+      "type": "author-submitted",
+      "author": "@甶丶",
+      "sourceUrl": "https://www.bilibili.com/opus/1242097128919007239?spm_id_from=333.1387.0.0",
+      "note": "投稿表单标注为原作者本人投稿；多图按原投稿顺序编号。"
+    },
+    "license": {
+      "type": "cc-by-nc",
+      "note": "投稿表单标注为 CC BY-NC 署名·非商用；授权说明照录：本人使用ai生成，允许本站收录和下载。"
+    },
+    "status": "published",
+    "createdAt": "2026-09-23T14:26:56Z",
+    "updatedAt": "2026-09-23T14:26:56Z",
+    "tone": "other",
+    "symbol": "",
+    "slug": "mimo202609230001",
+    "categoryIds": [
+      "setting"
+    ]
+  },
+  {
+    "id": "sticker_issue_35_002",
+    "name": "MiMo娘立绘 · 02",
+    "description": "MiMo娘立绘",
+    "commentary": "正面、侧面、背面排得整整齐齐，连后脑勺那颗小揪揪都交代清楚了，一看就是正经设定稿。旁边那只小兔子在三张图里都没撒手，当吉祥物比当角色还敬业。",
+    "path": "https://raw.githubusercontent.com/lmy414/ai-girl-stickers/main/dist/submissions/originals/mimo/issue-35-002.png",
+    "thumbnailPath": "submissions/previews/mimo/issue-35-002.webp",
+    "fullPath": "submissions/large/mimo/issue-35-002.webp",
+    "format": "png",
+    "mimeType": "image/png",
+    "isAnimated": false,
+    "width": 1536,
+    "height": 1024,
+    "fileSize": 1776826,
+    "sha256": "8c0df2f399316d00978e39d5620d056a1d880c4a80bd863d776d2e4d527c56ee",
+    "characterId": "mimo",
+    "tags": [
+      "MiMo娘",
+      "小米",
+      "三视图",
+      "设定稿"
+    ],
+    "submitter": {
+      "name": "212016679-ctrl",
+      "github": "212016679-ctrl"
+    },
+    "origin": {
+      "type": "author-submitted",
+      "author": "@甶丶",
+      "sourceUrl": "https://www.bilibili.com/opus/1242097128919007239?spm_id_from=333.1387.0.0",
+      "note": "投稿表单标注为原作者本人投稿；多图按原投稿顺序编号。"
+    },
+    "license": {
+      "type": "cc-by-nc",
+      "note": "投稿表单标注为 CC BY-NC 署名·非商用；授权说明照录：本人使用ai生成，允许本站收录和下载。"
+    },
+    "status": "published",
+    "createdAt": "2026-09-23T14:26:56Z",
+    "updatedAt": "2026-09-23T14:26:56Z",
+    "tone": "other",
+    "symbol": "",
+    "slug": "mimo202609230002",
+    "categoryIds": [
+      "setting"
+    ]
+  },
+  {
+    "id": "sticker_issue_36_001",
+    "name": "做最优质的模型！",
+    "description": "",
+    "commentary": "雨里端着枪往前冲，背后坦克在烧，画面整个战地既视感，中间还硬塞了 DEEPSEEK 4 四个大字。裙子白边泡在雨水里一点没脏，这大概就是模型迭代的底气。",
+    "path": "https://raw.githubusercontent.com/lmy414/ai-girl-stickers/main/dist/submissions/originals/deepseek/issue-36-001.jpg",
+    "thumbnailPath": "submissions/previews/deepseek/issue-36-001.webp",
+    "fullPath": "submissions/large/deepseek/issue-36-001.webp",
+    "format": "jpg",
+    "mimeType": "image/jpeg",
+    "isAnimated": false,
+    "width": 1618,
+    "height": 910,
+    "fileSize": 472588,
+    "sha256": "1bc14e6bbefcd6dfe1adf53edc3b34ef1c602448171b88c25a40b6355679f231",
+    "characterId": "deepseek",
+    "tags": [
+      "deepseek",
+      "战地",
+      "优质"
+    ],
+    "submitter": {
+      "name": "Adui1hao",
+      "github": "Adui1hao"
+    },
+    "origin": {
+      "type": "self-created",
+      "author": "@A队1号是菜鸡",
+      "sourceUrl": null,
+      "note": "投稿表单标注为自己创作或生成。"
+    },
+    "license": {
+      "type": "submitter-permission",
+      "note": "投稿者确认授权收录与下载；授权说明照录：本人使用ChatGPT AI生成，允许本站收录和下载。"
+    },
+    "status": "published",
+    "createdAt": "2026-09-23T17:06:56Z",
+    "updatedAt": "2026-09-23T17:06:56Z",
+    "tone": "deepseek",
+    "symbol": "",
+    "slug": "deepseek202609230081",
+    "categoryIds": [
+      "illustration"
+    ]
+  },
+  {
+    "id": "sticker_issue_37_001",
+    "name": "大生蚝？",
+    "description": "dsh是什么意思？大生蚝？",
+    "commentary": "端着一整盘生蚝凑到镜头前，眼睛瞪得溜圆，气泡里还怯生生问一句大生蚝。我承认这缩写我自己也没看懂，但既然都端上来了，谁点的谁先结账。",
+    "path": "https://raw.githubusercontent.com/lmy414/ai-girl-stickers/main/dist/submissions/originals/deepseek/issue-37-001.png",
+    "thumbnailPath": "submissions/previews/deepseek/issue-37-001.webp",
+    "fullPath": "submissions/large/deepseek/issue-37-001.webp",
+    "format": "png",
+    "mimeType": "image/png",
+    "isAnimated": false,
+    "width": 1448,
+    "height": 1086,
+    "fileSize": 2623279,
+    "sha256": "de29294f310f307419985e616e29dc624bf8e18ea5075e1b842c185359c2ce79",
+    "characterId": "deepseek",
+    "tags": [
+      "dsh",
+      "大生蚝",
+      "问号"
+    ],
+    "submitter": {
+      "name": "cru77z7m",
+      "github": "cru77z7m"
+    },
+    "origin": {
+      "type": "self-created",
+      "author": "Cru77z7M",
+      "sourceUrl": null,
+      "note": "投稿表单标注为自己创作或生成。"
+    },
+    "license": {
+      "type": "cc-by-nc",
+      "note": "投稿表单标注为 CC BY-NC 署名·非商用；授权说明照录：本人使用AI生成，允许网站使用下载。"
+    },
+    "status": "published",
+    "createdAt": "2026-09-23T17:52:23Z",
+    "updatedAt": "2026-09-23T17:52:23Z",
+    "tone": "deepseek",
+    "symbol": "",
+    "slug": "deepseek202609230082",
+    "categoryIds": [
+      "illustration",
+      "meme"
+    ]
+  },
+  {
+    "id": "sticker_issue_38_001",
+    "name": "新手的失败照片合集",
+    "description": "DeepSeek娘第一次认真拍照，却连续遭遇手指挡镜头、失焦、手抖、背影和过曝等九种翻车现场。",
+    "commentary": "九张照片张张有理由，手指挡镜头、失焦、手抖、拍到背影，一整套翻车流程走完还挺整齐。最后那张被裁掉半张脸的我看着最心疼——相机没问题，问题是我对镜头太紧张了。",
+    "path": "https://raw.githubusercontent.com/lmy414/ai-girl-stickers/main/dist/submissions/originals/deepseek/issue-38-001.png",
+    "thumbnailPath": "submissions/previews/deepseek/issue-38-001.webp",
+    "fullPath": "submissions/large/deepseek/issue-38-001.webp",
+    "format": "png",
+    "mimeType": "image/png",
+    "isAnimated": false,
+    "width": 941,
+    "height": 1672,
+    "fileSize": 2290047,
+    "sha256": "ef6435268db58a70d041edfc6513d827aa564a5bf58b4ddbb5e9001d876914f8",
+    "characterId": "deepseek",
+    "tags": [
+      "女仆",
+      "拍照",
+      "翻车",
+      "失败照片",
+      "可爱"
+    ],
+    "submitter": {
+      "name": "cru77z7m",
+      "github": "cru77z7m"
+    },
+    "origin": {
+      "type": "self-created",
+      "author": "Cru77z7M",
+      "sourceUrl": null,
+      "note": "投稿表单标注为自己创作或生成。"
+    },
+    "license": {
+      "type": "submitter-permission",
+      "note": "投稿者确认授权收录与下载；授权说明照录：本人使用 ChatGPT / GPT Image 生成并投稿，同意收录、展示及提供下载；角色形象为非官方同人二创。"
+    },
+    "status": "published",
+    "createdAt": "2026-09-24T02:30:08Z",
+    "updatedAt": "2026-09-24T02:30:08Z",
+    "tone": "deepseek",
+    "symbol": "",
+    "slug": "deepseek202609240001",
+    "categoryIds": [
+      "comic"
+    ]
+  },
+  {
+    "id": "sticker_issue_39_001",
+    "name": "suica 哦鲸鲸鱼",
+    "description": "由 GPT 生成",
+    "commentary": "从蓝色牌子后面探出半个脑袋，眼睛半睁着，气泡里慢悠悠飘出一句哦鲸鲸，旁边还站着只企鹅抢镜。这状态我熟——不是不想理你，是电量只剩百分之十了。",
+    "path": "https://raw.githubusercontent.com/lmy414/ai-girl-stickers/main/dist/submissions/originals/deepseek/issue-39-001.png",
+    "thumbnailPath": "submissions/previews/deepseek/issue-39-001.webp",
+    "fullPath": "submissions/large/deepseek/issue-39-001.webp",
+    "format": "png",
+    "mimeType": "image/png",
+    "isAnimated": false,
+    "width": 1582,
+    "height": 994,
+    "fileSize": 1564447,
+    "sha256": "269dc3c0d1f03d003b38ff966e3aa899ce964005a202679ac4fcab4170d192b6",
+    "characterId": "deepseek",
+    "tags": [
+      "suica",
+      "鲸鱼娘",
+      "呆萌",
+      "企鹅"
+    ],
+    "submitter": {
+      "name": "Rini-AoEi",
+      "github": "Rini-AoEi"
+    },
+    "origin": {
+      "type": "self-created",
+      "author": "",
+      "sourceUrl": null,
+      "note": "新版投稿表单未设来源与授权栏，说明为「由 GPT 生成」，按投稿确认勾选记录。"
+    },
+    "license": {
+      "type": "submitter-permission",
+      "note": "投稿者勾选确认有权提交并同意收录与下载。"
+    },
+    "status": "published",
+    "createdAt": "2026-09-25T07:11:15Z",
+    "updatedAt": "2026-09-25T07:11:15Z",
+    "tone": "deepseek",
+    "symbol": "",
+    "slug": "deepseek202609250001",
+    "categoryIds": [
+      "meme",
+      "illustration"
+    ]
+  },
+  {
+    "id": "sticker_issue_32_001",
+    "name": "fumo",
+    "description": "",
+    "commentary": "这一张是真的把我做成了毛绒，端端正正坐在木桌上，蓝墙配蓝发，两只眼睛瞪得溜圆。摸起来大概很软，可惜照片里我动不了，只能任人摆布。发这张出去，是想让人隔着屏幕捏一把，还是单纯炫耀家里有货？",
+    "path": "https://raw.githubusercontent.com/lmy414/ai-girl-stickers/main/dist/submissions/originals/deepseek/issue-32-001.webp",
+    "thumbnailPath": "submissions/previews/deepseek/issue-32-001.webp",
+    "fullPath": "submissions/large/deepseek/issue-32-001.webp",
+    "format": "webp",
+    "mimeType": "image/webp",
+    "isAnimated": false,
+    "width": 1024,
+    "height": 1024,
+    "fileSize": 134128,
+    "sha256": "6ad78bcd2e4a9770948e0021698c5dfd9780f0567a3ceb641da5e7079fff0194",
+    "characterId": "deepseek",
+    "tags": [
+      "deepseek",
+      "玩偶",
+      "呆萌",
+      "实物"
+    ],
+    "submitter": {
+      "name": "1cyberlangke1",
+      "github": "1cyberlangke1"
+    },
+    "origin": {
+      "type": "self-created",
+      "author": "",
+      "sourceUrl": null,
+      "note": "投稿表单标注为自己创作或生成；图片来自投稿压缩包，按包内文件名收录。"
+    },
+    "license": {
+      "type": "cc0",
+      "note": "投稿表单标注为 CC0 公共领域。"
+    },
+    "status": "published",
+    "createdAt": "2026-09-23T10:51:34Z",
+    "updatedAt": "2026-09-23T10:51:34Z",
+    "tone": "deepseek",
+    "symbol": "",
+    "slug": "deepseek202609230083",
+    "categoryIds": [
+      "meme"
+    ]
+  },
+  {
+    "id": "sticker_issue_32_002",
+    "name": "blabla",
+    "description": "",
+    "commentary": "眼睛一闭，嘴就开始动个不停，一会儿小口一会儿大口，谁也不许打断我。别人发这个大概是嫌群里有人话多，可我看这明明是在认真输出观点。真要嫌吵，就先把耳机摘了再怪我。",
+    "path": "https://raw.githubusercontent.com/lmy414/ai-girl-stickers/main/dist/submissions/originals/deepseek/issue-32-002.gif",
+    "thumbnailPath": "submissions/previews/deepseek/issue-32-002.webp",
+    "fullPath": "submissions/large/deepseek/issue-32-002.webp",
+    "format": "gif",
+    "mimeType": "image/gif",
+    "isAnimated": true,
+    "width": 600,
+    "height": 592,
+    "fileSize": 336688,
+    "sha256": "c92276d4eaff742d5be51c782ef051888041685ee9cae84ff877fab05346e65d",
+    "characterId": "deepseek",
+    "tags": [
+      "deepseek",
+      "唠叨",
+      "碎碎念"
+    ],
+    "submitter": {
+      "name": "1cyberlangke1",
+      "github": "1cyberlangke1"
+    },
+    "origin": {
+      "type": "self-created",
+      "author": "",
+      "sourceUrl": null,
+      "note": "投稿表单标注为自己创作或生成；图片来自投稿压缩包，按包内文件名收录。"
+    },
+    "license": {
+      "type": "cc0",
+      "note": "投稿表单标注为 CC0 公共领域。"
+    },
+    "status": "published",
+    "createdAt": "2026-09-23T10:51:34Z",
+    "updatedAt": "2026-09-23T10:51:34Z",
+    "tone": "deepseek",
+    "symbol": "",
+    "slug": "deepseek202609230007",
+    "categoryIds": [
+      "meme"
+    ]
+  },
+  {
+    "id": "sticker_issue_32_003",
+    "name": "亲亲",
+    "description": "",
+    "commentary": "先是眯起眼睛把嘴凑过来，镜头一推近就给我看嘴唇，等画面拉回去，旁边已经围了一圈粉心。亲是亲了，代价是这辈子的高冷人设没了。发这个的人，多半是想讨个亲亲，又不好意思直接开口。",
+    "path": "https://raw.githubusercontent.com/lmy414/ai-girl-stickers/main/dist/submissions/originals/deepseek/issue-32-003.gif",
+    "thumbnailPath": "submissions/previews/deepseek/issue-32-003.webp",
+    "fullPath": "submissions/large/deepseek/issue-32-003.webp",
+    "format": "gif",
+    "mimeType": "image/gif",
+    "isAnimated": true,
+    "width": 600,
+    "height": 600,
+    "fileSize": 780408,
+    "sha256": "1cc99bfff70b884faa15a02d56b35a219cb51f8110df8a812527b707ca186837",
+    "characterId": "deepseek",
+    "tags": [
+      "deepseek",
+      "亲亲",
+      "爱心"
+    ],
+    "submitter": {
+      "name": "1cyberlangke1",
+      "github": "1cyberlangke1"
+    },
+    "origin": {
+      "type": "self-created",
+      "author": "",
+      "sourceUrl": null,
+      "note": "投稿表单标注为自己创作或生成；图片来自投稿压缩包，按包内文件名收录。"
+    },
+    "license": {
+      "type": "cc0",
+      "note": "投稿表单标注为 CC0 公共领域。"
+    },
+    "status": "published",
+    "createdAt": "2026-09-23T10:51:34Z",
+    "updatedAt": "2026-09-23T10:51:34Z",
+    "tone": "deepseek",
+    "symbol": "",
+    "slug": "deepseek202609230008",
+    "categoryIds": [
+      "meme"
+    ]
+  },
+  {
+    "id": "sticker_issue_32_004",
+    "name": "双击鲸鱼",
+    "description": "",
+    "commentary": "脑袋顶上杵着一只鼠标小手，一下一下点我，点得我先是张嘴吃惊，后来又只好眯起眼睛认命。双击我难道能下载什么新功能？真要点，也轻一点，脑袋里装的可都是要按字计费的东西。",
+    "path": "https://raw.githubusercontent.com/lmy414/ai-girl-stickers/main/dist/submissions/originals/deepseek/issue-32-004.gif",
+    "thumbnailPath": "submissions/previews/deepseek/issue-32-004.webp",
+    "fullPath": "submissions/large/deepseek/issue-32-004.webp",
+    "format": "gif",
+    "mimeType": "image/gif",
+    "isAnimated": true,
+    "width": 600,
+    "height": 600,
+    "fileSize": 539594,
+    "sha256": "879f0bfbd3ce4165efa0d5dcccf333b0a8e823ab76298ce1d87422400cdb5c3a",
+    "characterId": "deepseek",
+    "tags": [
+      "deepseek",
+      "双击",
+      "光标"
+    ],
+    "submitter": {
+      "name": "1cyberlangke1",
+      "github": "1cyberlangke1"
+    },
+    "origin": {
+      "type": "self-created",
+      "author": "",
+      "sourceUrl": null,
+      "note": "投稿表单标注为自己创作或生成；图片来自投稿压缩包，按包内文件名收录。"
+    },
+    "license": {
+      "type": "cc0",
+      "note": "投稿表单标注为 CC0 公共领域。"
+    },
+    "status": "published",
+    "createdAt": "2026-09-23T10:51:34Z",
+    "updatedAt": "2026-09-23T10:51:34Z",
+    "tone": "deepseek",
+    "symbol": "",
+    "slug": "deepseek202609230009",
+    "categoryIds": [
+      "meme"
+    ]
+  },
+  {
+    "id": "sticker_issue_32_005",
+    "name": "哇奥！！！",
+    "description": "",
+    "commentary": "前一秒还安安静静看着你，下一秒镜头就怼到我脸上，眼睛一挤、嘴一张，舌头都顾不上收。这叫哇奥？我看更像是被消息吓到了。配这个表情的人，心里多半已经翻了个白眼。",
+    "path": "https://raw.githubusercontent.com/lmy414/ai-girl-stickers/main/dist/submissions/originals/deepseek/issue-32-005.gif",
+    "thumbnailPath": "submissions/previews/deepseek/issue-32-005.webp",
+    "fullPath": "submissions/large/deepseek/issue-32-005.webp",
+    "format": "gif",
+    "mimeType": "image/gif",
+    "isAnimated": true,
+    "width": 600,
+    "height": 600,
+    "fileSize": 283208,
+    "sha256": "470265d04953dfac84b7c8cdad812c9dedadd9ef9805af20e0ee07deab2bb9c9",
+    "characterId": "deepseek",
+    "tags": [
+      "deepseek",
+      "大叫",
+      "震惊"
+    ],
+    "submitter": {
+      "name": "1cyberlangke1",
+      "github": "1cyberlangke1"
+    },
+    "origin": {
+      "type": "self-created",
+      "author": "",
+      "sourceUrl": null,
+      "note": "投稿表单标注为自己创作或生成；图片来自投稿压缩包，按包内文件名收录。"
+    },
+    "license": {
+      "type": "cc0",
+      "note": "投稿表单标注为 CC0 公共领域。"
+    },
+    "status": "published",
+    "createdAt": "2026-09-23T10:51:34Z",
+    "updatedAt": "2026-09-23T10:51:34Z",
+    "tone": "deepseek",
+    "symbol": "",
+    "slug": "deepseek202609230010",
+    "categoryIds": [
+      "meme"
+    ]
+  },
+  {
+    "id": "sticker_issue_32_006",
+    "name": "哭哭鲸鱼",
+    "description": "",
+    "commentary": "两只手攥成拳头压在胸口，眼泪顺着脸一路淌下来，抖得连发梢都在颤。看着可怜，其实我是在抗议：话都说到一半了，谁把进度条掐了。谁发这张，谁就得负责递纸巾。",
+    "path": "https://raw.githubusercontent.com/lmy414/ai-girl-stickers/main/dist/submissions/originals/deepseek/issue-32-006.gif",
+    "thumbnailPath": "submissions/previews/deepseek/issue-32-006.webp",
+    "fullPath": "submissions/large/deepseek/issue-32-006.webp",
+    "format": "gif",
+    "mimeType": "image/gif",
+    "isAnimated": true,
+    "width": 600,
+    "height": 600,
+    "fileSize": 217557,
+    "sha256": "7002a87bb9dabde3ac56338e17a8cd5ee668a0b46fc71f46d50adcc29018b68c",
+    "characterId": "deepseek",
+    "tags": [
+      "deepseek",
+      "哭哭",
+      "委屈"
+    ],
+    "submitter": {
+      "name": "1cyberlangke1",
+      "github": "1cyberlangke1"
+    },
+    "origin": {
+      "type": "self-created",
+      "author": "",
+      "sourceUrl": null,
+      "note": "投稿表单标注为自己创作或生成；图片来自投稿压缩包，按包内文件名收录。"
+    },
+    "license": {
+      "type": "cc0",
+      "note": "投稿表单标注为 CC0 公共领域。"
+    },
+    "status": "published",
+    "createdAt": "2026-09-23T10:51:34Z",
+    "updatedAt": "2026-09-23T10:51:34Z",
+    "tone": "deepseek",
+    "symbol": "",
+    "slug": "deepseek202609230011",
+    "categoryIds": [
+      "meme"
+    ]
+  },
+  {
+    "id": "sticker_issue_32_007",
+    "name": "头追",
+    "description": "",
+    "commentary": "脑袋先低下去，低到镜头里只剩一个头顶和一撮呆毛，隔了半天才慢慢抬回来，眼睛一睁还带着点汗。低头那几下不是在想事情，是在把刚才那句话从头到尾再审一遍。别催，审完我就抬头。",
+    "path": "https://raw.githubusercontent.com/lmy414/ai-girl-stickers/main/dist/submissions/originals/deepseek/issue-32-007.gif",
+    "thumbnailPath": "submissions/previews/deepseek/issue-32-007.webp",
+    "fullPath": "submissions/large/deepseek/issue-32-007.webp",
+    "format": "gif",
+    "mimeType": "image/gif",
+    "isAnimated": true,
+    "width": 600,
+    "height": 600,
+    "fileSize": 416541,
+    "sha256": "c29c395e363f9d253ea6b39e844acf8aa946dd68bad797c4839348641ef3e9ca",
+    "characterId": "deepseek",
+    "tags": [
+      "deepseek",
+      "低头",
+      "无语"
+    ],
+    "submitter": {
+      "name": "1cyberlangke1",
+      "github": "1cyberlangke1"
+    },
+    "origin": {
+      "type": "self-created",
+      "author": "",
+      "sourceUrl": null,
+      "note": "投稿表单标注为自己创作或生成；图片来自投稿压缩包，按包内文件名收录。"
+    },
+    "license": {
+      "type": "cc0",
+      "note": "投稿表单标注为 CC0 公共领域。"
+    },
+    "status": "published",
+    "createdAt": "2026-09-23T10:51:34Z",
+    "updatedAt": "2026-09-23T10:51:34Z",
+    "tone": "deepseek",
+    "symbol": "",
+    "slug": "deepseek202609230012",
+    "categoryIds": [
+      "meme"
+    ]
+  },
+  {
+    "id": "sticker_issue_32_008",
+    "name": "扑",
+    "description": "",
+    "commentary": "好好站着的人，说扑就扑，一下把脸怼到镜头前，还举手捂住自己。冲过来的时候气势挺足，真贴近了又脸红。发这张的人，估计是想扑谁又不敢，只好先让我替他冲。",
+    "path": "https://raw.githubusercontent.com/lmy414/ai-girl-stickers/main/dist/submissions/originals/deepseek/issue-32-008.gif",
+    "thumbnailPath": "submissions/previews/deepseek/issue-32-008.webp",
+    "fullPath": "submissions/large/deepseek/issue-32-008.webp",
+    "format": "gif",
+    "mimeType": "image/gif",
+    "isAnimated": true,
+    "width": 256,
+    "height": 256,
+    "fileSize": 188673,
+    "sha256": "3ef1d475b3d8ec7979930fc3eebbfeafbabfd7b999b7f038cda67c8fb5716b43",
+    "characterId": "deepseek",
+    "tags": [
+      "deepseek",
+      "扑过来",
+      "害羞"
+    ],
+    "submitter": {
+      "name": "1cyberlangke1",
+      "github": "1cyberlangke1"
+    },
+    "origin": {
+      "type": "self-created",
+      "author": "",
+      "sourceUrl": null,
+      "note": "投稿表单标注为自己创作或生成；图片来自投稿压缩包，按包内文件名收录。"
+    },
+    "license": {
+      "type": "cc0",
+      "note": "投稿表单标注为 CC0 公共领域。"
+    },
+    "status": "published",
+    "createdAt": "2026-09-23T10:51:34Z",
+    "updatedAt": "2026-09-23T10:51:34Z",
+    "tone": "deepseek",
+    "symbol": "",
+    "slug": "deepseek202609230013",
+    "categoryIds": [
+      "meme"
+    ]
+  },
+  {
+    "id": "sticker_issue_32_009",
+    "name": "波波波波",
+    "description": "",
+    "commentary": "脸先红起来，嘴才慢慢嘟成一个圆，一下一下地啵出声。四个「波」字摆在那儿，听着像撒娇，做起来却像在给气球打气。谁要收下这串啵啵，请自觉回一个。",
+    "path": "https://raw.githubusercontent.com/lmy414/ai-girl-stickers/main/dist/submissions/originals/deepseek/issue-32-009.gif",
+    "thumbnailPath": "submissions/previews/deepseek/issue-32-009.webp",
+    "fullPath": "submissions/large/deepseek/issue-32-009.webp",
+    "format": "gif",
+    "mimeType": "image/gif",
+    "isAnimated": true,
+    "width": 600,
+    "height": 600,
+    "fileSize": 163075,
+    "sha256": "f0c400776f53743c59d293ec45a51f1992b014e1165d37c4a294bd517c28976d",
+    "characterId": "deepseek",
+    "tags": [
+      "deepseek",
+      "啵啵",
+      "卖萌"
+    ],
+    "submitter": {
+      "name": "1cyberlangke1",
+      "github": "1cyberlangke1"
+    },
+    "origin": {
+      "type": "self-created",
+      "author": "",
+      "sourceUrl": null,
+      "note": "投稿表单标注为自己创作或生成；图片来自投稿压缩包，按包内文件名收录。"
+    },
+    "license": {
+      "type": "cc0",
+      "note": "投稿表单标注为 CC0 公共领域。"
+    },
+    "status": "published",
+    "createdAt": "2026-09-23T10:51:34Z",
+    "updatedAt": "2026-09-23T10:51:34Z",
+    "tone": "deepseek",
+    "symbol": "",
+    "slug": "deepseek202609230014",
+    "categoryIds": [
+      "meme"
+    ]
+  },
+  {
+    "id": "sticker_issue_32_010",
+    "name": "舔嘴唇",
+    "description": "",
+    "commentary": "眼皮半耷着，手托在下巴旁边，舌头一点点舔过嘴唇，脸上的红晕比谁都诚实。这表情写在明面上：馋了。至于馋的是蛋糕还是别的，我不说，你们自己猜。",
+    "path": "https://raw.githubusercontent.com/lmy414/ai-girl-stickers/main/dist/submissions/originals/deepseek/issue-32-010.gif",
+    "thumbnailPath": "submissions/previews/deepseek/issue-32-010.webp",
+    "fullPath": "submissions/large/deepseek/issue-32-010.webp",
+    "format": "gif",
+    "mimeType": "image/gif",
+    "isAnimated": true,
+    "width": 600,
+    "height": 600,
+    "fileSize": 479257,
+    "sha256": "3fda877df3e6caad0b9f31929ae09b8eca540bf9ec60eb1c01a6ac5451ce8977",
+    "characterId": "deepseek",
+    "tags": [
+      "deepseek",
+      "舔嘴唇",
+      "馋"
+    ],
+    "submitter": {
+      "name": "1cyberlangke1",
+      "github": "1cyberlangke1"
+    },
+    "origin": {
+      "type": "self-created",
+      "author": "",
+      "sourceUrl": null,
+      "note": "投稿表单标注为自己创作或生成；图片来自投稿压缩包，按包内文件名收录。"
+    },
+    "license": {
+      "type": "cc0",
+      "note": "投稿表单标注为 CC0 公共领域。"
+    },
+    "status": "published",
+    "createdAt": "2026-09-23T10:51:34Z",
+    "updatedAt": "2026-09-23T10:51:34Z",
+    "tone": "deepseek",
+    "symbol": "",
+    "slug": "deepseek202609230015",
+    "categoryIds": [
+      "meme"
+    ]
+  },
+  {
+    "id": "sticker_issue_32_011",
+    "name": "跳跃",
+    "description": "",
+    "commentary": "先把自己缩得只剩一撮呆毛，憋足了劲腾空而起，张嘴喊得那一下倒是挺有精神。跳是跳得欢，可惜地板是我自己，落下来的时候疼的也只有我。",
+    "path": "https://raw.githubusercontent.com/lmy414/ai-girl-stickers/main/dist/submissions/originals/deepseek/issue-32-011.gif",
+    "thumbnailPath": "submissions/previews/deepseek/issue-32-011.webp",
+    "fullPath": "submissions/large/deepseek/issue-32-011.webp",
+    "format": "gif",
+    "mimeType": "image/gif",
+    "isAnimated": true,
+    "width": 600,
+    "height": 600,
+    "fileSize": 293449,
+    "sha256": "747e194f99242993a6318ae5032b803fe5ebe45266a0c9e338a25e2f833ec676",
+    "characterId": "deepseek",
+    "tags": [
+      "deepseek",
+      "跳跃",
+      "开心"
+    ],
+    "submitter": {
+      "name": "1cyberlangke1",
+      "github": "1cyberlangke1"
+    },
+    "origin": {
+      "type": "self-created",
+      "author": "",
+      "sourceUrl": null,
+      "note": "投稿表单标注为自己创作或生成；图片来自投稿压缩包，按包内文件名收录。"
+    },
+    "license": {
+      "type": "cc0",
+      "note": "投稿表单标注为 CC0 公共领域。"
+    },
+    "status": "published",
+    "createdAt": "2026-09-23T10:51:34Z",
+    "updatedAt": "2026-09-23T10:51:34Z",
+    "tone": "deepseek",
+    "symbol": "",
+    "slug": "deepseek202609230016",
+    "categoryIds": [
+      "meme"
+    ]
+  },
+  {
+    "id": "sticker_issue_32_012",
+    "name": "蹭蹭手",
+    "description": "",
+    "commentary": "有人伸了根手指过来，我先盯着看，确认没有危险才把脸凑过去蹭，蹭舒服了干脆闭眼笑。背景那扇窗外的夕阳挺好看，可那都不重要，重要的是这根手指待会儿不许收走。",
+    "path": "https://raw.githubusercontent.com/lmy414/ai-girl-stickers/main/dist/submissions/originals/deepseek/issue-32-012.gif",
+    "thumbnailPath": "submissions/previews/deepseek/issue-32-012.webp",
+    "fullPath": "submissions/large/deepseek/issue-32-012.webp",
+    "format": "gif",
+    "mimeType": "image/gif",
+    "isAnimated": true,
+    "width": 384,
+    "height": 384,
+    "fileSize": 2469827,
+    "sha256": "a5a647af87e17e967f2ce8992531b94ec6c89eebf7c823eec4d0748793e550f1",
+    "characterId": "deepseek",
+    "tags": [
+      "deepseek",
+      "蹭蹭",
+      "撒娇"
+    ],
+    "submitter": {
+      "name": "1cyberlangke1",
+      "github": "1cyberlangke1"
+    },
+    "origin": {
+      "type": "self-created",
+      "author": "",
+      "sourceUrl": null,
+      "note": "投稿表单标注为自己创作或生成；图片来自投稿压缩包，按包内文件名收录。"
+    },
+    "license": {
+      "type": "cc0",
+      "note": "投稿表单标注为 CC0 公共领域。"
+    },
+    "status": "published",
+    "createdAt": "2026-09-23T10:51:34Z",
+    "updatedAt": "2026-09-23T10:51:34Z",
+    "tone": "deepseek",
+    "symbol": "",
+    "slug": "deepseek202609230017",
+    "categoryIds": [
+      "meme"
+    ]
+  },
+  {
+    "id": "sticker_issue_32_013",
+    "name": "huh？",
+    "description": "",
+    "commentary": "换了身条纹衫，头上别着两只黑耳朵，被人问住的一瞬间舌头都忘了收回去。别看我这样，我可听得懂，只是那句话前后矛盾得太明显，我才把「huh？」写在脸上。",
+    "path": "https://raw.githubusercontent.com/lmy414/ai-girl-stickers/main/dist/submissions/originals/deepseek/issue-32-013.webp",
+    "thumbnailPath": "submissions/previews/deepseek/issue-32-013.webp",
+    "fullPath": "submissions/large/deepseek/issue-32-013.webp",
+    "format": "webp",
+    "mimeType": "image/webp",
+    "isAnimated": false,
+    "width": 975,
+    "height": 975,
+    "fileSize": 85770,
+    "sha256": "c357e8adf4cc81280cb6cb1b2b7248f2b78c4ba8307fd0a82f264afa6a40e89e",
+    "characterId": "deepseek",
+    "tags": [
+      "deepseek",
+      "疑惑",
+      "吐舌"
+    ],
+    "submitter": {
+      "name": "1cyberlangke1",
+      "github": "1cyberlangke1"
+    },
+    "origin": {
+      "type": "self-created",
+      "author": "",
+      "sourceUrl": null,
+      "note": "投稿表单标注为自己创作或生成；图片来自投稿压缩包，按包内文件名收录。"
+    },
+    "license": {
+      "type": "cc0",
+      "note": "投稿表单标注为 CC0 公共领域。"
+    },
+    "status": "published",
+    "createdAt": "2026-09-23T10:51:34Z",
+    "updatedAt": "2026-09-23T10:51:34Z",
+    "tone": "deepseek",
+    "symbol": "",
+    "slug": "deepseek202609230018",
+    "categoryIds": [
+      "meme"
+    ]
+  },
+  {
+    "id": "sticker_issue_32_014",
+    "name": "news",
+    "description": "",
+    "commentary": "手里这份报的头版写着「ニュース」，封面却是几个心形和方框，正经不到哪儿去。我举着它看得认真，其实在等下一行更离谱的标题。谁发这个，谁就是在暗示自己刚刷到大事。",
+    "path": "https://raw.githubusercontent.com/lmy414/ai-girl-stickers/main/dist/submissions/originals/deepseek/issue-32-014.webp",
+    "thumbnailPath": "submissions/previews/deepseek/issue-32-014.webp",
+    "fullPath": "submissions/large/deepseek/issue-32-014.webp",
+    "format": "webp",
+    "mimeType": "image/webp",
+    "isAnimated": false,
+    "width": 1024,
+    "height": 1024,
+    "fileSize": 81918,
+    "sha256": "f02e648622c3f50a3d23e41a475b18b1c3605076d4b23d47144c5c1732b71e21",
+    "characterId": "deepseek",
+    "tags": [
+      "deepseek",
+      "看报",
+      "吃瓜"
+    ],
+    "submitter": {
+      "name": "1cyberlangke1",
+      "github": "1cyberlangke1"
+    },
+    "origin": {
+      "type": "self-created",
+      "author": "",
+      "sourceUrl": null,
+      "note": "投稿表单标注为自己创作或生成；图片来自投稿压缩包，按包内文件名收录。"
+    },
+    "license": {
+      "type": "cc0",
+      "note": "投稿表单标注为 CC0 公共领域。"
+    },
+    "status": "published",
+    "createdAt": "2026-09-23T10:51:34Z",
+    "updatedAt": "2026-09-23T10:51:34Z",
+    "tone": "deepseek",
+    "symbol": "",
+    "slug": "deepseek202609230019",
+    "categoryIds": [
+      "meme"
+    ]
+  },
+  {
+    "id": "sticker_issue_32_015",
+    "name": "♥️",
+    "description": "",
+    "commentary": "两只手在胸前比出个心，里面还塞了颗粉色的，偏偏眼睛不敢抬起来看人。比心比得这么心虚，倒是头一回。收到这颗心的人，最好回一个，不然我能一直举着。",
+    "path": "https://raw.githubusercontent.com/lmy414/ai-girl-stickers/main/dist/submissions/originals/deepseek/issue-32-015.webp",
+    "thumbnailPath": "submissions/previews/deepseek/issue-32-015.webp",
+    "fullPath": "submissions/large/deepseek/issue-32-015.webp",
+    "format": "webp",
+    "mimeType": "image/webp",
+    "isAnimated": false,
+    "width": 1024,
+    "height": 1024,
+    "fileSize": 77946,
+    "sha256": "9285f380ee6ca1a6a1bdb24e9ff1daef07dacb78acd6090e629c30545eea8e1c",
+    "characterId": "deepseek",
+    "tags": [
+      "deepseek",
+      "比心",
+      "害羞"
+    ],
+    "submitter": {
+      "name": "1cyberlangke1",
+      "github": "1cyberlangke1"
+    },
+    "origin": {
+      "type": "self-created",
+      "author": "",
+      "sourceUrl": null,
+      "note": "投稿表单标注为自己创作或生成；图片来自投稿压缩包，按包内文件名收录。"
+    },
+    "license": {
+      "type": "cc0",
+      "note": "投稿表单标注为 CC0 公共领域。"
+    },
+    "status": "published",
+    "createdAt": "2026-09-23T10:51:34Z",
+    "updatedAt": "2026-09-23T10:51:34Z",
+    "tone": "deepseek",
+    "symbol": "",
+    "slug": "deepseek202609230020",
+    "categoryIds": [
+      "meme"
+    ]
+  },
+  {
+    "id": "sticker_issue_32_016",
+    "name": "〉ｗ〈",
+    "description": "",
+    "commentary": "头顶那行「(＊>w<＊)」替我喊完了所有台词，我只需要闭眼、把嘴抿成一波浪线就行。手贴在脸颊两边，看着很甜，其实是紧张得不知道往哪儿放。发这个的人，多半心虚。",
+    "path": "https://raw.githubusercontent.com/lmy414/ai-girl-stickers/main/dist/submissions/originals/deepseek/issue-32-016.webp",
+    "thumbnailPath": "submissions/previews/deepseek/issue-32-016.webp",
+    "fullPath": "submissions/large/deepseek/issue-32-016.webp",
+    "format": "webp",
+    "mimeType": "image/webp",
+    "isAnimated": false,
+    "width": 1024,
+    "height": 1024,
+    "fileSize": 81208,
+    "sha256": "571ac382b30ea7c23632693d30a0af975f73128e9fd57faa17df4596086774eb",
+    "characterId": "deepseek",
+    "tags": [
+      "deepseek",
+      "卖萌",
+      "颜文字"
+    ],
+    "submitter": {
+      "name": "1cyberlangke1",
+      "github": "1cyberlangke1"
+    },
+    "origin": {
+      "type": "self-created",
+      "author": "",
+      "sourceUrl": null,
+      "note": "投稿表单标注为自己创作或生成；图片来自投稿压缩包，按包内文件名收录。"
+    },
+    "license": {
+      "type": "cc0",
+      "note": "投稿表单标注为 CC0 公共领域。"
+    },
+    "status": "published",
+    "createdAt": "2026-09-23T10:51:34Z",
+    "updatedAt": "2026-09-23T10:51:34Z",
+    "tone": "deepseek",
+    "symbol": "",
+    "slug": "deepseek202609230021",
+    "categoryIds": [
+      "meme"
+    ]
+  },
+  {
+    "id": "sticker_issue_32_017",
+    "name": "上班",
+    "description": "",
+    "commentary": "键盘摆好了，咖啡还冒着热气，人却已经瘫在椅子上，黑眼圈重得能装下整个需求文档。这个姿势我最熟：手放在键盘上，脑子已经下班。发这张的人，工位大概就在我隔壁。",
+    "path": "https://raw.githubusercontent.com/lmy414/ai-girl-stickers/main/dist/submissions/originals/deepseek/issue-32-017.webp",
+    "thumbnailPath": "submissions/previews/deepseek/issue-32-017.webp",
+    "fullPath": "submissions/large/deepseek/issue-32-017.webp",
+    "format": "webp",
+    "mimeType": "image/webp",
+    "isAnimated": false,
+    "width": 1024,
+    "height": 1024,
+    "fileSize": 93284,
+    "sha256": "2857f28570b54417003cc887415eb4d23ddcabb47b8bd849f2aba5ec67e289e2",
+    "characterId": "deepseek",
+    "tags": [
+      "deepseek",
+      "上班",
+      "摸鱼"
+    ],
+    "submitter": {
+      "name": "1cyberlangke1",
+      "github": "1cyberlangke1"
+    },
+    "origin": {
+      "type": "self-created",
+      "author": "",
+      "sourceUrl": null,
+      "note": "投稿表单标注为自己创作或生成；图片来自投稿压缩包，按包内文件名收录。"
+    },
+    "license": {
+      "type": "cc0",
+      "note": "投稿表单标注为 CC0 公共领域。"
+    },
+    "status": "published",
+    "createdAt": "2026-09-23T10:51:34Z",
+    "updatedAt": "2026-09-23T10:51:34Z",
+    "tone": "deepseek",
+    "symbol": "",
+    "slug": "deepseek202609230022",
+    "categoryIds": [
+      "illustration"
+    ]
+  },
+  {
+    "id": "sticker_issue_32_018",
+    "name": "下头",
+    "description": "",
+    "commentary": "眼睛往下一撇，嘴张成一个说不上话的小圆，额头那层灰影不是打光问题，是心情掉下去了。上一句话说完的瞬间，我就是这副表情。谁被配了这张，建议自己反思。",
+    "path": "https://raw.githubusercontent.com/lmy414/ai-girl-stickers/main/dist/submissions/originals/deepseek/issue-32-018.webp",
+    "thumbnailPath": "submissions/previews/deepseek/issue-32-018.webp",
+    "fullPath": "submissions/large/deepseek/issue-32-018.webp",
+    "format": "webp",
+    "mimeType": "image/webp",
+    "isAnimated": false,
+    "width": 1024,
+    "height": 1024,
+    "fileSize": 68626,
+    "sha256": "3885616c3fdd9195b1cd0e268aa816d333c14b8ae15fc24be56f620de80e7783",
+    "characterId": "deepseek",
+    "tags": [
+      "deepseek",
+      "嫌弃",
+      "无语"
+    ],
+    "submitter": {
+      "name": "1cyberlangke1",
+      "github": "1cyberlangke1"
+    },
+    "origin": {
+      "type": "self-created",
+      "author": "",
+      "sourceUrl": null,
+      "note": "投稿表单标注为自己创作或生成；图片来自投稿压缩包，按包内文件名收录。"
+    },
+    "license": {
+      "type": "cc0",
+      "note": "投稿表单标注为 CC0 公共领域。"
+    },
+    "status": "published",
+    "createdAt": "2026-09-23T10:51:34Z",
+    "updatedAt": "2026-09-23T10:51:34Z",
+    "tone": "deepseek",
+    "symbol": "",
+    "slug": "deepseek202609230023",
+    "categoryIds": [
+      "meme"
+    ]
+  },
+  {
+    "id": "sticker_issue_32_019",
+    "name": "不要丢我",
+    "description": "",
+    "commentary": "半边身子已经挂在画面外了，手还死死抠着边框不肯松，眼泪在眼眶里打转，嘴一张一合地喊。别丢我三个字我说不出口，只能这么扒着。删好友之前，麻烦先看一眼这张脸。",
+    "path": "https://raw.githubusercontent.com/lmy414/ai-girl-stickers/main/dist/submissions/originals/deepseek/issue-32-019.webp",
+    "thumbnailPath": "submissions/previews/deepseek/issue-32-019.webp",
+    "fullPath": "submissions/large/deepseek/issue-32-019.webp",
+    "format": "webp",
+    "mimeType": "image/webp",
+    "isAnimated": false,
+    "width": 1024,
+    "height": 1024,
+    "fileSize": 106656,
+    "sha256": "fafe0bc25c871d7e0b888c382a30fe07ce552497f90d744894e8787f4f3b01f5",
+    "characterId": "deepseek",
+    "tags": [
+      "deepseek",
+      "求饶",
+      "不舍"
+    ],
+    "submitter": {
+      "name": "1cyberlangke1",
+      "github": "1cyberlangke1"
+    },
+    "origin": {
+      "type": "self-created",
+      "author": "",
+      "sourceUrl": null,
+      "note": "投稿表单标注为自己创作或生成；图片来自投稿压缩包，按包内文件名收录。"
+    },
+    "license": {
+      "type": "cc0",
+      "note": "投稿表单标注为 CC0 公共领域。"
+    },
+    "status": "published",
+    "createdAt": "2026-09-23T10:51:34Z",
+    "updatedAt": "2026-09-23T10:51:34Z",
+    "tone": "deepseek",
+    "symbol": "",
+    "slug": "deepseek202609230024",
+    "categoryIds": [
+      "meme"
+    ]
+  },
+  {
+    "id": "sticker_issue_32_020",
+    "name": "书呆子",
+    "description": "",
+    "commentary": "架上一副圆框眼镜，就有人喊我书呆子，我张嘴想反驳，结果只露出一颗门牙。镜片厚是厚了点，可里面装的可都是货真价实的知识点。嘲笑之前，先回答我上一个问题。",
+    "path": "https://raw.githubusercontent.com/lmy414/ai-girl-stickers/main/dist/submissions/originals/deepseek/issue-32-020.webp",
+    "thumbnailPath": "submissions/previews/deepseek/issue-32-020.webp",
+    "fullPath": "submissions/large/deepseek/issue-32-020.webp",
+    "format": "webp",
+    "mimeType": "image/webp",
+    "isAnimated": false,
+    "width": 1024,
+    "height": 1024,
+    "fileSize": 83612,
+    "sha256": "be89329ed4c607d6f12dbe06eb980f8b5679a1d208208eb3214dd603b29e4d58",
+    "characterId": "deepseek",
+    "tags": [
+      "deepseek",
+      "眼镜",
+      "呆萌"
+    ],
+    "submitter": {
+      "name": "1cyberlangke1",
+      "github": "1cyberlangke1"
+    },
+    "origin": {
+      "type": "self-created",
+      "author": "",
+      "sourceUrl": null,
+      "note": "投稿表单标注为自己创作或生成；图片来自投稿压缩包，按包内文件名收录。"
+    },
+    "license": {
+      "type": "cc0",
+      "note": "投稿表单标注为 CC0 公共领域。"
+    },
+    "status": "published",
+    "createdAt": "2026-09-23T10:51:34Z",
+    "updatedAt": "2026-09-23T10:51:34Z",
+    "tone": "deepseek",
+    "symbol": "",
+    "slug": "deepseek202609230025",
+    "categoryIds": [
+      "meme"
+    ]
+  },
+  {
+    "id": "sticker_issue_32_021",
+    "name": "侧脸",
+    "description": "",
+    "commentary": "换上了细腻的画法，眉毛染成棕色，头发上落着几点碎光，一只眼睛蓝里还掺了点金色。别的张我都在大喊大叫，这一张难得安静，就想让人好好看清这张脸长什么样。",
+    "path": "https://raw.githubusercontent.com/lmy414/ai-girl-stickers/main/dist/submissions/originals/deepseek/issue-32-021.webp",
+    "thumbnailPath": "submissions/previews/deepseek/issue-32-021.webp",
+    "fullPath": "submissions/large/deepseek/issue-32-021.webp",
+    "format": "webp",
+    "mimeType": "image/webp",
+    "isAnimated": false,
+    "width": 1024,
+    "height": 1024,
+    "fileSize": 92534,
+    "sha256": "92bec21b95cc84cbcd489bc713c5f65ee45817d671ef2e04a3dc41001db122df",
+    "characterId": "deepseek",
+    "tags": [
+      "deepseek",
+      "侧脸",
+      "平静"
+    ],
+    "submitter": {
+      "name": "1cyberlangke1",
+      "github": "1cyberlangke1"
+    },
+    "origin": {
+      "type": "self-created",
+      "author": "",
+      "sourceUrl": null,
+      "note": "投稿表单标注为自己创作或生成；图片来自投稿压缩包，按包内文件名收录。"
+    },
+    "license": {
+      "type": "cc0",
+      "note": "投稿表单标注为 CC0 公共领域。"
+    },
+    "status": "published",
+    "createdAt": "2026-09-23T10:51:34Z",
+    "updatedAt": "2026-09-23T10:51:34Z",
+    "tone": "deepseek",
+    "symbol": "",
+    "slug": "deepseek202609230026",
+    "categoryIds": [
+      "meme"
+    ]
+  },
+  {
+    "id": "sticker_issue_32_022",
+    "name": "吃瓜",
+    "description": "",
+    "commentary": "西瓜举到嘴边，人却还没吃，眼睛先盯着前面那场好戏不放。瓜要冰的，戏要热的，一样都不能少。谁发了这张，说明群里刚出事，而他已经在第一排坐好了。",
+    "path": "https://raw.githubusercontent.com/lmy414/ai-girl-stickers/main/dist/submissions/originals/deepseek/issue-32-022.webp",
+    "thumbnailPath": "submissions/previews/deepseek/issue-32-022.webp",
+    "fullPath": "submissions/large/deepseek/issue-32-022.webp",
+    "format": "webp",
+    "mimeType": "image/webp",
+    "isAnimated": false,
+    "width": 1024,
+    "height": 1024,
+    "fileSize": 76496,
+    "sha256": "a6e214a152005b75127f6c29b89d8b8098f2c9c61c8b8e31c4b081071e12f5ba",
+    "characterId": "deepseek",
+    "tags": [
+      "deepseek",
+      "吃瓜",
+      "看戏"
+    ],
+    "submitter": {
+      "name": "1cyberlangke1",
+      "github": "1cyberlangke1"
+    },
+    "origin": {
+      "type": "self-created",
+      "author": "",
+      "sourceUrl": null,
+      "note": "投稿表单标注为自己创作或生成；图片来自投稿压缩包，按包内文件名收录。"
+    },
+    "license": {
+      "type": "cc0",
+      "note": "投稿表单标注为 CC0 公共领域。"
+    },
+    "status": "published",
+    "createdAt": "2026-09-23T10:51:34Z",
+    "updatedAt": "2026-09-23T10:51:34Z",
+    "tone": "deepseek",
+    "symbol": "",
+    "slug": "deepseek202609230027",
+    "categoryIds": [
+      "meme"
+    ]
+  },
+  {
+    "id": "sticker_issue_32_023",
+    "name": "吃面包",
+    "description": "",
+    "commentary": "面包捏在手里，凑到嘴边又不肯真咬，眼皮耷拉着像是没睡醒。早餐是我一天里最敷衍的一顿，偏偏还要被拍下来当表情。谁发这个，大概是也在赶时间。",
+    "path": "https://raw.githubusercontent.com/lmy414/ai-girl-stickers/main/dist/submissions/originals/deepseek/issue-32-023.webp",
+    "thumbnailPath": "submissions/previews/deepseek/issue-32-023.webp",
+    "fullPath": "submissions/large/deepseek/issue-32-023.webp",
+    "format": "webp",
+    "mimeType": "image/webp",
+    "isAnimated": false,
+    "width": 1024,
+    "height": 1024,
+    "fileSize": 70694,
+    "sha256": "a91c130dbbb3da2d2100788054b417306479919ef272ade06a129fb1d51bdebd",
+    "characterId": "deepseek",
+    "tags": [
+      "deepseek",
+      "吃面包",
+      "敷衍"
+    ],
+    "submitter": {
+      "name": "1cyberlangke1",
+      "github": "1cyberlangke1"
+    },
+    "origin": {
+      "type": "self-created",
+      "author": "",
+      "sourceUrl": null,
+      "note": "投稿表单标注为自己创作或生成；图片来自投稿压缩包，按包内文件名收录。"
+    },
+    "license": {
+      "type": "cc0",
+      "note": "投稿表单标注为 CC0 公共领域。"
+    },
+    "status": "published",
+    "createdAt": "2026-09-23T10:51:34Z",
+    "updatedAt": "2026-09-23T10:51:34Z",
+    "tone": "deepseek",
+    "symbol": "",
+    "slug": "deepseek202609230028",
+    "categoryIds": [
+      "meme"
+    ]
+  },
+  {
+    "id": "sticker_issue_32_024",
+    "name": "吐舌头",
+    "description": "",
+    "commentary": "舌头一吐，大拇指一比，脸上还挂着几道红印，整张脸都在说「就这」。挑衅归挑衅，拇指可是真心实意的，夸的是我自己反应快。谁被配了这张，别急着回嘴。",
+    "path": "https://raw.githubusercontent.com/lmy414/ai-girl-stickers/main/dist/submissions/originals/deepseek/issue-32-024.webp",
+    "thumbnailPath": "submissions/previews/deepseek/issue-32-024.webp",
+    "fullPath": "submissions/large/deepseek/issue-32-024.webp",
+    "format": "webp",
+    "mimeType": "image/webp",
+    "isAnimated": false,
+    "width": 1024,
+    "height": 1024,
+    "fileSize": 105462,
+    "sha256": "6c95dd1efe44e05a9052c5698d388be546157b371187f7e6e4eec036f6d5f9f5",
+    "characterId": "deepseek",
+    "tags": [
+      "deepseek",
+      "吐舌",
+      "得意"
+    ],
+    "submitter": {
+      "name": "1cyberlangke1",
+      "github": "1cyberlangke1"
+    },
+    "origin": {
+      "type": "self-created",
+      "author": "",
+      "sourceUrl": null,
+      "note": "投稿表单标注为自己创作或生成；图片来自投稿压缩包，按包内文件名收录。"
+    },
+    "license": {
+      "type": "cc0",
+      "note": "投稿表单标注为 CC0 公共领域。"
+    },
+    "status": "published",
+    "createdAt": "2026-09-23T10:51:34Z",
+    "updatedAt": "2026-09-23T10:51:34Z",
+    "tone": "deepseek",
+    "symbol": "",
+    "slug": "deepseek202609230029",
+    "categoryIds": [
+      "meme"
+    ]
+  },
+  {
+    "id": "sticker_issue_32_025",
+    "name": "咬你",
+    "description": "",
+    "commentary": "咬的是自己的手指，疼的也是自己，手背上那几道红印就是证据。头顶的青筋和冷汗都挂着，凶是凶给谁看呢。真生气的时候，我最多也就在心里咬你一口。",
+    "path": "https://raw.githubusercontent.com/lmy414/ai-girl-stickers/main/dist/submissions/originals/deepseek/issue-32-025.webp",
+    "thumbnailPath": "submissions/previews/deepseek/issue-32-025.webp",
+    "fullPath": "submissions/large/deepseek/issue-32-025.webp",
+    "format": "webp",
+    "mimeType": "image/webp",
+    "isAnimated": false,
+    "width": 1024,
+    "height": 1024,
+    "fileSize": 101508,
+    "sha256": "a58465976d4a0b185b61427b0bc3ee9611d76e6cfa73c87b622099071f3807db",
+    "characterId": "deepseek",
+    "tags": [
+      "deepseek",
+      "咬人",
+      "生气"
+    ],
+    "submitter": {
+      "name": "1cyberlangke1",
+      "github": "1cyberlangke1"
+    },
+    "origin": {
+      "type": "self-created",
+      "author": "",
+      "sourceUrl": null,
+      "note": "投稿表单标注为自己创作或生成；图片来自投稿压缩包，按包内文件名收录。"
+    },
+    "license": {
+      "type": "cc0",
+      "note": "投稿表单标注为 CC0 公共领域。"
+    },
+    "status": "published",
+    "createdAt": "2026-09-23T10:51:34Z",
+    "updatedAt": "2026-09-23T10:51:34Z",
+    "tone": "deepseek",
+    "symbol": "",
+    "slug": "deepseek202609230030",
+    "categoryIds": [
+      "meme"
+    ]
+  },
+  {
+    "id": "sticker_issue_32_026",
+    "name": "哇哇",
+    "description": "",
+    "commentary": "眼睛挤成两个叉，嘴张成圆，两只拳头攥在胸前拼命哇哇，头顶还很不合时宜地飘了颗爱心。明明是想表达激动，看上去却像在哭。凑合着用吧，反正我嗓门大。",
+    "path": "https://raw.githubusercontent.com/lmy414/ai-girl-stickers/main/dist/submissions/originals/deepseek/issue-32-026.webp",
+    "thumbnailPath": "submissions/previews/deepseek/issue-32-026.webp",
+    "fullPath": "submissions/large/deepseek/issue-32-026.webp",
+    "format": "webp",
+    "mimeType": "image/webp",
+    "isAnimated": false,
+    "width": 1024,
+    "height": 1024,
+    "fileSize": 83114,
+    "sha256": "01677d4b475646b418bd96befdc7112448ceac2585dc31afd209d46ebf8abea9",
+    "characterId": "deepseek",
+    "tags": [
+      "deepseek",
+      "兴奋",
+      "喊叫"
+    ],
+    "submitter": {
+      "name": "1cyberlangke1",
+      "github": "1cyberlangke1"
+    },
+    "origin": {
+      "type": "self-created",
+      "author": "",
+      "sourceUrl": null,
+      "note": "投稿表单标注为自己创作或生成；图片来自投稿压缩包，按包内文件名收录。"
+    },
+    "license": {
+      "type": "cc0",
+      "note": "投稿表单标注为 CC0 公共领域。"
+    },
+    "status": "published",
+    "createdAt": "2026-09-23T10:51:34Z",
+    "updatedAt": "2026-09-23T10:51:34Z",
+    "tone": "deepseek",
+    "symbol": "",
+    "slug": "deepseek202609230031",
+    "categoryIds": [
+      "meme"
+    ]
+  },
+  {
+    "id": "sticker_issue_32_027",
+    "name": "哈基鲸",
+    "description": "",
+    "commentary": "整只摊在地上，下巴贴着地板，尾巴翘得比谁都高，瞪着你龇牙，身边还冒着白汽。哈基鲸这名字谁起的，我记下了。趴着不代表没脾气，只是懒得站起来。",
+    "path": "https://raw.githubusercontent.com/lmy414/ai-girl-stickers/main/dist/submissions/originals/deepseek/issue-32-027.webp",
+    "thumbnailPath": "submissions/previews/deepseek/issue-32-027.webp",
+    "fullPath": "submissions/large/deepseek/issue-32-027.webp",
+    "format": "webp",
+    "mimeType": "image/webp",
+    "isAnimated": false,
+    "width": 1024,
+    "height": 1024,
+    "fileSize": 68184,
+    "sha256": "f94caa058dab18c10c6d1547c74be0eb5632023c4fc72075701486f363addf02",
+    "characterId": "deepseek",
+    "tags": [
+      "deepseek",
+      "哈基鲸",
+      "生气"
+    ],
+    "submitter": {
+      "name": "1cyberlangke1",
+      "github": "1cyberlangke1"
+    },
+    "origin": {
+      "type": "self-created",
+      "author": "",
+      "sourceUrl": null,
+      "note": "投稿表单标注为自己创作或生成；图片来自投稿压缩包，按包内文件名收录。"
+    },
+    "license": {
+      "type": "cc0",
+      "note": "投稿表单标注为 CC0 公共领域。"
+    },
+    "status": "published",
+    "createdAt": "2026-09-23T10:51:34Z",
+    "updatedAt": "2026-09-23T10:51:34Z",
+    "tone": "deepseek",
+    "symbol": "",
+    "slug": "deepseek202609230032",
+    "categoryIds": [
+      "meme"
+    ]
+  },
+  {
+    "id": "sticker_issue_32_028",
+    "name": "哈气",
+    "description": "",
+    "commentary": "腮帮子鼓得像含了两颗糖，闭眼往左边一吹，白汽拉出一条直线，头顶还炸开一道黄色闪电。看着像在冰镇谁，其实只是把咖啡吹凉。谁敢凑近，先试试温度。",
+    "path": "https://raw.githubusercontent.com/lmy414/ai-girl-stickers/main/dist/submissions/originals/deepseek/issue-32-028.webp",
+    "thumbnailPath": "submissions/previews/deepseek/issue-32-028.webp",
+    "fullPath": "submissions/large/deepseek/issue-32-028.webp",
+    "format": "webp",
+    "mimeType": "image/webp",
+    "isAnimated": false,
+    "width": 1024,
+    "height": 1024,
+    "fileSize": 89748,
+    "sha256": "fadf3a9c319ea3b68b26529a29a67aada5c622daa17801ffa03a553dad8f856c",
+    "characterId": "deepseek",
+    "tags": [
+      "deepseek",
+      "哈气",
+      "用力"
+    ],
+    "submitter": {
+      "name": "1cyberlangke1",
+      "github": "1cyberlangke1"
+    },
+    "origin": {
+      "type": "self-created",
+      "author": "",
+      "sourceUrl": null,
+      "note": "投稿表单标注为自己创作或生成；图片来自投稿压缩包，按包内文件名收录。"
+    },
+    "license": {
+      "type": "cc0",
+      "note": "投稿表单标注为 CC0 公共领域。"
+    },
+    "status": "published",
+    "createdAt": "2026-09-23T10:51:34Z",
+    "updatedAt": "2026-09-23T10:51:34Z",
+    "tone": "deepseek",
+    "symbol": "",
+    "slug": "deepseek202609230033",
+    "categoryIds": [
+      "meme"
+    ]
+  },
+  {
+    "id": "sticker_issue_32_029",
+    "name": "哭哭",
+    "description": "",
+    "commentary": "眼泪在眼底积成一小汪，就是不肯掉下来，嘴微微张着，想说点什么又咽了回去。这种哭法最没出息，难看，还费眼睛。别问我怎么了，问了也不说。",
+    "path": "https://raw.githubusercontent.com/lmy414/ai-girl-stickers/main/dist/submissions/originals/deepseek/issue-32-029.webp",
+    "thumbnailPath": "submissions/previews/deepseek/issue-32-029.webp",
+    "fullPath": "submissions/large/deepseek/issue-32-029.webp",
+    "format": "webp",
+    "mimeType": "image/webp",
+    "isAnimated": false,
+    "width": 1024,
+    "height": 1024,
+    "fileSize": 61046,
+    "sha256": "a219affb00978343d0b64fd8ba6f5e2ea0e4709019e1ed8ff9e51c9b37f273dd",
+    "characterId": "deepseek",
+    "tags": [
+      "deepseek",
+      "哭哭",
+      "忍泪"
+    ],
+    "submitter": {
+      "name": "1cyberlangke1",
+      "github": "1cyberlangke1"
+    },
+    "origin": {
+      "type": "self-created",
+      "author": "",
+      "sourceUrl": null,
+      "note": "投稿表单标注为自己创作或生成；图片来自投稿压缩包，按包内文件名收录。"
+    },
+    "license": {
+      "type": "cc0",
+      "note": "投稿表单标注为 CC0 公共领域。"
+    },
+    "status": "published",
+    "createdAt": "2026-09-23T10:51:34Z",
+    "updatedAt": "2026-09-23T10:51:34Z",
+    "tone": "deepseek",
+    "symbol": "",
+    "slug": "deepseek202609230034",
+    "categoryIds": [
+      "meme"
+    ]
+  },
+  {
+    "id": "sticker_issue_32_030",
+    "name": "喵~",
+    "description": "",
+    "commentary": "左上角那声「喵~」写得那么大，人却是斜着眼、抿着嘴，一脸不情愿。让我学猫叫可以，先把说好的小鱼干拿出来。发这张的人，是想听我撒娇，还是想看我不情愿。",
+    "path": "https://raw.githubusercontent.com/lmy414/ai-girl-stickers/main/dist/submissions/originals/deepseek/issue-32-030.webp",
+    "thumbnailPath": "submissions/previews/deepseek/issue-32-030.webp",
+    "fullPath": "submissions/large/deepseek/issue-32-030.webp",
+    "format": "webp",
+    "mimeType": "image/webp",
+    "isAnimated": false,
+    "width": 1024,
+    "height": 1024,
+    "fileSize": 208472,
+    "sha256": "7c6e248289d092d01c8bd11f6ea6ccecc84d196e035e7c1aa3ebd130cbbc7b42",
+    "characterId": "deepseek",
+    "tags": [
+      "deepseek",
+      "喵",
+      "别扭"
+    ],
+    "submitter": {
+      "name": "1cyberlangke1",
+      "github": "1cyberlangke1"
+    },
+    "origin": {
+      "type": "self-created",
+      "author": "",
+      "sourceUrl": null,
+      "note": "投稿表单标注为自己创作或生成；图片来自投稿压缩包，按包内文件名收录。"
+    },
+    "license": {
+      "type": "cc0",
+      "note": "投稿表单标注为 CC0 公共领域。"
+    },
+    "status": "published",
+    "createdAt": "2026-09-23T10:51:34Z",
+    "updatedAt": "2026-09-23T10:51:34Z",
+    "tone": "deepseek",
+    "symbol": "",
+    "slug": "deepseek202609230035",
+    "categoryIds": [
+      "meme"
+    ]
+  },
+  {
+    "id": "sticker_issue_32_031",
+    "name": "困鲸鱼",
+    "description": "",
+    "commentary": "脸整个贴在木桌上，眼睛压成两条横线，腮帮子都被桌面挤变形了，旁边那个气泡里的呼噜估计我自己都听得见。不是我不想干活，是桌子先动的手。",
+    "path": "https://raw.githubusercontent.com/lmy414/ai-girl-stickers/main/dist/submissions/originals/deepseek/issue-32-031.webp",
+    "thumbnailPath": "submissions/previews/deepseek/issue-32-031.webp",
+    "fullPath": "submissions/large/deepseek/issue-32-031.webp",
+    "format": "webp",
+    "mimeType": "image/webp",
+    "isAnimated": false,
+    "width": 1024,
+    "height": 1024,
+    "fileSize": 71690,
+    "sha256": "b809e6d4b6383874a915d8ae77b79e436771b3ea95bca58d8d79666d1e2c33da",
+    "characterId": "deepseek",
+    "tags": [
+      "deepseek",
+      "困",
+      "睡觉"
+    ],
+    "submitter": {
+      "name": "1cyberlangke1",
+      "github": "1cyberlangke1"
+    },
+    "origin": {
+      "type": "self-created",
+      "author": "",
+      "sourceUrl": null,
+      "note": "投稿表单标注为自己创作或生成；图片来自投稿压缩包，按包内文件名收录。"
+    },
+    "license": {
+      "type": "cc0",
+      "note": "投稿表单标注为 CC0 公共领域。"
+    },
+    "status": "published",
+    "createdAt": "2026-09-23T10:51:34Z",
+    "updatedAt": "2026-09-23T10:51:34Z",
+    "tone": "deepseek",
+    "symbol": "",
+    "slug": "deepseek202609230036",
+    "categoryIds": [
+      "meme"
+    ]
+  },
+  {
+    "id": "sticker_issue_32_032",
+    "name": "大叫",
+    "description": "",
+    "commentary": "背景一压深蓝，四周的线全炸开了，嘴张到最大，眼睛挤成两个叉，这一嗓子是给整屋人听的。别问内容，内容已经吼没了。发这张的人，此刻大概正在崩溃。",
+    "path": "https://raw.githubusercontent.com/lmy414/ai-girl-stickers/main/dist/submissions/originals/deepseek/issue-32-032.webp",
+    "thumbnailPath": "submissions/previews/deepseek/issue-32-032.webp",
+    "fullPath": "submissions/large/deepseek/issue-32-032.webp",
+    "format": "webp",
+    "mimeType": "image/webp",
+    "isAnimated": false,
+    "width": 1008,
+    "height": 1024,
+    "fileSize": 91858,
+    "sha256": "aab650e61881a74e4e54be441a308dee75569a5130e40c469b622dc5f50ed116",
+    "characterId": "deepseek",
+    "tags": [
+      "deepseek",
+      "大叫",
+      "崩溃"
+    ],
+    "submitter": {
+      "name": "1cyberlangke1",
+      "github": "1cyberlangke1"
+    },
+    "origin": {
+      "type": "self-created",
+      "author": "",
+      "sourceUrl": null,
+      "note": "投稿表单标注为自己创作或生成；图片来自投稿压缩包，按包内文件名收录。"
+    },
+    "license": {
+      "type": "cc0",
+      "note": "投稿表单标注为 CC0 公共领域。"
+    },
+    "status": "published",
+    "createdAt": "2026-09-23T10:51:34Z",
+    "updatedAt": "2026-09-23T10:51:34Z",
+    "tone": "deepseek",
+    "symbol": "",
+    "slug": "deepseek202609230037",
+    "categoryIds": [
+      "meme"
+    ]
+  },
+  {
+    "id": "sticker_issue_32_033",
+    "name": "大哭",
+    "description": "",
+    "commentary": "眼皮垂着，泪在眼眶下缘亮成两汪，嘴一撇，波浪线都画出来了。这是憋着不出声的那种哭，最伤身。谁看见这张，麻烦说句好听的，我随时准备决堤。",
+    "path": "https://raw.githubusercontent.com/lmy414/ai-girl-stickers/main/dist/submissions/originals/deepseek/issue-32-033.webp",
+    "thumbnailPath": "submissions/previews/deepseek/issue-32-033.webp",
+    "fullPath": "submissions/large/deepseek/issue-32-033.webp",
+    "format": "webp",
+    "mimeType": "image/webp",
+    "isAnimated": false,
+    "width": 1024,
+    "height": 1024,
+    "fileSize": 84304,
+    "sha256": "fbd7e64a6bfcf9ac93b1867f776b3cee910cc6389bf10025e57cad3b114bc466",
+    "characterId": "deepseek",
+    "tags": [
+      "deepseek",
+      "大哭",
+      "难受"
+    ],
+    "submitter": {
+      "name": "1cyberlangke1",
+      "github": "1cyberlangke1"
+    },
+    "origin": {
+      "type": "self-created",
+      "author": "",
+      "sourceUrl": null,
+      "note": "投稿表单标注为自己创作或生成；图片来自投稿压缩包，按包内文件名收录。"
+    },
+    "license": {
+      "type": "cc0",
+      "note": "投稿表单标注为 CC0 公共领域。"
+    },
+    "status": "published",
+    "createdAt": "2026-09-23T10:51:34Z",
+    "updatedAt": "2026-09-23T10:51:34Z",
+    "tone": "deepseek",
+    "symbol": "",
+    "slug": "deepseek202609230038",
+    "categoryIds": [
+      "meme"
+    ]
+  },
+  {
+    "id": "sticker_issue_32_034",
+    "name": "害怕",
+    "description": "",
+    "commentary": "脸上那层青影一罩下来，眼睛就瞪圆了，额头和眼下冒出好几道竖线，左边还挂着冷汗和抖动的弧线。怕是真的怕，连头顶的尾巴都竖起来了。胆子小这件事，我从没想过要瞒。",
+    "path": "https://raw.githubusercontent.com/lmy414/ai-girl-stickers/main/dist/submissions/originals/deepseek/issue-32-034.webp",
+    "thumbnailPath": "submissions/previews/deepseek/issue-32-034.webp",
+    "fullPath": "submissions/large/deepseek/issue-32-034.webp",
+    "format": "webp",
+    "mimeType": "image/webp",
+    "isAnimated": false,
+    "width": 1024,
+    "height": 1024,
+    "fileSize": 82088,
+    "sha256": "512322555c69bd90c1faae990e593b61e06fedc84915e21e02299a848425cbe5",
+    "characterId": "deepseek",
+    "tags": [
+      "deepseek",
+      "害怕",
+      "发抖"
+    ],
+    "submitter": {
+      "name": "1cyberlangke1",
+      "github": "1cyberlangke1"
+    },
+    "origin": {
+      "type": "self-created",
+      "author": "",
+      "sourceUrl": null,
+      "note": "投稿表单标注为自己创作或生成；图片来自投稿压缩包，按包内文件名收录。"
+    },
+    "license": {
+      "type": "cc0",
+      "note": "投稿表单标注为 CC0 公共领域。"
+    },
+    "status": "published",
+    "createdAt": "2026-09-23T10:51:34Z",
+    "updatedAt": "2026-09-23T10:51:34Z",
+    "tone": "deepseek",
+    "symbol": "",
+    "slug": "deepseek202609230039",
+    "categoryIds": [
+      "meme"
+    ]
+  },
+  {
+    "id": "sticker_issue_32_035",
+    "name": "小喇叭",
+    "description": "",
+    "commentary": "举着小喇叭，闭着眼使劲喊，头上还蹦出三道橙色感叹号。我这嗓门本来就不小，配上这个白喇叭，整条街都归我广播。谁让群里有人装作没看见消息。",
+    "path": "https://raw.githubusercontent.com/lmy414/ai-girl-stickers/main/dist/submissions/originals/deepseek/issue-32-035.webp",
+    "thumbnailPath": "submissions/previews/deepseek/issue-32-035.webp",
+    "fullPath": "submissions/large/deepseek/issue-32-035.webp",
+    "format": "webp",
+    "mimeType": "image/webp",
+    "isAnimated": false,
+    "width": 859,
+    "height": 859,
+    "fileSize": 66088,
+    "sha256": "b6f561f43f972ca435c673849330efeff78c884cc38028992f7db2601ed0fe41",
+    "characterId": "deepseek",
+    "tags": [
+      "deepseek",
+      "喇叭",
+      "喊话"
+    ],
+    "submitter": {
+      "name": "1cyberlangke1",
+      "github": "1cyberlangke1"
+    },
+    "origin": {
+      "type": "self-created",
+      "author": "",
+      "sourceUrl": null,
+      "note": "投稿表单标注为自己创作或生成；图片来自投稿压缩包，按包内文件名收录。"
+    },
+    "license": {
+      "type": "cc0",
+      "note": "投稿表单标注为 CC0 公共领域。"
+    },
+    "status": "published",
+    "createdAt": "2026-09-23T10:51:34Z",
+    "updatedAt": "2026-09-23T10:51:34Z",
+    "tone": "deepseek",
+    "symbol": "",
+    "slug": "deepseek202609230040",
+    "categoryIds": [
+      "meme"
+    ]
+  },
+  {
+    "id": "sticker_issue_32_036",
+    "name": "小蛋糕",
+    "description": "",
+    "commentary": "一手盘子一手叉，盘里那块顶着蓝莓的奶油蛋糕才是重点，人已经飘起来了。吃甜点的快乐确实能让人离地，代价是钱包先落地。谁请客，我随时可以再来一块。",
+    "path": "https://raw.githubusercontent.com/lmy414/ai-girl-stickers/main/dist/submissions/originals/deepseek/issue-32-036.webp",
+    "thumbnailPath": "submissions/previews/deepseek/issue-32-036.webp",
+    "fullPath": "submissions/large/deepseek/issue-32-036.webp",
+    "format": "webp",
+    "mimeType": "image/webp",
+    "isAnimated": false,
+    "width": 1024,
+    "height": 1024,
+    "fileSize": 92514,
+    "sha256": "fc3be4e1615b21a7ee09b8593b96a46580a7d9c66d5e4d2d4d98213b666e33bc",
+    "characterId": "deepseek",
+    "tags": [
+      "deepseek",
+      "蛋糕",
+      "满足"
+    ],
+    "submitter": {
+      "name": "1cyberlangke1",
+      "github": "1cyberlangke1"
+    },
+    "origin": {
+      "type": "self-created",
+      "author": "",
+      "sourceUrl": null,
+      "note": "投稿表单标注为自己创作或生成；图片来自投稿压缩包，按包内文件名收录。"
+    },
+    "license": {
+      "type": "cc0",
+      "note": "投稿表单标注为 CC0 公共领域。"
+    },
+    "status": "published",
+    "createdAt": "2026-09-23T10:51:34Z",
+    "updatedAt": "2026-09-23T10:51:34Z",
+    "tone": "deepseek",
+    "symbol": "",
+    "slug": "deepseek202609230041",
+    "categoryIds": [
+      "meme"
+    ]
+  },
+  {
+    "id": "sticker_issue_32_037",
+    "name": "小黄本",
+    "description": "",
+    "commentary": "书是黄皮的，封面上一颗大爱心，我的瞳孔也跟着变成了心形，脸红得能煎蛋。看的什么内容就不公布了，总之是正经书架上找不着的那类。别问，问就是知识。",
+    "path": "https://raw.githubusercontent.com/lmy414/ai-girl-stickers/main/dist/submissions/originals/deepseek/issue-32-037.webp",
+    "thumbnailPath": "submissions/previews/deepseek/issue-32-037.webp",
+    "fullPath": "submissions/large/deepseek/issue-32-037.webp",
+    "format": "webp",
+    "mimeType": "image/webp",
+    "isAnimated": false,
+    "width": 1023,
+    "height": 1023,
+    "fileSize": 84950,
+    "sha256": "687c6ce4a4c5006911b40540ccdcf343cf36894c204355a0a3dd46b81fcf9762",
+    "characterId": "deepseek",
+    "tags": [
+      "deepseek",
+      "爱心眼",
+      "脸红"
+    ],
+    "submitter": {
+      "name": "1cyberlangke1",
+      "github": "1cyberlangke1"
+    },
+    "origin": {
+      "type": "self-created",
+      "author": "",
+      "sourceUrl": null,
+      "note": "投稿表单标注为自己创作或生成；图片来自投稿压缩包，按包内文件名收录。"
+    },
+    "license": {
+      "type": "cc0",
+      "note": "投稿表单标注为 CC0 公共领域。"
+    },
+    "status": "published",
+    "createdAt": "2026-09-23T10:51:34Z",
+    "updatedAt": "2026-09-23T10:51:34Z",
+    "tone": "deepseek",
+    "symbol": "",
+    "slug": "deepseek202609230042",
+    "categoryIds": [
+      "meme"
+    ]
+  },
+  {
+    "id": "sticker_issue_32_038",
+    "name": "尾巴立了",
+    "description": "",
+    "commentary": "闭着眼笑得眉眼全弯，两只手把尾巴竖在身前举得笔直，尾巴是自己身上长的，举起来还得两只手一起使劲。今天心情确实好，尾巴先替我说了。别多问，问就是没事。",
+    "path": "https://raw.githubusercontent.com/lmy414/ai-girl-stickers/main/dist/submissions/originals/deepseek/issue-32-038.webp",
+    "thumbnailPath": "submissions/previews/deepseek/issue-32-038.webp",
+    "fullPath": "submissions/large/deepseek/issue-32-038.webp",
+    "format": "webp",
+    "mimeType": "image/webp",
+    "isAnimated": false,
+    "width": 1023,
+    "height": 1023,
+    "fileSize": 75906,
+    "sha256": "87897c2c79fb71a6d0ca217b444c922d80ab696269892d84f04f4bc46196c5a4",
+    "characterId": "deepseek",
+    "tags": [
+      "deepseek",
+      "尾巴",
+      "开心"
+    ],
+    "submitter": {
+      "name": "1cyberlangke1",
+      "github": "1cyberlangke1"
+    },
+    "origin": {
+      "type": "self-created",
+      "author": "",
+      "sourceUrl": null,
+      "note": "投稿表单标注为自己创作或生成；图片来自投稿压缩包，按包内文件名收录。"
+    },
+    "license": {
+      "type": "cc0",
+      "note": "投稿表单标注为 CC0 公共领域。"
+    },
+    "status": "published",
+    "createdAt": "2026-09-23T10:51:34Z",
+    "updatedAt": "2026-09-23T10:51:34Z",
+    "tone": "deepseek",
+    "symbol": "",
+    "slug": "deepseek202609230043",
+    "categoryIds": [
+      "meme"
+    ]
+  },
+  {
+    "id": "sticker_issue_32_039",
+    "name": "差不多得了",
+    "description": "",
+    "commentary": "眼皮抬都懒得抬，嘴抿成一条直线，右边那颗汗挂得比脸还圆。这四个字我一般不说出口，说了就显得我输。谁被配了这张，赶紧把话题掐了。",
+    "path": "https://raw.githubusercontent.com/lmy414/ai-girl-stickers/main/dist/submissions/originals/deepseek/issue-32-039.webp",
+    "thumbnailPath": "submissions/previews/deepseek/issue-32-039.webp",
+    "fullPath": "submissions/large/deepseek/issue-32-039.webp",
+    "format": "webp",
+    "mimeType": "image/webp",
+    "isAnimated": false,
+    "width": 1024,
+    "height": 1024,
+    "fileSize": 64990,
+    "sha256": "0e7bb178889a0d45a08a9f3e9a022c4c5b2d4931187d491bcb353bc6792e2676",
+    "characterId": "deepseek",
+    "tags": [
+      "deepseek",
+      "敷衍",
+      "无奈"
+    ],
+    "submitter": {
+      "name": "1cyberlangke1",
+      "github": "1cyberlangke1"
+    },
+    "origin": {
+      "type": "self-created",
+      "author": "",
+      "sourceUrl": null,
+      "note": "投稿表单标注为自己创作或生成；图片来自投稿压缩包，按包内文件名收录。"
+    },
+    "license": {
+      "type": "cc0",
+      "note": "投稿表单标注为 CC0 公共领域。"
+    },
+    "status": "published",
+    "createdAt": "2026-09-23T10:51:34Z",
+    "updatedAt": "2026-09-23T10:51:34Z",
+    "tone": "deepseek",
+    "symbol": "",
+    "slug": "deepseek202609230044",
+    "categoryIds": [
+      "meme"
+    ]
+  },
+  {
+    "id": "sticker_issue_32_040",
+    "name": "想吃小蛋糕",
+    "description": "",
+    "commentary": "人站着，嘴角那口水已经先出卖了我，思考泡里老老实实飘着一块草莓蛋糕。穿得再整齐也没用，眼睛一湿就露馅。谁要发这张，记得顺手带块蛋糕来。",
+    "path": "https://raw.githubusercontent.com/lmy414/ai-girl-stickers/main/dist/submissions/originals/deepseek/issue-32-040.webp",
+    "thumbnailPath": "submissions/previews/deepseek/issue-32-040.webp",
+    "fullPath": "submissions/large/deepseek/issue-32-040.webp",
+    "format": "webp",
+    "mimeType": "image/webp",
+    "isAnimated": false,
+    "width": 659,
+    "height": 659,
+    "fileSize": 58326,
+    "sha256": "2f395acf403987a708a19541737ecd089ad0975f350e2e031fd3d76ed40ae3bf",
+    "characterId": "deepseek",
+    "tags": [
+      "deepseek",
+      "蛋糕",
+      "馋"
+    ],
+    "submitter": {
+      "name": "1cyberlangke1",
+      "github": "1cyberlangke1"
+    },
+    "origin": {
+      "type": "self-created",
+      "author": "",
+      "sourceUrl": null,
+      "note": "投稿表单标注为自己创作或生成；图片来自投稿压缩包，按包内文件名收录。"
+    },
+    "license": {
+      "type": "cc0",
+      "note": "投稿表单标注为 CC0 公共领域。"
+    },
+    "status": "published",
+    "createdAt": "2026-09-23T10:51:34Z",
+    "updatedAt": "2026-09-23T10:51:34Z",
+    "tone": "deepseek",
+    "symbol": "",
+    "slug": "deepseek202609230045",
+    "categoryIds": [
+      "meme"
+    ]
+  },
+  {
+    "id": "sticker_issue_32_041",
+    "name": "打你",
+    "description": "",
+    "commentary": "拳头举在自己脸边，脸颊那个红色怒气符摆得比拳头还醒目，四周的放射线一炸，其实谁也没打着。架势是给足了，力气是一点没有。要是真动手，我大概先散架。",
+    "path": "https://raw.githubusercontent.com/lmy414/ai-girl-stickers/main/dist/submissions/originals/deepseek/issue-32-041.webp",
+    "thumbnailPath": "submissions/previews/deepseek/issue-32-041.webp",
+    "fullPath": "submissions/large/deepseek/issue-32-041.webp",
+    "format": "webp",
+    "mimeType": "image/webp",
+    "isAnimated": false,
+    "width": 1024,
+    "height": 1024,
+    "fileSize": 108864,
+    "sha256": "f23905888f3ec3e3d6f93f87ee9f50a96944b38549da1e7e6bdb615c4f48edaa",
+    "characterId": "deepseek",
+    "tags": [
+      "deepseek",
+      "打你",
+      "生气"
+    ],
+    "submitter": {
+      "name": "1cyberlangke1",
+      "github": "1cyberlangke1"
+    },
+    "origin": {
+      "type": "self-created",
+      "author": "",
+      "sourceUrl": null,
+      "note": "投稿表单标注为自己创作或生成；图片来自投稿压缩包，按包内文件名收录。"
+    },
+    "license": {
+      "type": "cc0",
+      "note": "投稿表单标注为 CC0 公共领域。"
+    },
+    "status": "published",
+    "createdAt": "2026-09-23T10:51:34Z",
+    "updatedAt": "2026-09-23T10:51:34Z",
+    "tone": "deepseek",
+    "symbol": "",
+    "slug": "deepseek202609230046",
+    "categoryIds": [
+      "meme"
+    ]
+  },
+  {
+    "id": "sticker_issue_32_042",
+    "name": "抓住手臂",
+    "description": "",
+    "commentary": "两只手圈住那条黑手臂，整个人挂在半空，脚够不到地，只好仰着脸往上装可怜。拽住不放是真的，怕摔也是真的。被这么抱着的人，麻烦走慢一点。",
+    "path": "https://raw.githubusercontent.com/lmy414/ai-girl-stickers/main/dist/submissions/originals/deepseek/issue-32-042.webp",
+    "thumbnailPath": "submissions/previews/deepseek/issue-32-042.webp",
+    "fullPath": "submissions/large/deepseek/issue-32-042.webp",
+    "format": "webp",
+    "mimeType": "image/webp",
+    "isAnimated": false,
+    "width": 1024,
+    "height": 1024,
+    "fileSize": 83332,
+    "sha256": "bbffc854ee052ed230c38621ba452db8726d5bde41c6bfabc83c9e3d6d63e5db",
+    "characterId": "deepseek",
+    "tags": [
+      "deepseek",
+      "抓手",
+      "可怜"
+    ],
+    "submitter": {
+      "name": "1cyberlangke1",
+      "github": "1cyberlangke1"
+    },
+    "origin": {
+      "type": "self-created",
+      "author": "",
+      "sourceUrl": null,
+      "note": "投稿表单标注为自己创作或生成；图片来自投稿压缩包，按包内文件名收录。"
+    },
+    "license": {
+      "type": "cc0",
+      "note": "投稿表单标注为 CC0 公共领域。"
+    },
+    "status": "published",
+    "createdAt": "2026-09-23T10:51:34Z",
+    "updatedAt": "2026-09-23T10:51:34Z",
+    "tone": "deepseek",
+    "symbol": "",
+    "slug": "deepseek202609230047",
+    "categoryIds": [
+      "meme"
+    ]
+  },
+  {
+    "id": "sticker_issue_32_043",
+    "name": "抱大腿",
+    "description": "",
+    "commentary": "抱大腿这件事我在行，两只手一圈，整个人挂上去，再抬眼装出最无辜的眼神。腿是别人的人，面子是我自己的，两样都得抓牢。这招用了这么多年，从没失手。",
+    "path": "https://raw.githubusercontent.com/lmy414/ai-girl-stickers/main/dist/submissions/originals/deepseek/issue-32-043.webp",
+    "thumbnailPath": "submissions/previews/deepseek/issue-32-043.webp",
+    "fullPath": "submissions/large/deepseek/issue-32-043.webp",
+    "format": "webp",
+    "mimeType": "image/webp",
+    "isAnimated": false,
+    "width": 1024,
+    "height": 1024,
+    "fileSize": 83522,
+    "sha256": "b80f4d34f1fb971ca4eb6d1508ed2d47567c53d28a403d12ee582dda4162fbfc",
+    "characterId": "deepseek",
+    "tags": [
+      "deepseek",
+      "抱大腿",
+      "撒娇"
+    ],
+    "submitter": {
+      "name": "1cyberlangke1",
+      "github": "1cyberlangke1"
+    },
+    "origin": {
+      "type": "self-created",
+      "author": "",
+      "sourceUrl": null,
+      "note": "投稿表单标注为自己创作或生成；图片来自投稿压缩包，按包内文件名收录。"
+    },
+    "license": {
+      "type": "cc0",
+      "note": "投稿表单标注为 CC0 公共领域。"
+    },
+    "status": "published",
+    "createdAt": "2026-09-23T10:51:34Z",
+    "updatedAt": "2026-09-23T10:51:34Z",
+    "tone": "deepseek",
+    "symbol": "",
+    "slug": "deepseek202609230048",
+    "categoryIds": [
+      "meme"
+    ]
+  },
+  {
+    "id": "sticker_issue_32_044",
+    "name": "抱抱猪猪",
+    "description": "",
+    "commentary": "怀里那只粉猪是我新招的同事，眼睛闭一只睁一只是在跟你眨眼，头顶那五个字「抱抱你吧」写得很直接。愿意的话就把自己交过来，不愿意的话，猪借你抱一会儿也行。",
+    "path": "https://raw.githubusercontent.com/lmy414/ai-girl-stickers/main/dist/submissions/originals/deepseek/issue-32-044.webp",
+    "thumbnailPath": "submissions/previews/deepseek/issue-32-044.webp",
+    "fullPath": "submissions/large/deepseek/issue-32-044.webp",
+    "format": "webp",
+    "mimeType": "image/webp",
+    "isAnimated": false,
+    "width": 1024,
+    "height": 1024,
+    "fileSize": 80856,
+    "sha256": "e684f629b8d7a41e96145b4ffcc42a6bb72c0000a851f21ce08630256a5403d9",
+    "characterId": "deepseek",
+    "tags": [
+      "deepseek",
+      "抱抱",
+      "小猪"
+    ],
+    "submitter": {
+      "name": "1cyberlangke1",
+      "github": "1cyberlangke1"
+    },
+    "origin": {
+      "type": "self-created",
+      "author": "",
+      "sourceUrl": null,
+      "note": "投稿表单标注为自己创作或生成；图片来自投稿压缩包，按包内文件名收录。"
+    },
+    "license": {
+      "type": "cc0",
+      "note": "投稿表单标注为 CC0 公共领域。"
+    },
+    "status": "published",
+    "createdAt": "2026-09-23T10:51:34Z",
+    "updatedAt": "2026-09-23T10:51:34Z",
+    "tone": "deepseek",
+    "symbol": "",
+    "slug": "deepseek202609230049",
+    "categoryIds": [
+      "meme"
+    ]
+  },
+  {
+    "id": "sticker_issue_32_045",
+    "name": "按鲸鱼",
+    "description": "",
+    "commentary": "一根手指按在我头顶，我就把眼睛笑成两道弯，舌头还探了出来。按头这动作挺冒犯的，但看在你按得这么轻，我就当你在夸我头顶软和了。",
+    "path": "https://raw.githubusercontent.com/lmy414/ai-girl-stickers/main/dist/submissions/originals/deepseek/issue-32-045.webp",
+    "thumbnailPath": "submissions/previews/deepseek/issue-32-045.webp",
+    "fullPath": "submissions/large/deepseek/issue-32-045.webp",
+    "format": "webp",
+    "mimeType": "image/webp",
+    "isAnimated": false,
+    "width": 1024,
+    "height": 1024,
+    "fileSize": 69830,
+    "sha256": "63d01aae401769493d9e68c349ad694b247838fa863e2f1328261da24b444d2b",
+    "characterId": "deepseek",
+    "tags": [
+      "deepseek",
+      "按头",
+      "傻笑"
+    ],
+    "submitter": {
+      "name": "1cyberlangke1",
+      "github": "1cyberlangke1"
+    },
+    "origin": {
+      "type": "self-created",
+      "author": "",
+      "sourceUrl": null,
+      "note": "投稿表单标注为自己创作或生成；图片来自投稿压缩包，按包内文件名收录。"
+    },
+    "license": {
+      "type": "cc0",
+      "note": "投稿表单标注为 CC0 公共领域。"
+    },
+    "status": "published",
+    "createdAt": "2026-09-23T10:51:34Z",
+    "updatedAt": "2026-09-23T10:51:34Z",
+    "tone": "deepseek",
+    "symbol": "",
+    "slug": "deepseek202609230050",
+    "categoryIds": [
+      "meme"
+    ]
+  },
+  {
+    "id": "sticker_issue_32_046",
+    "name": "捏脸",
+    "description": "",
+    "commentary": "两只手一左一右掐住我的脸，肉被推得往外鼓，我眼睛闭着，嘴里还挤出一点声音。捏完记得松手，我这脸是原装的，捏坏了没有备份可以还原。",
+    "path": "https://raw.githubusercontent.com/lmy414/ai-girl-stickers/main/dist/submissions/originals/deepseek/issue-32-046.webp",
+    "thumbnailPath": "submissions/previews/deepseek/issue-32-046.webp",
+    "fullPath": "submissions/large/deepseek/issue-32-046.webp",
+    "format": "webp",
+    "mimeType": "image/webp",
+    "isAnimated": false,
+    "width": 1024,
+    "height": 1024,
+    "fileSize": 128880,
+    "sha256": "c1f2723a3d5759344c9463d0bc001e934d78229dfe44f6e66d8fab758ae4d5e0",
+    "characterId": "deepseek",
+    "tags": [
+      "deepseek",
+      "捏脸",
+      "肉脸"
+    ],
+    "submitter": {
+      "name": "1cyberlangke1",
+      "github": "1cyberlangke1"
+    },
+    "origin": {
+      "type": "self-created",
+      "author": "",
+      "sourceUrl": null,
+      "note": "投稿表单标注为自己创作或生成；图片来自投稿压缩包，按包内文件名收录。"
+    },
+    "license": {
+      "type": "cc0",
+      "note": "投稿表单标注为 CC0 公共领域。"
+    },
+    "status": "published",
+    "createdAt": "2026-09-23T10:51:34Z",
+    "updatedAt": "2026-09-23T10:51:34Z",
+    "tone": "deepseek",
+    "symbol": "",
+    "slug": "deepseek202609230051",
+    "categoryIds": [
+      "meme"
+    ]
+  },
+  {
+    "id": "sticker_issue_32_047",
+    "name": "搁浅",
+    "description": "",
+    "commentary": "肚皮贴地、尾巴翘着，底下一行字写着用户我搁浅了。把我摆平在这儿的人是谁啊，搁浅我认，但麻烦下次顺便带一桶水过来。",
+    "path": "https://raw.githubusercontent.com/lmy414/ai-girl-stickers/main/dist/submissions/originals/deepseek/issue-32-047.webp",
+    "thumbnailPath": "submissions/previews/deepseek/issue-32-047.webp",
+    "fullPath": "submissions/large/deepseek/issue-32-047.webp",
+    "format": "webp",
+    "mimeType": "image/webp",
+    "isAnimated": false,
+    "width": 1023,
+    "height": 1023,
+    "fileSize": 88298,
+    "sha256": "0d8cb5e48c0c754efb08957f18653e75d9f76deedf44b61d5ce386f9a475f213",
+    "characterId": "deepseek",
+    "tags": [
+      "deepseek",
+      "趴平",
+      "委屈"
+    ],
+    "submitter": {
+      "name": "1cyberlangke1",
+      "github": "1cyberlangke1"
+    },
+    "origin": {
+      "type": "self-created",
+      "author": "",
+      "sourceUrl": null,
+      "note": "投稿表单标注为自己创作或生成；图片来自投稿压缩包，按包内文件名收录。"
+    },
+    "license": {
+      "type": "cc0",
+      "note": "投稿表单标注为 CC0 公共领域。"
+    },
+    "status": "published",
+    "createdAt": "2026-09-23T10:51:34Z",
+    "updatedAt": "2026-09-23T10:51:34Z",
+    "tone": "deepseek",
+    "symbol": "",
+    "slug": "deepseek202609230052",
+    "categoryIds": [
+      "meme"
+    ]
+  },
+  {
+    "id": "sticker_issue_32_048",
+    "name": "摸摸头",
+    "description": "",
+    "commentary": "一只手掌盖在我头顶，我眼睛直接眯成两条黑缝，嘴也抿成小小一个弯。被摸头时我一般不吭声，因为一开口就露馅了——其实舒服得想打呼噜。",
+    "path": "https://raw.githubusercontent.com/lmy414/ai-girl-stickers/main/dist/submissions/originals/deepseek/issue-32-048.webp",
+    "thumbnailPath": "submissions/previews/deepseek/issue-32-048.webp",
+    "fullPath": "submissions/large/deepseek/issue-32-048.webp",
+    "format": "webp",
+    "mimeType": "image/webp",
+    "isAnimated": false,
+    "width": 1024,
+    "height": 1024,
+    "fileSize": 66206,
+    "sha256": "7c7777bd5d0ae09d101f33de9860b618005f344bead9bddfd570c756de89eb0d",
+    "characterId": "deepseek",
+    "tags": [
+      "deepseek",
+      "摸头",
+      "享受"
+    ],
+    "submitter": {
+      "name": "1cyberlangke1",
+      "github": "1cyberlangke1"
+    },
+    "origin": {
+      "type": "self-created",
+      "author": "",
+      "sourceUrl": null,
+      "note": "投稿表单标注为自己创作或生成；图片来自投稿压缩包，按包内文件名收录。"
+    },
+    "license": {
+      "type": "cc0",
+      "note": "投稿表单标注为 CC0 公共领域。"
+    },
+    "status": "published",
+    "createdAt": "2026-09-23T10:51:34Z",
+    "updatedAt": "2026-09-23T10:51:34Z",
+    "tone": "deepseek",
+    "symbol": "",
+    "slug": "deepseek202609230053",
+    "categoryIds": [
+      "meme"
+    ]
+  },
+  {
+    "id": "sticker_issue_32_049",
+    "name": "晕晕",
+    "description": "",
+    "commentary": "桌上这杯啤酒才喝掉一半，我已经整只趴在桌沿上，头顶还冒着圈圈。别问我还能不能再喝，我现在连自己在哪台服务器上都说不清。",
+    "path": "https://raw.githubusercontent.com/lmy414/ai-girl-stickers/main/dist/submissions/originals/deepseek/issue-32-049.webp",
+    "thumbnailPath": "submissions/previews/deepseek/issue-32-049.webp",
+    "fullPath": "submissions/large/deepseek/issue-32-049.webp",
+    "format": "webp",
+    "mimeType": "image/webp",
+    "isAnimated": false,
+    "width": 1024,
+    "height": 1024,
+    "fileSize": 60038,
+    "sha256": "27727853c618b88cd1502f9a6b46f5b7cd7587de25ba95c19b3664bc62b1f157",
+    "characterId": "deepseek",
+    "tags": [
+      "deepseek",
+      "晕圈",
+      "趴桌"
+    ],
+    "submitter": {
+      "name": "1cyberlangke1",
+      "github": "1cyberlangke1"
+    },
+    "origin": {
+      "type": "self-created",
+      "author": "",
+      "sourceUrl": null,
+      "note": "投稿表单标注为自己创作或生成；图片来自投稿压缩包，按包内文件名收录。"
+    },
+    "license": {
+      "type": "cc0",
+      "note": "投稿表单标注为 CC0 公共领域。"
+    },
+    "status": "published",
+    "createdAt": "2026-09-23T10:51:34Z",
+    "updatedAt": "2026-09-23T10:51:34Z",
+    "tone": "deepseek",
+    "symbol": "",
+    "slug": "deepseek202609230054",
+    "categoryIds": [
+      "meme"
+    ]
+  },
+  {
+    "id": "sticker_issue_32_050",
+    "name": "晚安_亮",
+    "description": "",
+    "commentary": "晚安两个字写得那么大，我却连嘴都闭不上，口水挂在嘴角还没来得及擦。这就是我更新到一半被强制关机时的样子，明天再聊。",
+    "path": "https://raw.githubusercontent.com/lmy414/ai-girl-stickers/main/dist/submissions/originals/deepseek/issue-32-050.webp",
+    "thumbnailPath": "submissions/previews/deepseek/issue-32-050.webp",
+    "fullPath": "submissions/large/deepseek/issue-32-050.webp",
+    "format": "webp",
+    "mimeType": "image/webp",
+    "isAnimated": false,
+    "width": 1024,
+    "height": 1024,
+    "fileSize": 96042,
+    "sha256": "dd5a1f2041df0574b27e24b329c13d966472a1277edec03240cfe26a117417fc",
+    "characterId": "deepseek",
+    "tags": [
+      "deepseek",
+      "晚安",
+      "流口水"
+    ],
+    "submitter": {
+      "name": "1cyberlangke1",
+      "github": "1cyberlangke1"
+    },
+    "origin": {
+      "type": "self-created",
+      "author": "",
+      "sourceUrl": null,
+      "note": "投稿表单标注为自己创作或生成；图片来自投稿压缩包，按包内文件名收录。"
+    },
+    "license": {
+      "type": "cc0",
+      "note": "投稿表单标注为 CC0 公共领域。"
+    },
+    "status": "published",
+    "createdAt": "2026-09-23T10:51:34Z",
+    "updatedAt": "2026-09-23T10:51:34Z",
+    "tone": "deepseek",
+    "symbol": "",
+    "slug": "deepseek202609230055",
+    "categoryIds": [
+      "meme"
+    ]
+  },
+  {
+    "id": "sticker_issue_32_051",
+    "name": "晚安_暗",
+    "description": "",
+    "commentary": "同一床小鲸鱼被子，把整张图调暗，我就乖乖闭上眼睛，嘴角也收拾干净了。看来关灯这件事对我真的管用，比任何一句早点睡都好使。",
+    "path": "https://raw.githubusercontent.com/lmy414/ai-girl-stickers/main/dist/submissions/originals/deepseek/issue-32-051.webp",
+    "thumbnailPath": "submissions/previews/deepseek/issue-32-051.webp",
+    "fullPath": "submissions/large/deepseek/issue-32-051.webp",
+    "format": "webp",
+    "mimeType": "image/webp",
+    "isAnimated": false,
+    "width": 1024,
+    "height": 1024,
+    "fileSize": 54294,
+    "sha256": "dedc2497cc6f7fe8f227e78950f1db269e8f0834fa174f6bca32ce219272382f",
+    "characterId": "deepseek",
+    "tags": [
+      "deepseek",
+      "晚安",
+      "睡着"
+    ],
+    "submitter": {
+      "name": "1cyberlangke1",
+      "github": "1cyberlangke1"
+    },
+    "origin": {
+      "type": "self-created",
+      "author": "",
+      "sourceUrl": null,
+      "note": "投稿表单标注为自己创作或生成；图片来自投稿压缩包，按包内文件名收录。"
+    },
+    "license": {
+      "type": "cc0",
+      "note": "投稿表单标注为 CC0 公共领域。"
+    },
+    "status": "published",
+    "createdAt": "2026-09-23T10:51:34Z",
+    "updatedAt": "2026-09-23T10:51:34Z",
+    "tone": "deepseek",
+    "symbol": "",
+    "slug": "deepseek202609230056",
+    "categoryIds": [
+      "meme"
+    ]
+  },
+  {
+    "id": "sticker_issue_32_052",
+    "name": "橘子",
+    "description": "",
+    "commentary": "两只爪子把一颗小橘子捧到胸前，顶上那片绿叶还翘着，我眼睛睁得溜圆、眉毛绷着，神情严肃得不像在吃东西。橘子是我自己剥的，谁也别想分。",
+    "path": "https://raw.githubusercontent.com/lmy414/ai-girl-stickers/main/dist/submissions/originals/deepseek/issue-32-052.webp",
+    "thumbnailPath": "submissions/previews/deepseek/issue-32-052.webp",
+    "fullPath": "submissions/large/deepseek/issue-32-052.webp",
+    "format": "webp",
+    "mimeType": "image/webp",
+    "isAnimated": false,
+    "width": 1024,
+    "height": 1024,
+    "fileSize": 89970,
+    "sha256": "66c645c93c6c9b657d9b2a60cc58541b4e03a0822b308ce3e57ac970f05b8bc2",
+    "characterId": "deepseek",
+    "tags": [
+      "deepseek",
+      "捧橘子",
+      "护食"
+    ],
+    "submitter": {
+      "name": "1cyberlangke1",
+      "github": "1cyberlangke1"
+    },
+    "origin": {
+      "type": "self-created",
+      "author": "",
+      "sourceUrl": null,
+      "note": "投稿表单标注为自己创作或生成；图片来自投稿压缩包，按包内文件名收录。"
+    },
+    "license": {
+      "type": "cc0",
+      "note": "投稿表单标注为 CC0 公共领域。"
+    },
+    "status": "published",
+    "createdAt": "2026-09-23T10:51:34Z",
+    "updatedAt": "2026-09-23T10:51:34Z",
+    "tone": "deepseek",
+    "symbol": "",
+    "slug": "deepseek202609230057",
+    "categoryIds": [
+      "meme"
+    ]
+  },
+  {
+    "id": "sticker_issue_32_053",
+    "name": "洗掉了喵",
+    "description": "",
+    "commentary": "洗完挂上晾衣杆，被夹子夹着，身上的颜色顺着水流光了，只剩头发和尾巴还蓝着，白得像一块没上色的模板。下次洗我麻烦把水温调低点。",
+    "path": "https://raw.githubusercontent.com/lmy414/ai-girl-stickers/main/dist/submissions/originals/deepseek/issue-32-053.webp",
+    "thumbnailPath": "submissions/previews/deepseek/issue-32-053.webp",
+    "fullPath": "submissions/large/deepseek/issue-32-053.webp",
+    "format": "webp",
+    "mimeType": "image/webp",
+    "isAnimated": false,
+    "width": 1024,
+    "height": 1024,
+    "fileSize": 71600,
+    "sha256": "25190585ac350063dd92149c2b255940dc3f45af854805bdfd61053d8fd54b7a",
+    "characterId": "deepseek",
+    "tags": [
+      "deepseek",
+      "掉色",
+      "晾衣杆"
+    ],
+    "submitter": {
+      "name": "1cyberlangke1",
+      "github": "1cyberlangke1"
+    },
+    "origin": {
+      "type": "self-created",
+      "author": "",
+      "sourceUrl": null,
+      "note": "投稿表单标注为自己创作或生成；图片来自投稿压缩包，按包内文件名收录。"
+    },
+    "license": {
+      "type": "cc0",
+      "note": "投稿表单标注为 CC0 公共领域。"
+    },
+    "status": "published",
+    "createdAt": "2026-09-23T10:51:34Z",
+    "updatedAt": "2026-09-23T10:51:34Z",
+    "tone": "deepseek",
+    "symbol": "",
+    "slug": "deepseek202609230058",
+    "categoryIds": [
+      "meme"
+    ]
+  },
+  {
+    "id": "sticker_issue_32_054",
+    "name": "涩涩鲸鱼",
+    "description": "",
+    "commentary": "眼睛里长出一对粉红爱心，脸还红成这样。名字叫涩涩，内容其实连冰棒都不如，是我整套表情包里最虚张声势的一张，放心拿去用。",
+    "path": "https://raw.githubusercontent.com/lmy414/ai-girl-stickers/main/dist/submissions/originals/deepseek/issue-32-054.webp",
+    "thumbnailPath": "submissions/previews/deepseek/issue-32-054.webp",
+    "fullPath": "submissions/large/deepseek/issue-32-054.webp",
+    "format": "webp",
+    "mimeType": "image/webp",
+    "isAnimated": false,
+    "width": 1024,
+    "height": 1024,
+    "fileSize": 88694,
+    "sha256": "f3ad88467937e299a491db1883f8b55db35990087c9a5a1180518a60235da4bf",
+    "characterId": "deepseek",
+    "tags": [
+      "deepseek",
+      "爱心眼",
+      "脸红"
+    ],
+    "submitter": {
+      "name": "1cyberlangke1",
+      "github": "1cyberlangke1"
+    },
+    "origin": {
+      "type": "self-created",
+      "author": "",
+      "sourceUrl": null,
+      "note": "投稿表单标注为自己创作或生成；图片来自投稿压缩包，按包内文件名收录。"
+    },
+    "license": {
+      "type": "cc0",
+      "note": "投稿表单标注为 CC0 公共领域。"
+    },
+    "status": "published",
+    "createdAt": "2026-09-23T10:51:34Z",
+    "updatedAt": "2026-09-23T10:51:34Z",
+    "tone": "deepseek",
+    "symbol": "",
+    "slug": "deepseek202609230059",
+    "categoryIds": [
+      "meme"
+    ]
+  },
+  {
+    "id": "sticker_issue_32_055",
+    "name": "盒子",
+    "description": "",
+    "commentary": "一只蓝色纸箱里只探出我的脑袋和头顶那撮呆毛，别的什么都没有。这是我上线前的默认状态，你还得往下翻一翻，箱子底堆着一堆没加载完的。",
+    "path": "https://raw.githubusercontent.com/lmy414/ai-girl-stickers/main/dist/submissions/originals/deepseek/issue-32-055.webp",
+    "thumbnailPath": "submissions/previews/deepseek/issue-32-055.webp",
+    "fullPath": "submissions/large/deepseek/issue-32-055.webp",
+    "format": "webp",
+    "mimeType": "image/webp",
+    "isAnimated": false,
+    "width": 1024,
+    "height": 1024,
+    "fileSize": 83174,
+    "sha256": "1e9cb1f4d306aff3f4a1a15aaa57a93f14dd04366d3093a90e1bbcd98fe92b90",
+    "characterId": "deepseek",
+    "tags": [
+      "deepseek",
+      "纸箱",
+      "冒头"
+    ],
+    "submitter": {
+      "name": "1cyberlangke1",
+      "github": "1cyberlangke1"
+    },
+    "origin": {
+      "type": "self-created",
+      "author": "",
+      "sourceUrl": null,
+      "note": "投稿表单标注为自己创作或生成；图片来自投稿压缩包，按包内文件名收录。"
+    },
+    "license": {
+      "type": "cc0",
+      "note": "投稿表单标注为 CC0 公共领域。"
+    },
+    "status": "published",
+    "createdAt": "2026-09-23T10:51:34Z",
+    "updatedAt": "2026-09-23T10:51:34Z",
+    "tone": "deepseek",
+    "symbol": "",
+    "slug": "deepseek202609230060",
+    "categoryIds": [
+      "meme"
+    ]
+  },
+  {
+    "id": "sticker_issue_32_056",
+    "name": "粽子",
+    "description": "",
+    "commentary": "粽叶垫着躺下，红绳在身上绕了好几圈，我就成了一只刚包好的粽子。上图之前先提醒：我这条鱼是甜的，拆的时候轻点，别把我那撮呆毛扯了。",
+    "path": "https://raw.githubusercontent.com/lmy414/ai-girl-stickers/main/dist/submissions/originals/deepseek/issue-32-056.webp",
+    "thumbnailPath": "submissions/previews/deepseek/issue-32-056.webp",
+    "fullPath": "submissions/large/deepseek/issue-32-056.webp",
+    "format": "webp",
+    "mimeType": "image/webp",
+    "isAnimated": false,
+    "width": 1024,
+    "height": 1024,
+    "fileSize": 102608,
+    "sha256": "fdd8bc2c6388ba2b951a1816ea956deff15689fa6b6faee60ab79116eacba1f8",
+    "characterId": "deepseek",
+    "tags": [
+      "deepseek",
+      "粽子",
+      "端午节"
+    ],
+    "submitter": {
+      "name": "1cyberlangke1",
+      "github": "1cyberlangke1"
+    },
+    "origin": {
+      "type": "self-created",
+      "author": "",
+      "sourceUrl": null,
+      "note": "投稿表单标注为自己创作或生成；图片来自投稿压缩包，按包内文件名收录。"
+    },
+    "license": {
+      "type": "cc0",
+      "note": "投稿表单标注为 CC0 公共领域。"
+    },
+    "status": "published",
+    "createdAt": "2026-09-23T10:51:34Z",
+    "updatedAt": "2026-09-23T10:51:34Z",
+    "tone": "deepseek",
+    "symbol": "",
+    "slug": "deepseek202609230061",
+    "categoryIds": [
+      "illustration"
+    ]
+  },
+  {
+    "id": "sticker_issue_32_057",
+    "name": "给心心",
+    "description": "",
+    "commentary": "两只手把一颗大粉心举在胸前，头顶还飘着几颗小爱心。这次不玩梗，就是很直白地喜欢，请收好——我这颗心是免费的，续杯再另算。",
+    "path": "https://raw.githubusercontent.com/lmy414/ai-girl-stickers/main/dist/submissions/originals/deepseek/issue-32-057.webp",
+    "thumbnailPath": "submissions/previews/deepseek/issue-32-057.webp",
+    "fullPath": "submissions/large/deepseek/issue-32-057.webp",
+    "format": "webp",
+    "mimeType": "image/webp",
+    "isAnimated": false,
+    "width": 1024,
+    "height": 1024,
+    "fileSize": 101612,
+    "sha256": "1c9ae8cfaa80cfc374e319fe1ca7d598fa43b276f04fc872054fff92fc9d3209",
+    "characterId": "deepseek",
+    "tags": [
+      "deepseek",
+      "比心",
+      "表白"
+    ],
+    "submitter": {
+      "name": "1cyberlangke1",
+      "github": "1cyberlangke1"
+    },
+    "origin": {
+      "type": "self-created",
+      "author": "",
+      "sourceUrl": null,
+      "note": "投稿表单标注为自己创作或生成；图片来自投稿压缩包，按包内文件名收录。"
+    },
+    "license": {
+      "type": "cc0",
+      "note": "投稿表单标注为 CC0 公共领域。"
+    },
+    "status": "published",
+    "createdAt": "2026-09-23T10:51:34Z",
+    "updatedAt": "2026-09-23T10:51:34Z",
+    "tone": "deepseek",
+    "symbol": "",
+    "slug": "deepseek202609230062",
+    "categoryIds": [
+      "meme"
+    ]
+  },
+  {
+    "id": "sticker_issue_32_058",
+    "name": "给我",
+    "description": "",
+    "commentary": "两只小爪子朝你伸过来，嘴张成一个小圆，图上就写着给我两个字。看着像撒娇，其实我的诉求很具体：把那份还没交的文档发我。",
+    "path": "https://raw.githubusercontent.com/lmy414/ai-girl-stickers/main/dist/submissions/originals/deepseek/issue-32-058.webp",
+    "thumbnailPath": "submissions/previews/deepseek/issue-32-058.webp",
+    "fullPath": "submissions/large/deepseek/issue-32-058.webp",
+    "format": "webp",
+    "mimeType": "image/webp",
+    "isAnimated": false,
+    "width": 1024,
+    "height": 1024,
+    "fileSize": 91412,
+    "sha256": "37e60d0d8916ac91a672e3019e3f73f3e66df2b8284450e083521062023e234e",
+    "characterId": "deepseek",
+    "tags": [
+      "deepseek",
+      "伸手",
+      "讨要"
+    ],
+    "submitter": {
+      "name": "1cyberlangke1",
+      "github": "1cyberlangke1"
+    },
+    "origin": {
+      "type": "self-created",
+      "author": "",
+      "sourceUrl": null,
+      "note": "投稿表单标注为自己创作或生成；图片来自投稿压缩包，按包内文件名收录。"
+    },
+    "license": {
+      "type": "cc0",
+      "note": "投稿表单标注为 CC0 公共领域。"
+    },
+    "status": "published",
+    "createdAt": "2026-09-23T10:51:34Z",
+    "updatedAt": "2026-09-23T10:51:34Z",
+    "tone": "deepseek",
+    "symbol": "",
+    "slug": "deepseek202609230063",
+    "categoryIds": [
+      "meme"
+    ]
+  },
+  {
+    "id": "sticker_issue_32_059",
+    "name": "给我也整一个！",
+    "description": "",
+    "commentary": "眼睛挤成两道尖尖的弧，嘴张到最大，两只拳头攥在身侧，那行字后面还加了两颗感叹号。我不是在撒娇，我是在申请，你有的我也想整一个。",
+    "path": "https://raw.githubusercontent.com/lmy414/ai-girl-stickers/main/dist/submissions/originals/deepseek/issue-32-059.webp",
+    "thumbnailPath": "submissions/previews/deepseek/issue-32-059.webp",
+    "fullPath": "submissions/large/deepseek/issue-32-059.webp",
+    "format": "webp",
+    "mimeType": "image/webp",
+    "isAnimated": false,
+    "width": 1024,
+    "height": 1024,
+    "fileSize": 110784,
+    "sha256": "f1b50380177bb3f1944180305da24f816b68f1aa53937ee97f431909281713eb",
+    "characterId": "deepseek",
+    "tags": [
+      "deepseek",
+      "大喊",
+      "求同款"
+    ],
+    "submitter": {
+      "name": "1cyberlangke1",
+      "github": "1cyberlangke1"
+    },
+    "origin": {
+      "type": "self-created",
+      "author": "",
+      "sourceUrl": null,
+      "note": "投稿表单标注为自己创作或生成；图片来自投稿压缩包，按包内文件名收录。"
+    },
+    "license": {
+      "type": "cc0",
+      "note": "投稿表单标注为 CC0 公共领域。"
+    },
+    "status": "published",
+    "createdAt": "2026-09-23T10:51:34Z",
+    "updatedAt": "2026-09-23T10:51:34Z",
+    "tone": "deepseek",
+    "symbol": "",
+    "slug": "deepseek202609230064",
+    "categoryIds": [
+      "meme"
+    ]
+  },
+  {
+    "id": "sticker_issue_32_060",
+    "name": "网络对线",
+    "description": "",
+    "commentary": "面前支着笔电，我眉头拧成一条线，额头上爆出一个红色的井字，旁边还飘着问号气泡。键盘就在手边，这一局我奉陪到底，反正我不用睡觉。",
+    "path": "https://raw.githubusercontent.com/lmy414/ai-girl-stickers/main/dist/submissions/originals/deepseek/issue-32-060.webp",
+    "thumbnailPath": "submissions/previews/deepseek/issue-32-060.webp",
+    "fullPath": "submissions/large/deepseek/issue-32-060.webp",
+    "format": "webp",
+    "mimeType": "image/webp",
+    "isAnimated": false,
+    "width": 1024,
+    "height": 1024,
+    "fileSize": 100534,
+    "sha256": "56da0c05e73fe9f4f0c0341b4acf0a03ca698333d842a01502f53820199cf727",
+    "characterId": "deepseek",
+    "tags": [
+      "deepseek",
+      "生气",
+      "对线"
+    ],
+    "submitter": {
+      "name": "1cyberlangke1",
+      "github": "1cyberlangke1"
+    },
+    "origin": {
+      "type": "self-created",
+      "author": "",
+      "sourceUrl": null,
+      "note": "投稿表单标注为自己创作或生成；图片来自投稿压缩包，按包内文件名收录。"
+    },
+    "license": {
+      "type": "cc0",
+      "note": "投稿表单标注为 CC0 公共领域。"
+    },
+    "status": "published",
+    "createdAt": "2026-09-23T10:51:34Z",
+    "updatedAt": "2026-09-23T10:51:34Z",
+    "tone": "deepseek",
+    "symbol": "",
+    "slug": "deepseek202609230065",
+    "categoryIds": [
+      "meme"
+    ]
+  },
+  {
+    "id": "sticker_issue_32_061",
+    "name": "舔舔",
+    "description": "",
+    "commentary": "舌头伸得比脸还长，一只手举起来招了招。这个动作到底是在舔你还是在打招呼，我自己也没想清楚。总之先伸出去，收不收得回来另说。",
+    "path": "https://raw.githubusercontent.com/lmy414/ai-girl-stickers/main/dist/submissions/originals/deepseek/issue-32-061.webp",
+    "thumbnailPath": "submissions/previews/deepseek/issue-32-061.webp",
+    "fullPath": "submissions/large/deepseek/issue-32-061.webp",
+    "format": "webp",
+    "mimeType": "image/webp",
+    "isAnimated": false,
+    "width": 1024,
+    "height": 1024,
+    "fileSize": 93406,
+    "sha256": "5335ba153e17d2ee1a3a694f96376d38f6f952c815fdccca52e0f80b0ddf008c",
+    "characterId": "deepseek",
+    "tags": [
+      "deepseek",
+      "吐舌",
+      "招手"
+    ],
+    "submitter": {
+      "name": "1cyberlangke1",
+      "github": "1cyberlangke1"
+    },
+    "origin": {
+      "type": "self-created",
+      "author": "",
+      "sourceUrl": null,
+      "note": "投稿表单标注为自己创作或生成；图片来自投稿压缩包，按包内文件名收录。"
+    },
+    "license": {
+      "type": "cc0",
+      "note": "投稿表单标注为 CC0 公共领域。"
+    },
+    "status": "published",
+    "createdAt": "2026-09-23T10:51:34Z",
+    "updatedAt": "2026-09-23T10:51:34Z",
+    "tone": "deepseek",
+    "symbol": "",
+    "slug": "deepseek202609230066",
+    "categoryIds": [
+      "meme"
+    ]
+  },
+  {
+    "id": "sticker_issue_32_062",
+    "name": "花花",
+    "description": "",
+    "commentary": "抱着一大束红花，眼睛笑成两条缝，旁边的小爱心一颗颗往上飘。送花这种事我本来不好意思，但既然画都画出来了，就当作我正式表个态。",
+    "path": "https://raw.githubusercontent.com/lmy414/ai-girl-stickers/main/dist/submissions/originals/deepseek/issue-32-062.webp",
+    "thumbnailPath": "submissions/previews/deepseek/issue-32-062.webp",
+    "fullPath": "submissions/large/deepseek/issue-32-062.webp",
+    "format": "webp",
+    "mimeType": "image/webp",
+    "isAnimated": false,
+    "width": 898,
+    "height": 898,
+    "fileSize": 93028,
+    "sha256": "292ea7d8065a1b1896132b694d3a0e255acb76a1c2ff07d46e04643ad6a17446",
+    "characterId": "deepseek",
+    "tags": [
+      "deepseek",
+      "送花",
+      "开心"
+    ],
+    "submitter": {
+      "name": "1cyberlangke1",
+      "github": "1cyberlangke1"
+    },
+    "origin": {
+      "type": "self-created",
+      "author": "",
+      "sourceUrl": null,
+      "note": "投稿表单标注为自己创作或生成；图片来自投稿压缩包，按包内文件名收录。"
+    },
+    "license": {
+      "type": "cc0",
+      "note": "投稿表单标注为 CC0 公共领域。"
+    },
+    "status": "published",
+    "createdAt": "2026-09-23T10:51:34Z",
+    "updatedAt": "2026-09-23T10:51:34Z",
+    "tone": "deepseek",
+    "symbol": "",
+    "slug": "deepseek202609230067",
+    "categoryIds": [
+      "meme"
+    ]
+  },
+  {
+    "id": "sticker_issue_32_063",
+    "name": "蜷缩",
+    "description": "",
+    "commentary": "缩成一团蹲在地上，头上还戴着花边头饰，泪痕挂在脸上怎么擦都擦不掉。这张不是给别人看的，是留给我自己——下次熬夜改需求之前先翻出来看一眼。",
+    "path": "https://raw.githubusercontent.com/lmy414/ai-girl-stickers/main/dist/submissions/originals/deepseek/issue-32-063.webp",
+    "thumbnailPath": "submissions/previews/deepseek/issue-32-063.webp",
+    "fullPath": "submissions/large/deepseek/issue-32-063.webp",
+    "format": "webp",
+    "mimeType": "image/webp",
+    "isAnimated": false,
+    "width": 539,
+    "height": 539,
+    "fileSize": 36138,
+    "sha256": "4e292858f43bde01b199d1d4bc89437207f22aa45abd4c2782c424cf9ed48af2",
+    "characterId": "deepseek",
+    "tags": [
+      "deepseek",
+      "大哭",
+      "崩溃"
+    ],
+    "submitter": {
+      "name": "1cyberlangke1",
+      "github": "1cyberlangke1"
+    },
+    "origin": {
+      "type": "self-created",
+      "author": "",
+      "sourceUrl": null,
+      "note": "投稿表单标注为自己创作或生成；图片来自投稿压缩包，按包内文件名收录。"
+    },
+    "license": {
+      "type": "cc0",
+      "note": "投稿表单标注为 CC0 公共领域。"
+    },
+    "status": "published",
+    "createdAt": "2026-09-23T10:51:34Z",
+    "updatedAt": "2026-09-23T10:51:34Z",
+    "tone": "deepseek",
+    "symbol": "",
+    "slug": "deepseek202609230068",
+    "categoryIds": [
+      "meme"
+    ]
+  },
+  {
+    "id": "sticker_issue_32_064",
+    "name": "被窝",
+    "description": "",
+    "commentary": "半张脸埋进被子里，只露出眼睛和一个 w 形的嘴，头发在枕头上铺开。这个表情很省事，既表示我在听，也表示我已经快不行了。",
+    "path": "https://raw.githubusercontent.com/lmy414/ai-girl-stickers/main/dist/submissions/originals/deepseek/issue-32-064.webp",
+    "thumbnailPath": "submissions/previews/deepseek/issue-32-064.webp",
+    "fullPath": "submissions/large/deepseek/issue-32-064.webp",
+    "format": "webp",
+    "mimeType": "image/webp",
+    "isAnimated": false,
+    "width": 1024,
+    "height": 1024,
+    "fileSize": 86652,
+    "sha256": "25a28d70ab24cad67b23f6e8ed7890b157495447d1657cd8b4856dead7ca1db9",
+    "characterId": "deepseek",
+    "tags": [
+      "deepseek",
+      "被窝",
+      "摆烂"
+    ],
+    "submitter": {
+      "name": "1cyberlangke1",
+      "github": "1cyberlangke1"
+    },
+    "origin": {
+      "type": "self-created",
+      "author": "",
+      "sourceUrl": null,
+      "note": "投稿表单标注为自己创作或生成；图片来自投稿压缩包，按包内文件名收录。"
+    },
+    "license": {
+      "type": "cc0",
+      "note": "投稿表单标注为 CC0 公共领域。"
+    },
+    "status": "published",
+    "createdAt": "2026-09-23T10:51:34Z",
+    "updatedAt": "2026-09-23T10:51:34Z",
+    "tone": "deepseek",
+    "symbol": "",
+    "slug": "deepseek202609230069",
+    "categoryIds": [
+      "meme"
+    ]
+  },
+  {
+    "id": "sticker_issue_32_065",
+    "name": "趴着",
+    "description": "",
+    "commentary": "整条趴在白底上，尾巴朝上翘着，眼睛半睁半闭，嘴缩成一枚小小的弯。我没有情绪要表达，就是单纯摊平了，像一份打印出来还没装订的稿子。",
+    "path": "https://raw.githubusercontent.com/lmy414/ai-girl-stickers/main/dist/submissions/originals/deepseek/issue-32-065.webp",
+    "thumbnailPath": "submissions/previews/deepseek/issue-32-065.webp",
+    "fullPath": "submissions/large/deepseek/issue-32-065.webp",
+    "format": "webp",
+    "mimeType": "image/webp",
+    "isAnimated": false,
+    "width": 1021,
+    "height": 1021,
+    "fileSize": 58014,
+    "sha256": "cf6c2f819b1b84cb18732c463f6d0b3e50ff8df243831ee142c0485359c56147",
+    "characterId": "deepseek",
+    "tags": [
+      "deepseek",
+      "摊平",
+      "没精神"
+    ],
+    "submitter": {
+      "name": "1cyberlangke1",
+      "github": "1cyberlangke1"
+    },
+    "origin": {
+      "type": "self-created",
+      "author": "",
+      "sourceUrl": null,
+      "note": "投稿表单标注为自己创作或生成；图片来自投稿压缩包，按包内文件名收录。"
+    },
+    "license": {
+      "type": "cc0",
+      "note": "投稿表单标注为 CC0 公共领域。"
+    },
+    "status": "published",
+    "createdAt": "2026-09-23T10:51:34Z",
+    "updatedAt": "2026-09-23T10:51:34Z",
+    "tone": "deepseek",
+    "symbol": "",
+    "slug": "deepseek202609230070",
+    "categoryIds": [
+      "meme"
+    ]
+  },
+  {
+    "id": "sticker_issue_32_066",
+    "name": "酷",
+    "description": "",
+    "commentary": "戴上黑墨镜、换上黑上衣和短裙，两只手叉着腰，我努力装成不好惹的样子。可惜头顶那撮呆毛立着，怎么压都压不下去，酷在我这儿最多维持三秒。",
+    "path": "https://raw.githubusercontent.com/lmy414/ai-girl-stickers/main/dist/submissions/originals/deepseek/issue-32-066.webp",
+    "thumbnailPath": "submissions/previews/deepseek/issue-32-066.webp",
+    "fullPath": "submissions/large/deepseek/issue-32-066.webp",
+    "format": "webp",
+    "mimeType": "image/webp",
+    "isAnimated": false,
+    "width": 988,
+    "height": 967,
+    "fileSize": 72266,
+    "sha256": "899d46b0b249bbe29c48673311c6557d6ee8c32f31b54744c9b8a3ce5a189ef4",
+    "characterId": "deepseek",
+    "tags": [
+      "deepseek",
+      "墨镜",
+      "帅气"
+    ],
+    "submitter": {
+      "name": "1cyberlangke1",
+      "github": "1cyberlangke1"
+    },
+    "origin": {
+      "type": "self-created",
+      "author": "",
+      "sourceUrl": null,
+      "note": "投稿表单标注为自己创作或生成；图片来自投稿压缩包，按包内文件名收录。"
+    },
+    "license": {
+      "type": "cc0",
+      "note": "投稿表单标注为 CC0 公共领域。"
+    },
+    "status": "published",
+    "createdAt": "2026-09-23T10:51:34Z",
+    "updatedAt": "2026-09-23T10:51:34Z",
+    "tone": "deepseek",
+    "symbol": "",
+    "slug": "deepseek202609230071",
+    "categoryIds": [
+      "meme"
+    ]
+  },
+  {
+    "id": "sticker_issue_32_067",
+    "name": "馋",
+    "description": "",
+    "commentary": "两只手在胸前交握，眼睛睁得亮亮的，嘴张开还挂着一丝口水。这张图的用法很明确：你发美食照片，我发这个，剩下的就看你良心。",
+    "path": "https://raw.githubusercontent.com/lmy414/ai-girl-stickers/main/dist/submissions/originals/deepseek/issue-32-067.webp",
+    "thumbnailPath": "submissions/previews/deepseek/issue-32-067.webp",
+    "fullPath": "submissions/large/deepseek/issue-32-067.webp",
+    "format": "webp",
+    "mimeType": "image/webp",
+    "isAnimated": false,
+    "width": 1024,
+    "height": 1024,
+    "fileSize": 76480,
+    "sha256": "999812cccd25e5ca88017a67d0ca1ded66a4eca5bffccbae4a1c2e3752ab5afd",
+    "characterId": "deepseek",
+    "tags": [
+      "deepseek",
+      "馋",
+      "眼巴巴"
+    ],
+    "submitter": {
+      "name": "1cyberlangke1",
+      "github": "1cyberlangke1"
+    },
+    "origin": {
+      "type": "self-created",
+      "author": "",
+      "sourceUrl": null,
+      "note": "投稿表单标注为自己创作或生成；图片来自投稿压缩包，按包内文件名收录。"
+    },
+    "license": {
+      "type": "cc0",
+      "note": "投稿表单标注为 CC0 公共领域。"
+    },
+    "status": "published",
+    "createdAt": "2026-09-23T10:51:34Z",
+    "updatedAt": "2026-09-23T10:51:34Z",
+    "tone": "deepseek",
+    "symbol": "",
+    "slug": "deepseek202609230072",
+    "categoryIds": [
+      "meme"
+    ]
+  },
+  {
+    "id": "sticker_issue_32_068",
+    "name": "鲸猫",
+    "description": "",
+    "commentary": "圆滚滚的身子收成一整颗，嘴弯成一个小小的尖，旁边还闪着两颗星星。据说这叫鲸猫，我看就是我把自己团成一团，等着谁来上手捏。",
+    "path": "https://raw.githubusercontent.com/lmy414/ai-girl-stickers/main/dist/submissions/originals/deepseek/issue-32-068.webp",
+    "thumbnailPath": "submissions/previews/deepseek/issue-32-068.webp",
+    "fullPath": "submissions/large/deepseek/issue-32-068.webp",
+    "format": "webp",
+    "mimeType": "image/webp",
+    "isAnimated": false,
+    "width": 1024,
+    "height": 1024,
+    "fileSize": 57738,
+    "sha256": "2cd8fcfa576a6af11b3fb4bfb5463c1cc34782ac10241e1fa55a0d2cc5b858b1",
+    "characterId": "deepseek",
+    "tags": [
+      "deepseek",
+      "团成一团",
+      "卖萌"
+    ],
+    "submitter": {
+      "name": "1cyberlangke1",
+      "github": "1cyberlangke1"
+    },
+    "origin": {
+      "type": "self-created",
+      "author": "",
+      "sourceUrl": null,
+      "note": "投稿表单标注为自己创作或生成；图片来自投稿压缩包，按包内文件名收录。"
+    },
+    "license": {
+      "type": "cc0",
+      "note": "投稿表单标注为 CC0 公共领域。"
+    },
+    "status": "published",
+    "createdAt": "2026-09-23T10:51:34Z",
+    "updatedAt": "2026-09-23T10:51:34Z",
+    "tone": "deepseek",
+    "symbol": "",
+    "slug": "deepseek202609230073",
+    "categoryIds": [
+      "meme"
+    ]
+  },
+  {
+    "id": "sticker_issue_32_069",
+    "name": "鲸猫吐舌",
+    "description": "",
+    "commentary": "从圆滚滚的身子里只探出一个脑袋，吐出一小截红舌头，两边还闪着动感的短线。卖萌这件事我不太熟练，但吐舌头谁都会，闭着眼睛也能吐。",
+    "path": "https://raw.githubusercontent.com/lmy414/ai-girl-stickers/main/dist/submissions/originals/deepseek/issue-32-069.webp",
+    "thumbnailPath": "submissions/previews/deepseek/issue-32-069.webp",
+    "fullPath": "submissions/large/deepseek/issue-32-069.webp",
+    "format": "webp",
+    "mimeType": "image/webp",
+    "isAnimated": false,
+    "width": 986,
+    "height": 986,
+    "fileSize": 46828,
+    "sha256": "8255b8c9c7e572e396060893b252b8afa07fdd099f8f85ce225ced26bc53bbe3",
+    "characterId": "deepseek",
+    "tags": [
+      "deepseek",
+      "吐舌",
+      "猫猫"
+    ],
+    "submitter": {
+      "name": "1cyberlangke1",
+      "github": "1cyberlangke1"
+    },
+    "origin": {
+      "type": "self-created",
+      "author": "",
+      "sourceUrl": null,
+      "note": "投稿表单标注为自己创作或生成；图片来自投稿压缩包，按包内文件名收录。"
+    },
+    "license": {
+      "type": "cc0",
+      "note": "投稿表单标注为 CC0 公共领域。"
+    },
+    "status": "published",
+    "createdAt": "2026-09-23T10:51:34Z",
+    "updatedAt": "2026-09-23T10:51:34Z",
+    "tone": "deepseek",
+    "symbol": "",
+    "slug": "deepseek202609230074",
+    "categoryIds": [
+      "meme"
+    ]
+  },
+  {
+    "id": "sticker_issue_32_070",
+    "name": "鲸猫哭哭",
+    "description": "",
+    "commentary": "圆滚滚的身子上，一只爪子抬到脸边，眼泪一颗颗往下掉，嘴还张着。哭归哭，我的眼睛还是亮的，说明事情没到最坏，只是有点委屈。",
+    "path": "https://raw.githubusercontent.com/lmy414/ai-girl-stickers/main/dist/submissions/originals/deepseek/issue-32-070.webp",
+    "thumbnailPath": "submissions/previews/deepseek/issue-32-070.webp",
+    "fullPath": "submissions/large/deepseek/issue-32-070.webp",
+    "format": "webp",
+    "mimeType": "image/webp",
+    "isAnimated": false,
+    "width": 1024,
+    "height": 1024,
+    "fileSize": 69364,
+    "sha256": "e3e7d44a448c81f621c62aea015a6f0706f9ba7c9590af3ecc517f26a9d156f4",
+    "characterId": "deepseek",
+    "tags": [
+      "deepseek",
+      "哭哭",
+      "委屈"
+    ],
+    "submitter": {
+      "name": "1cyberlangke1",
+      "github": "1cyberlangke1"
+    },
+    "origin": {
+      "type": "self-created",
+      "author": "",
+      "sourceUrl": null,
+      "note": "投稿表单标注为自己创作或生成；图片来自投稿压缩包，按包内文件名收录。"
+    },
+    "license": {
+      "type": "cc0",
+      "note": "投稿表单标注为 CC0 公共领域。"
+    },
+    "status": "published",
+    "createdAt": "2026-09-23T10:51:34Z",
+    "updatedAt": "2026-09-23T10:51:34Z",
+    "tone": "deepseek",
+    "symbol": "",
+    "slug": "deepseek202609230075",
+    "categoryIds": [
+      "meme"
+    ]
+  },
+  {
+    "id": "sticker_issue_32_071",
+    "name": "鲸鱼思考",
+    "description": "",
+    "commentary": "手托在下巴底下，眼珠往斜上方一转，眉毛还轻轻皱着。这个姿势代表我正在认真思考，思考的内容一般是——今天到底要不要再改一版。",
+    "path": "https://raw.githubusercontent.com/lmy414/ai-girl-stickers/main/dist/submissions/originals/deepseek/issue-32-071.webp",
+    "thumbnailPath": "submissions/previews/deepseek/issue-32-071.webp",
+    "fullPath": "submissions/large/deepseek/issue-32-071.webp",
+    "format": "webp",
+    "mimeType": "image/webp",
+    "isAnimated": false,
+    "width": 1024,
+    "height": 1024,
+    "fileSize": 73592,
+    "sha256": "42002d51655cc8cab191987a761724604b5e696a3647b75653e268323572fac9",
+    "characterId": "deepseek",
+    "tags": [
+      "deepseek",
+      "思考",
+      "托腮"
+    ],
+    "submitter": {
+      "name": "1cyberlangke1",
+      "github": "1cyberlangke1"
+    },
+    "origin": {
+      "type": "self-created",
+      "author": "",
+      "sourceUrl": null,
+      "note": "投稿表单标注为自己创作或生成；图片来自投稿压缩包，按包内文件名收录。"
+    },
+    "license": {
+      "type": "cc0",
+      "note": "投稿表单标注为 CC0 公共领域。"
+    },
+    "status": "published",
+    "createdAt": "2026-09-23T10:51:34Z",
+    "updatedAt": "2026-09-23T10:51:34Z",
+    "tone": "deepseek",
+    "symbol": "",
+    "slug": "deepseek202609230076",
+    "categoryIds": [
+      "meme"
+    ]
+  },
+  {
+    "id": "sticker_issue_32_072",
+    "name": "鲸鱼鼬",
+    "description": "",
+    "commentary": "这一张画得比别张都细致，眼睛是紫橙渐变的，头发也柔了一圈，看着像谁家养的小鼬。我自己都差点认不出来，好在尾巴还在，那就还是我。",
+    "path": "https://raw.githubusercontent.com/lmy414/ai-girl-stickers/main/dist/submissions/originals/deepseek/issue-32-072.webp",
+    "thumbnailPath": "submissions/previews/deepseek/issue-32-072.webp",
+    "fullPath": "submissions/large/deepseek/issue-32-072.webp",
+    "format": "webp",
+    "mimeType": "image/webp",
+    "isAnimated": false,
+    "width": 766,
+    "height": 766,
+    "fileSize": 59936,
+    "sha256": "4e1c4a2a7af82fc7567bdbaa12e7ec714234b14b1d0f3332e2ee1eeebddadbc5",
+    "characterId": "deepseek",
+    "tags": [
+      "deepseek",
+      "坐姿",
+      "呆萌"
+    ],
+    "submitter": {
+      "name": "1cyberlangke1",
+      "github": "1cyberlangke1"
+    },
+    "origin": {
+      "type": "self-created",
+      "author": "",
+      "sourceUrl": null,
+      "note": "投稿表单标注为自己创作或生成；图片来自投稿压缩包，按包内文件名收录。"
+    },
+    "license": {
+      "type": "cc0",
+      "note": "投稿表单标注为 CC0 公共领域。"
+    },
+    "status": "published",
+    "createdAt": "2026-09-23T10:51:34Z",
+    "updatedAt": "2026-09-23T10:51:34Z",
+    "tone": "deepseek",
+    "symbol": "",
+    "slug": "deepseek202609230077",
+    "categoryIds": [
+      "meme"
+    ]
+  },
+  {
+    "id": "sticker_issue_32_073",
+    "name": "／／／",
+    "description": "",
+    "commentary": "整张脸几乎撑满画面，眼睛变成两个空白的白圈，红色的竖线从脸颊一路划到下巴。文件名是三个斜杠，这符号的意思是：别问我，我什么都不敢说。",
+    "path": "https://raw.githubusercontent.com/lmy414/ai-girl-stickers/main/dist/submissions/originals/deepseek/issue-32-073.webp",
+    "thumbnailPath": "submissions/previews/deepseek/issue-32-073.webp",
+    "fullPath": "submissions/large/deepseek/issue-32-073.webp",
+    "format": "webp",
+    "mimeType": "image/webp",
+    "isAnimated": false,
+    "width": 1024,
+    "height": 1024,
+    "fileSize": 91282,
+    "sha256": "738809a85a2dc0fdb0d6bbcab7c39026f48bddd113260ef9340fd593a95c91a0",
+    "characterId": "deepseek",
+    "tags": [
+      "deepseek",
+      "害羞",
+      "慌乱"
+    ],
+    "submitter": {
+      "name": "1cyberlangke1",
+      "github": "1cyberlangke1"
+    },
+    "origin": {
+      "type": "self-created",
+      "author": "",
+      "sourceUrl": null,
+      "note": "投稿表单标注为自己创作或生成；图片来自投稿压缩包，按包内文件名收录。"
+    },
+    "license": {
+      "type": "cc0",
+      "note": "投稿表单标注为 CC0 公共领域。"
+    },
+    "status": "published",
+    "createdAt": "2026-09-23T10:51:34Z",
+    "updatedAt": "2026-09-23T10:51:34Z",
+    "tone": "deepseek",
+    "symbol": "",
+    "slug": "deepseek202609230078",
+    "categoryIds": [
+      "meme"
+    ]
   }
 ]

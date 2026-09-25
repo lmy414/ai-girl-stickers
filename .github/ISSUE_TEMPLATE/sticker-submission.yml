@@ -45,6 +45,7 @@ body:
         - "Stepfun娘（stepfun · 别名 StepFun / 阶跃星辰）"
         - "GLM娘（glm · 别名 GLM / 智谱）"
         - "GPT娘（gpt · 别名 GPT / ChatGPT / OpenAI）"
+        - "MiMo娘（mimo · 别名 MiMo / 小米 / XiaomiMiMo / 米莫）"
         - "其他角色（other）"
     validations:
       required: true
