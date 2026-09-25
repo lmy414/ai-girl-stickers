@@ -26,6 +26,7 @@ AI 娘表情包站「蓝色大肥鱼」的**图片 / 内容 / 投稿仓库**。�
 | `dist/data/` | 首批「蓝色大肥鱼档案馆」数据：`blue-fish-classification.json` 清单 + `blue-fish/previews/` 预览图 |
 | `dist/characters.json`、`dist/categories.json`、`dist/blue-fish-ids.json` | 角色 / 分类 / 首批 ID 冻结映射 |
 | `dist/favicon.ico`、`dist/favicon.png`、`dist/avatar.png` | 站点图标与头像（内容侧原件） |
+| `dist/qq-group.png` | 关于页「交流群」的 QQ 群二维码（518×518，纠错 M）。payload 是群链接 `https://qm.qq.com/q/2HPjWFjgRG`，群链接变了就照它重生成一张 |
 | `assets/` | 站点图标的原始素材 |
 | `archive/2026-09-24/` | 仓库拆分前的历史文档副本（仅供追溯，不是当前规范） |
 
