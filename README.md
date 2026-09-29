@@ -1,6 +1,33 @@
-# 蓝色大肥鱼 · 公开图片存档
+<div align="center">
+  <img src="https://raw.githubusercontent.com/lmy414/ai-girl-stickers/main/dist/avatar.png" width="112" alt="蓝色大肥鱼站点图标">
+  <h1>蓝色大肥鱼 · 公开图片存档</h1>
+  <p><strong>站点图片、投稿与下架入口</strong></p>
+  <p>
+    <a href="https://xn--pssy23gqgbz2d718b.com/"><img src="https://img.shields.io/website?url=https%3A%2F%2Fxn--pssy23gqgbz2d718b.com%2F&style=for-the-badge&label=site&up_message=online&down_message=offline" alt="站点在线状态"></a>
+    <a href=".github/ISSUE_TEMPLATE/sticker-submission.yml"><img src="https://img.shields.io/badge/submissions-GitHub%20Issue%20Forms-2f81f7?style=for-the-badge&logo=github&logoColor=white" alt="通过 GitHub Issue 表单投稿"></a>
+    <a href="CONTRIBUTING.md"><img src="https://img.shields.io/badge/formats-PNG%20%7C%20JPG%20%7C%20GIF%20%7C%20WebP%20%7C%20APNG-6f42c1?style=for-the-badge" alt="支持 PNG、JPG、GIF、WebP 和 APNG"></a>
+    <a href="LICENSE"><img src="https://img.shields.io/badge/docs%20license-MIT-2ea44f?style=for-the-badge" alt="文字材料使用 MIT 许可"></a>
+  </p>
+  <p>
+    <strong>简体中文</strong> ·
+    <a href="README.en.md">English</a> ·
+    <a href="README.ja.md">日本語</a>
+  </p>
+</div>
+
+---
 
 本仓库保存“蓝色大肥鱼”站点使用的投稿原图、派生图和站点图片资源。这里也是 GitHub 投稿与下架入口。站点页面、结构化数据和程序在独立仓库 [lmy414/bluedafeiyu](https://github.com/lmy414/bluedafeiyu)。
+
+## 项目概览
+
+| 项目 | 内容 |
+| --- | --- |
+| 仓库定位 | 公开图片存档与 GitHub 投稿入口 |
+| 原图访问 | 详情页下载使用 GitHub Raw |
+| 投稿表单 | GitHub Issue Forms |
+| 支持格式 | PNG、JPG、GIF、WebP、APNG |
+| 图片权利 | 归原作者，以详情页来源与授权为准 |
 
 ## 常用入口
 
@@ -29,6 +56,17 @@
 | `dist/favicon.ico`、`dist/favicon.png`、`dist/avatar.png`、`dist/qq-group.png` | 站点图标、头像和 QQ 群二维码 |
 
 图片格式、大小和内容范围见 [`CONTRIBUTING.md`](CONTRIBUTING.md)。
+
+## 站点图标
+
+仓库保存站点的全部公开图标。README 顶部使用 `dist/avatar.png`。
+
+| 文件 | 尺寸 | 用途 |
+| --- | --- | --- |
+| [`dist/avatar.png`](https://github.com/lmy414/ai-girl-stickers/blob/main/dist/avatar.png) | 96 × 96 | 站点头像和 README Logo |
+| [`dist/favicon.ico`](https://github.com/lmy414/ai-girl-stickers/blob/main/dist/favicon.ico) | 256 × 256 | 浏览器标签页图标 |
+| [`dist/favicon.png`](https://github.com/lmy414/ai-girl-stickers/blob/main/dist/favicon.png) | 512 × 512 | 高清站点图标 |
+| [`dist/qq-group.png`](https://github.com/lmy414/ai-girl-stickers/blob/main/dist/qq-group.png) | 518 × 518 | QQ 交流群二维码 |
 
 ## 图片路径
 
