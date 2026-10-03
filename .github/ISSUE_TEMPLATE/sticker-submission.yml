@@ -8,7 +8,8 @@ body:
       value: |
         本站收集 **AI 角色的拟人化二创表情包**，是非官方同人档案。填写前请先看 [来源与授权说明](https://xn--pssy23gqgbz2d718b.com/#/about/license)。
 
-        - 投稿时只需填写 **图片名称、角色**，一句话说明可选；Tag、分类、来源、授权和详情页文案由维护者审核时补充。
+        - 投稿时填写 **图片名称、角色、是否署名**；选择署名时填写名字，个人主页链接可留空。
+        - 署名信息用于展示投稿者，填写主页后点击名字即可跳转。作品来源与原作者信息独立，写在说明里；Tag、分类、来源、授权和详情页文案由维护者审核时补充。
         - 支持格式：PNG、JPG、GIF、WebP、APNG；单张建议不超过 10 MB。
         - 图片请**直接拖进下面的「图片文件」框上传**，不要贴网盘或外链代替。
         - 与 AI 角色无关的通用表情包、真人肖像、未授权商业素材不收录。
@@ -49,6 +50,33 @@ body:
         - "其他角色（other）"
     validations:
       required: true
+  - type: dropdown
+    id: credit
+    attributes:
+      label: 是否署名
+      description: 选择不署名时，本站不公开你的投稿者名字或 GitHub 用户名。GitHub Issue 本身仍公开显示发帖账号。
+      options:
+        - "不署名"
+        - "署名"
+      default: 0
+    validations:
+      required: true
+  - type: input
+    id: credit-name
+    attributes:
+      label: 署名名字（选择署名时必填）
+      description: 选择署名时填写希望公开的名字，最多 120 字；选择不署名时可留空，此项会被忽略。
+      placeholder: 例如：小鱼
+    validations:
+      required: false
+  - type: input
+    id: credit-url
+    attributes:
+      label: 个人主页链接（可选）
+      description: 填写 http:// 或 https:// 开头的主页地址，收录后点击署名名字即可打开。不填则只显示名字。这不是作品来源链接。
+      placeholder: https://example.com/
+    validations:
+      required: false
   - type: textarea
     id: files
     attributes:
