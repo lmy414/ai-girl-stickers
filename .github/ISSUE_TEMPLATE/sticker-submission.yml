@@ -8,8 +8,8 @@ body:
       value: |
         本站收集 **AI 角色的拟人化二创表情包**，是非官方同人档案。填写前请先看 [来源与授权说明](https://xn--pssy23gqgbz2d718b.com/#/about/license)。
 
-        - 投稿时填写 **图片名称、角色、是否署名**；选择署名时填写名字，个人主页链接可留空。
-        - 署名信息用于展示投稿者，填写主页后点击名字即可跳转。作品来源与原作者信息独立，写在说明里；Tag、分类、来源、授权和详情页文案由维护者审核时补充。
+        - 投稿时填写 **图片名称、角色、作品类型、是否署名**；每张图只选一个类型。选择署名时填写名字，个人主页链接可留空。
+        - 署名信息用于展示投稿者，填写主页后点击名字即可跳转。作品来源与原作者信息独立，写在说明里；作品类型会在审核时核对，Tag、来源、授权和详情页文案由维护者补充。
         - 支持格式：PNG、JPG、GIF、WebP、APNG；单张建议不超过 10 MB。
         - 图片请**直接拖进下面的「图片文件」框上传**，不要贴网盘或外链代替。
         - 与 AI 角色无关的通用表情包、真人肖像、未授权商业素材不收录。
@@ -48,6 +48,21 @@ body:
         - "GPT娘（gpt · 别名 GPT / ChatGPT / OpenAI）"
         - "MiMo娘（mimo · 别名 MiMo / 小米 / XiaomiMiMo / 米莫）"
         - "其他角色（other）"
+    validations:
+      required: true
+  - type: dropdown
+    id: category
+    attributes:
+      label: 作品类型
+      description: "每张图只选一个：梗图是单幅梗或聊天反应；漫画须有多格分镜，可表达反应、对比或笑点，不要求叙事；立绘是简单背景上的独立人物；设定图须有三视图、结构拆解或设计标注；插画是场景、头像或半身绘画；不好判断选其他。"
+      multiple: false
+      options:
+        - "梗图（meme）"
+        - "插画（illustration）"
+        - "设定图（setting）"
+        - "漫画（comic）"
+        - "立绘（standing）"
+        - "其他（other）"
     validations:
       required: true
   - type: dropdown

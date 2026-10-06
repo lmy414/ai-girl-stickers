@@ -81,7 +81,7 @@ Browse and download through the website when possible. When citing an original, 
 
 ## Submissions and Takedown
 
-You do not need to fork the repository or know Git. Open the submission form, upload the image directly, and enter its name and character. A one-line note is optional. Maintainers add tags, categories, source and license information during review.
+You do not need to fork the repository or know Git. Open the submission form, upload the image, enter its name and character, and choose one type: meme, illustration, comic, character art, design reference or other. A one-line note is optional. Maintainers check the type and complete tags, source and license information during review.
 
 PNG, JPG, GIF, WebP and APNG are supported. A single image should be no larger than 10 MB. Generic stickers unrelated to AI characters, real-person portraits and unauthorized commercial assets are not accepted.
 
