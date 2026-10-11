@@ -35,6 +35,7 @@ body:
     attributes:
       label: 角色
       description: 括号里是 `characterId`，收录时直接按它归档。不属于任何已收录角色的选「其他角色」。
+      multiple: true
       options:
         - "DeepSeek娘（deepseek · 别名 蓝色大肥鱼 / 鲸鱼娘）"
         - "豆包娘（doubao · 别名 豆包）"
