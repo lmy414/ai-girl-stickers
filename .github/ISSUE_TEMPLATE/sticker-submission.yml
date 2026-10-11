@@ -34,7 +34,7 @@ body:
     id: character
     attributes:
       label: 角色
-      description: 括号里是 `characterId`，收录时直接按它归档。不属于任何已收录角色的选「其他角色」。
+      description: "支持多选。每选一个角色菜单会收起，再打开即可继续选择；已选角色会保留，再次点击可取消。请选图片中出现的全部角色，不属于已收录角色的选「其他角色」。"
       multiple: true
       options:
         - "DeepSeek娘（deepseek · 别名 蓝色大肥鱼 / 鲸鱼娘）"
