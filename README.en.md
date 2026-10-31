@@ -53,7 +53,9 @@ This repository stores the submitted originals, derivatives and public image ass
 | `dist/data/blue-fish/previews/` | Previews for the first Blue Big Fish archive collection |
 | `blue-fish-originals/` | Self-hosted originals for the first collected set; other originals remain in [EDMOK/blue-fish-archive](https://github.com/EDMOK/blue-fish-archive) |
 | `assets/` | Original source files for the site icon |
-| `dist/favicon.ico`, `dist/favicon.png`, `dist/avatar.png`, `dist/qq-group.png` | Site icons, avatar and QQ group QR code |
+| `dist/favicon.ico`, `dist/favicon.png`, `dist/avatar.png` | Site icons and avatar |
+| `dist/community/` | Current community QR codes: the QQ group "蓝色大肥鱼.com" QR code `qq-1134100615-bc8e49b662df6b84.png` and the WeChat Official Account QR code `wechat-official-110b8756b8377c5b.png` |
+| `dist/qq-group.png` | Historical QQ group QR code (no longer used on this site) |
 
 See [`CONTRIBUTING.md`](CONTRIBUTING.md) for formats, size limits and content rules.
 
@@ -66,7 +68,7 @@ This repository stores all public site icons. The README header uses `dist/avata
 | [`dist/avatar.png`](https://github.com/lmy414/ai-girl-stickers/blob/main/dist/avatar.png) | 96 × 96 | Site avatar and README logo |
 | [`dist/favicon.ico`](https://github.com/lmy414/ai-girl-stickers/blob/main/dist/favicon.ico) | 256 × 256 | Browser tab icon |
 | [`dist/favicon.png`](https://github.com/lmy414/ai-girl-stickers/blob/main/dist/favicon.png) | 512 × 512 | High-resolution site icon |
-| [`dist/qq-group.png`](https://github.com/lmy414/ai-girl-stickers/blob/main/dist/qq-group.png) | 518 × 518 | QQ group QR code |
+| [`dist/qq-group.png`](https://github.com/lmy414/ai-girl-stickers/blob/main/dist/qq-group.png) | 518 × 518 | Historical QQ group QR code (no longer used on this site) |
 
 ## Image Paths
 

@@ -53,7 +53,9 @@
 | `dist/data/blue-fish/previews/` | “蓝色大肥鱼档案馆”首批作品的预览图 |
 | `blue-fish-originals/` | 首批已收编作品的自托管原图。其余首批原图仍在上游仓库 [EDMOK/blue-fish-archive](https://github.com/EDMOK/blue-fish-archive) |
 | `assets/` | 站点图标的原始素材 |
-| `dist/favicon.ico`、`dist/favicon.png`、`dist/avatar.png`、`dist/qq-group.png` | 站点图标、头像和 QQ 群二维码 |
+| `dist/favicon.ico`、`dist/favicon.png`、`dist/avatar.png` | 站点图标和头像 |
+| `dist/community/` | 当前社群二维码目录。含 QQ 群「蓝色大肥鱼.com」二维码 `qq-1134100615-bc8e49b662df6b84.png` 和微信公众号二维码 `wechat-official-110b8756b8377c5b.png` |
+| `dist/qq-group.png` | 历史 QQ 群二维码（本站已不再使用） |
 
 图片格式、大小和内容范围见 [`CONTRIBUTING.md`](CONTRIBUTING.md)。
 
@@ -66,7 +68,7 @@
 | [`dist/avatar.png`](https://github.com/lmy414/ai-girl-stickers/blob/main/dist/avatar.png) | 96 × 96 | 站点头像和 README Logo |
 | [`dist/favicon.ico`](https://github.com/lmy414/ai-girl-stickers/blob/main/dist/favicon.ico) | 256 × 256 | 浏览器标签页图标 |
 | [`dist/favicon.png`](https://github.com/lmy414/ai-girl-stickers/blob/main/dist/favicon.png) | 512 × 512 | 高清站点图标 |
-| [`dist/qq-group.png`](https://github.com/lmy414/ai-girl-stickers/blob/main/dist/qq-group.png) | 518 × 518 | QQ 交流群二维码 |
+| [`dist/qq-group.png`](https://github.com/lmy414/ai-girl-stickers/blob/main/dist/qq-group.png) | 518 × 518 | 历史 QQ 群二维码（本站已不再使用） |
 
 ## 图片路径
 

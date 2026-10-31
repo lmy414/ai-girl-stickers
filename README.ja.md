@@ -53,7 +53,9 @@
 | `dist/data/blue-fish/previews/` | 最初の Blue Big Fish アーカイブ作品のプレビュー |
 | `blue-fish-originals/` | 最初の収録作品のうち、このリポジトリで管理する原画。それ以外は [EDMOK/blue-fish-archive](https://github.com/EDMOK/blue-fish-archive) にあります |
 | `assets/` | サイトアイコンの元素材 |
-| `dist/favicon.ico`、`dist/favicon.png`、`dist/avatar.png`、`dist/qq-group.png` | サイトアイコン、アバター、QQ グループの QR コード |
+| `dist/favicon.ico`、`dist/favicon.png`、`dist/avatar.png` | サイトアイコンとアバター |
+| `dist/community/` | 現在のコミュニティ QR コードのディレクトリ。QQ グループ「蓝色大肥鱼.com」の QR コード `qq-1134100615-bc8e49b662df6b84.png` と WeChat 公式アカウントの QR コード `wechat-official-110b8756b8377c5b.png` を収録 |
+| `dist/qq-group.png` | 過去の QQ グループ QR コード（当サイトでは使用していません） |
 
 対応形式、容量、内容のルールは [`CONTRIBUTING.md`](CONTRIBUTING.md) を参照してください。
 
@@ -66,7 +68,7 @@
 | [`dist/avatar.png`](https://github.com/lmy414/ai-girl-stickers/blob/main/dist/avatar.png) | 96 × 96 | サイトのアバターと README ロゴ |
 | [`dist/favicon.ico`](https://github.com/lmy414/ai-girl-stickers/blob/main/dist/favicon.ico) | 256 × 256 | ブラウザータブのアイコン |
 | [`dist/favicon.png`](https://github.com/lmy414/ai-girl-stickers/blob/main/dist/favicon.png) | 512 × 512 | 高解像度のサイトアイコン |
-| [`dist/qq-group.png`](https://github.com/lmy414/ai-girl-stickers/blob/main/dist/qq-group.png) | 518 × 518 | QQ グループの QR コード |
+| [`dist/qq-group.png`](https://github.com/lmy414/ai-girl-stickers/blob/main/dist/qq-group.png) | 518 × 518 | 過去の QQ グループ QR コード（当サイトでは使用していません） |
 
 ## 画像パス
 
